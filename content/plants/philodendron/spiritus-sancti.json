@@ -47,6 +47,7 @@
   ],
   "recommendedPlants": [
     { "name": "Philodendron joepii", "slug": "joepii", "rarity": "Rare", "price": "££" },
-    { "name": "Anthurium warocqueanum", "slug": "warocqueanum", "rarity": "Very Rare", "price": "£££" }
+    { "name": "Anthurium warocqueanum", "slug": "warocqueanum", "rarity": "Very Rare", "price": "£££" },
+    { "name": "Philodendron atabapoense", "slug": "atabapoense", "rarity": "Uncommon", "price": "£" }
   ]
 }
