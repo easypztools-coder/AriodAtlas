@@ -42,8 +42,21 @@
     "source": "soldcomps",
     "marketplace": "ebay.co.uk",
     "query": "Philodendron billietiae variegated",
-    "acceptedTerms": ["philodendron billietiae variegated", "billietiae variegated", "billietiae var"],
-    "excludeTerms": ["seeds", "corm", "rhizome", "poster", "print", "artificial", "fake", "soil", "pot only"],
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "philodendron billietiae variegated",
+      "billietiae variegated",
+      "billietiae var",
+      "p billietiae variegated",
+      "p. billietiae variegated"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "corm", "bulb", "rhizome",
+      "poster", "print", "book", "magazine", "care guide",
+      "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole",
+      "pot only", "label", "tag", "cutting board"
+    ],
     "marketCurrency": "GBP"
   },
   "recommendedPlants": [

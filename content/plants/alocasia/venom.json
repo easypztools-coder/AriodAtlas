@@ -42,8 +42,21 @@
     "source": "soldcomps",
     "marketplace": "ebay.co.uk",
     "query": "Alocasia Venom",
-    "acceptedTerms": ["alocasia venom", "venom alocasia", "alocasia amazonica venom"],
-    "excludeTerms": ["seeds", "corm", "rhizome", "poster", "print", "artificial", "fake", "soil", "pot only"],
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "alocasia venom",
+      "venom alocasia",
+      "alocasia amazonica venom",
+      "alocasia 'venom'",
+      "alocasia amazonica 'venom'"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "corm", "bulb", "rhizome",
+      "poster", "print", "book", "magazine", "care guide",
+      "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole",
+      "pot only", "label", "tag", "cutting board"
+    ],
     "marketCurrency": "GBP"
   },
   "recommendedPlants": [
