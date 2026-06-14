@@ -172,7 +172,7 @@ export default function PlantDetailPage({
   }, [data.slug]);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 max-w-7xl mx-auto px-4 py-8 bg-background">
+    <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 max-w-7xl mx-auto px-4 py-8 bg-background lg:items-start">
       {/* ===== LEFT COLUMN (Cols 1-7) ===== */}
       <div className="lg:col-span-7 space-y-8">
         {/* Breadcrumbs */}
@@ -399,8 +399,7 @@ export default function PlantDetailPage({
       </div>
 
       {/* ===== RIGHT SIDEBAR (Cols 8-10) ===== */}
-      <div className="lg:col-span-3 space-y-6">
-        <div className="sticky top-24 space-y-6">
+      <div className="lg:col-span-3 space-y-6 lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] lg:overflow-y-auto">
           <div className="rounded-xl bg-card p-5">
             <h3 className="mb-4 text-sm font-semibold text-heading">
               Quick Facts
@@ -490,7 +489,6 @@ export default function PlantDetailPage({
             </svg>
             Find Live Specimens on Etsy UK
           </a>
-        </div>
       </div>
 
       {/* ===== BOTTOM FOOTPRINT: Recommended Plants ===== */}
