@@ -126,18 +126,6 @@ const GENUS_LABELS: Record<string, string> = {
   alocasia: "Alocasia",
 };
 
-const SUB_COMPONENTS = [
-  { label: "Leaf Detail", accent: "bg-leaf/20 text-leaf border-leaf/30" },
-  { label: "Petiole", accent: "bg-primary/20 text-primary border-primary/30" },
-  { label: "Inflorescence", accent: "bg-rarity/20 text-rarity border-rarity/30" },
-];
-
-const MATURITY_PHASES = [
-  { label: "Seedling", pct: 15 },
-  { label: "Juvenile", pct: 35 },
-  { label: "Intermediate", pct: 60 },
-  { label: "Mature", pct: 100 },
-];
 
 export default function PlantDetailPage({
   data,
@@ -190,9 +178,12 @@ export default function PlantDetailPage({
 
         {/* Heading + Status Tags Row */}
         <div className="flex flex-wrap items-start justify-between gap-4">
-          <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading">
-            {data.commonName}
-          </h1>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading italic">
+              {data.scientificName}
+            </h1>
+            <p className="text-sm text-muted mt-1">{data.commonName}</p>
+          </div>
           <div className="flex flex-wrap items-center gap-2">
             {data.statusTag && (
               <span className="inline-flex items-center gap-1.5 rounded-full bg-rarity/10 px-3 py-1 text-xs font-medium text-rarity">
@@ -202,9 +193,6 @@ export default function PlantDetailPage({
                 {data.statusTag}
               </span>
             )}
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-              {data.scientificName}
-            </span>
           </div>
         </div>
 
@@ -270,66 +258,16 @@ export default function PlantDetailPage({
           </span>
         </div>
 
-        {/* Main Feature Image + Sub-Component Circles */}
-        <div className="flex gap-4">
-          <div className="relative flex-1 aspect-[3/4] overflow-hidden rounded-xl bg-card">
-            <Image
-              src={`/api/plant-image?genus=${genus}&slug=${data.slug}`}
-              alt={data.commonName}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-          </div>
-
-          <div className="flex flex-col gap-3 justify-center">
-            {SUB_COMPONENTS.map((comp) => (
-              <div
-                key={comp.label}
-                className={`flex flex-col items-center justify-center w-20 h-20 rounded-full border ${comp.accent} text-center`}
-              >
-                <svg className="h-5 w-5 mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-                <span className="text-[10px] font-medium leading-tight">{comp.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Maturity Progression Row */}
-        <div className="rounded-xl bg-card p-5">
-          <h3 className="mb-4 text-sm font-semibold text-heading">
-            Maturity Progression
-          </h3>
-          <div className="flex items-center gap-0">
-            {MATURITY_PHASES.map((phase, idx) => (
-              <div
-                key={phase.label}
-                className="flex-1 flex flex-col items-center gap-2"
-              >
-                <div className="relative w-full flex items-center">
-                  {idx > 0 && (
-                    <div className="absolute right-1/2 top-0 h-0.5 w-full bg-background" />
-                  )}
-                  <div
-                    className={`relative z-10 mx-auto h-3 w-3 rounded-full ${
-                      idx === MATURITY_PHASES.length - 1
-                        ? "bg-primary"
-                        : "bg-background ring-2 ring-primary/40"
-                    }`}
-                  />
-                </div>
-                <span className="text-[11px] font-medium text-muted">
-                  {phase.label}
-                </span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-3 text-xs text-muted">
-            Typical mature leaf size: {data.quickFacts.matureSize}
-          </p>
+        {/* Main Feature Image */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-card">
+          <Image
+            src={`/api/plant-image?genus=${genus}&slug=${data.slug}`}
+            alt={data.commonName}
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
         </div>
 
         {/* Split Baseline: Morphology + About + Climate */}

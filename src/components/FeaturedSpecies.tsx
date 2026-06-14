@@ -70,7 +70,7 @@ function PlantCard({
 
           {/* Info Overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-4">
-            <h3 className="text-sm font-heading font-bold text-heading group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-sm font-heading font-bold text-heading italic group-hover:text-primary transition-colors duration-300">
               {plant.scientificName}
             </h3>
             <div className="mt-2 flex items-center gap-2">

@@ -143,7 +143,7 @@ export default function HeroSection() {
                         {plant.genus.slice(0, 2)}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-medium text-heading truncate">{plant.name}</p>
+                        <p className="font-medium text-heading italic truncate">{plant.scientificName}</p>
                         <p className="text-xs text-muted truncate">{plant.commonName}</p>
                       </div>
                       <span className="badge-primary shrink-0 text-[10px]">{plant.rarityStatus}</span>
