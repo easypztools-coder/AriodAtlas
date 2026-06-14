@@ -46,6 +46,7 @@ export default function PriceHistoryChart({
   }
 
   const latest = data[data.length - 1];
+  const totalSamples = data.reduce((sum, d) => sum + d.sampleSize, 0);
 
   return (
     <div className="space-y-4">
@@ -199,7 +200,7 @@ export default function PriceHistoryChart({
           </span>
         </div>
         <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-card px-2.5 py-1 text-[10px] font-medium">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-card px-2.5 py-1 text-[10px] font-medium" title="Confidence grade: A=high (30+ sales), B=good (15-29), C=fair (5-14), D=low (<5 sales per month)">
             <span
               className={`h-1.5 w-1.5 rounded-full ${
                 latest.confidenceScore === "A"
@@ -211,10 +212,10 @@ export default function PriceHistoryChart({
                   : "bg-red-400"
               }`}
             />
-            {latest.confidenceScore}
+            <span>Confidence {latest.confidenceScore}</span>
           </span>
           <span className="text-muted">
-            n={latest.sampleSize}
+            {totalSamples} sales
           </span>
         </div>
       </div>
