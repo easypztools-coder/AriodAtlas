@@ -50,8 +50,8 @@
     "source": "soldcomps",
     "marketplace": "ebay.co.uk",
     "query": "Philodendron spiritus sancti",
-    "requiredTerms": ["philodendron"],
-    "acceptedTerms": ["spiritus sancti", "spiritus-sancti", "spiritus sanctus", "pss"],
+    "requiredTerms": [],
+    "acceptedTerms": ["philodendron spiritus sancti", "philodendron spiritus-sancti", "spiritus sancti", "spiritus-sancti", "spiritus sanctus", "pss"],
     "excludeTerms": [
       "micans",
       "splendid",
