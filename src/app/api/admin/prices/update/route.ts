@@ -137,12 +137,25 @@ export async function GET(request: NextRequest) {
 
     await saveSnapshot(snapshot, priceListings);
 
+    // Build per-rejection breakdown for debugging
+    const rejectionBreakdown: Record<string, string[]> = {};
+    for (const r of rejected) {
+      const key = r.reason.split(":")[0].trim();
+      if (!rejectionBreakdown[key]) rejectionBreakdown[key] = [];
+      if (rejectionBreakdown[key].length < 3) {
+        rejectionBreakdown[key].push(r.listing.title);
+      }
+    }
+
     return NextResponse.json({
       success: true,
       snapshot,
       stats,
       acceptedCount: classified.length,
       rejectedCount: rejected.length,
+      rejectionBreakdown,
+      sampleRejectedTitle: rejected.length > 0 ? rejected[0].listing.title : null,
+      sampleRejectedReason: rejected.length > 0 ? rejected[0].reason : null,
       warnings: [],
     });
   } catch (err) {
