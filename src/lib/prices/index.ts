@@ -18,7 +18,7 @@ export { normaliseListing } from "./normaliseListing";
 export { filterPlantListings } from "./filterPlantListings";
 export { classifyListing } from "./classifyPlantListing";
 export { calculateStats } from "./calculatePriceStats";
-export { saveSnapshot, loadLatestSnapshot, listSnapshots } from "./database";
+export { loadLatestSnapshot, listSnapshots } from "./database";
 
 // Re-export types for convenience
 export type {

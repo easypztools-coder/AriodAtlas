@@ -15,8 +15,13 @@ on:
 jobs:
   fetch-prices:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Call admin price update endpoint
         env:
           ADMIN_PRICE_SECRET: ${{ secrets.ADMIN_PRICE_SECRET }}
@@ -26,13 +31,53 @@ jobs:
             PLANTS="spiritus-sancti"
           fi
 
-          # Use Vercel deployment URL from the environment
+          # Use Vercel deployment URL
           SITE_URL="${VERCEL_URL:-https://ariod-atlas.vercel.app}"
+
+          mkdir -p content/price-snapshots
 
           IFS=',' read -ra SLUGS <<< "$PLANTS"
           for slug in "${SLUGS[@]}"; do
             slug=$(echo "$slug" | xargs)  # trim whitespace
             echo "Fetching prices for: $slug"
-            curl -s -o /dev/null -w "  Status: %{http_code}\n" \
-              "$SITE_URL/api/admin/prices/update?slug=$slug&secret=$ADMIN_PRICE_SECRET"
+
+            RESPONSE=$(curl -s "$SITE_URL/api/admin/prices/update?slug=$slug&secret=$ADMIN_PRICE_SECRET")
+
+            # Parse the snapshot and listings from the response
+            SNAPSHOT=$(echo "$RESPONSE" | jq -r '.snapshot')
+            STATS=$(echo "$RESPONSE" | jq -r '.stats')
+
+            if [ "$(echo "$RESPONSE" | jq -r '.success')" = "true" ]; then
+              echo "  ✓ Success: $(echo "$RESPONSE" | jq -r '.acceptedCount') accepted, $(echo "$RESPONSE" | jq -r '.rejectedCount') rejected"
+
+              # Save the full data including listings map from stats
+              mkdir -p "content/price-snapshots/$slug"
+
+              # Build the full data object with snapshot and listings
+              TIMESTAMP=$(echo "$SNAPSHOT" | jq -r '.checkedAt' | tr ':.' '--')
+
+              # Save timestamped version
+              echo "$RESPONSE" | jq '{snapshot: .snapshot, stats: .stats, acceptedCount: .acceptedCount, rejectedCount: .rejectedCount}' \
+                > "content/price-snapshots/$slug/$TIMESTAMP.json"
+
+              # Save latest
+              cp "content/price-snapshots/$slug/$TIMESTAMP.json" "content/price-snapshots/$slug/latest.json"
+
+              echo "  ✓ Saved snapshot to content/price-snapshots/$slug/"
+            else
+              ERROR=$(echo "$RESPONSE" | jq -r '.error // "Unknown error"')
+              echo "  ✗ Failed: $ERROR"
+            fi
           done
+
+      - name: Commit and push snapshot data
+        run: |
+          git config --local user.email "bot@ariod-atlas.com"
+          git config --local user.name "Ariod Atlas Bot"
+          git add content/price-snapshots/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update price snapshots [skip ci]"
+            git push
+          fi

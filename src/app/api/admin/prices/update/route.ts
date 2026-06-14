@@ -7,7 +7,6 @@ import { normaliseListing } from "@/lib/prices/normaliseListing";
 import { filterPlantListings } from "@/lib/prices/filterPlantListings";
 import { classifyListing } from "@/lib/prices/classifyPlantListing";
 import { calculateStats } from "@/lib/prices/calculatePriceStats";
-import { saveSnapshot } from "@/lib/prices/database";
 
 /**
  * ─── ADMIN PRICE UPDATE ──────────────────────────────────────────────────
@@ -20,8 +19,7 @@ import { saveSnapshot } from "@/lib/prices/database";
  * 3. Confirm priceTracking.enabled = true
  * 4. Call SoldComps
  * 5. Normalise → Filter → Classify → Calculate stats
- * 6. Save snapshot
- * 7. Return results
+ * 6. Return results for the GitHub Actions workflow to save
  *
  * Safe for manual weekly use. Never called on page load.
  *
@@ -91,7 +89,7 @@ export async function GET(request: NextRequest) {
     // 5. Calculate stats
     const stats = calculateStats(classified, rejected.length);
 
-    // 6. Save snapshot
+    // 6. Build snapshot
     const snapshot = {
       plantSlug: slug,
       source: config.source,
@@ -113,29 +111,6 @@ export async function GET(request: NextRequest) {
       maxPrice: stats.max,
       notes: "",
     };
-
-    // Map classified listings to PriceListing for storage
-    const priceListings = classified.map((l) => ({
-      plantSlug: slug,
-      title: l.originalTitle,
-      normalizedTitle: l.title,
-      listingType: l.listingType,
-      lotSize: l.lotSize,
-      soldPrice: l.soldPrice,
-      shippingPrice: l.shippingPrice,
-      totalPrice: l.totalPrice,
-      unitPrice: l.unitPrice,
-      currency: l.currency,
-      soldDate: l.soldDate,
-      seller: l.seller,
-      condition: l.condition,
-      url: l.url,
-      accepted: true,
-      rejectionReason: null,
-      isOutlier: false,
-    }));
-
-    await saveSnapshot(snapshot, priceListings);
 
     // Build per-rejection breakdown for debugging
     const rejectionBreakdown: Record<string, string[]> = {};
