@@ -6,27 +6,30 @@ import { SoldCompsRawItem, NormalisedListing } from "./types";
  * Handles:
  * - Price strings → numbers ("£23.00" → 23.00)
  * - Shipping strings → numbers ("Free" → 0)
+ * - USD → GBP currency conversion (1 USD ≈ 0.79 GBP)
  * - TotalPrice calculation (soldPrice + shippingPrice if not provided)
  * - Date parsing
  * - Title normalisation
  */
 export function normaliseListing(raw: SoldCompsRawItem): NormalisedListing {
+  // ─── Currency ──────────────────────────────────────────────────────────
+  const rawCurrency = (raw.soldCurrency ?? "GBP").toUpperCase();
+  // Rough conversion: 1 USD ≈ 0.79 GBP. Leave other currencies at 1x.
+  const currencyMultiplier = rawCurrency === "USD" ? 0.79 : 1;
+  const currency: string = rawCurrency;
+
   // ─── Sold Price ──────────────────────────────────────────────────────
-  const soldPrice = parsePrice(raw.soldPrice ?? 0);
+  const soldPrice = parsePrice(raw.soldPrice ?? 0) * currencyMultiplier;
 
   // ─── Shipping Price ───────────────────────────────────────────────────
-  const shippingPrice = parseShipping(raw.shippingPrice);
+  const shippingPrice = parseShipping(raw.shippingPrice) * currencyMultiplier;
 
   // ─── Total Price ───────────────────────────────────────────────────────
-  // If the API provides totalPrice, use it. Otherwise calculate.
   const totalPrice = soldPrice + shippingPrice;
 
   // ─── Unit Price ────────────────────────────────────────────────────────
   // Default to totalPrice — lot size division happens in classifyPlantListing
   const unitPrice = totalPrice;
-
-  // ─── Currency ──────────────────────────────────────────────────────────
-  const currency = (raw.soldCurrency ?? "GBP").toUpperCase();
 
   // ─── Sold Date ─────────────────────────────────────────────────────────
   const soldDate = normaliseDate(raw.endedAt);

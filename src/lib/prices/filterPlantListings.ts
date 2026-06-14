@@ -67,11 +67,12 @@ export function filterPlantListings(
       continue;
     }
 
-    // ─── 4. Currency check ──────────────────────────────────────────────
-    if (listing.currency !== "GBP") {
+    // ─── 4. Currency check — accept GBP or USD (convert USD to GBP) ────
+    const currency = listing.currency;
+    if (currency !== "GBP" && currency !== "USD") {
       rejected.push({
         listing,
-        reason: `Currency is ${listing.currency}, not GBP`,
+        reason: `Currency is ${currency}, not GBP or USD`,
       });
       continue;
     }

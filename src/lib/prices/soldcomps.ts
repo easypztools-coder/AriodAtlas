@@ -11,9 +11,7 @@ import { SoldCompsRawItem, SoldCompsResponse } from "./types";
  * Process:
  * 1. Fetch raw data from API
  * 2. Parse response
- * 3. Filter to GBP/UK only
- * 4. Reject non-plant listings
- * 5. Return raw items for normalisation
+ * 3. Return raw items for normalisation
  *
  * ──────────────────────────────────────────────────────────────────────────
  */
@@ -112,38 +110,10 @@ export async function fetchSoldCompsRaw(
     `[soldcomps] Fetched ${json.items.length} items for "${query}"`
   );
 
-  // ─── Accept GBP items, also accept USD items (convert to GBP) ─────────
-  // SoldComps primarily returns US eBay data. We keep USD listings and
-  // convert to GBP (rough rate ~1 USD = 0.79 GBP).
-  const USD_TO_GBP = 0.79;
-
-  const acceptedItems = json.items
-    .map((item) => {
-      const currency = (item.soldCurrency ?? "GBP").toUpperCase();
-      if (currency === "GBP") return item;
-      if (currency === "USD") {
-        // Convert price to GBP by applying exchange rate
-        const priceNum = parseFloat(item.soldPrice?.replace(/[^0-9.\-]/g, "") || "0");
-        const convertedPrice = (priceNum * USD_TO_GBP).toFixed(2);
-        return { ...item, soldCurrency: "GBP", soldPrice: convertedPrice };
-      }
-      return null; // reject other currencies
-    })
-    .filter((item): item is SoldCompsRawItem => item !== null);
-
-  console.log(
-    `[soldcomps] ${acceptedItems.length} accepted (GBP + USD converted) out of ${json.items.length} total`
-  );
-
-  if (acceptedItems.length === 0) {
-    console.warn(
-      "[soldcomps] No accepted items found. Sample currencies:",
-      json.items.slice(0, 5).map((i) => i.soldCurrency)
-    );
-  }
-
-  // ─── Return accepted items ──────────────────────────────────────────────
-  return acceptedItems;
+  // ─── Return all items ──────────────────────────────────────────────────
+  // Currency conversion and filtering happens in normaliseListing and
+  // filterPlantListings downstream.
+  return json.items;
 }
 
 /**
