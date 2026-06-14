@@ -9,7 +9,7 @@ const footerLinks = {
     links: [
       { label: "Species Database", href: "/plants" },
       { label: "Genera", href: "/plants" },
-      { label: "Collections", href: "/collections" },
+      { label: "Collections", href: "/" },
       { label: "Compare Tool", href: "/compare" },
     ],
   },
@@ -25,18 +25,18 @@ const footerLinks = {
   about: {
     title: "About",
     links: [
-      { label: "Mission", href: "/about" },
-      { label: "Methodology", href: "/about" },
-      { label: "Contributors", href: "/about" },
-      { label: "Contact", href: "/about" },
+      { label: "Mission", href: "/" },
+      { label: "Methodology", href: "/" },
+      { label: "Contributors", href: "/" },
+      { label: "Contact", href: "/" },
     ],
   },
   legal: {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
+      { label: "Privacy Policy", href: "/" },
+      { label: "Terms of Service", href: "/" },
+      { label: "Cookie Policy", href: "/" },
     ],
   },
 };

@@ -1,0 +1,45 @@
+import Link from "next/link";
+import { genera } from "@/lib/mock-data";
+
+export default function PlantsPage() {
+  return (
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading mb-4">
+        Species Database
+      </h1>
+      <p className="text-sm md:text-base text-muted max-w-2xl mb-12">
+        Explore the remarkable diversity of the Araceae family. Browse by genus to discover detailed profiles, market data, and cultivation information.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {genera.map((genus) => (
+          <Link
+            key={genus.slug}
+            href={`/plants/${genus.slug}`}
+            className="glass-card-hover group relative flex flex-col overflow-hidden rounded-2xl p-6"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-forest-deep via-card to-forest-dark opacity-50" />
+            <div className="relative">
+              <h3 className="text-lg font-heading font-bold text-heading group-hover:text-primary transition-colors duration-300">
+                {genus.name}
+              </h3>
+              <p className="mt-1 text-xs text-muted line-clamp-2">{genus.description}</p>
+              <div className="mt-3 flex items-center gap-2">
+                <span className="badge-primary">{genus.speciesCount} species</span>
+                <svg
+                  className="h-4 w-4 text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}

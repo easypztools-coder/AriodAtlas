@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function IdentifyPlant() {
@@ -61,12 +62,12 @@ export default function IdentifyPlant() {
                 species for accurate results.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="/identify" className="btn-primary">
+                <Link href="/identify" className="btn-primary">
                   Identify Now
-                </a>
-                <a href="/learn" className="btn-secondary">
+                </Link>
+                <Link href="/learn" className="btn-secondary">
                   Learn More
-                </a>
+                </Link>
               </div>
 
               {/* Feature list */}

@@ -1,12 +1,65 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { featuredPlants } from "@/lib/mock-data";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<typeof featuredPlants>([]);
+  const [showResults, setShowResults] = useState(false);
+  const router = useRouter();
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // All plants data for search
+  const allPlants = featuredPlants;
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function handleSearch(value: string) {
+    setSearchQuery(value);
+    if (value.trim().length < 2) {
+      setSearchResults([]);
+      setShowResults(false);
+      return;
+    }
+    const q = value.toLowerCase();
+    const results = allPlants.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        p.scientificName.toLowerCase().includes(q) ||
+        p.commonName.toLowerCase().includes(q) ||
+        p.genus.toLowerCase().includes(q)
+    );
+    setSearchResults(results);
+    setShowResults(results.length > 0);
+  }
+
+  function handleSelect(slug: string, genus: string) {
+    setSearchQuery("");
+    setShowResults(false);
+    const genusPath = genus.toLowerCase();
+    router.push(`/plants/${genusPath}/${slug}`);
+  }
+
+  function handleSearchSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (searchQuery.trim().length >= 2 && searchResults.length > 0) {
+      handleSelect(searchResults[0].slug, searchResults[0].genus);
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80">
@@ -24,8 +77,8 @@ export default function Navbar() {
         </Link>
 
         {/* Search Bar (Desktop) */}
-        <div className="hidden md:flex flex-1 max-w-md mx-auto">
-          <div className="relative w-full">
+        <div className="hidden md:flex flex-1 max-w-md mx-auto relative" ref={searchRef}>
+          <form onSubmit={handleSearchSubmit} className="relative w-full">
             <svg
               className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
               fill="none"
@@ -41,10 +94,40 @@ export default function Navbar() {
             </svg>
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
               placeholder="Search species, cultivars, or common names..."
               className="w-full rounded-xl border border-primary/10 bg-card/60 py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-card focus:shadow-glow"
             />
-          </div>
+          </form>
+          {/* Search Results Dropdown */}
+          <AnimatePresence>
+            {showResults && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-full left-0 right-0 mt-2 rounded-xl border border-primary/10 bg-card/95 backdrop-blur-xl shadow-xl overflow-hidden"
+              >
+                {searchResults.slice(0, 6).map((plant) => (
+                  <button
+                    key={plant.slug}
+                    onClick={() => handleSelect(plant.slug, plant.genus)}
+                    className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm transition hover:bg-primary/10"
+                  >
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-xs text-primary font-medium">
+                      {plant.genus.slice(0, 2)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-heading truncate">{plant.name}</p>
+                      <p className="text-xs text-muted truncate">{plant.commonName}</p>
+                    </div>
+                    <span className="badge-primary shrink-0 text-[10px]">{plant.rarityStatus}</span>
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Nav Links (Desktop) */}
@@ -121,7 +204,7 @@ export default function Navbar() {
           >
             <div className="space-y-1 px-6 py-4">
               {/* Mobile Search */}
-              <div className="relative mb-4">
+              <form onSubmit={handleSearchSubmit} className="relative mb-4">
                 <svg
                   className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
                   fill="none"
@@ -137,10 +220,12 @@ export default function Navbar() {
                 </svg>
                 <input
                   type="text"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search species, cultivars..."
                   className="w-full rounded-xl border border-primary/10 bg-background/60 py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-background"
                 />
-              </div>
+              </form>
               <Link
                 href="/"
                 className="block rounded-lg px-3 py-2 text-sm font-medium text-heading transition hover:bg-primary/10"
