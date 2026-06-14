@@ -1,19 +1,25 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import FeaturedSpecies from "@/components/FeaturedSpecies";
-import CompareSection from "@/components/CompareSection";
-import IdentifyPlant from "@/components/IdentifyPlant";
 import GenusGrid from "@/components/GenusGrid";
-import CollectionsGrid from "@/components/CollectionsGrid";
+import ExploreCTA from "@/components/ExploreCTA";
+
+export const metadata: Metadata = {
+  title: "The Visual Encyclopedia of Rare Tropical Plants",
+  description:
+    "Discover, explore and compare the world's most extraordinary aroids. Live market prices, species profiles, and cultivation data for serious collectors.",
+  openGraph: {
+    url: "https://ariodatlas.com",
+  },
+};
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <FeaturedSpecies />
-      <CompareSection />
-      <IdentifyPlant />
       <GenusGrid />
-      <CollectionsGrid />
+      <ExploreCTA />
     </>
   );
 }

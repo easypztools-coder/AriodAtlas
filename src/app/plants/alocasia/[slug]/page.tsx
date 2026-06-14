@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
@@ -97,6 +98,25 @@ interface PageProps {
   params: { slug: string };
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const data = loadPlantData(params.slug);
+  if (!data) return { title: "Plant Not Found" };
+  return {
+    title: `${data.scientificName} — ${data.commonName}`,
+    description: data.aboutText.slice(0, 155) + "…",
+    openGraph: {
+      title: `${data.scientificName} | Ariod Atlas`,
+      description: data.aboutText.slice(0, 155) + "…",
+      images: [
+        {
+          url: `/api/plant-image?genus=alocasia&slug=${data.slug}`,
+          alt: data.scientificName,
+        },
+      ],
+    },
+  };
+}
+
 export default function AlocasiaPlantPage({ params }: PageProps) {
   const data = loadPlantData(params.slug);
 
@@ -107,15 +127,40 @@ export default function AlocasiaPlantPage({ params }: PageProps) {
           <p className="text-lg font-heading font-bold text-heading">Plant Not Found</p>
           <p className="mt-2 text-sm text-muted">No data available for &ldquo;{params.slug}&rdquo;</p>
           <Link
-            href="/"
+            href="/plants"
             className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-background transition hover:bg-primary/90"
           >
-            Back to Explore
+            Back to Species
           </Link>
         </div>
       </div>
     );
   }
 
-  return <PlantDetailPage data={data} genus="alocasia" />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    name: data.scientificName,
+    description: data.aboutText,
+    about: {
+      "@type": "Thing",
+      name: data.scientificName,
+      alternateName: data.commonName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ariod Atlas",
+      url: "https://ariodatlas.com",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <PlantDetailPage data={data} genus="alocasia" />
+    </>
+  );
 }

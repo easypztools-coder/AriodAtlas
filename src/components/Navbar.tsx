@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { featuredPlants } from "@/lib/mock-data";
 
 export default function Navbar() {
@@ -13,6 +13,7 @@ export default function Navbar() {
   const [searchResults, setSearchResults] = useState<typeof featuredPlants>([]);
   const [showResults, setShowResults] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   const searchRef = useRef<HTMLDivElement>(null);
 
   // All plants data for search
@@ -69,9 +70,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Ariod Atlas"
-            width={120}
-            height={32}
-            className="h-8 w-auto"
+            width={150}
+            height={40}
+            className="h-10 w-auto"
             priority
           />
         </Link>
@@ -132,49 +133,18 @@ export default function Navbar() {
 
         {/* Nav Links (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
-          <Link href="/" className="nav-link-active">
+          <Link href="/plants" className={pathname.startsWith("/plants") ? "nav-link-active" : "nav-link"}>
             Explore
           </Link>
-          <Link href="/compare" className="nav-link">
+          <Link href="/compare" className={pathname === "/compare" ? "nav-link-active" : "nav-link"}>
             Compare
           </Link>
-          <Link href="/identify" className="nav-link">
+          <Link href="/identify" className={pathname === "/identify" ? "nav-link-active" : "nav-link"}>
             Identify
           </Link>
-          <Link href="/learn" className="nav-link">
+          <Link href="/learn" className={pathname === "/learn" ? "nav-link-active" : "nav-link"}>
             Learn
           </Link>
-        </div>
-
-        {/* Icon Buttons (Desktop) */}
-        <div className="hidden md:flex items-center gap-1">
-          <button className="icon-btn" aria-label="Bookmarks">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-              />
-            </svg>
-          </button>
-          <button className="icon-btn" aria-label="Notifications">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-              />
-            </svg>
-          </button>
-          <button className="icon-btn" aria-label="Profile">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-              />
-            </svg>
-          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -227,7 +197,7 @@ export default function Navbar() {
                 />
               </form>
               <Link
-                href="/"
+                href="/plants"
                 className="block rounded-lg px-3 py-2 text-sm font-medium text-heading transition hover:bg-primary/10"
                 onClick={() => setMobileMenuOpen(false)}
               >

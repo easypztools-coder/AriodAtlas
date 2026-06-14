@@ -163,11 +163,11 @@ export default function PlantDetailPage({
       <div className="lg:col-span-7 space-y-8">
         {/* Breadcrumbs */}
         <nav className="flex items-center gap-2 text-xs text-muted">
-          <Link href="/" className="hover:text-primary transition-colors">
-            Explore
+          <Link href="/plants" className="hover:text-primary transition-colors">
+            Species
           </Link>
           <span>/</span>
-          <Link href="/plants" className="hover:text-primary transition-colors">
+          <Link href={`/plants/${genus}`} className="hover:text-primary transition-colors">
             {genusLabel}
           </Link>
           <span>/</span>
@@ -352,9 +352,9 @@ export default function PlantDetailPage({
                 </div>
               ))}
             </div>
-            <button className="mt-5 w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-background transition hover:bg-primary/90">
+            <Link href="/learn" className="mt-5 block w-full rounded-xl bg-primary px-5 py-3 text-center text-sm font-semibold text-background transition hover:bg-primary/90">
               View Care Guide
-            </button>
+            </Link>
           </div>
 
           <div className="rounded-xl bg-card p-5">

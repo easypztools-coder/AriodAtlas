@@ -19,7 +19,7 @@ function PlantCard({
       transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
     >
       <Link
-        href={`/plants/philodendron/${plant.slug}`}
+        href={`/plants/${plant.genus.toLowerCase()}/${plant.slug}`}
         className="glass-card-glow group block overflow-hidden rounded-2xl"
       >
         {/* Image Container */}
@@ -53,17 +53,6 @@ function PlantCard({
               />
             </svg>
           </div>
-
-          {/* Top-right Save Icon */}
-          <button className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-lg bg-background/40 backdrop-blur-sm text-heading/60 opacity-0 transition-all duration-300 group-hover:opacity-100 hover:bg-primary/20 hover:text-primary">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-              />
-            </svg>
-          </button>
 
           {/* Bottom gradient overlay */}
           <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-card via-card/80 to-transparent" />

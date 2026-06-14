@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
+
+export const metadata: Metadata = {
+  title: "Anthurium Species — Velvet-Leafed Rainforest Jewels",
+  description:
+    "Browse Anthurium species and cultivars with detailed care profiles and live eBay UK price tracking. Warocqueanum, crystallinum, veitchii and more.",
+};
 
 interface PlantSummary {
   slug: string;
@@ -35,9 +42,7 @@ export default function AnthuriumPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <nav className="flex items-center gap-2 text-xs text-muted mb-8">
-        <Link href="/" className="hover:text-primary transition-colors">Explore</Link>
-        <span>/</span>
-        <Link href="/plants" className="hover:text-primary transition-colors">Plants</Link>
+        <Link href="/plants" className="hover:text-primary transition-colors">Species</Link>
         <span>/</span>
         <span className="text-heading">Anthurium</span>
       </nav>

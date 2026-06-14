@@ -1,0 +1,16 @@
+{
+  "name": "Ariod Atlas",
+  "short_name": "Ariod Atlas",
+  "description": "The visual encyclopedia of rare tropical plants",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0A0F0C",
+  "theme_color": "#C3D9A1",
+  "icons": [
+    {
+      "src": "/images/logo-mark.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

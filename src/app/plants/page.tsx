@@ -1,14 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { genera } from "@/lib/mock-data";
+
+export const metadata: Metadata = {
+  title: "Explore Aroids by Genus",
+  description:
+    "Browse thousands of aroid species across Monstera, Philodendron, Anthurium, Alocasia and more. Detailed profiles with live eBay UK market data.",
+};
 
 export default function PlantsPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading mb-4">
-        Species Database
+        Explore Aroids by Genus
       </h1>
       <p className="text-sm md:text-base text-muted max-w-2xl mb-12">
-        Explore the remarkable diversity of the Araceae family. Browse by genus to discover detailed profiles, market data, and cultivation information.
+        Select a genus below to browse species profiles, care data, and live market prices.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
