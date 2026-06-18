@@ -170,10 +170,11 @@ export default function PlantDetailPage({
     : { tier: data.priceGuideTier, label: getStaticTierLabel(data.priceGuideTier) };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 max-w-7xl mx-auto px-4 py-8 bg-background lg:items-start">
-      {/* ===== LEFT COLUMN (Cols 1-7) ===== */}
-      <div className="lg:col-span-7 space-y-8">
-        {/* Breadcrumbs */}
+    <div className="plant-detail-container">
+      <div className="plant-detail-grid">
+        {/* ===== LEFT COLUMN (Cols 1-7) ===== */}
+        <div className="plant-detail-main-col">
+          {/* Breadcrumbs */}
         <nav className="flex items-center gap-2 text-xs text-muted">
           <Link href="/plants" className="hover:text-primary transition-colors">
             Species
@@ -339,7 +340,7 @@ export default function PlantDetailPage({
           </div>
         </div>
 
-        {/* Field Notes by Aaron (Vintage Journal Style) */}
+        {/* Field Notes by Ariod Aaron (Vintage Journal Style) */}
         {data.fieldNotes && (
           <div className="relative overflow-hidden rounded-2xl bg-[#F4F0EA] border-2 border-[#E3DEC3] p-8 text-[#1A2421] shadow-lg">
             {/* Double-ruled notebook frame */}
@@ -371,7 +372,7 @@ export default function PlantDetailPage({
               <div className="mt-6 flex items-center justify-between text-xs text-[#8B9A92] font-body">
                 <span className="italic">Written at AroidAtlas research station</span>
                 <span className="font-semibold italic text-[#1A2421] font-heading text-sm">
-                  &mdash; Aaron
+                  &mdash; Ariod Aaron
                 </span>
               </div>
             </div>
@@ -380,7 +381,7 @@ export default function PlantDetailPage({
       </div>
 
       {/* ===== RIGHT SIDEBAR (Cols 8-10) ===== */}
-      <div className="lg:col-span-3 space-y-6 lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] lg:overflow-y-auto">
+      <div className="plant-detail-sidebar-col">
           <div className="rounded-xl bg-card p-5">
             <h3 className="mb-4 text-sm font-semibold text-heading">
               Quick Facts
@@ -474,8 +475,11 @@ export default function PlantDetailPage({
           </a>
       </div>
 
+      {/* Close the plant-detail-grid container */}
+      </div>
+
       {/* ===== BOTTOM FOOTPRINT: Recommended Plants ===== */}
-      <div className="lg:col-span-10 mt-4">
+      <div className="plant-detail-recommended-section">
         <h2 className="mb-5 text-lg font-heading font-bold text-heading">
           Recommended For You
         </h2>

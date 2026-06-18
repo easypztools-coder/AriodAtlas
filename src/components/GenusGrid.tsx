@@ -1,8 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { genera } from "@/lib/mock-data";
+
+const GENUS_REPRESENTATIVES: Record<string, { genus: string; slug: string }> = {
+  philodendron: { genus: "philodendron", slug: "spiritus-sancti" },
+  anthurium: { genus: "anthurium", slug: "delta-force" },
+  monstera: { genus: "monstera", slug: "devil-monster" },
+  alocasia: { genus: "alocasia", slug: "venom" },
+};
 
 function GenusCard({
   genus,
@@ -11,6 +19,8 @@ function GenusCard({
   genus: (typeof genera)[number];
   index: number;
 }) {
+  const representative = GENUS_REPRESENTATIVES[genus.slug];
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 30 }}
@@ -25,20 +35,35 @@ function GenusCard({
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-forest-deep via-card to-forest-dark" />
 
-        {/* Decorative SVG pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="h-full w-full" viewBox="0 0 200 200" fill="none">
-            <path
-              d="M100 180C100 180 50 130 50 80C50 40 75 20 100 15C125 20 150 40 150 80C150 130 100 180 100 180Z"
-              fill="currentColor"
-              opacity="0.3"
-              className="text-primary"
+        {representative ? (
+          <>
+            {/* Specimen image with zoom-on-hover */}
+            <Image
+              src={`/api/plant-image?genus=${representative.genus}&slug=${representative.slug}`}
+              alt={`${genus.name} representative`}
+              fill
+              className="object-cover object-center scale-[1.3] transition-all duration-700 ease-out group-hover:scale-[1.4] opacity-40 group-hover:opacity-60 filter brightness-90 group-hover:brightness-100"
+              sizes="(max-width: 768px) 256px, 288px"
             />
-          </svg>
-        </div>
+            {/* Premium spotlight reveal overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(17,26,21,0.5)_50%,rgba(17,26,21,0.95)_85%,#111A15_100%)] transition-all duration-700 ease-out group-hover:scale-105 pointer-events-none" />
+          </>
+        ) : (
+          /* Decorative SVG pattern for fallback (e.g. Homalomena) */
+          <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_center,rgba(195,217,161,0.12)_0%,transparent_70%)]">
+            <svg className="h-full w-full" viewBox="0 0 200 200" fill="none">
+              <path
+                d="M100 180C100 180 50 130 50 80C50 40 75 20 100 15C125 20 150 40 150 80C150 130 100 180 100 180Z"
+                fill="currentColor"
+                opacity="0.3"
+                className="text-primary"
+              />
+            </svg>
+          </div>
+        )}
 
         {/* Content */}
-        <div className="relative mt-auto p-6">
+        <div className="relative mt-auto p-6 z-10 bg-gradient-to-t from-forest-dark via-forest-dark/40 to-transparent pt-12">
           <h3 className="text-lg font-heading font-bold text-heading group-hover:text-primary transition-colors duration-300">
             {genus.name}
           </h3>
@@ -63,7 +88,7 @@ function GenusCard({
 
 export default function GenusGrid() {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative section-spacing overflow-hidden">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

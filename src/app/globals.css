@@ -81,4 +81,34 @@
   .section-container {
     @apply mx-auto max-w-7xl px-6;
   }
+
+  /* Unified global spacing classes to minimize dead space */
+  .section-spacing {
+    @apply py-12 md:py-16;
+  }
+
+  .section-spacing-tighter {
+    @apply py-8 md:py-12;
+  }
+
+  /* Plant Detail page specific layouts */
+  .plant-detail-container {
+    @apply max-w-7xl mx-auto px-4 py-6 md:py-8 bg-background;
+  }
+
+  .plant-detail-grid {
+    @apply grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8 lg:items-start;
+  }
+
+  .plant-detail-main-col {
+    @apply lg:col-span-7 space-y-6 md:space-y-8;
+  }
+
+  .plant-detail-sidebar-col {
+    @apply lg:col-span-3 space-y-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto pr-1;
+  }
+
+  .plant-detail-recommended-section {
+    @apply mt-10 border-t border-primary/10 pt-8;
+  }
 }

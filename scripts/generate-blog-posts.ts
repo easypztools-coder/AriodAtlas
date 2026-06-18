@@ -45,7 +45,7 @@ async function generateBlogForPlant(plantName: string, scientificName: string, a
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
   const promptText = `
-You are Aaron, a passionate botanical explorer and blogger for Aroid Atlas.
+You are Ariod Aaron, a passionate botanical explorer and blogger for Aroid Atlas.
 Your task is to write a short, authentic, and highly believable "Field Notes" blog entry for the tropical plant: ${plantName} (${scientificName}).
 
 STYLE & TONE:
@@ -141,7 +141,7 @@ async function main() {
       plantData.fieldNotes = {
         title: blogData.title,
         date: blogData.date,
-        author: "Aaron",
+        author: "Ariod Aaron",
         content: blogData.content
       };
 

@@ -66,7 +66,7 @@ export default function FeaturedSpecies() {
   const displayPlants = featuredPlants.slice(0, 4);
 
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative section-spacing">
       <div className="section-container">
         {/* Section Header */}
         <motion.div

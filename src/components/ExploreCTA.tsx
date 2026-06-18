@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ExploreCTA() {
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative section-spacing">
       <div className="section-container">
         <div className="glass-card-glow overflow-hidden rounded-3xl p-8 md:p-14 text-center">
           <h2 className="section-heading">Explore the Full Database</h2>

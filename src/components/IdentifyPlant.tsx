@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function IdentifyPlant() {
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative section-spacing">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

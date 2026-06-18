@@ -88,15 +88,18 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-mark.png"
             alt="Ariod Atlas"
-            width={150}
-            height={40}
-            className="h-10 w-auto"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105"
             priority
           />
+          <span className="font-heading font-bold text-lg tracking-widest text-heading uppercase transition-colors duration-300 group-hover:text-primary">
+            Ariod Atlas
+          </span>
         </Link>
 
         {/* Search Bar (Desktop) */}

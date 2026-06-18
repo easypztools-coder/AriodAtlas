@@ -128,7 +128,7 @@ function main() {
       plantData.fieldNotes = {
         title: post.title,
         date: post.date,
-        author: "Aaron",
+        author: "Ariod Aaron",
         content: post.content
       };
       fs.writeFileSync(filePath, JSON.stringify(plantData, null, 2), "utf-8");

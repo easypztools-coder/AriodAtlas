@@ -12,7 +12,7 @@ const stages = [
 
 export default function MaturityJourney() {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative section-spacing overflow-hidden">
       {/* Subtle background decoration */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-deep/50 via-transparent to-forest-deep/50" />
 
