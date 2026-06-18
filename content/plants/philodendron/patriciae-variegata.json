@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron patriciae 'Variegata'",
+  "slug": "patriciae-variegata",
+  "scientificName": "Philodendron patriciae 'Variegata'",
+  "commonName": "Variegated Patriciae Philodendron",
+  "statusTag": "Rare Variegated Cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "patriciae",
+  "origin": "Colombia (cultivated collector selection)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Philodendron patriciae 'Variegata' is a highly coveted variegated form of the Colombian species, prized for its extraordinary pendant leaves that can grow 50-100 cm or more in length. It features a unique corrugated and quilted texture between the veins and a prominent pale midrib. The variegation displays as stunning cream to yellow sectors, marbling, or mottling over the deep green foliage. It is a vigorous climber that thrives in warm, humid conditions with vertical support.",
+  "quickFacts": {
+    "growthHabit": "Climbing vine with aerial roots",
+    "matureSize": "50–100 cm leaf length",
+    "light": "Bright, indirect filter",
+    "humidity": "70% or above",
+    "temperature": "18 - 28°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Extraordinarily elongated, narrow pendant shape",
+    "leafLength": "50–100 cm",
+    "leafWidth": "10–20 cm",
+    "petioleColor": "Green",
+    "venation": "Quilted with pronounced pale midrib",
+    "texture": "Strongly corrugated and quilted",
+    "variegation": "Cream to yellow sectors and marbling",
+    "growthHabit": "Climbing with elongated internodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron patriciae",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "philodendron patriciae",
+      "variegated patriciae",
+      "patriciae variegata",
+      "philodendron patriciae variegata"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm",
+      "poster", "print", "book", "magazine", "care guide",
+      "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole",
+      "pot only", "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Monstera 'Burle Marx Flame'",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "deliciosa",
+  "cultivar": "Burle Marx Flame",
+  "morphology": {
+    "leaf_shape": "Elongated, narrow, flame-like leaves with dramatic, deep internal fenestrations and thick lobes resembling ribs",
+    "leaf_ratio": "Distinctly longer than wide, approximately 3:1 to 4:1 length-to-width ratio",
+    "texture": "Smooth, glossy, and firm (coriaceous) leaf substance",
+    "petiole": "Green, relatively slender, cylindrical, and sturdy",
+    "growth_habit": "Climbing hemiepiphyte with a graceful, sculptural habit, producing thick aerial roots from nodes",
+    "mature_size": "Overall leaf length 40–70 cm; petioles 30–50 cm; mature height up to 1.5 meters when supported"
+  },
+  "critical_traits": [
+    "Elongated, narrow leaves with deep, flame-like lobing and internal fenestrations resembling ribs",
+    "Solid deep green foliage with a smooth, glossy texture and no variegation",
+    "Slender green petioles without wings or sheath wrapping",
+    "Thick, stubby aerial roots emerging from the nodes",
+    "Graceful, upright climbing growth habit requiring vertical support"
+  ],
+  "negative_traits": [
+    "Variegated foliage (no mint, white, yellow sectoral or marbled patterns)",
+    "Entire leaf margins without any fenestrations or lobes",
+    "Perfectly heart-shaped (cordate) leaves with no holes",
+    "Velvety, matte, or hairy (pubescent) leaf surfaces",
+    "Wide, heavily winged petioles"
+  ],
+  "habitat": "Cultivated tropical climbing aroid; best grown in warm, humid understory-like conditions with bright indirect light and vertical support. Ecologically consistent with rainforest hemiepiphyte Monstera species.",
+  "origin": "Horticultural cultivar associated with Brazilian aroid cultivation; exact original selection history is debated in cultivation."
+}

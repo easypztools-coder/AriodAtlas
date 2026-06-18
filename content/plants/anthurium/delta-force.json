@@ -80,8 +80,8 @@
     "marketCurrency": "GBP"
   },
   "recommendedPlants": [
-    { "name": "Anthurium clarinervium", "slug": "clarinervium", "rarity": "Uncommon", "price": "££" },
-    { "name": "Anthurium crystallinum", "slug": "crystallinum", "rarity": "Uncommon", "price": "££" },
-    { "name": "Anthurium warocqueanum", "slug": "warocqueanum", "rarity": "Very Rare", "price": "£££" }
+    { "name": "Anthurium 'Ace of Spades' Variegata", "slug": "ace-of-spades-variegata", "rarity": "Very Rare", "price": "£££" },
+    { "name": "Anthurium luxurians 'Variegata'", "slug": "luxurians-variegata", "rarity": "Ultra Rare", "price": "££££" },
+    { "name": "Anthurium papillilaminum 'Variegata'", "slug": "papillilaminum-variegata", "rarity": "Very Rare", "price": "£££" }
   ]
 }

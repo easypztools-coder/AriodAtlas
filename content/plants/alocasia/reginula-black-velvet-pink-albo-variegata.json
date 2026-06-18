@@ -1,0 +1,81 @@
+{
+  "name": "Alocasia reginula 'Black Velvet' Pink Albo Variegata",
+  "slug": "reginula-black-velvet-pink-albo-variegata",
+  "scientificName": "Alocasia reginula 'Black Velvet' Pink Albo Variegata",
+  "commonName": "Alocasia Black Velvet Pink Albo Variegata",
+  "statusTag": "Extremely Rare Cultivar",
+  "family": "Araceae",
+  "genus": "Alocasia",
+  "species": "reginula 'Black Velvet' Pink Albo Variegata",
+  "origin": "Species native to Borneo; this pink-albo variegated form is a rare cultivated collector selection.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Alocasia reginula 'Black Velvet' Pink Albo Variegata is a highly sought-after aroid cultivar, originating from Borneo where the species thrives as a humid tropical understory plant. This specific variegated form is a rare collector's selection, distinguished by its striking foliage. The plant features thick, velvety, almost black sagittate to heart-shaped leaves, adorned with vibrant blush pink, white, and dark green marbling or sectoral variegation patches. It maintains a compact, upright, and self-heading growth habit, supported by relatively short, reddish petioles and crisp silver venation, making it a truly unique specimen.",
+  "quickFacts": {
+    "growthHabit": "Compact, upright, self-heading",
+    "matureSize": "Small to Medium",
+    "light": "Bright indirect light",
+    "humidity": "High humidity",
+    "temperature": "Prefers warmth",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Sagittate to heart-shaped",
+    "leafLength": "Medium",
+    "leafWidth": "Medium",
+    "petioleColor": "Reddish pink",
+    "venation": "Striking pale silver-white, crisp silver",
+    "texture": "Thick, velvety",
+    "variegation": "Blush pink, white, dark green marbling or sectoral patches",
+    "growthHabit": "Compact, self-heading"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Alocasia reginula Black Velvet Pink Albo Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Alocasia Pink Albo",
+      "Alocasia Black Velvet Variegata",
+      "Alocasia reginula Variegata",
+      "Pink Albo Alocasia Black Velvet",
+      "Alocasia Black Velvet Pink Variegated"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

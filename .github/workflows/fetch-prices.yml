@@ -22,65 +22,34 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Resolve plant slugs
-        id: slugs
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch and update prices
+        env:
+          SOLDCOMPS_API_KEY: ${{ secrets.SOLDCOMPS_API_KEY }}
         run: |
-          INPUT="${{ github.event.inputs.plants }}"
-          if [ -n "$INPUT" ]; then
-            echo "slugs=$INPUT" >> $GITHUB_OUTPUT
+          PLANTS="${{ github.event.inputs.plants }}"
+          if [ -n "$PLANTS" ]; then
+            npm run fetch-prices -- --plants="$PLANTS"
           else
-            # Auto-discover all plant JSONs with priceTracking.enabled = true
-            DISCOVERED=$(find content/plants -name "*.json" | \
-              xargs grep -l '"enabled": true' | \
-              xargs -I{} jq -r 'select(.priceTracking.enabled == true) | .slug' {} | \
-              paste -sd ',' -)
-            echo "slugs=$DISCOVERED" >> $GITHUB_OUTPUT
-            echo "Auto-discovered slugs: $DISCOVERED"
+            npm run fetch-prices
           fi
 
-      - name: Call admin price update endpoint
-        env:
-          ADMIN_PRICE_SECRET: ${{ secrets.ADMIN_PRICE_SECRET }}
-        run: |
-          PLANTS="${{ steps.slugs.outputs.slugs }}"
-          SITE_URL="${VERCEL_URL:-https://ariod-atlas.vercel.app}"
-
-          mkdir -p content/price-snapshots
-
-          IFS=',' read -ra SLUGS <<< "$PLANTS"
-          for slug in "${SLUGS[@]}"; do
-            slug=$(echo "$slug" | xargs)  # trim whitespace
-            echo "Fetching prices for: $slug"
-
-            RESPONSE=$(curl -s "$SITE_URL/api/admin/prices/update?slug=$slug&secret=$ADMIN_PRICE_SECRET")
-
-            if [ "$(echo "$RESPONSE" | jq -r '.success')" = "true" ]; then
-              echo "  ✓ Success: $(echo "$RESPONSE" | jq -r '.acceptedCount') accepted, $(echo "$RESPONSE" | jq -r '.rejectedCount') rejected"
-
-              mkdir -p "content/price-snapshots/$slug"
-
-              TIMESTAMP=$(echo "$RESPONSE" | jq -r '.snapshot.checkedAt' | tr ':.' '--')
-
-              echo "$RESPONSE" | jq '{snapshot: .snapshot, stats: .stats, acceptedListings: .acceptedListings, acceptedCount: .acceptedCount, rejectedCount: .rejectedCount, rejectionBreakdown: .rejectionBreakdown}' \
-                > "content/price-snapshots/$slug/$TIMESTAMP.json"
-
-              cp "content/price-snapshots/$slug/$TIMESTAMP.json" "content/price-snapshots/$slug/latest.json"
-
-              echo "  ✓ Saved snapshot to content/price-snapshots/$slug/"
-            else
-              ERROR=$(echo "$RESPONSE" | jq -r '.error // "Unknown error"')
-              echo "  ✗ Failed for $slug: $ERROR"
-            fi
-          done
-
-      - name: Commit and push snapshot data
+      - name: Commit and push changes
         run: |
           git config --local user.email "bot@ariod-atlas.com"
           git config --local user.name "Ariod Atlas Bot"
-          git add content/price-snapshots/
+          git add content/price-snapshots/ content/plants/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update price snapshots [skip ci]"
+            git commit -m "chore: update sold price data [skip ci]"
             git push
           fi

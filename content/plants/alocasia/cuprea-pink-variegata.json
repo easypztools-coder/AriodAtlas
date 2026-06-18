@@ -1,0 +1,82 @@
+{
+  "name": "Alocasia cuprea 'Pink Variegata'",
+  "slug": "cuprea-pink-variegata",
+  "scientificName": "Alocasia cuprea 'Pink Variegata'",
+  "commonName": "Pink Variegata Alocasia Cuprea",
+  "statusTag": "Rare Variegata Cultivar",
+  "family": "Araceae",
+  "genus": "Alocasia",
+  "species": "cuprea 'Pink Variegata'",
+  "origin": "Species native to Borneo; this pink-variegated form is an uncommon collector selection.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "The Alocasia cuprea 'Pink Variegata' is a striking cultivar of the species native to Borneo, cherished as an uncommon collector's selection due to its unique coloration. This plant is characterized by its metallic, shield-like, bullate leaves that boast a coppery sheen and thick texture. The variegated form displays a stunning blend of pink, cream, and dark green marbling or sectoral patterning, while maintaining the distinctive metallic appearance of Alocasia cuprea. Thriving as a humid tropical understory aroid, it prefers environments with warmth, high humidity, and bright, indirect light within a porous, free-draining substrate.",
+  "quickFacts": {
+    "growthHabit": "Compact, corm-forming, understory aroid",
+    "matureSize": "Medium (up to 60cm height)",
+    "light": "Bright indirect light",
+    "humidity": "High (60-80%)",
+    "temperature": "Warm (18-28°C)",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Shield-like, bullate",
+    "leafLength": "20-40cm",
+    "leafWidth": "15-25cm",
+    "petioleColor": "Reddish-brown",
+    "venation": "Prominent, recessed",
+    "texture": "Metallic, bullate, thick",
+    "variegation": "Pink, cream, and dark green marbling/sectoral",
+    "growthHabit": "Compact and corm-forming"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Alocasia cuprea Pink Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Alocasia cuprea Pink Variegata",
+      "Alocasia Pink Variegata cuprea",
+      "Alocasia Pink Variegated cuprea",
+      "Pink Variegated Alocasia cuprea",
+      "Pink Alocasia cuprea",
+      "Alocasia 'Pink Variegata'"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

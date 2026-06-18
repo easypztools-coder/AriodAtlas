@@ -5,20 +5,41 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
-import { featuredPlants } from "@/lib/mock-data";
 import { getStaticTierLabel } from "@/lib/prices/priceRarityTier";
+
+interface SearchPlant {
+  slug: string;
+  name: string;
+  scientificName: string;
+  commonName: string;
+  genus: string;
+  rarityStatus: string;
+  priceGuideTier: string;
+}
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<typeof featuredPlants>([]);
+  const [searchResults, setSearchResults] = useState<SearchPlant[]>([]);
   const [showResults, setShowResults] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const searchRef = useRef<HTMLDivElement>(null);
 
-  // All plants data for search
-  const allPlants = featuredPlants;
+  const [allPlants, setAllPlants] = useState<SearchPlant[]>([]);
+
+  useEffect(() => {
+    fetch("/api/plants")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setAllPlants(data);
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load search index:", err);
+      });
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {

@@ -1,5 +1,8 @@
 import spiritusSanctiData from "../../content/plants/philodendron/spiritus-sancti.json";
 import billietiaeData from "../../content/plants/philodendron/billietiae-variegated.json";
+import deltaForceData from "../../content/plants/anthurium/delta-force.json";
+import venomData from "../../content/plants/alocasia/venom.json";
+import devilMonsterData from "../../content/plants/monstera/devil-monster.json";
 
 export interface PlantEntry {
   name: string;
@@ -49,30 +52,30 @@ export const featuredPlants: PlantEntry[] = [
     imageSlug: "spiritus-sancti",
   },
   {
-    name: "Anthurium warocqueanum",
-    slug: "warocqueanum",
-    scientificName: "Anthurium warocqueanum",
-    commonName: "Queen Anthurium",
+    name: "Anthurium 'Delta Force'",
+    slug: "delta-force",
+    scientificName: "Anthurium clarinervium × pedatoradiatum 'Delta Force'",
+    commonName: "Delta Force Anthurium",
     genus: "Anthurium",
-    origin: "Colombia",
-    rarityStatus: "Very Rare",
-    priceGuideTier: "£££",
+    origin: "Miami, Florida, USA",
+    rarityStatus: "Rare",
+    priceGuideTier: deltaForceData.priceGuideTier,
     description:
-      "Regal anthurium with large, velvety dark green leaves and striking silver venation. A crown jewel of any aroid collection, demanding high humidity and careful cultivation.",
-    imageSlug: "warocqueanum",
+      "A deliberate hybrid featuring velvet dark-green deltoid leaves with high-contrast bright white venation. A compact architectural masterpiece created by Steve Nock.",
+    imageSlug: "delta-force",
   },
   {
-    name: "Monstera burle marx flame",
-    slug: "burle-marx-flame",
-    scientificName: "Monstera burle marx flame",
-    commonName: "Burle Marx Flame",
+    name: "Monstera 'Devil Monster'",
+    slug: "devil-monster",
+    scientificName: "Monstera 'Devil Monster'",
+    commonName: "Devil Monster Monstera",
     genus: "Monstera",
-    origin: "Brazil",
+    origin: "China (natural mutation) / Thailand (rebranded 2024)",
     rarityStatus: "Rare",
-    priceGuideTier: "£££",
+    priceGuideTier: devilMonsterData.priceGuideTier,
     description:
-      "A highly sought-after Monstera with unique flame-patterned variegation and elongated leaves. Named after the legendary Brazilian landscape architect Roberto Burle Marx.",
-    imageSlug: "burle-marx-flame",
+      "A unique cultivated variety featuring mint-coloured variegation on deeply lobed, rigid leaves. Gained prominence in Thailand in 2024.",
+    imageSlug: "devil-monster",
   },
   {
     name: "Philodendron billietiae 'Variegated'",
@@ -88,17 +91,17 @@ export const featuredPlants: PlantEntry[] = [
     imageSlug: "billietiae-variegated",
   },
   {
-    name: "Anthurium luxurians",
-    slug: "luxurians",
-    scientificName: "Anthurium luxurians",
-    commonName: "Luxuriant Anthurium",
-    genus: "Anthurium",
-    origin: "Colombia",
-    rarityStatus: "Uncommon",
-    priceGuideTier: "££",
+    name: "Alocasia × amazonica 'Venom'",
+    slug: "venom",
+    scientificName: "Alocasia × amazonica 'Venom'",
+    commonName: "Venom Alocasia",
+    genus: "Alocasia",
+    origin: "South Korea (Mason Plants, 2019)",
+    rarityStatus: "Rare",
+    priceGuideTier: venomData.priceGuideTier,
     description:
-      "Known for its incredibly bullate (blistered) leaf texture and dark green coloration. A textural masterpiece that brings depth and dimension to any collection.",
-    imageSlug: "luxurians",
+      "A spontaneous mutation of Alocasia amazonica with a distinctive elongated, curling fang-like leaf tip and a soft, matte silvery-green coloration.",
+    imageSlug: "venom",
   },
 ];
 

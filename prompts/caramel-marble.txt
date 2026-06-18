@@ -1,0 +1,149 @@
+AROIDATLAS BOTANICAL PLATE — Philodendron 'Caramel Marble'
+
+Create a premium, museum-quality botanical plate of Philodendron 'Caramel Marble' suitable for a luxury digital encyclopedia of rare tropical plants. The layout must match a classic 19th-century scientific natural history illustration.
+- **Aspect Ratio:** Portrait (3:4) to match existing plates.
+
+STYLE REQUIREMENTS
+
+- Scientific botanical illustration
+- Natural history museum quality
+- Photorealistic rendering
+- Botanical accuracy prioritized over aesthetics
+- Cream archival paper background with subtle paper fiber texture
+- Elegant editorial layout with a thin black double-ruled border framing the entire page
+- Premium field-guide aesthetic with balanced composition and clean alignment
+- Soft, diffused studio lighting casting subtle natural shadows
+- No fantasy elements or modern artistic liberties
+
+LAYOUT & STRUCTURE
+
+1. Title Section (Top):
+   - Two lines of centered text at the very top:
+     "AROIDATLAS BOTANICAL PLATE —" in small caps, elegant modern sans-serif.
+     "Philodendron 'Caramel Marble'" in a large, elegant, bold serif font (italicized).
+   - A delicate horizontal separator line (a thin black line with a central diamond/dot accent) immediately below the title.
+
+2. Left Information Panel (Bordered Column):
+   - Framed by a thin, elegant double-lined rectangular box with decorative ornate corners.
+   - Contains the following sections separated by thin horizontal line dividers with a central diamond accent:
+     - **SCIENTIFIC NAME**: in small-caps bold sans-serif, with "Philodendron 'Caramel Marble'" (in serif italics) below it.
+     - **FAMILY**: in small-caps bold sans-serif, with "Araceae" below it.
+     - **GENUS**: in small-caps bold sans-serif, with "Philodendron" (in italics) below it.
+     - **SPECIES / CULTIVAR**: in small-caps bold sans-serif, with "Caramel Marble cultivar" below it.
+     - **ORIGIN**: in small-caps bold sans-serif, with a detailed description below: "Cultivated selection/hybrid mutation, widely propagated in specialized collections globally."
+     - **Botanical Line Art**: At the very bottom of this left box, a small, subtle black-and-white vintage line engraving of a generic plant or leaf structure.
+
+3. Central Specimen:
+   - A large, highly detailed, photorealistic botanical illustration of a mature Philodendron 'Caramel Marble' plant, occupying 60% of the composition.
+   - Show foliage at various stages of maturity, depicting correct leaf margins, color variation, and variegation.
+   - Correctly drawn sturdy petioles and central stem showing aerial roots.
+
+4. Right Information Panel (Morphology Callouts):
+   - A vertical column of 4 circular callouts with thin black borders, each showing a high-detail close-up morphology drawing.
+   - Each circle must be labeled with small, elegant lowercase text above it:
+     - "leaf detail": showing variegation and texture details.
+     - "petiole detail": showing cross-section/texture/color of the leaf stalk.
+     - "aerial roots": showing roots growing from the node.
+     - "inflorescence": showing spadix and spathe.
+
+5. Lower Panel (Horizontal Box):
+   - A wide, thin-bordered horizontal box at the bottom, divided into 3 equal-width columns by thin vertical lines:
+     - **HABITAT**:
+       - Title: "HABITAT" in small-caps bold sans-serif.
+       - Description: "Cultivated mutation originally selected from Philodendron hybridization. Thrives in high humidity (60–85%), warm temperatures (18–28°C), and bright indirect light to preserve and stimulate the colorful variegation patterns."
+       - A small, detailed black-and-white vintage landscape engraving of a tropical rainforest floor/understory at the bottom of the column.
+     - **NATIVE RANGE**:
+       - Title: "NATIVE RANGE" in small-caps bold sans-serif.
+       - A simple, minimalist black-and-white outline map of the world in the center, with a small highlighted region or indicator dot showing the native origins.
+       - Description text below: "No confirmed wild native range. A cultivated selection of hybrid origin."
+     - **MORPHOLOGY SUMMARY**:
+       - Title: "MORPHOLOGY SUMMARY" in small-caps bold sans-serif.
+       - Description: A detailed summary paragraph of the species morphology, including growth habit, leaf shape, margins, coloration, mature size, and identifying botanical markers.
+
+6. Footer (Bottom-most margin):
+   - printed in a tiny, clean sans-serif typeface outside and below the lower panel:
+     - Left: "PLATE No. 3684"
+     - Center: "AROIDS OF CULTIVATION"
+     - Right: "ILLUSTRATED FOR AROIDATLAS"
+     - Far Lower Right Corner: A discreet watermark consisting of the text "AROIDATLAS" in a clean, modern sans-serif typeface.
+
+--------------------------------
+
+SPECIES MORPHOLOGY
+
+--------------------------------
+
+BOTANICAL ACCURACY REQUIREMENTS
+
+Critical identifying traits for Philodendron 'Caramel Marble':
+
+- Deeply serrated or pinnately lobed leaf margins, resembling a jagged saw-tooth edge
+- Highly variegated foliage featuring marbled, sectoral, and speckled patterns of caramel, orange, bronze, yellow, cream, and forest green
+- Thick, leathery, coriaceous leaf texture that is stiff to the touch
+- Glossy adaxial leaf finish reflecting studio light
+- Long, sturdy reddish-brown or dark maroon petioles
+- Elongated narrow-oblong to lanceolate leaf blade shape
+
+Morphology:
+
+Leaf Shape:
+Deeply serrated to pinnately lobed margins with saw-tooth edges, lanceolate to narrow-oblong blade shape
+
+Leaf Ratio:
+Elongated leaves, approximately 4:1 to 6:1 length-to-width ratio (leaves 30–60 cm long × 8–15 cm wide)
+
+Texture:
+Thick, leathery (coriaceous), stiff, with a glossy waxy sheen on the adaxial surface
+
+Petiole:
+Long, sturdy, cylindrical, colored deep reddish-brown to dark green, slightly winged at the base
+
+Growth Habit:
+Slow-growing, self-heading when young, transitioning to a slow climbing/scandent habit with age, producing thick aerial roots
+
+Mature Size:
+Overall leaf length 30–60 cm; petioles 25–40 cm; mature height up to 1.2 meters when supported
+
+Origin:
+Cultivated selection/hybrid mutation, widely propagated in specialized collections globally.
+
+Habitat:
+Cultivated mutation originally selected from Philodendron hybridization. Thrives in high humidity (60–85%), warm temperatures (18–28°C), and bright indirect light to preserve and stimulate the colorful variegation patterns.
+
+The specimen of Philodendron 'Caramel Marble' should immediately be recognizable to an experienced collector.
+
+Failure to accurately reproduce species-defining morphology should be considered incorrect.
+
+--------------------------------
+
+NEGATIVE CONSTRAINTS
+
+--------------------------------
+
+Do not generate:
+
+- Entire leaf margins without serrations or lobes
+- Solid green leaves with no variegation
+- Fenestrations or holes in the leaf blades
+- Thin, papery, or membranous leaf texture
+- Perfectly symmetrical or simple cordate leaf shapes
+- Winged petioles that wrap around the stem like a sheath
+- Soft, velvety, or pubescent leaf surfaces
+
+--------------------------------
+
+FINAL REQUIREMENT
+
+--------------------------------
+
+Botanical accuracy is the highest priority.
+
+The illustration style may be stylized.
+
+The morphology must remain faithful to real specimens.
+
+
+
+REFERENCE IMAGE (if provided)
+
+If a reference image of the actual plant is attached, use it as a strict visual guide for morphology, proportions, and colouration. The generated plate must match the reference specimen closely.

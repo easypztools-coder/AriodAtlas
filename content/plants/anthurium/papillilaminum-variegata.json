@@ -1,0 +1,80 @@
+{
+  "name": "Anthurium papillilaminum 'Variegata'",
+  "slug": "papillilaminum-variegata",
+  "scientificName": "Anthurium papillilaminum 'Variegata'",
+  "commonName": "Variegated Papillilaminum Anthurium",
+  "statusTag": "Rare Variegata Cultivar",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "papillilaminum 'Variegata'",
+  "origin": "Species native to Panama; this variegated form is a cultivated collector selection.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "The Anthurium papillilaminum 'Variegata' is a cultivated collector selection, originating from the species native to Panama. This striking tropical humid forest understory aroid thrives in warmth, high humidity, bright indirect light, and an airy substrate. Its velvety, cordate to elongated-cordate leaves feature a deep basal sinus and a dark green to near-black lamina. The plant displays captivating irregular cream to yellow marbling or sectoral variegation, along with subtle venation and a graceful growth habit. Slender petioles support the softly textured foliage, from which aerial roots emerge.",
+  "quickFacts": {
+    "growthHabit": "Terrestrial",
+    "matureSize": "Medium",
+    "light": "Bright Indirect",
+    "humidity": "High",
+    "temperature": "Warm",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate to elongated-cordate",
+    "leafLength": "",
+    "leafWidth": "",
+    "petioleColor": "Green",
+    "venation": "Subtle",
+    "texture": "Softly velvety",
+    "variegation": "Irregular cream/yellow marbling or sectoral",
+    "growthHabit": "Terrestrial, graceful habit"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium papillilaminum Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium pap 'Variegata'",
+      "Anthurium papillilaminum V",
+      "Variegated Anthurium pap",
+      "Anthurium papillilaminum variegated"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Philodendron ilsemannii 'Variegata'",
+  "slug": "ilsemannii-variegata",
+  "scientificName": "Philodendron ilsemannii 'Variegata'",
+  "commonName": "Ilsemannii Variegata Philodendron",
+  "statusTag": "Rare Variegata Cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "ilsemannii 'Variegata'",
+  "origin": "Cultivated variegated form of a tropical American Philodendron, now chiefly known from specialist collector cultivation and Southeast Asian propagation.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Philodendron ilsemannii 'Variegata' is a highly sought-after cultivated variegated form originating from tropical America, now chiefly propagated by specialist collectors in Southeast Asia. This climbing Philodendron is prized for its striking marbled variegation, presenting elongated, oblong to ovate leaves with an acute tip. The foliage displays irregular splashes of cream, yellow, and green, beautifully complemented by green and slender petioles. It thrives in warm, humid understory-like conditions with bright indirect light and requires vertical support. This rare cultivar is a prized possession in advanced aroid collections.",
+  "quickFacts": {
+    "growthHabit": "Climbing Aroid",
+    "matureSize": "Large",
+    "light": "Bright Indirect Light",
+    "humidity": "High",
+    "temperature": "Warm",
+    "difficulty": "Moderate",
+    "growthSpeed": "Medium"
+  },
+  "morphology": {
+    "leafShape": "Elongated, oblong to ovate with an acute tip",
+    "leafLength": "Long",
+    "leafWidth": "Medium",
+    "petioleColor": "Green",
+    "venation": "Pinnate",
+    "texture": "Smooth",
+    "variegation": "Striking marbled variegation with irregular splashes of cream, yellow, and green",
+    "growthHabit": "Climbing"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron ilsemannii Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron ilsemannii",
+      "ilsemannii Variegata",
+      "Ilsemanii Variegata Philodendron",
+      "Philo ilsemannii Variegata",
+      "Philo ilsemanii",
+      "Philo ilsemanni variegated"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

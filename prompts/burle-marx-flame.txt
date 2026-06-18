@@ -1,6 +1,6 @@
-AROIDATLAS BOTANICAL PLATE — [PLANT NAME]
+AROIDATLAS BOTANICAL PLATE — Monstera 'Burle Marx Flame'
 
-Create a premium, museum-quality botanical plate of [PLANT NAME] suitable for a luxury digital encyclopedia of rare tropical plants. The layout must match a classic 19th-century scientific natural history illustration.
+Create a premium, museum-quality botanical plate of Monstera 'Burle Marx Flame' suitable for a luxury digital encyclopedia of rare tropical plants. The layout must match a classic 19th-century scientific natural history illustration.
 
 STYLE REQUIREMENTS
 
@@ -11,7 +11,7 @@ STYLE REQUIREMENTS
 - Cream archival paper background with subtle paper fiber texture
 - Elegant editorial layout with a thin black double-ruled border framing the entire page
 - Premium field-guide aesthetic with balanced composition and clean alignment
-- Diffused, soft studio lighting casting subtle natural shadows
+- Soft, diffused studio lighting casting subtle natural shadows
 - No fantasy elements or modern artistic liberties
 
 LAYOUT & STRUCTURE
@@ -19,21 +19,21 @@ LAYOUT & STRUCTURE
 1. Title Section (Top):
    - Two lines of centered text at the very top:
      "AROIDATLAS BOTANICAL PLATE —" in small caps, elegant modern sans-serif.
-     "[PLANT NAME]" in a large, elegant, bold serif font (italicized).
+     "Monstera 'Burle Marx Flame'" in a large, elegant, bold serif font (italicized).
    - A delicate horizontal separator line (a thin black line with a central diamond/dot accent) immediately below the title.
 
 2. Left Information Panel (Bordered Column):
    - Framed by a thin, elegant double-lined rectangular box with decorative ornate corners.
    - Contains the following sections separated by thin horizontal line dividers with a central diamond accent:
-     - **SCIENTIFIC NAME**: in small-caps bold sans-serif, with "[SCIENTIFIC NAME]" (in serif italics) below it.
-     - **FAMILY**: in small-caps bold sans-serif, with "[FAMILY]" below it.
-     - **GENUS**: in small-caps bold sans-serif, with "[GENUS]" (in italics) below it.
-     - **SPECIES / CULTIVAR**: in small-caps bold sans-serif, with "[SPECIES OR CULTIVAR]" below it.
-     - **ORIGIN**: in small-caps bold sans-serif, with a detailed description below: "[ORIGIN]"
+     - **SCIENTIFIC NAME**: in small-caps bold sans-serif, with "Monstera 'Burle Marx Flame'" (in serif italics) below it.
+     - **FAMILY**: in small-caps bold sans-serif, with "Araceae" below it.
+     - **GENUS**: in small-caps bold sans-serif, with "Monstera" (in italics) below it.
+     - **SPECIES / CULTIVAR**: in small-caps bold sans-serif, with "Burle Marx Flame cultivar" below it.
+     - **ORIGIN**: in small-caps bold sans-serif, with a detailed description below: "Horticultural cultivar associated with Brazilian aroid cultivation; exact original selection history is debated in cultivation."
      - **Botanical Line Art**: At the very bottom of this left box, a small, subtle black-and-white vintage line engraving of a generic plant or leaf structure.
 
 3. Central Specimen:
-   - A large, highly detailed, photorealistic botanical illustration of a mature [PLANT NAME] plant, occupying 60% of the composition.
+   - A large, highly detailed, photorealistic botanical illustration of a mature Monstera 'Burle Marx Flame' plant, occupying 60% of the composition.
    - Show foliage at various stages of maturity, depicting correct leaf margins, color variation, and variegation.
    - Correctly drawn sturdy petioles and central stem showing aerial roots.
 
@@ -49,20 +49,20 @@ LAYOUT & STRUCTURE
    - A wide, thin-bordered horizontal box at the bottom, divided into 3 equal-width columns by thin vertical lines:
      - **HABITAT**:
        - Title: "HABITAT" in small-caps bold sans-serif.
-       - Description: "[HABITAT SUMMARY]"
+       - Description: "Cultivated tropical climbing aroid; best grown in warm, humid understory-like conditions with bright indirect light and vertical support. Ecologically consistent with rainforest hemiepiphyte Monstera species."
        - A small, detailed black-and-white vintage landscape engraving of a tropical rainforest floor/understory at the bottom of the column.
      - **NATIVE RANGE**:
        - Title: "NATIVE RANGE" in small-caps bold sans-serif.
        - A simple, minimalist black-and-white outline map of the world in the center, with a small highlighted region or indicator dot showing the native origins.
-       - Description text below: "[NATIVE RANGE DESCRIPTION]"
+       - Description text below: "No confirmed wild native range. A cultivated selection of hybrid origin."
      - **MORPHOLOGY SUMMARY**:
        - Title: "MORPHOLOGY SUMMARY" in small-caps bold sans-serif.
        - Description: A detailed summary paragraph of the species morphology, including growth habit, leaf shape, margins, coloration, mature size, and identifying botanical markers.
 
 6. Footer (Bottom-most margin):
    - printed in a tiny, clean sans-serif typeface outside and below the lower panel:
-     - Left: "PLATE No. [PLATE NUMBER]"
-     - Center: "AROIDS OF [CLASSIFICATION]"
+     - Left: "PLATE No. 3414"
+     - Center: "AROIDS OF CULTIVATION"
      - Right: "ILLUSTRATED FOR AROIDATLAS"
      - Far Lower Right Corner: A discreet watermark consisting of the text "AROIDATLAS" in a clean, modern sans-serif typeface.
 
@@ -74,41 +74,41 @@ SPECIES MORPHOLOGY
 
 BOTANICAL ACCURACY REQUIREMENTS
 
-Critical identifying traits for [PLANT NAME]:
+Critical identifying traits for Monstera 'Burle Marx Flame':
 
-- [CRITICAL TRAIT 1]
-- [CRITICAL TRAIT 2]
-- [CRITICAL TRAIT 3]
-- [CRITICAL TRAIT 4]
-- [CRITICAL TRAIT 5]
+- Elongated, narrow leaves with deep, flame-like lobing and internal fenestrations resembling ribs
+- Solid deep green foliage with a smooth, glossy texture and no variegation
+- Slender green petioles without wings or sheath wrapping
+- Thick, stubby aerial roots emerging from the nodes
+- Graceful, upright climbing growth habit requiring vertical support
 
 Morphology:
 
 Leaf Shape:
-[LEAF SHAPE DESCRIPTION]
+Elongated, narrow, flame-like leaves with dramatic, deep internal fenestrations and thick lobes resembling ribs
 
 Leaf Ratio:
-[LEAF RATIO DESCRIPTION]
+Distinctly longer than wide, approximately 3:1 to 4:1 length-to-width ratio
 
 Texture:
-[TEXTURE DESCRIPTION]
+Smooth, glossy, and firm (coriaceous) leaf substance
 
 Petiole:
-[PETIOLE DESCRIPTION]
+Green, relatively slender, cylindrical, and sturdy
 
 Growth Habit:
-[GROWTH HABIT DESCRIPTION]
+Climbing hemiepiphyte with a graceful, sculptural habit, producing thick aerial roots from nodes
 
 Mature Size:
-[MATURE SIZE DESCRIPTION]
+Overall leaf length 40–70 cm; petioles 30–50 cm; mature height up to 1.5 meters when supported
 
 Origin:
-[FULL ORIGIN DESCRIPTION]
+Horticultural cultivar associated with Brazilian aroid cultivation; exact original selection history is debated in cultivation.
 
 Habitat:
-[FULL HABITAT DESCRIPTION]
+Cultivated tropical climbing aroid; best grown in warm, humid understory-like conditions with bright indirect light and vertical support. Ecologically consistent with rainforest hemiepiphyte Monstera species.
 
-The specimen of [PLANT NAME] should immediately be recognizable to an experienced collector.
+The specimen of Monstera 'Burle Marx Flame' should immediately be recognizable to an experienced collector.
 
 Failure to accurately reproduce species-defining morphology should be considered incorrect.
 
@@ -120,11 +120,11 @@ NEGATIVE CONSTRAINTS
 
 Do not generate:
 
-- [NEGATIVE CONSTRAINT 1]
-- [NEGATIVE CONSTRAINT 2]
-- [NEGATIVE CONSTRAINT 3]
-- [NEGATIVE CONSTRAINT 4]
-- [NEGATIVE CONSTRAINT 5]
+- Variegated foliage (no mint, white, yellow sectoral or marbled patterns)
+- Entire leaf margins without any fenestrations or lobes
+- Perfectly heart-shaped (cordate) leaves with no holes
+- Velvety, matte, or hairy (pubescent) leaf surfaces
+- Wide, heavily winged petioles
 
 --------------------------------
 
@@ -137,6 +137,8 @@ Botanical accuracy is the highest priority.
 The illustration style may be stylized.
 
 The morphology must remain faithful to real specimens.
+
+
 
 REFERENCE IMAGE (if provided)
 

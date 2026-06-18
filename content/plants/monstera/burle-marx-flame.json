@@ -1,0 +1,76 @@
+{
+  "name": "Monstera 'Burle Marx Flame'",
+  "slug": "burle-marx-flame",
+  "scientificName": "Monstera deliciosa 'Burle Marx Flame'",
+  "commonName": "Burle Marx Flame Monstera",
+  "statusTag": "Rare Cultivar",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "deliciosa",
+  "origin": "Horticultural cultivar associated with Brazilian aroid cultivation; exact original selection history is debated in cultivation",
+  "collectorPopularity": 4.7,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Monstera deliciosa 'Burle Marx Flame' is a highly coveted, slow-growing cultivated variety prized for its unique, architectural foliage. Named in honor of the renowned Brazilian landscape architect Roberto Burle Marx, it features narrow, flame-like leaves that develop dramatic, deep internal fenestrations resembling ribs. Unlike standard Monstera deliciosa, its mature blades are distinctly elongated, with a graceful, sculptural habit and clean margins. Due to its slow growth rate and high demand among serious collectors, it commands a premium in the horticultural market.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte on moss pole",
+    "matureSize": "40 - 70 cm leaf length",
+    "light": "Bright, indirect filter",
+    "humidity": "60 - 85%",
+    "temperature": "18 - 28°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Elongated, narrow, flame-like leaves with deep internal fenestrations and rib-like lobes",
+    "leafLength": "40 - 70 cm",
+    "leafWidth": "15 - 25 cm",
+    "petioleColor": "Slender green",
+    "venation": "Pinnate, distinct green midrib",
+    "texture": "Smooth, glossy, and firm",
+    "variegation": "None (Solid Green)",
+    "growthHabit": "Climbing with thick aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 130,
+    "threeMonthChangePercent": -5.2,
+    "marketStatus": "Stable"
+  },
+  "priceHistory": [
+    { "date": "2026-01-11", "medianPriceGBP": 280.00, "dataPointsAnalyzed": 2 },
+    { "date": "2026-02-08", "medianPriceGBP": 185.00, "dataPointsAnalyzed": 3 },
+    { "date": "2026-03-15", "medianPriceGBP": 140.00, "dataPointsAnalyzed": 4 },
+    { "date": "2026-04-19", "medianPriceGBP": 130.00, "dataPointsAnalyzed": 5 },
+    { "date": "2026-05-17", "medianPriceGBP": 95.00, "dataPointsAnalyzed": 6 },
+    { "date": "2026-06-10", "medianPriceGBP": 70.00, "dataPointsAnalyzed": 4 }
+  ],
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Burle Marx Flame",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "burle marx flame",
+      "monstera burle marx flame",
+      "bmf",
+      "bmf monstera",
+      "monstera bmf"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "corm", "bulb", "rhizome",
+      "poster", "print", "book", "magazine", "care guide",
+      "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole",
+      "pot only", "label", "tag", "cutting board",
+      "philodendron"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [
+    { "name": "Monstera 'Devil Monster'", "slug": "devil-monster", "rarity": "Rare", "price": "£££" },
+    { "name": "Philodendron spiritus-sancti", "slug": "spiritus-sancti", "rarity": "Extremely Rare", "price": "££" },
+    { "name": "Philodendron billietiae 'Variegated'", "slug": "billietiae-variegated", "rarity": "Rare", "price": "£££" }
+  ]
+}

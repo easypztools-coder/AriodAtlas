@@ -88,8 +88,8 @@
     "marketCurrency": "GBP"
   },
   "recommendedPlants": [
-    { "name": "Philodendron joepii", "slug": "joepii", "rarity": "Rare", "price": "££" },
-    { "name": "Anthurium warocqueanum", "slug": "warocqueanum", "rarity": "Very Rare", "price": "£££" },
-    { "name": "Philodendron atabapoense", "slug": "atabapoense", "rarity": "Uncommon", "price": "£" }
+    { "name": "Philodendron x joepii 'Aurea Variegata'", "slug": "joepii-aurea-variegata", "rarity": "Ultra Rare", "price": "££££" },
+    { "name": "Philodendron patriciae 'Variegata'", "slug": "patriciae-variegata", "rarity": "Ultra Rare", "price": "££££" },
+    { "name": "Philodendron 'Whipple Way'", "slug": "whipple-way", "rarity": "Very Rare", "price": "£££" }
   ]
 }

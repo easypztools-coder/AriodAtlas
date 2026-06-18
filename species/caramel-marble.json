@@ -1,0 +1,34 @@
+{
+  "name": "Philodendron 'Caramel Marble'",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "hybrid",
+  "cultivar": "Caramel Marble",
+  "morphology": {
+    "leaf_shape": "Deeply serrated to pinnately lobed margins with saw-tooth edges, lanceolate to narrow-oblong blade shape",
+    "leaf_ratio": "Elongated leaves, approximately 4:1 to 6:1 length-to-width ratio (leaves 30–60 cm long × 8–15 cm wide)",
+    "texture": "Thick, leathery (coriaceous), stiff, with a glossy waxy sheen on the adaxial surface",
+    "petiole": "Long, sturdy, cylindrical, colored deep reddish-brown to dark green, slightly winged at the base",
+    "growth_habit": "Slow-growing, self-heading when young, transitioning to a slow climbing/scandent habit with age, producing thick aerial roots",
+    "mature_size": "Overall leaf length 30–60 cm; petioles 25–40 cm; mature height up to 1.2 meters when supported"
+  },
+  "critical_traits": [
+    "Deeply serrated or pinnately lobed leaf margins, resembling a jagged saw-tooth edge",
+    "Highly variegated foliage featuring marbled, sectoral, and speckled patterns of caramel, orange, bronze, yellow, cream, and forest green",
+    "Thick, leathery, coriaceous leaf texture that is stiff to the touch",
+    "Glossy adaxial leaf finish reflecting studio light",
+    "Long, sturdy reddish-brown or dark maroon petioles",
+    "Elongated narrow-oblong to lanceolate leaf blade shape"
+  ],
+  "negative_traits": [
+    "Entire leaf margins without serrations or lobes",
+    "Solid green leaves with no variegation",
+    "Fenestrations or holes in the leaf blades",
+    "Thin, papery, or membranous leaf texture",
+    "Perfectly symmetrical or simple cordate leaf shapes",
+    "Winged petioles that wrap around the stem like a sheath",
+    "Soft, velvety, or pubescent leaf surfaces"
+  ],
+  "habitat": "Cultivated mutation originally selected from Philodendron hybridization. Thrives in high humidity (60–85%), warm temperatures (18–28°C), and bright indirect light to preserve and stimulate the colorful variegation patterns.",
+  "origin": "Cultivated selection/hybrid mutation, widely propagated in specialized collections globally."
+}

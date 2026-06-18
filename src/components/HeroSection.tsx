@@ -5,8 +5,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { featuredPlants } from "@/lib/mock-data";
 import { getStaticTierLabel } from "@/lib/prices/priceRarityTier";
+
+interface SearchPlant {
+  slug: string;
+  name: string;
+  scientificName: string;
+  commonName: string;
+  genus: string;
+  rarityStatus: string;
+  priceGuideTier: string;
+}
 
 function StatCard({ label, value, index }: { label: string; value: string; index: number }) {
   return (
@@ -31,9 +40,10 @@ const LIVE_STAT_LABELS = [
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<typeof featuredPlants>([]);
+  const [searchResults, setSearchResults] = useState<SearchPlant[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [liveStats, setLiveStats] = useState<Record<string, string>>({});
+  const [allPlants, setAllPlants] = useState<SearchPlant[]>([]);
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
 
@@ -48,6 +58,15 @@ export default function HeroSection() {
           priceChecks:       d.priceChecks.toString(),
         })
       )
+      .catch(() => {});
+
+    fetch("/api/plants")
+      .then((r) => r.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setAllPlants(data);
+        }
+      })
       .catch(() => {});
   }, []);
 
@@ -69,7 +88,7 @@ export default function HeroSection() {
       return;
     }
     const q = value.toLowerCase();
-    const results = featuredPlants.filter(
+    const results = allPlants.filter(
       (p) =>
         p.name.toLowerCase().includes(q) ||
         p.scientificName.toLowerCase().includes(q) ||

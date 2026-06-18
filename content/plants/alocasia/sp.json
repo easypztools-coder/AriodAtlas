@@ -1,0 +1,79 @@
+{
+  "name": "Alocasia sp.",
+  "slug": "sp",
+  "scientificName": "Alocasia sp.",
+  "commonName": "Unspecified Alocasia Cultivar",
+  "statusTag": "Unspecified Cultivar",
+  "family": "Araceae",
+  "genus": "Alocasia",
+  "species": "Unspecified cultivated form",
+  "origin": "Tropical Asia (exact species or cultivar not specified)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Alocasias are tropical understory aroids native to Tropical Asia, including Southeast Asia and surrounding regions. They thrive in warm, humid conditions with bright, indirect light, preferring a well-draining, airy aroid mix rich in organic matter. This particular unspecified cultivated form is a compact, free-standing plant, growing terrestrially from a corm or rhizomatous base, producing upright, self-heading leaves from a central crown. Its sagittate to arrow-shaped leaves feature strongly undulate, ruffled margins, with a silvery to pale green upper surface, darker green to nearly black edges, and a deep green to purplish underside, showcasing a firm, leathery, and slightly bullate texture with prominent pale midribs and visible lateral venation.",
+  "quickFacts": {
+    "growthHabit": "Terrestrial, self-heading, non-climbing",
+    "matureSize": "Medium, up to 90cm tall",
+    "light": "Bright, indirect light",
+    "humidity": "High (warm, humid conditions)",
+    "temperature": "Warm (18-29°C / 65-85°F)",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Sagittate to arrow-shaped with undulate, ruffled margins",
+    "leafLength": "15-30 cm",
+    "leafWidth": "10-20 cm",
+    "petioleColor": "Dark green to purplish-black",
+    "venation": "Prominent pale midrib with visible lateral venation",
+    "texture": "Firm, leathery, and slightly bullate",
+    "variegation": "None",
+    "growthHabit": "Compact, free-standing, terrestrial, self-heading, and non-climbing"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Alocasia unnamed cultivar",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Alocasia plant",
+      "Alocasia species",
+      "Alocasia live"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

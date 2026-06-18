@@ -1,0 +1,70 @@
+{
+  "name": "Philodendron 'Caramel Marble'",
+  "slug": "caramel-marble",
+  "scientificName": "Philodendron 'Caramel Marble'",
+  "commonName": "Caramel Marble Philodendron",
+  "statusTag": "Rare Variegated Cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "hybrid",
+  "origin": "Cultivated mutation",
+  "collectorPopularity": 4.8,
+  "rarityStatus": "Extremely Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Philodendron 'Caramel Marble' is a highly coveted and spectacular variegated cultivar within the aroid collector community. It features dramatic, deeply serrated leaves resembling saw-tooth blades, decorated with stunning marbled and sectoral variegation patterns in shades of caramel, orange, yellow, cream, and deep green. The leaves are thick, stiff, and leathery, rising on sturdy reddish-brown petioles. Due to its slow growth rate and the high demand for its unique coloration, mature, well-variegated specimens command premium prices among collectors.",
+  "quickFacts": {
+    "growthHabit": "Slow climbing hemiepiphyte",
+    "matureSize": "30 - 60 cm leaf length",
+    "light": "Bright, indirect filter",
+    "humidity": "60 - 85%",
+    "temperature": "18 - 28°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Deeply serrated to pinnately lobed, lanceolate to narrow-oblong",
+    "leafLength": "30 - 60 cm",
+    "leafWidth": "8 - 15 cm",
+    "petioleColor": "Reddish-brown to dark maroon",
+    "venation": "Pinnate, subtle green midrib",
+    "texture": "Thick, leathery (coriaceous), glossy",
+    "variegation": "Caramel, orange, yellow, cream, and green marbled and sectoral patterns",
+    "growthHabit": "Slow climber with support"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 350.00,
+    "threeMonthChangePercent": -4.5,
+    "marketStatus": "Stable"
+  },
+  "priceHistory": [
+    { "date": "2026-01-11", "medianPriceGBP": 420.00, "dataPointsAnalyzed": 2 },
+    { "date": "2026-02-08", "medianPriceGBP": 390.00, "dataPointsAnalyzed": 3 },
+    { "date": "2026-03-15", "medianPriceGBP": 370.00, "dataPointsAnalyzed": 4 },
+    { "date": "2026-04-19", "medianPriceGBP": 360.00, "dataPointsAnalyzed": 5 },
+    { "date": "2026-05-17", "medianPriceGBP": 350.00, "dataPointsAnalyzed": 6 },
+    { "date": "2026-06-10", "medianPriceGBP": 350.00, "dataPointsAnalyzed": 4 }
+  ],
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron Caramel Marble",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "philodendron caramel marble",
+      "caramel marble",
+      "caramel marble philodendron",
+      "p caramel marble"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "artificial", "fake", "soil", "perlite", "moss pole", "corm", "bulb", "rhizome",
+      "care guide", "book", "poster", "print", "plug only"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [
+    { "name": "Philodendron billietiae 'Variegated'", "slug": "billietiae-variegated", "rarity": "Rare", "price": "£££" },
+    { "name": "Philodendron spiritus-sancti", "slug": "spiritus-sancti", "rarity": "Extremely Rare", "price": "£££" }
+  ]
+}

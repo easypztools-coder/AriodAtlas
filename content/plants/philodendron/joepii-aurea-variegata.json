@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron x joepii 'Aurea Variegata'",
+  "slug": "joepii-aurea-variegata",
+  "scientificName": "Philodendron x joepii 'Aurea Variegata'",
+  "commonName": "Variegated Joepii Philodendron",
+  "statusTag": "Rare Variegated Cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "x joepii",
+  "origin": "French Guiana (hybrid lineage)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Philodendron x joepii 'Aurea Variegata' is a stunning variegated selection of the tri-lobed hybrid lineage first associated with French Guiana. It is famous for its distinctive leaf shape, featuring a narrow constricted midsection with elongated lateral and terminal lobes. The aurea variegation appears as dramatic marbled and sectoral splashes of yellow and chartreuse against a deep green backdrop. It climbs using aerial roots and benefits greatly from a moss pole or vertical support.",
+  "quickFacts": {
+    "growthHabit": "Climbing vine with aerial roots",
+    "matureSize": "40–60 cm leaf length",
+    "light": "Bright, indirect filter",
+    "humidity": "65% or above",
+    "temperature": "18 - 28°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Tri-lobed with narrow constricted midsection",
+    "leafLength": "40–60 cm",
+    "leafWidth": "20–35 cm",
+    "petioleColor": "Green",
+    "venation": "Distinct primary veins",
+    "texture": "Smooth, leathery",
+    "variegation": "Marbled and sectoral yellow splashes",
+    "growthHabit": "Climbing with green petioles"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron joepii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "philodendron joepii",
+      "joepii aurea",
+      "joepii variegata",
+      "philodendron joepii aurea variegata"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm",
+      "poster", "print", "book", "magazine", "care guide",
+      "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole",
+      "pot only", "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

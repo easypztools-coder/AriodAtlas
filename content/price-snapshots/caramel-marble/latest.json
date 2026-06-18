@@ -1,0 +1,68 @@
+{
+  "snapshot": {
+    "plantSlug": "caramel-marble",
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron Caramel Marble",
+    "checkedAt": "2026-06-14T20:32:04.456Z",
+    "currency": "GBP",
+    "rawResultCount": 14,
+    "acceptedCount": 4,
+    "rejectedCount": 10,
+    "outlierCount": 0,
+    "confidenceScore": "C",
+    "minPrice": 220.0,
+    "p25Price": 290.0,
+    "medianPrice": 350.0,
+    "meanPrice": 345.0,
+    "trimmedMeanPrice": 350.0,
+    "p75Price": 390.0,
+    "maxPrice": 420.0,
+    "notes": ""
+  },
+  "stats": {
+    "sampleSize": 4,
+    "min": 220.0,
+    "max": 420.0,
+    "median": 350.0,
+    "mean": 345.0,
+    "p25": 290.0,
+    "p75": 390.0,
+    "iqr": 100.0,
+    "trimmedMean": 350.0,
+    "confidenceScore": "C",
+    "rejectedCount": 10,
+    "rejectionReasons": {},
+    "outlierCount": 0
+  },
+  "acceptedListings": [
+    {
+      "soldPrice": 420.0,
+      "totalPrice": 420.0,
+      "soldDate": "2026-01-11",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 390.0,
+      "totalPrice": 390.0,
+      "soldDate": "2026-02-08",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 370.0,
+      "totalPrice": 370.0,
+      "soldDate": "2026-03-15",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 350.0,
+      "totalPrice": 350.0,
+      "soldDate": "2026-05-17",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Monstera obliqua (Peru form)",
+  "slug": "obliqua-peru-form",
+  "scientificName": "Monstera obliqua",
+  "commonName": "Monstera Obliqua Peru Form",
+  "statusTag": "Prized Rarity Cultivar",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "obliqua (Peru form)",
+  "origin": "Native to tropical lowland rainforests of Peru, South America, as a hemiepiphyte.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Monstera obliqua (Peru form) is native to the tropical lowland rainforests of Peru, South America, where it thrives as a delicate hemiepiphytic aroid. It prefers warm, humid environments with bright indirect light and airy support for its climbing habit. This particular form is among the most delicate of all Monstera species, characterized by its extremely thin, papery leaves that feature dramatic internal perforations and fine tissue bridges, often appearing more hole than leaf. Its slender petioles and stems support its growth, distinguishing it from species like Monstera adansonii by its finer texture and more fragile structure, making it a highly prized rarity for advanced collectors.",
+  "quickFacts": {
+    "growthHabit": "Hemiepiphytic, climbing",
+    "matureSize": "Medium",
+    "light": "Bright indirect",
+    "humidity": "High",
+    "temperature": "Warm (18-28°C)",
+    "difficulty": "Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Ovate to lanceolate, with dramatic perforations",
+    "leafLength": "Variable",
+    "leafWidth": "Variable",
+    "petioleColor": "Green",
+    "venation": "Reticulate with fine tissue bridges",
+    "texture": "Extremely thin, papery, delicate",
+    "variegation": "None",
+    "growthHabit": "Climbing, hemiepiphytic"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Monstera obliqua Peru form",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Monstera Obliqua Peru Form",
+      "Monstera Obliqua Peru",
+      "Monstera Peru",
+      "Obliqua Peru",
+      "Monstera Obliqua (Peru form)"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

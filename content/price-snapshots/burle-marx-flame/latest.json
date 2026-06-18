@@ -1,0 +1,82 @@
+{
+  "snapshot": {
+    "plantSlug": "burle-marx-flame",
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Burle Marx Flame",
+    "checkedAt": "2026-06-14T20:32:04.456Z",
+    "currency": "GBP",
+    "rawResultCount": 42,
+    "acceptedCount": 6,
+    "rejectedCount": 36,
+    "outlierCount": 0,
+    "confidenceScore": "B",
+    "minPrice": 70.0,
+    "p25Price": 95.0,
+    "medianPrice": 130.0,
+    "meanPrice": 145.0,
+    "trimmedMeanPrice": 130.0,
+    "p75Price": 185.0,
+    "maxPrice": 280.0,
+    "notes": ""
+  },
+  "stats": {
+    "sampleSize": 6,
+    "min": 70.0,
+    "max": 280.0,
+    "median": 130.0,
+    "mean": 145.0,
+    "p25": 95.0,
+    "p75": 185.0,
+    "iqr": 90.0,
+    "trimmedMean": 130.0,
+    "confidenceScore": "B",
+    "rejectedCount": 36,
+    "rejectionReasons": {},
+    "outlierCount": 0
+  },
+  "acceptedListings": [
+    {
+      "soldPrice": 280.0,
+      "totalPrice": 280.0,
+      "soldDate": "2026-01-11",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 185.0,
+      "totalPrice": 185.0,
+      "soldDate": "2026-02-08",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 140.0,
+      "totalPrice": 140.0,
+      "soldDate": "2026-03-15",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 130.0,
+      "totalPrice": 130.0,
+      "soldDate": "2026-04-19",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 95.0,
+      "totalPrice": 95.0,
+      "soldDate": "2026-05-17",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    },
+    {
+      "soldPrice": 70.0,
+      "totalPrice": 70.0,
+      "soldDate": "2026-06-10",
+      "listingType": "whole_plant",
+      "currency": "GBP"
+    }
+  ]
+}

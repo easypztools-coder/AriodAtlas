@@ -61,7 +61,7 @@
   },
   "recommendedPlants": [
     { "name": "Philodendron spiritus-sancti", "slug": "spiritus-sancti", "rarity": "Extremely Rare", "price": "££££" },
-    { "name": "Philodendron joepii", "slug": "joepii", "rarity": "Rare", "price": "££" },
+    { "name": "Philodendron x joepii 'Aurea Variegata'", "slug": "joepii-aurea-variegata", "rarity": "Ultra Rare", "price": "££££" },
     { "name": "Monstera burle marx flame", "slug": "burle-marx-flame", "rarity": "Rare", "price": "£££" }
   ]
 }

@@ -60,8 +60,8 @@
     "marketCurrency": "GBP"
   },
   "recommendedPlants": [
-    { "name": "Alocasia 'Polly'", "slug": "polly", "rarity": "Common", "price": "£" },
-    { "name": "Alocasia 'Bambino'", "slug": "bambino", "rarity": "Common", "price": "£" },
-    { "name": "Alocasia 'Dragon Scale'", "slug": "dragon-scale", "rarity": "Uncommon", "price": "££" }
+    { "name": "Alocasia cuprea 'Pink Variegata'", "slug": "cuprea-pink-variegata", "rarity": "Rare", "price": "£££" },
+    { "name": "Alocasia reginula 'Black Velvet' Pink Albo Variegata", "slug": "reginula-black-velvet-pink-albo-variegata", "rarity": "Very Rare", "price": "£££" },
+    { "name": "Alocasia sp.", "slug": "sp", "rarity": "Uncommon", "price": "££" }
   ]
 }

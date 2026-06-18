@@ -18,6 +18,7 @@ interface RecommendedPlant {
   slug: string;
   rarity: string;
   price: string;
+  genus?: string;
 }
 
 interface QuickFacts {
@@ -434,12 +435,14 @@ export default function PlantDetailPage({
           Recommended For You
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {data.recommendedPlants.map((plant) => (
-            <Link
-              key={plant.slug}
-              href={`/plants/${genus}/${plant.slug}`}
-              className="group rounded-xl bg-card p-4 transition hover:bg-card/80"
-            >
+          {data.recommendedPlants.map((plant) => {
+            const recommendedGenus = (plant.genus || plant.name.split(" ")[0].replace(/['"]/g, "")).toLowerCase();
+            return (
+              <Link
+                key={plant.slug}
+                href={`/plants/${recommendedGenus}/${plant.slug}`}
+                className="group rounded-xl bg-card p-4 transition hover:bg-card/80"
+              >
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-sm font-semibold text-heading group-hover:text-primary transition-colors">
@@ -468,7 +471,8 @@ export default function PlantDetailPage({
                 </div>
               </div>
             </Link>
-          ))}
+          );
+          })}
         </div>
       </div>
     </div>

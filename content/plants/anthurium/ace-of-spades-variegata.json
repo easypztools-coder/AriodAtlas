@@ -1,0 +1,81 @@
+{
+  "name": "Anthurium 'Ace of Spades' Variegata",
+  "slug": "ace-of-spades-variegata",
+  "scientificName": "Anthurium 'Ace of Spades' Variegata",
+  "commonName": "Ace of Spades Variegata Anthurium",
+  "statusTag": "Rare Variegata Cultivar",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "Ace of Spades Variegata",
+  "origin": "Horticultural anthurium hybrid in collector cultivation.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "The Anthurium 'Ace of Spades' Variegata is a highly sought-after horticultural hybrid, developed in collector cultivation for its striking visual appeal. This cultivated tropical aroid prefers warm, high humidity environments with bright indirect light and an airy, specialized anthurium mix. Its defining features include dark, velvety foliage with spade-shaped to elongated-cordate leaves, showcasing a pronounced sinus and an elegant drip tip. The distinctive variegation appears as cream, mint, or yellow marbling and sectoral patterning, beautifully contrasting with the near-black leaf base. The plant exhibits a compact to climbing growth habit, supported by slender petioles and aerial roots, making it an elegant and prized addition to any collection.",
+  "quickFacts": {
+    "growthHabit": "Compact to climbing",
+    "matureSize": "Medium to Large (up to 60cm+)",
+    "light": "Bright indirect light",
+    "humidity": "High humidity",
+    "temperature": "Warm (18-30°C)",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Spade-shaped to elongated-cordate",
+    "leafLength": "20-40 cm",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Dark reddish-brown",
+    "venation": "Subtle pale venation",
+    "texture": "Velvety",
+    "variegation": "Cream, mint, or yellow marbling and sectoral patterning",
+    "growthHabit": "Compact to climbing"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium Ace of Spades Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium AOS Variegata",
+      "Anthurium Ace of Spades Yellow Variegata",
+      "Anthurium Ace of Spades White Variegata",
+      "Anthurium Ace of Spades Cream Variegata",
+      "Anthurium 'AOS' Variegata"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

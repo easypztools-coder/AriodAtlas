@@ -1,0 +1,81 @@
+{
+  "name": "Anthurium luxurians 'Variegata'",
+  "slug": "luxurians-variegata",
+  "scientificName": "Anthurium luxurians 'Variegata'",
+  "commonName": "Variegated Luxurians Anthurium",
+  "statusTag": "Rare Variegata Cultivar",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "luxurians 'Variegata'",
+  "origin": "Species native to Colombia; this variegated form is maintained in specialist collector cultivation.",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium luxurians 'Variegata' is a highly sought-after aroid, a rare variegated cultivar of the species native to the tropical humid forests of Colombia. This particular form is carefully maintained in specialist collector cultivation due to its unique genetic mutation. It is characterized by thick, heavily bullate, strongly quilted heart-shaped leaves that display a dark green to bronze-green metallic sheen. The striking variegation appears as captivating cream, buttery yellow, or even minty green sectors and marbling, enhancing its distinctive textured surface.",
+  "quickFacts": {
+    "growthHabit": "Self-heading, compact aroid",
+    "matureSize": "Compact to Medium",
+    "light": "Bright indirect light",
+    "humidity": "High",
+    "temperature": "Warm tropical (20-30°C)",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Heart-shaped, cordate",
+    "leafLength": "Variable (typically 20-40cm)",
+    "leafWidth": "Variable (typically 15-30cm)",
+    "petioleColor": "Green",
+    "venation": "Deeply bullate, strongly quilted",
+    "texture": "Thick, heavily bullate, quilted, glossy to satin metallic",
+    "variegation": "Cream, buttery yellow, or minty green sectors and marbling",
+    "growthHabit": "Compact and self-heading"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium luxurians Variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Variegated luxurians",
+      "Luxurians variegated Anthurium",
+      "Variegated Anthurium luxurians",
+      "Anthurium luxurians albo",
+      "Anthurium luxurians yellow variegata"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "seed",
+      "bulb",
+      "rhizome",
+      "corm",
+      "poster",
+      "print",
+      "book",
+      "magazine",
+      "care guide",
+      "artificial",
+      "fake",
+      "plastic",
+      "silk",
+      "soil",
+      "perlite",
+      "fertiliser",
+      "fertilizer",
+      "moss pole",
+      "pot only",
+      "label",
+      "tag",
+      "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}
