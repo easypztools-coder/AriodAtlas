@@ -34,7 +34,7 @@ function StatCard({ label, value, index }: { label: string; value: string; index
 const LIVE_STAT_LABELS = [
   { key: "species",           label: "Species Tracked" },
   { key: "genera",            label: "Genera Covered" },
-  { key: "soldCompsAnalysed", label: "Sold Prices Tracked" },
+  { key: "soldCompsAnalysed", label: "Retail Prices Tracked" },
 ] as const;
 
 export default function HeroSection() {

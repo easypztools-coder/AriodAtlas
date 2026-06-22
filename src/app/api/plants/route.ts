@@ -13,14 +13,7 @@ interface SearchPlant {
   botanicalType: string;
 }
 
-// In-memory cache for parsed plant profiles
-let cachedPlants: SearchPlant[] | null = null;
-
 export async function GET() {
-  if (cachedPlants) {
-    return NextResponse.json(cachedPlants);
-  }
-
   const plantsRoot = path.join(process.cwd(), "content", "plants");
   const results: SearchPlant[] = [];
 
@@ -54,7 +47,6 @@ export async function GET() {
     }
   }
 
-  cachedPlants = results;
   return NextResponse.json(results);
 }
 

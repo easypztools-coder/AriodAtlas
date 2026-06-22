@@ -26,7 +26,7 @@ export async function GET(
     return NextResponse.json({ error: "Missing slug parameter" }, { status: 400 });
   }
 
-  const snapshot = await loadLatestSnapshot(slug);
+  const snapshot = loadLatestSnapshot(slug);
 
   if (!snapshot) {
     return NextResponse.json(
