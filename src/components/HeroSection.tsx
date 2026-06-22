@@ -237,7 +237,7 @@ export default function HeroSection() {
                 className="glass-card-glow relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl"
               >
                 <Image
-                  src="/api/plant-image?genus=philodendron&slug=spiritus-sancti"
+                  src="/plants/philodendron/spiritus-sancti.png"
                   alt="Philodendron spiritus-sancti — Hero Specimen"
                   fill
                   className="object-contain"

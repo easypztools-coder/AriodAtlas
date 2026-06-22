@@ -316,7 +316,7 @@ export default function PlantDetailPage({
         {/* Main Feature Image */}
         <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-card">
           <Image
-            src={`/api/plant-image?genus=${genus}&slug=${data.slug}`}
+            src={`/plants/${genus}/${data.slug}.png`}
             alt={data.commonName}
             fill
             className="object-contain"
@@ -784,7 +784,7 @@ export default function PlantDetailPage({
                 </div>
                 <div className="relative h-16 w-16 rounded-lg overflow-hidden bg-background border border-primary/5 shrink-0">
                   <Image
-                    src={`/api/plant-image?genus=${recommendedGenus}&slug=${plant.slug}`}
+                    src={`/plants/${recommendedGenus}/${plant.slug}.png`}
                     alt={plant.name}
                     fill
                     className="object-cover object-center scale-[1.3] transition-all duration-500 ease-out group-hover:scale-[1.4] opacity-90 group-hover:opacity-100"

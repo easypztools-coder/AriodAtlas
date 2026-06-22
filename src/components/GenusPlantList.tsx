@@ -212,7 +212,7 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                       {/* Right-aligned soft-reveal thumbnail */}
                       <div className="relative h-20 w-20 shrink-0 rounded-xl overflow-hidden bg-card border border-primary/5">
                         <Image
-                          src={`/api/plant-image?genus=${genus}&slug=${plant.slug}`}
+                          src={`/plants/${genus}/${plant.slug}.png`}
                           alt={plant.commonName}
                           fill
                           className="object-cover object-center scale-[1.3] transition-all duration-500 ease-out group-hover:scale-[1.4] opacity-90 group-hover:opacity-100"

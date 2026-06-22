@@ -124,7 +124,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: data.aboutText.slice(0, 155) + "…",
       images: [
         {
-          url: `/api/plant-image?genus=${genus.toLowerCase()}&slug=${data.slug}`,
+          url: `/plants/${genus.toLowerCase()}/${data.slug}.png`,
           alt: data.scientificName,
         },
       ],

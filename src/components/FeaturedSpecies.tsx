@@ -28,7 +28,7 @@ function PlantCard({
         <div className="relative aspect-[3/4] overflow-hidden bg-card">
           {/* Spotlight Plant Plate Image */}
           <Image
-            src={`/api/plant-image?genus=${plant.genus.toLowerCase()}&slug=${plant.slug}`}
+            src={`/plants/${plant.genus.toLowerCase()}/${plant.slug}.png`}
             alt={plant.commonName}
             fill
             className="object-cover object-center scale-[1.3] transition-all duration-700 ease-out group-hover:scale-[1.4] opacity-80 group-hover:opacity-100 filter brightness-95 group-hover:brightness-105"

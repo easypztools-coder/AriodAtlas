@@ -42,7 +42,7 @@ function GenusCard({
           <>
             {/* Specimen image with zoom-on-hover */}
             <Image
-              src={`/api/plant-image?genus=${representative.genus}&slug=${representative.slug}`}
+              src={`/plants/${representative.genus}/${representative.slug}.png`}
               alt={`${genus.name} representative`}
               fill
               className="object-cover object-center scale-[1.3] transition-all duration-700 ease-out group-hover:scale-[1.4] opacity-40 group-hover:opacity-60 filter brightness-90 group-hover:brightness-100"
