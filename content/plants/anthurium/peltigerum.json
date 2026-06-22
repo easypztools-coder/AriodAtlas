@@ -1,0 +1,61 @@
+{
+  "name": "Anthurium peltigerum",
+  "slug": "peltigerum",
+  "scientificName": "Anthurium peltigerum",
+  "commonName": "Shield Anthurium",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "peltigerum",
+  "origin": "Central America to NW South America (wet tropical forest, epiphytic)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium peltigerum is a structurally unusual species from the wet tropical forests of Central America through to north-western South America, where it grows epiphytically on trees and fallen logs, or occasionally on the forest floor in deep shade with consistently high humidity and rich organic substrates. What distinguishes it immediately is the peltate leaf attachment — the petiole meets the underside of the blade rather than its edge, creating the characteristic shield-like silhouette that gives the species its name. Compact and epiphytic with short internodes and visible aerial roots, the leaves are thick, coriaceous, and deeply glossy dark green, with a clean, bold form. This unusual architecture, combined with genuine scarcity in cultivation, makes peltigerum a highly sought prize for collectors drawn to the architecturally unexpected.",
+  "quickFacts": {
+    "growthHabit": "Compact epiphyte to low-climber",
+    "matureSize": "Small to Medium (30-60 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broadly cordate, peltate (petiole attaches to underside of blade)",
+    "leafLength": "20-40 cm",
+    "leafWidth": "18-35 cm",
+    "petioleColor": "Green, medium length",
+    "venation": "Prominent midrib, pinnate lateral veins",
+    "texture": "Thick, coriaceous, glossy",
+    "variegation": "None",
+    "growthHabit": "Compact epiphyte with short internodes and visible aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium peltigerum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium peltigerum",
+      "peltigerum anthurium",
+      "Anthurium peltate shield"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -98,7 +98,7 @@ function getEnabledPlants(): EnabledPlant[] {
 
 async function main() {
   console.log("=".repeat(60));
-  console.log("  ARIOD ATLAS RETAIL PRICE FETCH WORKFLOW");
+  console.log("  AROID ATLAS RETAIL PRICE FETCH WORKFLOW");
   console.log("=".repeat(60));
 
   const allPlants = getEnabledPlants();

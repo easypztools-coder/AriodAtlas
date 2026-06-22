@@ -17,10 +17,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ariodatlas.com"), // TODO: update with real domain before going live
+  metadataBase: new URL("https://aroidatlas.com"), // TODO: update with real domain before going live
   title: {
-    default: "Ariod Atlas — Rare Tropical Plant Encyclopedia",
-    template: "%s | Ariod Atlas",
+    default: "Aroid Atlas — Rare Tropical Plant Encyclopedia",
+    template: "%s | Aroid Atlas",
   },
   description:
     "The visual encyclopedia of rare tropical plants. Discover, explore and compare the world's most extraordinary aroids — with live eBay UK market prices.",
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
     "rare plants for sale",
     "aroid care guide",
   ],
-  authors: [{ name: "Ariod Atlas" }],
+  authors: [{ name: "Aroid Atlas" }],
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "Ariod Atlas",
-    title: "Ariod Atlas — Rare Tropical Plant Encyclopedia",
+    siteName: "Aroid Atlas",
+    title: "Aroid Atlas — Rare Tropical Plant Encyclopedia",
     description:
       "The visual encyclopedia of rare tropical plants. Live eBay UK market prices, species profiles, and cultivation data.",
     images: [
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Ariod Atlas — Rare Tropical Plant Encyclopedia",
+        alt: "Aroid Atlas — Rare Tropical Plant Encyclopedia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ariod Atlas — Rare Tropical Plant Encyclopedia",
+    title: "Aroid Atlas — Rare Tropical Plant Encyclopedia",
     description:
       "The visual encyclopedia of rare tropical plants. Live market prices and species profiles.",
     images: ["/images/og-default.jpg"],

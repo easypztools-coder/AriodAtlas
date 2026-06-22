@@ -134,6 +134,7 @@ const GENUS_LABELS: Record<string, string> = {
   philodendron: "Philodendron",
   anthurium: "Anthurium",
   alocasia: "Alocasia",
+  begonia: "Begonia",
   other: "Other Aroids",
 };
 
@@ -676,7 +677,7 @@ export default function PlantDetailPage({
           )}
         </div>
 
-        {/* Field Notes by Ariod Aaron (Vintage Journal Style) */}
+        {/* Field Notes by Aroid Aaron (Vintage Journal Style) */}
         {data.fieldNotes && (
           <div className="relative overflow-hidden rounded-2xl bg-[#F4F0EA] border-2 border-[#E3DEC3] p-8 text-[#1A2421] shadow-lg">
             {/* Double-ruled notebook frame */}
@@ -708,7 +709,7 @@ export default function PlantDetailPage({
               <div className="mt-6 flex items-center justify-between text-xs text-[#8B9A92] font-body">
                 <span className="italic">Written at AroidAtlas research station</span>
                 <span className="font-semibold italic text-[#1A2421] font-heading text-sm">
-                  &mdash; Ariod Aaron
+                  &mdash; Aroid Aaron
                 </span>
               </div>
             </div>

@@ -1,0 +1,63 @@
+{
+  "name": "Begonia ferox",
+  "slug": "ferox",
+  "scientificName": "Begonia ferox C.-I.Peng & Yan Liu.",
+  "commonName": "Fierce Begonia",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "ferox",
+  "origin": "Guangxi, China (native to Guangxi Zhuang Autonomous Region, shaded karst limestone)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Begonia ferox, described by C.-I.Peng and Yan Liu., is a limestone forest endemic from the Guangxi Zhuang Autonomous Region of southern China — typically found in shaded karst habitats at low to mid elevations, growing on moist, humus-rich calcareous soil and in crevices of limestone rock. The name 'ferox' (fierce) refers to the plant's most extraordinary feature: the upper surface of each thick, heavily bullate leaf is covered with numerous dark conical bullae — hard, spine-like projections rising from the raised surface texture in a pattern that resembles armour or reptile scales. The upper surface is deep green with prominent venation; undersides are maroon to burgundy. Short, densely spiny petioles complete the effect. Ferox has become one of the most sought-after of all collector Begonias since its description in 2015, and remains genuinely difficult to obtain in the UK market.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping",
+    "matureSize": "Small to medium (15-30 cm spread)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, broadly ovate, heavily bullate",
+    "leafLength": "8-18 cm",
+    "leafWidth": "7-15 cm",
+    "petioleColor": "Short, densely spiny",
+    "venation": "Prominent, with deeply sunken areas between bullae",
+    "texture": "Thick, heavily bullate with dark conical spine-like projections on upper surface; maroon-burgundy undersides",
+    "variegation": "None",
+    "growthHabit": "Creeping rhizome with compact leaf arrangement"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia ferox China",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia ferox",
+      "Begonia ferox Peng",
+      "ferox begonia",
+      "Begonia ferox Guangxi",
+      "fierce begonia"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

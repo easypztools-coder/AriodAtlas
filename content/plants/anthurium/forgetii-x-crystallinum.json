@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium forgetii × crystallinum",
+  "slug": "forgetii-x-crystallinum",
+  "scientificName": "Anthurium forgetii × crystallinum",
+  "commonName": "Forgetii Crystallinum Hybrid",
+  "statusTag": "Rare Collector Hybrid",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "forgetii × crystallinum",
+  "origin": "Horticultural hybrid; derived from tropical American parentage",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium forgetii × crystallinum is a cultivated horticultural hybrid combining two of the most celebrated velvet anthuriums in the hobby. From the forgetii parent it inherits the distinctive reduced to nearly closed sinus — that rounded, almost seamless base where the two leaf lobes meet — and from crystallinum it draws the striking silvery-white primary venation that fans across the velvety deep green blade with impressive clarity. The result is a compact, self-heading plant with broad, rounded cordate leaves that combine the best visual qualities of both parents in a single, manageable specimen. Among the intermediate velvet anthurium hybrids, forgetii × crystallinum is widely regarded as one of the most elegant and visually satisfying crosses, offering the impact of both parents without the demanding care requirements of the most extreme species.",
+  "quickFacts": {
+    "growthHabit": "Compact, self-heading",
+    "matureSize": "Medium (40-70 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broadly rounded cordate, sinus reduced to nearly closed",
+    "leafLength": "25-50 cm",
+    "leafWidth": "20-42 cm",
+    "petioleColor": "Medium green",
+    "venation": "Striking silvery-white primary venation on deep velvety green blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Compact self-heading crown"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium forgetii crystallinum hybrid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium forgetii crystallinum",
+      "Anthurium forgetii x crystallinum",
+      "Anthurium forgetii × crystallinum",
+      "forgetii crystallinum hybrid",
+      "Anthurium forgetii cross crystallinum"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

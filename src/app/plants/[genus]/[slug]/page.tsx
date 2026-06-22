@@ -120,7 +120,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${data.scientificName} — ${data.commonName}`,
     description: data.aboutText.slice(0, 155) + "…",
     openGraph: {
-      title: `${data.scientificName} | Ariod Atlas`,
+      title: `${data.scientificName} | Aroid Atlas`,
       description: data.aboutText.slice(0, 155) + "…",
       images: [
         {
@@ -165,8 +165,8 @@ export default function PlantPage({ params }: PageProps) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Ariod Atlas",
-      url: "https://ariodatlas.com",
+      name: "Aroid Atlas",
+      url: "https://aroidatlas.com",
     },
   };
 

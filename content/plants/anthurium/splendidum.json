@@ -1,0 +1,68 @@
+{
+  "name": "Anthurium splendidum",
+  "slug": "splendidum",
+  "scientificName": "Anthurium splendidum W.Bull",
+  "commonName": "Splendid Anthurium",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "splendidum",
+  "origin": "Colombia (wet tropical forest understory)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium splendidum, described by W.Bull, is a compact short-stemmed Colombian species belonging to the celebrated splendidum complex — a group of understory anthuriums prized for their extraordinary leaf texture and subdued, almost architectural beauty. It grows on the forest floor or low on roots and woody debris in deep shade, with excellent drainage and consistently high humidity. The thick, heavily bullate and depressed cordate leaves range from dark green to a distinctive slate-grey-green with a glaucous, matte finish, giving the whole plant an unusual mineral quality that sets it apart from the high-gloss velvet anthuriums. Leaves arise from a close-formed crown on short to medium petioles. Among collectors, splendidum commands exceptional respect — it is simultaneously one of the most desirable textured anthuriums and one of the most genuinely difficult to obtain.",
+  "quickFacts": {
+    "growthHabit": "Compact terrestrial, short-stemmed",
+    "matureSize": "Medium (35-65 cm)",
+    "light": "Low indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-27°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Cordate, heavily bullate and depressed",
+    "leafLength": "25-50 cm",
+    "leafWidth": "20-40 cm",
+    "petioleColor": "Short to medium, green",
+    "venation": "Deeply sunken veins forming pronounced bullate cells",
+    "texture": "Strongly bullate, thick-substanced, glaucous matte finish",
+    "variegation": "None",
+    "growthHabit": "Close-crowned basal rosette, terrestrial to low epiphyte"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium splendidum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium splendidum",
+      "Anthurium splendidum W.Bull",
+      "splendidum anthurium",
+      "Anthurium splendidum Colombia"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "The Quiet One",
+    "date": "2023-02-11",
+    "author": "Aroid Aaron",
+    "content": "One does not shout about *Anthurium splendidum*. One keeps it in a humid cabinet, tends it with considerable care and moderate anxiety, and shows it only to those who will truly appreciate what they are looking at. Unlike the flashier velvet anthuriums with their high-gloss surfaces and theatrical venation, splendidum makes its statement in a different register entirely — that extraordinary bullate texture, those slightly glaucous, slate-green tones. It is a plant for people who have moved past the need to impress and arrived somewhere quieter and more interesting. Getting one required patience, a contact in Colombia, and the willingness to accept a very small cutting at a very large price. It is now the most admired plant in the collection by the people who actually know what it is."
+  }
+}

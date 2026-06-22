@@ -1,0 +1,62 @@
+{
+  "name": "Begonia maculata 'Albo Variegata'",
+  "slug": "maculata-albo-variegated",
+  "scientificName": "Begonia maculata Raddi. 'Albo Variegata'",
+  "commonName": "Polka Dot Begonia Variegata",
+  "statusTag": "Collector Cultivar",
+  "botanicalType": "variegated",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "maculata",
+  "origin": "Cultivated selection (derived from Begonia maculata, native to southeastern Brazil, Atlantic Forest)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia maculata 'Albo Variegata' is a cultivated horticultural selection derived from the popular cane begonia Begonia maculata Raddi, whose wild ancestry lies in the humid Atlantic Forest habitats of southeastern Brazil. The base species is itself celebrated for its asymmetrical angel-wing leaves marked with silver polka dots against deep green; the 'Albo Variegata' form adds a layer of irregular cream variegation that overlays the silver spotting for an effect at once more complex and more dramatic than the plain species. Deep red undersides remain a constant. Upright, segmented, bamboo-like stems carry the distinctively winged, asymmetric leaves in a clean vertical arrangement. Compared to the common maculata, the variegated form is considerably harder to find and commands a premium price justified by its genuinely enhanced ornamental character.",
+  "quickFacts": {
+    "growthHabit": "Upright cane, bamboo-like",
+    "matureSize": "Medium to large (60-150 cm tall)",
+    "light": "Bright indirect light",
+    "humidity": "Moderate to high humidity (60-80%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, angel-wing / oblique-ovate with pointed tip",
+    "leafLength": "12-25 cm",
+    "leafWidth": "5-10 cm",
+    "petioleColor": "Short, reddish",
+    "venation": "Visible beneath spot and variegation pattern",
+    "texture": "Thin to semi-glossy, deep red undersides",
+    "variegation": "Silver polka dots plus irregular cream variegation on green blade",
+    "growthHabit": "Upright segmented bamboo-like canes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia maculata albo variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia maculata albo variegata",
+      "Begonia maculata variegated",
+      "Begonia maculata albo",
+      "polka dot begonia variegated"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

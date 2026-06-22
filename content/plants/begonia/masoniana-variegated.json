@@ -1,0 +1,62 @@
+{
+  "name": "Begonia masoniana 'Variegata'",
+  "slug": "masoniana-variegated",
+  "scientificName": "Begonia masoniana Irmsch. 'Variegata'",
+  "commonName": "Iron Cross Begonia Variegata",
+  "statusTag": "Collector Cultivar",
+  "botanicalType": "variegated",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "masoniana",
+  "origin": "Cultivated selection (derived from Begonia masoniana, native to southern China and northern Vietnam)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia masoniana 'Variegata' is a cultivated selection derived from Begonia masoniana Irmsch., the 'Iron Cross Begonia' — a rhizomatous species associated with the humid forest habitats of southern China and northern Vietnam, grown in warm, shaded, humid conditions that replicate its native understory environment. The base species is already remarkable for its large, heavily bullate and hairy leaves bearing the prominent dark iron-cross marking at the centre of each blade. In the 'Variegata' form, irregular creamy-white variegation is added to this iron-cross pattern across the deep green to olive lamina, producing leaves of layered visual complexity that are immediately striking. The creeping rhizome habit remains unchanged. A plant that makes the already-dramatic iron cross begonia more complex still — sought after by collectors for its rarity within the masoniana lineage.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping",
+    "matureSize": "Medium (30-50 cm spread)",
+    "light": "Medium indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Large, broadly cordate, asymmetrical, heavily bullate",
+    "leafLength": "12-25 cm",
+    "leafWidth": "10-20 cm",
+    "petioleColor": "Hairy, greenish-reddish",
+    "venation": "Iron-cross pattern centrally, palmate",
+    "texture": "Heavily bullate, hairy, crisp texture",
+    "variegation": "Dark iron-cross marking plus irregular creamy-white variegation on green-olive lamina",
+    "growthHabit": "Creeping rhizome at or just above substrate surface"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia masoniana variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia masoniana variegata",
+      "Begonia masoniana variegated",
+      "iron cross begonia variegated",
+      "Begonia masoniana 'Variegata'"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

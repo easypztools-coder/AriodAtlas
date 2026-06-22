@@ -131,6 +131,12 @@ export const genera: GenusEntry[] = [
     description: "Dramatic shield-leafed specimens from Southeast Asia",
   },
   {
+    name: "Begonia",
+    slug: "begonia",
+    speciesCount: 24,
+    description: "Extraordinary foliage diversity — from iridescent pavonina to textured ferox — the collector's botanical wild card",
+  },
+  {
     name: "Other Aroids",
     slug: "other",
     speciesCount: 19,

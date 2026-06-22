@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Discover, explore and compare the world's most extraordinary aroids. Live market prices, species profiles, and cultivation data for serious collectors.",
   openGraph: {
-    url: "https://ariodatlas.com",
+    url: "https://aroidatlas.com",
   },
 };
 

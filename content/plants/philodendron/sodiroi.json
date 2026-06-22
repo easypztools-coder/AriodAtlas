@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron sodiroi",
+  "slug": "sodiroi",
+  "scientificName": "Philodendron sodiroi André",
+  "commonName": "Silver Sodiroi",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "sodiroi",
+  "origin": "Ecuador (humid premontane to montane forest)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Philodendron sodiroi, described by André, is a climbing hemiepiphyte from the humid forests of Ecuador — an understory plant that ascends tree trunks in warm, filtered light with consistent high humidity and stable temperatures. The base species is immediately distinguished by its cordate leaves patterned with a natural silver mottling over a deep green base: not a chimeric mutation but an intrinsic feature of the species, producing an effect that appears almost hand-painted. Aerial roots at closely spaced nodes grip the support firmly, and the compact internodes keep leaves presented in a tight, refined arrangement. The base species is distinct from the cultivated 'Variegated' form, which shows a more dramatic chimeric white-and-green patterning; sodiroi itself rewards those who prefer the botanical original — elegant, manageable, and carrying a distinguished silvering that needs no enhancement.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte",
+    "matureSize": "Medium climber (0.8-1.5m with support)",
+    "light": "Medium indirect light",
+    "humidity": "High humidity (70-80%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate with distinct basal sinus",
+    "leafLength": "20-40 cm",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Green, moderate length",
+    "venation": "Primary venation visible beneath silver mottling",
+    "texture": "Semi-glossy, moderately coriaceous",
+    "variegation": "Natural silver mottling (intrinsic to species, not chimeric)",
+    "growthHabit": "Compact climber with short internodes and adherent aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron sodiroi",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron sodiroi",
+      "Philodendron sodiroi André",
+      "sodiroi philodendron",
+      "Philodendron silver sodiroi"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

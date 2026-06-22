@@ -1,0 +1,61 @@
+{
+  "name": "Rhaphidophora beccarii",
+  "slug": "rhaphidophora-beccarii",
+  "scientificName": "Rhaphidophora beccarii (Engl.) Engl.",
+  "commonName": "Beccari's Rhaphidophora",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Rhaphidophora",
+  "species": "beccarii",
+  "origin": "Peninsular Thailand to Western Malesia (humid lowland and hill forest)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Rhaphidophora beccarii, described by Engler, is a tropical climbing aroid from the humid lowland and hill forests of Peninsular Thailand to Western Malesia — ascending tree trunks by means of adventitious attachment roots in shaded to filtered light beneath the forest canopy where humidity is maintained throughout the year. It is a strongly heteroblastic species: juvenile leaves are small, coriaceous, and tightly appressed to the substrate in a characteristic shingling behaviour, while adult leaves breaking free of the shingle phase are considerably larger, thick and elliptic to ovate, with entire margins and assertive venation. The contrast between juvenile and adult growth is pronounced enough to cause regular misidentification. Beccarii occupies the accessible end of the collector Rhaphidophora spectrum — less extreme in its shingling habit than cryptantha or hayi but botanically interesting and genuinely ornamental in its adult form.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte, strongly heteroblastic",
+    "matureSize": "Medium climber (1-3m with support)",
+    "light": "Medium indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "20-30°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Juvenile: small, appressed, coriaceous; Adult: elliptic to ovate, entire margins",
+    "leafLength": "Juvenile 3-8 cm; Adult 15-30 cm",
+    "leafWidth": "Juvenile 2-5 cm; Adult 10-20 cm",
+    "petioleColor": "Short to moderate, green",
+    "venation": "Strong, prominent on adult leaves",
+    "texture": "Coriaceous, semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Shingling juvenile phase; scandent adult phase with aerial roots at nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Rhaphidophora beccarii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Rhaphidophora beccarii",
+      "Rhaphidophora beccarii Engl",
+      "beccarii Rhaphidophora"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -31,7 +31,7 @@ def main():
                 out_img.putpixel((x, y), (r, g, b, alpha))
                 
     # Save the output
-    output_path = r"c:\Users\nicho\OneDrive\Documents\Web Development\Ariod Atlas AG\AriodAtlas\public\images\logo.png"
+    output_path = r"c:\Users\nicho\OneDrive\Documents\Web Development\Aroid Atlas AG\AroidAtlas\public\images\logo.png"
     out_img.save(output_path, "PNG")
     print(f"Background removed successfully and saved to {output_path}!")
 

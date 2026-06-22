@@ -1,0 +1,62 @@
+{
+  "name": "Begonia melanobullata",
+  "slug": "melanobullata",
+  "scientificName": "Begonia melanobullata W.H.Ardi & D.C.Thomas",
+  "commonName": "Black Bullate Begonia",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "melanobullata",
+  "origin": "East Kalimantan, Borneo (humid lowland to hill forest)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Begonia melanobullata, described by Ardi and Thomas, is a rare rhizomatous species from the humid lowland to hill forest of East Kalimantan in Borneo — growing in warm, shaded rainforest understory on moist leaf litter and humus-rich substrate with high humidity and constantly damp but well-drained conditions. Its foliage is among the most dramatically textured in the genus: dark, deeply glossy leaves with a strongly bullate surface studded with distinctive black conical bullae that project from the blade surface, producing an effect that is simultaneously armoured and elegant. Red, hairy petioles carry each leaf from the creeping rhizome, which roots along the substrate surface to form compact forest-floor colonies. Among the black-foliage Bornean begonias, melanobullata occupies the highest position in collector rarity and desirability.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping colony",
+    "matureSize": "Small to medium (20-40 cm spread)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (85-95%)",
+    "temperature": "20-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Broadly ovate, strongly bullate",
+    "leafLength": "8-18 cm",
+    "leafWidth": "7-15 cm",
+    "petioleColor": "Red, hairy",
+    "venation": "Sunken between bullae",
+    "texture": "Dark, deeply glossy, with prominent black conical bullae on upper surface",
+    "variegation": "None",
+    "growthHabit": "Creeping rhizome rooting along substrate surface"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia melanobullata Borneo",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia melanobullata",
+      "Begonia melanobullata Ardi",
+      "melanobullata begonia",
+      "Begonia melanobullata Kalimantan"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

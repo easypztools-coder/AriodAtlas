@@ -1,0 +1,68 @@
+{
+  "name": "Philodendron joepii",
+  "slug": "joepii",
+  "scientificName": "Philodendron joepii Croat",
+  "commonName": "Joepii Philodendron",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "joepii",
+  "origin": "French Guiana (humid lowland forest endemic)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Philodendron joepii is a rare climbing Philodendron endemic to the humid lowland forests of French Guiana, described by Croat and named in honour of Joep Moonen, a naturalist who first documented it. It is one of the most strongly heteroblastic Philodendrons in cultivation — the difference between juvenile and adult foliage being so dramatic as to make the two growth stages almost unrecognisable as the same plant. Juvenile leaves are entire, narrow and elongated, held close to the climbing stem; as the plant matures and ascends into better light, the foliage transforms into the extraordinary tripartite adult leaf form — a very long, narrow central lobe flanked by two shorter lateral lobes positioned near the top of the blade, producing a silhouette unlike any other Philodendron in common cultivation. The base species is considerably rarer than its 'Aurea Variegata' form and commands serious collector interest in its own right.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte, strongly heteroblastic",
+    "matureSize": "Large climber (2-4m with support)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "20-30°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Juvenile: entire, narrow-elongated; Adult: tripartite with long narrow central lobe and 2 shorter lateral lobes",
+    "leafLength": "30-70 cm (adult central lobe)",
+    "leafWidth": "20-50 cm (spread across lateral lobes)",
+    "petioleColor": "Green, medium length",
+    "venation": "Prominent midrib per lobe, pinnate lateral veins",
+    "texture": "Semi-glossy, moderately coriaceous",
+    "variegation": "None",
+    "growthHabit": "Climbing via aerial roots with strongly heteroblastic leaf development"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron joepii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron joepii",
+      "Philodendron joepii Croat",
+      "joepii philodendron",
+      "Philodendron joepii French Guiana"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata", "aurea"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "The Shape-Shifter of French Guiana",
+    "date": "2021-04-17",
+    "author": "Aroid Aaron",
+    "content": "There is a particular pleasure in owning a plant that confounds the uninitiated. *Philodendron joepii* is precisely such a plant. A visitor to the collection will look at the juvenile growth — those slim, entire, almost grass-like leaves pressed against the support — and nod politely. Then they will see the adult foliage above, that extraordinary tripartite structure with its long, narrow central lobe and paired lateral lobes near the top, and the polite nod will become something quite different. Named for Joep Moonen, who found it in French Guiana, joepii is one of the more dramatic expressions of heteroblasty in the genus — the botanical equivalent of a caterpillar and butterfly being the same organism. The variegated form gets all the press. The species itself deserves considerably more of it."
+  }
+}

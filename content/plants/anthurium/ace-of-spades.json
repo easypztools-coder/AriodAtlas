@@ -1,0 +1,62 @@
+{
+  "name": "Anthurium 'Ace of Spades'",
+  "slug": "ace-of-spades",
+  "scientificName": "Anthurium 'Ace of Spades'",
+  "commonName": "Ace of Spades Anthurium",
+  "statusTag": "Collector Hybrid",
+  "botanicalType": "cultivar",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "'Ace of Spades'",
+  "origin": "Horticultural cultivar; derived from tropical Anthurium ancestry",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium 'Ace of Spades' is a cultivated horticultural selection bred for its exceptional dark foliage, maintained under controlled conditions worldwide. The leaves are a deep, velvety dark green to near-black — broad, cordate and spade-like, with an elegantly elongated apex, clean sinus, and striking pale venation that creates dramatic contrast against the almost luminous dark blade. New growth emerges lighter before hardening to the characteristic lustrous, near-black finish that makes this cultivar so sought after. Compact in habit with a short basal crown, it is one of those rare plants that combines genuine rarity with refined aesthetics in equal measure.",
+  "quickFacts": {
+    "growthHabit": "Compact, self-heading",
+    "matureSize": "Medium (40-70 cm)",
+    "light": "Bright indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-30°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate to ovate-cordate, spade-shaped with elongated apex",
+    "leafLength": "25-50 cm",
+    "leafWidth": "18-35 cm",
+    "petioleColor": "Dark greenish-maroon",
+    "venation": "Striking pale to silvery-white venation on near-black blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Compact basal rosette, short internodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium Ace of Spades",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium Ace of Spades",
+      "Anthurium AOS",
+      "Anthurium ace spades",
+      "AOS anthurium"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

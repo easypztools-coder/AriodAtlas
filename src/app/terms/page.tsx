@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Read the terms of service of Ariod Atlas to understand rules, guidelines, and agreements for using our visual encyclopedia.",
+  description: "Read the terms of service of Aroid Atlas to understand rules, guidelines, and agreements for using our visual encyclopedia.",
 };
 
 export default function TermsPage() {
@@ -19,7 +19,7 @@ export default function TermsPage() {
           Terms of Service
         </h1>
         <p className="mt-3 text-sm text-muted leading-relaxed">
-          Our full terms of service are being drafted. By using Ariod Atlas you agree to use the site for lawful purposes only. This page will be updated shortly.
+          Our full terms of service are being drafted. By using Aroid Atlas you agree to use the site for lawful purposes only. This page will be updated shortly.
         </p>
         <Link href="/" className="btn-primary mt-8 inline-flex items-center gap-2">
           Back to Home

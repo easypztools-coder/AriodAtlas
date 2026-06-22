@@ -2,31 +2,114 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Ariod Atlas",
-  description: "Learn more about the mission, data collection methodology, and team behind the Ariod Atlas tropical plant visual encyclopedia.",
+  title: "About Aroid Atlas & Methodology",
+  description: "Learn about the mission, data collection methodologies, statistical filtering, and active retail integrations powering the Aroid Atlas visual encyclopedia.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-[70vh] items-center justify-center px-6">
-      <div className="text-center max-w-md">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-primary/20 bg-primary/5">
-          <svg className="h-7 w-7 text-primary/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
+    <div className="section-spacing">
+      <div className="section-container">
+        {/* Header Block */}
+        <div className="mb-12 max-w-3xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-heading mb-4">
+            About Aroid Atlas
+          </h1>
+          <p className="text-sm md:text-base text-muted leading-relaxed">
+            Aroid Atlas is a specialized visual encyclopedia and market index for rare tropical plants in the family Araceae (Aroids). Built for serious collectors, commercial nurseries, and botanists, we bridge the gap between scientific botanical metadata and real-world market valuation.
+          </p>
         </div>
-        <h1 className="text-2xl font-heading font-bold text-heading">
-          About Ariod Atlas
-        </h1>
-        <p className="mt-3 text-sm text-muted leading-relaxed">
-          Ariod Atlas is the definitive visual encyclopedia of rare tropical plants — built for serious collectors, botanists, and plant enthusiasts. This page is being expanded.
-        </p>
-        <Link href="/plants" className="btn-primary mt-8 inline-flex items-center gap-2">
-          Explore Species
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </Link>
+
+        {/* Core Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="glass-card-hover p-6">
+            <h3 className="text-sm font-heading font-bold text-heading mb-2">Botanical Accuracy</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              Every species profile is compiled with structured taxonomic data—documenting geographical origin, growth habit, morphology (leaf shape, texture, size), and care requirements.
+            </p>
+          </div>
+          <div className="glass-card-hover p-6">
+            <h3 className="text-sm font-heading font-bold text-heading mb-2">Market Intelligence</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              We aggregate weekly historical sales data to track market velocity, volatility, and value ranges, offering an empirical valuation guide in an otherwise speculative market.
+            </p>
+          </div>
+          <div className="glass-card-hover p-6">
+            <h3 className="text-sm font-heading font-bold text-heading mb-2">Retail Integration</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              We scan and index availability from premium UK nurseries, comparing live store pricing with auction listings to help buyers find the best deals.
+            </p>
+          </div>
+        </div>
+
+        {/* Pricing Methodology Section */}
+        <div className="border-t border-primary/10 pt-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-4">
+              <h2 className="section-heading mb-3">Market Valuation Methodology</h2>
+              <p className="text-xs text-muted leading-relaxed">
+                Calculating the value of rare plants is highly complex due to fluctuations in leaf counts, variegation quality, and seasonal demand. Here is how our statistical pipeline handles this data:
+              </p>
+            </div>
+            
+            <div className="lg:col-span-8 space-y-6">
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">1</div>
+                <div>
+                  <h4 className="text-sm font-heading font-bold text-heading mb-1">eBay UK Sold Comparables (Comps)</h4>
+                  <p className="text-xs text-muted leading-relaxed">
+                    We crawl and log completed transaction prices from eBay UK auctions weekly. This records raw market transaction prices for real plant specimens sold between collectors.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">2</div>
+                <div>
+                  <h4 className="text-sm font-heading font-bold text-heading mb-1">Statistical Outlier & Keyword Filtering</h4>
+                  <p className="text-xs text-muted leading-relaxed">
+                    Raw scraping captures noise—seeds, artificial leaves, pots, or shipping fees. Our ingestion pipeline parses listing titles to filter out irrelevant items. We also use a **20% Trimmed Mean algorithm** to remove extreme statistical outliers (scam listings or extremely high-priced large specimens) from the weekly average.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs font-bold text-primary">3</div>
+                <div>
+                  <h4 className="text-sm font-heading font-bold text-heading mb-1">Retail Price Aggregation</h4>
+                  <p className="text-xs text-muted leading-relaxed">
+                    In parallel, our crawlers scan stock availability across leading online plant retail shops. This provides the *Retail Value Guide* which displays stable store prices including VAT, providing context on whether it is cheaper to buy from a nursery or bid in an auction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer Callout */}
+        <div className="glass-card bg-rarity/5 border-rarity/20 p-6 md:p-8 mb-12">
+          <div className="flex items-start gap-4">
+            <svg className="h-6 w-6 text-rarity shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            <div>
+              <h3 className="text-sm font-heading font-bold text-[#E6C687] mb-2">Market Volatility Disclaimer</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                The prices shown on Aroid Atlas are historical statistics computed using automated calculations and models. They represent estimates of general market trends and should not be taken as absolute valuations or financial advice. The rare plant market is highly volatile, and prices can fluctuate heavily based on seasonal weather, shipping conditions, and current trend aesthetics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation CTAs */}
+        <div className="flex justify-center gap-4">
+          <Link href="/plants" className="btn-primary">
+            Explore Species
+          </Link>
+          <Link href="/compare" className="btn-secondary">
+            Compare Species
+          </Link>
+        </div>
       </div>
     </div>
   );

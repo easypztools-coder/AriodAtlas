@@ -1,0 +1,63 @@
+{
+  "name": "Philodendron hederaceum",
+  "slug": "hederaceum",
+  "scientificName": "Philodendron hederaceum (Jacq.) Schott",
+  "commonName": "Heartleaf Philodendron",
+  "statusTag": "Classic Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "hederaceum",
+  "origin": "Central America, Caribbean, and northern South America",
+  "collectorPopularity": 2,
+  "rarityStatus": "Common",
+  "availability": "High",
+  "priceGuideTier": "£",
+  "aboutText": "Philodendron hederaceum is the botanical species underpinning what is likely the most widely grown Philodendron in cultivation — a climbing or scandent hemiepiphyte distributed across Central America, the Caribbean and northern South America, rooting along trunks and woody supports in shaded forest understory to lower canopy. The species in its true botanical form is a slender, graceful climber with elongated internodes and attaching aerial roots, carrying thin to moderately coriaceous cordate leaves with a shallow sinus, softly acuminate apex and understated venation on slim, flexible petioles. In the wild it is a forest plant of genuine ecological importance; in cultivation it has given rise to dozens of named forms including the common 'Brasil' cultivar. The true species remains an excellent foundational plant — forgiving, vigorous, and a useful reference point for understanding the genus.",
+  "quickFacts": {
+    "growthHabit": "Climbing to scandent hemiepiphyte",
+    "matureSize": "Medium climber (1-2m with support)",
+    "light": "Low to bright indirect light",
+    "humidity": "Moderate (50-70%)",
+    "temperature": "15-30°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Fast"
+  },
+  "morphology": {
+    "leafShape": "Cordate with shallow sinus and softly acuminate apex",
+    "leafLength": "15-35 cm",
+    "leafWidth": "10-25 cm",
+    "petioleColor": "Slim, flexible, green",
+    "venation": "Understated midrib and pinnate venation",
+    "texture": "Thin to moderately coriaceous, semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Climbing or trailing on elongated internodes with aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": false,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron hederaceum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron hederaceum",
+      "Heartleaf philodendron",
+      "Philodendron hederaceum Schott",
+      "Philodendron cordatum"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "brasil", "lemon lime", "micans",
+      "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

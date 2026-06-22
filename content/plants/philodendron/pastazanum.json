@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron pastazanum",
+  "slug": "pastazanum",
+  "scientificName": "Philodendron pastazanum K.Krause",
+  "commonName": "Pastaza Philodendron",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "pastazanum",
+  "origin": "Ecuador to Peru (humid western Amazonian lowland forest)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "££",
+  "aboutText": "Philodendron pastazanum is a crawling terrestrial rainforest aroid from the humid lowland forests of western Amazonia spanning Ecuador and Peru, growing on deep organic litter or among roots on the shaded forest floor with constant moisture and rich humus. Unlike the majority of collector Philodendrons, it spreads horizontally rather than climbing — a stout rhizome creeps along the substrate, extending feeder roots into the organic matter below, while upright petioles carry large, broadly cordate leaves of matte deep green with a broad, open sinus, rounded posterior lobes, and clear pale venation. The combination of considerable leaf size with a terrestrial spreading habit makes pastazanum an ideal specimen for wide, low containers. As a parent of the hybrid 'Dean McDowell', it has also passed its size and broad leaf character into one of the most celebrated crawling hybrids in the hobby.",
+  "quickFacts": {
+    "growthHabit": "Terrestrial crawling rhizome",
+    "matureSize": "Large (60-100 cm leaf span)",
+    "light": "Medium indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broadly cordate with open sinus and rounded posterior lobes",
+    "leafLength": "40-80 cm",
+    "leafWidth": "35-70 cm",
+    "petioleColor": "Long, upright, green",
+    "venation": "Clear pale primary venation on matte green blade",
+    "texture": "Matte, moderately coriaceous",
+    "variegation": "None",
+    "growthHabit": "Stout horizontal rhizome with feeder roots, spreading laterally"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron pastazanum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron pastazanum",
+      "Philodendron pastazanum K.Krause",
+      "pastazanum philodendron",
+      "Philodendron pastazanum plant"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Monstera deliciosa",
+  "slug": "deliciosa",
+  "scientificName": "Monstera deliciosa Liebm.",
+  "commonName": "Swiss Cheese Plant",
+  "statusTag": "Iconic Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "deliciosa",
+  "origin": "Southern Mexico to Panama",
+  "collectorPopularity": 3,
+  "rarityStatus": "Common",
+  "availability": "High",
+  "priceGuideTier": "£",
+  "aboutText": "Monstera deliciosa is the plant that introduced an entire generation to tropical foliage — a robust hemiepiphytic climber from the humid forests of southern Mexico to Panama that has become one of the most recognised houseplants on earth. In its juvenile stage the leaves are entire and cordate, clinging to trunks and working upward; as the plant matures and climbs into brighter canopy positions, the foliage transforms dramatically into the large, leathery, deeply split blades with characteristic inner fenestrations that have made the species so visually iconic. Stout, geniculate petioles project the broad mature leaves outward from the support with considerable authority. The base species remains a worthwhile addition to any collection in its own right — large, bold, architecturally significant, and considerably more forgiving than many of its rarer cousins. A gateway plant that earns its place in the most advanced collections too.",
+  "quickFacts": {
+    "growthHabit": "Robust climbing hemiepiphyte",
+    "matureSize": "Very Large climber (3m+ with support)",
+    "light": "Medium to bright indirect light",
+    "humidity": "Moderate to high (50-80%)",
+    "temperature": "18-30°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Fast"
+  },
+  "morphology": {
+    "leafShape": "Juvenile: entire cordate; Mature: deeply pinnately split with inner fenestrations",
+    "leafLength": "30-90 cm (mature)",
+    "leafWidth": "25-70 cm (mature)",
+    "petioleColor": "Stout, green, geniculate",
+    "venation": "Bold midrib with pinnate lateral veins between sinuses and fenestrations",
+    "texture": "Leathery, glossy, coriaceous at maturity",
+    "variegation": "None",
+    "growthHabit": "Strong climber with thick stems, conspicuous nodes, and robust aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Monstera deliciosa plant",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Monstera deliciosa",
+      "Swiss cheese plant",
+      "Monstera deliciosa Liebm",
+      "deliciosa monstera"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata",
+      "albo", "thai constellation", "mint", "aurea", "sport"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

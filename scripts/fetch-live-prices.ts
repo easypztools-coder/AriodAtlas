@@ -77,7 +77,7 @@ function discoverPlants(): DiscoveredPlant[] {
 // ─── 2. RUN PIPELINE FOR EACH PLANT ──────────────────────────────────────
 async function main() {
   console.log("=".repeat(60));
-  console.log("  ARIOD ATLAS LIVE PRICE FETCH WORKFLOW");
+  console.log("  AROID ATLAS LIVE PRICE FETCH WORKFLOW");
   console.log("=".repeat(60));
 
   const allPlants = discoverPlants();

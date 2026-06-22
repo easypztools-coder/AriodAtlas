@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium papillilaminum × magnificum",
+  "slug": "papillilaminum-x-magnificum",
+  "scientificName": "Anthurium papillilaminum × magnificum",
+  "commonName": "Papillilaminum Magnificum Hybrid",
+  "statusTag": "Rare Collector Hybrid",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "papillilaminum × magnificum",
+  "origin": "Horticultural hybrid; derived from tropical American parentage",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium papillilaminum × magnificum is a horticultural hybrid uniting two species prized for different but complementary leaf qualities. The papillilaminum parent — itself a rare Panamanian species with elongated, subtly textured leaves and distinctive papillate surface — lends an elegance and refinement of form, while magnificum contributes impressive breadth, substance, and the bold presence for which it is celebrated. The result is a compact, self-heading plant with a short basal crown producing dark, velvety, cordate and substantial leaves with pale to olive-toned venation and a moderate open sinus. Sturdy petioles support blades that combine the elongated elegance of papillilaminum's outline with the broad, impressive leaf mass of magnificum. A hybrid that rewards patient, attentive cultivation with increasingly impressive foliage at maturity.",
+  "quickFacts": {
+    "growthHabit": "Compact, self-heading",
+    "matureSize": "Medium (40-75 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate with moderate sinus, combining elongated papillilaminum form with magnificum breadth",
+    "leafLength": "25-55 cm",
+    "leafWidth": "20-42 cm",
+    "petioleColor": "Sturdy, dark reddish-green",
+    "venation": "Pale to olive venation on dark velvety blade",
+    "texture": "Velvety, substantial",
+    "variegation": "None",
+    "growthHabit": "Short basal crown, compact self-heading"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium papillilaminum magnificum hybrid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium papillilaminum magnificum",
+      "Anthurium papillilaminum x magnificum",
+      "Anthurium papillilaminum × magnificum",
+      "papillilaminum magnificum hybrid",
+      "Anthurium pap mag"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

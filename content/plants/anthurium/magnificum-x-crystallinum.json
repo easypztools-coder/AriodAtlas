@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium magnificum × crystallinum",
+  "slug": "magnificum-x-crystallinum",
+  "scientificName": "Anthurium magnificum × crystallinum",
+  "commonName": "Magnificum Crystallinum Hybrid",
+  "statusTag": "Rare Collector Hybrid",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "magnificum × crystallinum",
+  "origin": "Horticultural hybrid; derived from tropical American parentage",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium magnificum × crystallinum is a highly regarded hybrid cross that combines the impressive scale and substance of Anthurium magnificum with the refined velvety texture and luminous silvery venation of Anthurium crystallinum. The result is a compact, semi-upright plant with a short basal crown producing broad, velvet-textured, deeply cordate leaves with a pronounced open sinus and strikingly pale primary venation across a rich dark green blade. Sturdy petioles support what can become substantial leaf blades that inherit size inclinations from the magnificum parent. This hybrid is celebrated for being more vigorous and somewhat easier to manage than many pure velvet anthuriums while retaining the visual impact of both parents — making it one of the most practical and popular velvet hybrids in UK collector cultivation.",
+  "quickFacts": {
+    "growthHabit": "Compact, semi-upright, self-heading",
+    "matureSize": "Medium to Large (50-90 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-85%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broad, deeply cordate with pronounced open sinus",
+    "leafLength": "30-65 cm",
+    "leafWidth": "25-50 cm",
+    "petioleColor": "Sturdy, green to reddish-green",
+    "venation": "Striking pale primary venation on deep velvety green blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Short basal crown, semi-upright, self-supporting"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium magnificum crystallinum hybrid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium magnificum crystallinum",
+      "Anthurium magnificum x crystallinum",
+      "Anthurium magnificum × crystallinum",
+      "magnificum crystallinum hybrid",
+      "Anthurium mag crystal"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

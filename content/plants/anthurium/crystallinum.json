@@ -1,0 +1,64 @@
+{
+  "name": "Anthurium crystallinum",
+  "slug": "crystallinum",
+  "scientificName": "Anthurium crystallinum Linden & André",
+  "commonName": "Crystal Anthurium",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "crystallinum",
+  "origin": "Panama to Peru (humid tropical forest understory)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium crystallinum is one of the foundational velvet anthuriums — a compact, self-supporting species from humid tropical forests spanning Panama to Peru, where it grows terrestrially or occasionally lithophytically on moist, organic-rich substrates in deep shade. The broad, cordate leaves are a deep velvety dark green with an open sinus and strikingly beautiful silvery-white primary venation that gives the plant its crystalline quality. Petioles arise from a short crown with surface roots, and the plant remains neatly self-supporting rather than climbing. As the parent of an enormous number of celebrated hybrids — crystallinum × magnificum, crystallinum × forgetii and many others — this is a species of genuine horticultural importance as well as great beauty in its own right.",
+  "quickFacts": {
+    "growthHabit": "Compact, terrestrial, self-heading",
+    "matureSize": "Medium (40-70 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broad cordate with open sinus",
+    "leafLength": "25-50 cm",
+    "leafWidth": "18-38 cm",
+    "petioleColor": "Green, medium length",
+    "venation": "Striking silvery-white crystalline primary venation on deep velvety green blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Short basal crown with surface roots, self-supporting"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium crystallinum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium crystallinum",
+      "Crystal anthurium",
+      "Anthurium crystal",
+      "crystallinum anthurium",
+      "Anthurium crystallinum Linden"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata", "x magnificum",
+      "x forgetii", "hybrid"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

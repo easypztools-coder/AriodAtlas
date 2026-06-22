@@ -50,9 +50,9 @@ def main():
     sans_font_small = ImageFont.truetype(sans_path, 20)
     
     # Draw Brand Text
-    # "ARIOD ATLAS"
+    # "AROID ATLAS"
     # Draw in white
-    draw.text((220, 60), "ARIOD ATLAS", fill=(255, 255, 255, 255), font=serif_font_large)
+    draw.text((220, 60), "AROID ATLAS", fill=(255, 255, 255, 255), font=serif_font_large)
     
     # Draw Subtitle Text
     # "V I S U A L   E N C Y C L O P E D I A   O F   R A R E   P L A N T S"

@@ -1,0 +1,69 @@
+{
+  "name": "Philodendron 'Splendid'",
+  "slug": "splendid",
+  "scientificName": "Philodendron 'Splendid'",
+  "commonName": "Splendid Philodendron",
+  "statusTag": "Rare Collector Cultivar",
+  "botanicalType": "cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "'Splendid'",
+  "origin": "Horticultural cultivar; derived from tropical American Philodendron parentage (P. verrucosum × P. melanochrysum)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Philodendron 'Splendid' is a celebrated climbing hybrid believed to cross Philodendron verrucosum and Philodendron melanochrysum — two of the most admired velvety climbing Philodendrons in the collector world. The verrucosum parent contributes its extraordinary velvety leaf texture and the crisp, pale primary venation; the melanochrysum parent lends the elongated, tapering cordate form with its pronounced acuminate apex and deep, rich leaf colour. The result is a climbing hemiepiphyte with elongated, velvety, cordate leaves on robust internodes bearing cataphyll remnants and aerial roots for climbing and anchorage. The deep green blades show striking pale primary venation and that distinctive elongated tapering tip — a leaf shape that earns the cultivar name completely. Among Philodendron hybrids, 'Splendid' is one of the most consistently admired and frequently sought, offering the drama of both parents in a single, vigorous cultivar.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte",
+    "matureSize": "Large climber (1.5-3m with support)",
+    "light": "Bright indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Elongated cordate with pronounced sinus and tapering acuminate apex",
+    "leafLength": "40-80 cm",
+    "leafWidth": "25-50 cm",
+    "petioleColor": "Green, robust, slightly hairy on petiole",
+    "venation": "Striking pale primary venation on deep velvety green blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Climbing with aerial roots, robust internodes with cataphyll remnants"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron Splendid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron Splendid",
+      "Philodendron 'Splendid'",
+      "Splendid philodendron",
+      "Philodendron verrucosum melanochrysum hybrid",
+      "Philodendron splendid hybrid"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Greater Than the Sum of Its Parts",
+    "date": "2022-06-03",
+    "author": "Aroid Aaron",
+    "content": "I have a particular weakness for hybrids that justify their existence immediately and without argument. *Philodendron 'Splendid'* does exactly that. One looks at a mature leaf — that elongated, tapering form, the extraordinary velvety depth of the blade, those crisp pale veins — and it is quite clear why someone thought to cross *P. verrucosum* with *P. melanochrysum*. Each parent is magnificent in isolation. Together, they produce something that surpasses both. The cataphyll remnants along the internodes, the aerial roots gripping the moss pole with quiet determination, the new leaf emerging like a tightly furled letter of considerable importance — the whole plant is an exercise in botanical theatre conducted at precisely the right volume."
+  }
+}

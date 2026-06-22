@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read the privacy policy of Ariod Atlas to understand how we collect, use, and protect your data.",
+  description: "Read the privacy policy of Aroid Atlas to understand how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-3 text-sm text-muted leading-relaxed">
-          Our full privacy policy is being drafted. Ariod Atlas does not sell or share your personal data with third parties. This page will be updated shortly.
+          Our full privacy policy is being drafted. Aroid Atlas does not sell or share your personal data with third parties. This page will be updated shortly.
         </p>
         <Link href="/" className="btn-primary mt-8 inline-flex items-center gap-2">
           Back to Home

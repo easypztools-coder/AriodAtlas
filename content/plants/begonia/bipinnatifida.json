@@ -1,0 +1,62 @@
+{
+  "name": "Begonia bipinnatifida",
+  "slug": "bipinnatifida",
+  "scientificName": "Begonia bipinnatifida J.J.Sm.",
+  "commonName": "Fern-Leaf Begonia",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "bipinnatifida",
+  "origin": "New Guinea (humid montane and lowland tropical forest)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia bipinnatifida, described by J.J.Smith, is a rare rhizomatous species from the humid montane and lowland tropical forests of New Guinea, growing in warm, shaded, moist conditions on organic substrate. Its distinction lies entirely in its foliage: the leaves are deeply bipinnatifid — divided and then further divided again into narrow, toothed lobes — producing a feathery, highly dissected silhouette that is almost fern-like and entirely unlike the typical Begonia leaf form. Borne on red petioles from a creeping rhizome with reddish undersides accentuating the delicate lobes, bipinnatifida is one of the more structurally unusual Begonias in collector cultivation. It appeals strongly to those whose interest in the genus extends beyond the typical cane and rex forms into genuine botanical oddity.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping",
+    "matureSize": "Small to medium (20-40 cm spread)",
+    "light": "Medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Deeply bipinnatifid — divided into narrow, toothed lobes, fern-like",
+    "leafLength": "10-20 cm",
+    "leafWidth": "8-18 cm",
+    "petioleColor": "Red",
+    "venation": "Complex, following each lobe and sub-lobe",
+    "texture": "Thin, airy, reddish undersides",
+    "variegation": "None",
+    "growthHabit": "Creeping rhizome producing upright, highly divided foliage"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia bipinnatifida",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia bipinnatifida",
+      "Begonia bipinnatifida J.J.Sm",
+      "bipinnatifida begonia",
+      "Begonia bipinnatifida New Guinea"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

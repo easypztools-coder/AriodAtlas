@@ -50,7 +50,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-3">
               <Image
                 src="/images/logo.png"
-                alt="Ariod Atlas"
+                alt="Aroid Atlas"
                 width={450}
                 height={67}
                 className="h-16 w-auto"
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-primary/5">
           <p className="text-[11px] text-muted/60">
-            &copy; {new Date().getFullYear()} Ariod Atlas. All rights reserved.
+            &copy; {new Date().getFullYear()} Aroid Atlas. All rights reserved.
           </p>
         </div>
       </div>

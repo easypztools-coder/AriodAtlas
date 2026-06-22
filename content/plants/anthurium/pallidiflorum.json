@@ -78,5 +78,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "A Cloud Forest Cascade",
+    "date": "1898-07-22",
+    "author": "Aroid Aaron",
+    "content": "One often yearns for the incessant humidity of an Ecuadorian cloud forest when faced with a particularly damp British summer. *Anthurium pallidiflorum*, the Strapleaf Anthurium, always brings me back. Described by Engler in 1898, this epiphytic marvel clings to branches in its native montane forests, thriving in constant moisture and shade. Its compact basal crown gives rise to these wonderfully long, narrow, strap-like, linear-lanceolate leaves – quite the elegant, pendent cascade, isn't it? The smooth, leathery texture and prominent midrib are defining features. No variegation, thankfully, meaning one can truly appreciate its rather unique form without distraction. A fascinating adaptation to life high above the forest floor, though perhaps a tad challenging to accomodate in a modest glasshouse."
+  }
 }

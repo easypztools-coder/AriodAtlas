@@ -1,0 +1,62 @@
+{
+  "name": "Rhaphidophora cryptantha",
+  "slug": "rhaphidophora-cryptantha",
+  "scientificName": "Rhaphidophora cryptantha P.C.Boyce & G.M.Allen",
+  "commonName": "Shingling Rhaphidophora",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Rhaphidophora",
+  "species": "cryptantha",
+  "origin": "Papua New Guinea (wet rainforest)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Rhaphidophora cryptantha, described by Boyce and Allen, is a shingling climber from the wet rainforests of Papua New Guinea — ascending mossy trunks in persistently humid, shaded conditions, with juvenile growth remaining tightly appressed to bark by adhesive roots. It is one of the most neotenic Rhaphidophoras in cultivation: the overlapping leaves lie completely flat against the substrate in a permanently shingling arrangement, each ovate to elliptic, green and strongly veined blade carrying a distinctive folded profile that partially encloses the stem. Short internodes ensure leaves are packed closely. The base species is distinct from the cultivated 'Variegata' form, which has become considerably more sought-after due to its chimeric white patterning; the plain cryptantha is the more botanically correct expression of the species and appeals to collectors who appreciate the shingling habit for its own sake rather than as a backdrop for variegation.",
+  "quickFacts": {
+    "growthHabit": "Permanently shingling climber",
+    "matureSize": "Medium climber (0.5-2m on a flat bark panel)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "20-30°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Ovate to elliptic, folded profile partially enclosing the stem",
+    "leafLength": "4-12 cm",
+    "leafWidth": "3-8 cm",
+    "petioleColor": "Very short, green",
+    "venation": "Strongly veined, prominent",
+    "texture": "Semi-glossy, coriaceous, lies flat against substrate",
+    "variegation": "None",
+    "growthHabit": "Permanently shingling, overlapping leaves appressed to bark by adhesive roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Rhaphidophora cryptantha shingling",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Rhaphidophora cryptantha",
+      "Rhaphidophora cryptantha Boyce",
+      "shingling Rhaphidophora cryptantha",
+      "cryptantha Rhaphidophora"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

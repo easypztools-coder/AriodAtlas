@@ -9,7 +9,7 @@ function walk(dir) {
     } else if (file.endsWith('.json')) {
       let text = fs.readFileSync(full, 'utf8');
       if (text.includes('"author": "Aaron"')) {
-        text = text.replace(/"author": "Aaron"/g, '"author": "Ariod Aaron"');
+        text = text.replace(/"author": "Aaron"/g, '"author": "Aroid Aaron"');
         fs.writeFileSync(full, text, 'utf8');
         console.log('Updated:', full);
       }

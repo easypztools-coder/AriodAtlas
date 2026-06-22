@@ -1,0 +1,64 @@
+{
+  "name": "Monstera adansonii",
+  "slug": "adansonii",
+  "scientificName": "Monstera adansonii Schott",
+  "commonName": "Swiss Cheese Vine",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "adansonii",
+  "origin": "Southern Mexico to tropical South America",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "£",
+  "aboutText": "Monstera adansonii is a slender, vigorous climbing hemiepiphyte distributed widely from southern Mexico through tropical South America, rooting along trunks and woody supports from shaded understory positions up into brighter lower canopy. Unlike its famous relative Monstera deliciosa, the fenestrations in adansonii are elliptical perforations within the blade itself rather than cuts running to the margin — a botanical distinction that gives the leaves an almost lace-like quality when backlit. Juvenile foliage is smaller and intact; as the vine ascends it produces increasingly large, multi-perforated leaves on relatively slim petioles that arch lightly away from the support. Though common in the hobby, well-established mature specimens with large fenestrated leaves remain genuinely ornamental, and several unusual narrow-form and round-form variants have become collector items in their own right.",
+  "quickFacts": {
+    "growthHabit": "Vigorous climbing hemiepiphyte",
+    "matureSize": "Large climber (2m+ with support)",
+    "light": "Medium to bright indirect light",
+    "humidity": "Moderate to high (60-80%)",
+    "temperature": "18-30°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Fast"
+  },
+  "morphology": {
+    "leafShape": "Ovate to lanceolate with elliptical perforations within blade",
+    "leafLength": "20-45 cm",
+    "leafWidth": "12-30 cm",
+    "petioleColor": "Slim, green, geniculate",
+    "venation": "Prominent midrib with pinnate lateral veins between fenestrations",
+    "texture": "Thin to moderately coriaceous, semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Slender climbing vine with elongated internodes and aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Monstera adansonii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Monstera adansonii",
+      "Monstera adansonii Schott",
+      "Swiss cheese vine",
+      "Monstera adansonii plant",
+      "adansonii monstera"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata",
+      "deliciosa", "albo", "thai constellation"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

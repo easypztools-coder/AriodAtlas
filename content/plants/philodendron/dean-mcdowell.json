@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron 'Dean McDowell'",
+  "slug": "dean-mcdowell",
+  "scientificName": "Philodendron 'Dean McDowell'",
+  "commonName": "Dean McDowell Philodendron",
+  "statusTag": "Rare Collector Cultivar",
+  "botanicalType": "cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "'Dean McDowell'",
+  "origin": "Horticultural cultivar; derived from tropical South American Philodendron parentage (P. gloriosum × P. pastazanum)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Philodendron 'Dean McDowell' is a celebrated horticultural hybrid believed to be a cross between Philodendron gloriosum and Philodendron pastazanum — two of the most admired ground-crawling Philodendrons in the collector hobby. It inherits the best qualities of both parents: the velvety deep green leaf surface and bold, contrasting pale venation of gloriosum, combined with the larger, broader leaf potential of pastazanum, on a terrestrial rhizomatous plant that creeps along the substrate rather than climbing. New leaves emerge rolled and tightly furled before unfurling to reveal the rich dark surface with strikingly prominent primary venation. Feeder roots emerge from nodes along the running rhizome. Selected specifically for foliage quality and performance in cultivation, 'Dean McDowell' is a compelling choice for collectors who prefer the earthbound grandeur of the crawling species to their climbing counterparts.",
+  "quickFacts": {
+    "growthHabit": "Terrestrial crawling rhizome",
+    "matureSize": "Medium to Large (50-90 cm leaf span)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broadly cordate with deep sinus",
+    "leafLength": "40-80 cm",
+    "leafWidth": "30-65 cm",
+    "petioleColor": "Upright, green",
+    "venation": "Striking pale prominent primary venation on velvety deep green blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Terrestrial, compact rhizome creeping along substrate with feeder roots at nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron Dean McDowell",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron Dean McDowell",
+      "Philodendron 'Dean McDowell'",
+      "Dean McDowell philodendron",
+      "Philodendron dean mcdowell"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Philodendron hastatum",
+  "slug": "hastatum",
+  "scientificName": "Philodendron hastatum K.Koch & Sello",
+  "commonName": "Silver Sword Philodendron",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "hastatum",
+  "origin": "Southeastern Brazil (humid Atlantic forest)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Philodendron hastatum is a climbing Brazilian aroid from the humid Atlantic forest environments of southeastern Brazil, growing on tree trunks in shaded understory with constant moisture, high humidity, and filtered light. It is immediately distinguished by the remarkable metallic silver-green to blue-silver sheen of its leaf surface — a characteristic so pronounced that the plant is universally known in the hobby as the 'Silver Sword' Philodendron. The distinctly hastate leaves have elongated anterior lobes and comparatively short basal lobes, carried on long petioles that arise from sheathing nodes on slender aerial-rooted stems. A more established plant with genuinely interesting botanical character, hastatum rewards collectors who appreciate subtle, cool-toned foliage over the dramatic dark velvet of more expensive species — and it grows with admirable vigour once settled.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte",
+    "matureSize": "Medium to Large climber (1-2.5m with support)",
+    "light": "Medium to bright indirect light",
+    "humidity": "Moderate to high (60-80%)",
+    "temperature": "18-28°C",
+    "difficulty": "Easy to Moderate",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Distinctly hastate with elongated anterior lobes and short basal lobes",
+    "leafLength": "25-60 cm",
+    "leafWidth": "15-35 cm",
+    "petioleColor": "Long, green, from sheathing nodes",
+    "venation": "Prominent midrib, pinnate lateral veins",
+    "texture": "Metallic silver-green to blue-silver sheen, semi-glossy",
+    "variegation": "None (silver colouration is species trait)",
+    "growthHabit": "Climbing on slender aerial-rooted stems with distinct sheathing nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron hastatum silver sword",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron hastatum",
+      "Philodendron silver sword",
+      "Silver sword philodendron",
+      "Philodendron hastatum K.Koch",
+      "hastatum philodendron"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Begonia luxurians",
+  "slug": "luxurians",
+  "scientificName": "Begonia luxurians Scheidw.",
+  "commonName": "Palm Leaf Begonia",
+  "statusTag": "Architectural Collector Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "luxurians",
+  "origin": "Brazil (humid Atlantic Forest regions)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Begonia luxurians, described by Scheidweiler, is a distinctive tall cane begonia from the humid Atlantic Forest regions of Brazil — growing in warm, shaded to bright filtered conditions on organic-rich forest substrates with consistently moist soil and high atmospheric humidity. The plant is immediately identifiable by its dramatic, palm-like silhouette: bamboo-like segmented canes carry leaves composed of many narrow leaflets arranged palmately and radiating outward from the petiole end, forming a light, elegant crown with a tropical architectural effect that is unique within the genus. Growing to considerable height as a cane begonia, luxurians is a specimen plant rather than a compact windowsill subject — it rewards space with a display that no other begonia can match. An outstanding subject for bright conservatories and large indoor plantings.",
+  "quickFacts": {
+    "growthHabit": "Tall upright cane, architectural",
+    "matureSize": "Large (1-2.5m tall)",
+    "light": "Bright indirect to filtered direct light",
+    "humidity": "Moderate to high humidity (60-80%)",
+    "temperature": "18-28°C",
+    "difficulty": "Easy to Moderate",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Palmately divided into many narrow leaflets, palm-like crown",
+    "leafLength": "15-30 cm (overall leaf span across leaflets)",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Long, upright, reddish-green",
+    "venation": "Midrib per leaflet, palmate arrangement",
+    "texture": "Thin to semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Tall bamboo-like segmented canes with crown of palmately divided leaves"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia luxurians palm begonia",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia luxurians",
+      "Begonia luxurians Scheidw",
+      "luxurians begonia",
+      "palm leaf begonia",
+      "palm begonia Brazil"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

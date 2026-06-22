@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const projectRoot = "c:/Users/nicho/OneDrive/Documents/Web Development/Ariod Atlas AG/AriodAtlas";
+const projectRoot = "c:/Users/nicho/OneDrive/Documents/Web Development/Aroid Atlas AG/AroidAtlas";
 const sourceDir = path.join(projectRoot, "Finished Plates");
 const contentPlantsRoot = path.join(projectRoot, "content", "plants");
 

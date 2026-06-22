@@ -1,0 +1,63 @@
+{
+  "name": "Begonia rex-cultorum 'Escargot'",
+  "slug": "rex-cultorum-escargot",
+  "scientificName": "Begonia rex-cultorum 'Escargot'",
+  "commonName": "Escargot Begonia",
+  "statusTag": "Iconic Collector Cultivar",
+  "botanicalType": "cultivar",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "rex-cultorum",
+  "origin": "Cultivated selection (derived from Asian Begonia rex ancestry — northeastern India through southern China)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Begonia rex-cultorum 'Escargot' is one of the most immediately recognisable cultivated Begonias in existence — a horticultural selection from the rex begonia complex whose Asian ancestry spans the humid subtropical to tropical forest understories of northeastern India through southern China. The defining feature is structural rather than merely cosmetic: each leaf unfurls in a tight, spiralling snail-shell coil at the base, with the characteristic swirl remaining visible on mature leaves as a dark spiral against the silvery-pewter and dark green zoned lamina. Foliage is velvety and textured throughout, with maroon undersides and ruffled, asymmetric margins that amplify the sculptural effect. While more accessible than the rare wild species in this collection, 'Escargot' belongs alongside them by virtue of the uniqueness of its structure — no other commonly available begonia produces anything like it.",
+  "quickFacts": {
+    "growthHabit": "Compact rhizomatous clump",
+    "matureSize": "Small to medium (20-40 cm spread)",
+    "light": "Medium indirect light",
+    "humidity": "Moderate to high humidity (60-80%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, broadly ovate with ruffled margins, spiral base formation",
+    "leafLength": "10-20 cm",
+    "leafWidth": "8-18 cm",
+    "petioleColor": "Medium, reddish-green",
+    "venation": "Visible beneath silvery zoning",
+    "texture": "Velvety, textured; maroon undersides",
+    "variegation": "Silver to pewter zones contrasted by dark green to charcoal banding; spiral dark markings at base",
+    "growthHabit": "Compact rhizomatous clump, leaves with distinctive snail-shell spiral unfurling"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia escargot rex",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia escargot",
+      "Begonia rex escargot",
+      "escargot begonia",
+      "Begonia rex-cultorum escargot",
+      "snail begonia"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

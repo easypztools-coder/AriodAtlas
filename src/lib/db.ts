@@ -4,12 +4,13 @@ let pool: VercelPool | null = null;
 
 export function getDbPool(): VercelPool {
   if (!pool) {
-    const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+    let connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
     if (!connectionString) {
       throw new Error(
         "Missing POSTGRES_URL or DATABASE_URL environment variables for database connection."
       );
     }
+    connectionString = connectionString.trim().replace(/^=/, "");
     pool = createPool({
       connectionString,
     });

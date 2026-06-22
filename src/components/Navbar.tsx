@@ -27,19 +27,27 @@ export default function Navbar() {
   const searchRef = useRef<HTMLDivElement>(null);
 
   const [allPlants, setAllPlants] = useState<SearchPlant[]>([]);
+  const [indexLoading, setIndexLoading] = useState(false);
+  const [indexLoaded, setIndexLoaded] = useState(false);
 
-  useEffect(() => {
+  function ensureSearchIndexLoaded() {
+    if (indexLoaded || indexLoading) return;
+    setIndexLoading(true);
     fetch("/api/plants")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
           setAllPlants(data);
+          setIndexLoaded(true);
         }
       })
       .catch((err) => {
         console.error("Failed to load search index:", err);
+      })
+      .finally(() => {
+        setIndexLoading(false);
       });
-  }, []);
+  }
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -92,7 +100,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logo.png"
-              alt="Ariod Atlas"
+              alt="Aroid Atlas"
               width={674}
               height={100}
               className="h-10 w-auto"
@@ -121,7 +129,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logo.png"
-              alt="Ariod Atlas"
+              alt="Aroid Atlas"
               width={674}
               height={100}
               className="h-16 md:h-20 w-auto"
@@ -168,6 +176,7 @@ export default function Navbar() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+                  onFocus={ensureSearchIndexLoaded}
                   placeholder="Search species, cultivars, or common names..."
                   className="w-full rounded-xl border border-primary/10 bg-card/60 py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-card focus:shadow-glow"
                 />
@@ -236,6 +245,7 @@ export default function Navbar() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+                  onFocus={ensureSearchIndexLoaded}
                   placeholder="Search species, cultivars..."
                   className="w-full rounded-xl border border-primary/10 bg-background/60 py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-background"
                 />

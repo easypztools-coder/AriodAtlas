@@ -23,6 +23,7 @@ const GENUS_DESCRIPTIONS: Record<string, string> = {
   anthurium: "Velvet-leafed jewels of the rainforest understory. Browse our collection of Anthurium species and cultivars.",
   monstera: "Iconic fenestrated giants of the tropical canopy. Browse our collection of Monstera species and cultivars.",
   alocasia: "Dramatic shield-leafed specimens from Southeast Asia. Browse our collection of Alocasia species and cultivars.",
+  begonia: "Extraordinary foliage diversity spanning iridescent species, textured rarities, and variegated forms. Browse our curated collection of collectible Begonia species.",
   other: "Other rare climbing aroid genera including Amydrium, Rhaphidophora, Scindapsus, Epipremnum, Cercestis, and Pothos.",
 };
 

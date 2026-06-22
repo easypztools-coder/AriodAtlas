@@ -1,0 +1,62 @@
+{
+  "name": "Philodendron 'Belle Isle'",
+  "slug": "belle-isle",
+  "scientificName": "Philodendron 'Belle Isle'",
+  "commonName": "Belle Isle Philodendron",
+  "statusTag": "Rare Collector Cultivar",
+  "botanicalType": "cultivar",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "'Belle Isle'",
+  "origin": "Horticultural cultivar; tropical aroid ancestry, parentage undocumented",
+  "collectorPopularity": 3,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Philodendron 'Belle Isle' is a cultivated horticultural Philodendron of undocumented parentage, grown for its striking and highly unusual leaf silhouette. The defining feature is an elongated, strap-like central lobe paired with comparatively short, broad upper lateral lobes — a combination that produces the distinctively bat-wing shaped outline that immediately identifies the cultivar. Leaves are a rich, glossy dark green with slightly undulate margins, carried on a climbing stem that anchors itself via aerial roots along whatever support is provided. The precise parentage remains unpublished, but its tropical aroid ancestry is evident in its warm, humid cultivation requirements. Among cultivated Philodendrons with unusual leaf forms, 'Belle Isle' occupies a distinctive niche, appealing strongly to collectors who prize architectural departure over conventional foliage beauty.",
+  "quickFacts": {
+    "growthHabit": "Climbing hemiepiphyte",
+    "matureSize": "Medium to Large climber (1-2m with support)",
+    "light": "Bright indirect light",
+    "humidity": "High humidity (65-80%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Trilobed with very elongated central lobe and short broad lateral lobes (bat-wing silhouette)",
+    "leafLength": "30-60 cm (central lobe)",
+    "leafWidth": "25-50 cm (across lateral lobes)",
+    "petioleColor": "Green, medium length",
+    "venation": "Prominent midrib per lobe with pinnate lateral veins",
+    "texture": "Glossy, semi-coriaceous",
+    "variegation": "None",
+    "growthHabit": "Climbing, attaches via aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron Belle Isle",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron Belle Isle",
+      "Philodendron 'Belle Isle'",
+      "Belle Isle philodendron",
+      "Philodendron belle isle cultivar"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

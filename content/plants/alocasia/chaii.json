@@ -77,5 +77,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "A Rather Compact Character",
+    "date": "2015-03-15",
+    "author": "Aroid Aaron",
+    "content": "Right then, *Alocasia chaii*. Not a cuppa, though one often yearns for a proper brew whilst slogging through the Bornean undergrowth! This splendidly compact, self-heading aroid, formally described by the venerable P.C. Boyce, is a true Bornean marvel from Sarawak. We found it thriving either terrestrially or lithophytically on limestone outcrops, preferring deep humus and filtered light – rather sensible of it. Its deep maroon petioles support leaves that are, quite frankly, a marvel: thick, heavily bullate, and a glossy dark green above, contrasting rather strikingly with the deep maroon undersides. A rugged, jewel-like thing. Almost makes one forget the perpetual drizzle back home."
+  }
 }

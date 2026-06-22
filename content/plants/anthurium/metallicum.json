@@ -1,0 +1,68 @@
+{
+  "name": "Anthurium metallicum",
+  "slug": "metallicum",
+  "scientificName": "Anthurium metallicum N.E.Br.",
+  "commonName": "Metallic Anthurium",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "metallicum",
+  "origin": "Colombia to Ecuador (humid tropical forest, epiphytic)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium metallicum, described by N.E. Brown, is a rare epiphytic or hemiepiphytic Anthurium from the humid shaded forests of Colombia and Ecuador. What distinguishes it immediately is the extraordinary metallic quality of the leaf surface — elongated, narrowly cordate to lanceolate blades of velvety dark green, with a strong midrib and prominent pale primary veins creating a luminous, almost burnished contrast against the dark lamina. The leaves attach with a peltate base, adding to the architectural drama. Short internodes and modest aerial roots keep the plant compact, and new growth often emerges with a distinct metallic sheen before darkening. Among the velvet anthuriums, metallicum holds a reputation for being simultaneously one of the most visually stunning and one of the most difficult to source.",
+  "quickFacts": {
+    "growthHabit": "Epiphytic to hemiepiphytic, compact",
+    "matureSize": "Medium (40-70 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-27°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Elongated, narrowly cordate to lanceolate, peltate attachment",
+    "leafLength": "30-60 cm",
+    "leafWidth": "12-28 cm",
+    "petioleColor": "Slender, green",
+    "venation": "Strong midrib with prominent pale primary veins giving metallic contrast",
+    "texture": "Velvety with metallic sheen",
+    "variegation": "None",
+    "growthHabit": "Compact epiphyte with short internodes and modest aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium metallicum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium metallicum",
+      "Anthurium metallicum N.E.Br",
+      "metallicum anthurium",
+      "Anthurium metal"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "The Weight of a Name",
+    "date": "2021-07-19",
+    "author": "Aroid Aaron",
+    "content": "There are plants that earn their names immediately upon first sight, and *Anthurium metallicum* is emphatically one of them. That surface — dark velvety green with a pale primary venation that catches the light like hammered pewter — stops you completely. The peltate leaf attachment is an additional curiosity, lending the whole plant a slightly otherworldly quality, as if it belongs to some alternate evolutionary timeline. Native to Colombia and Ecuador, it lives epiphytically in humid shaded forest, doing its best impression of something jewelled and ancient. Sourcing one took the better part of a year and the goodwill of a contact in Bogotá. Worth every moment of waiting."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium luxurians × forgetii",
+  "slug": "luxurians-x-forgetii",
+  "scientificName": "Anthurium luxurians × forgetii",
+  "commonName": "Luxurians Forgetii Hybrid",
+  "statusTag": "Rare Collector Hybrid",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "luxurians × forgetii",
+  "origin": "Horticultural hybrid; derived from tropical American parentage",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium luxurians × forgetii is a carefully crafted horticultural hybrid that merges two highly sought Colombian and Panamanian species with complementary traits. The luxurians parent contributes its celebrated bullate, corrugated surface texture — that extraordinary quilted quality that resembles hammered dark metal — while the forgetii parent shapes the leaf form toward the broader, near-circular, closed-sinus silhouette it is famous for. The result is a compact, self-heading plant with broadly rounded cordate leaves showing a reduced sinus and subtle but distinct quilted texture on a deep, rich green surface. Among the bullate-forgetii crosses, this is considered one of the most successful combinations, producing offspring that are visually interesting from the texture of luxurians and architecturally clean from the form of forgetii.",
+  "quickFacts": {
+    "growthHabit": "Compact, self-heading",
+    "matureSize": "Small to Medium (30-55 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broadly rounded cordate with reduced sinus, subtle bullate texture",
+    "leafLength": "20-40 cm",
+    "leafWidth": "18-35 cm",
+    "petioleColor": "Short, green",
+    "venation": "Subtle pale venation, overshadowed by bullate texture",
+    "texture": "Subtly quilted, bullate, semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Compact self-heading crown, short internodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium luxurians forgetii hybrid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium luxurians forgetii",
+      "Anthurium luxurians x forgetii",
+      "Anthurium luxurians × forgetii",
+      "luxurians forgetii hybrid",
+      "Anthurium lux forgetii"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

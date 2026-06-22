@@ -1,0 +1,62 @@
+{
+  "name": "Begonia malachosticta",
+  "slug": "malachosticta",
+  "scientificName": "Begonia malachosticta L.Kollmann & A.P.Fontana",
+  "commonName": "Spotted Cane Begonia",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "malachosticta",
+  "origin": "Ecuador (humid shaded tropical forest understory)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia malachosticta, described by Kollmann and Fontana, is an upright cane species from the humid, shaded tropical forests of Ecuador — growing in warm, moist understory conditions where filtered light, high humidity, and rich organic substrate from leaf litter and decaying wood create the environment it requires. The red, setose (bristly-hairy) stems and petioles are an immediate distinguishing feature even before the leaves are examined; those leaves are asymmetrical and elongate-ovate with a dark green upper surface densely spotted with pale green to whitish maculations that cover the blade in a pattern of considerable visual interest. Deep red undersides complete the display. The natural branching cane habit produces a plant of moderate size that is manageable in cultivation while remaining genuinely uncommon in the UK trade.",
+  "quickFacts": {
+    "growthHabit": "Upright cane, branching",
+    "matureSize": "Medium (50-100 cm tall)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (75-85%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, elongate-ovate",
+    "leafLength": "10-22 cm",
+    "leafWidth": "7-15 cm",
+    "petioleColor": "Red, setose (bristly-hairy)",
+    "venation": "Visible beneath spot pattern",
+    "texture": "Semi-matte, red undersides",
+    "variegation": "Dense pale green to whitish maculations on dark green blade (natural species spotting)",
+    "growthHabit": "Upright cane with red setose stems, natural branching habit"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia malachosticta Ecuador",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia malachosticta",
+      "Begonia malachosticta Kollmann",
+      "malachosticta begonia",
+      "Begonia malachosticta Ecuador"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

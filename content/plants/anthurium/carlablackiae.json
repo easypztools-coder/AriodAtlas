@@ -1,0 +1,68 @@
+{
+  "name": "Anthurium carlablackiae",
+  "slug": "carlablackiae",
+  "scientificName": "Anthurium carlablackiae Croat & O.Ortiz",
+  "commonName": "Carla Blackie's Anthurium",
+  "statusTag": "Ultra Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "carlablackiae",
+  "origin": "Panama to Colombia (humid, shaded tropical forest understory)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium carlablackiae, described by Croat and O.Ortiz, is a compact and fiercely coveted species from the tropical forests spanning Panama to Colombia. It grows as a terrestrial or low epiphyte in rich organic debris and deep leaf litter on shaded forest floors, developing short, tightly spaced internodes and a self-heading crown of extraordinary leaves. The broad, cordate to ovate-cordate blades are deep velvety dark green to a startling near-black, with crisp, contrasting white venation and burgundy-toned petioles that deepen with maturity. A pale spathe flushed with pink completes the picture. Among the velvet anthuriums, carlablackiae is spoken of in hushed tones — exceptionally difficult to locate and one of the most desirable species in serious aroid collections.",
+  "quickFacts": {
+    "growthHabit": "Compact terrestrial to low epiphyte, self-heading",
+    "matureSize": "Small to Medium (30-55 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Broad cordate to ovate-cordate",
+    "leafLength": "20-40 cm",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Burgundy to dark reddish-green",
+    "venation": "Striking white venation contrasting sharply with near-black blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Dense basal crown, short internodes, self-supporting"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium carlablackiae",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium carlablackiae",
+      "Anthurium carlablackiae Croat",
+      "carlablackiae anthurium",
+      "Anthurium carla blackiae"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "A Discovery of Considerable Consequence",
+    "date": "2022-11-04",
+    "author": "Aroid Aaron",
+    "content": "I first encountered *Anthurium carlablackiae* in a photograph shared by a fellow collector in Panama, and I confess the image stopped me cold. That near-black velvet surface, those impossibly crisp white veins — surely, I thought, this must be a hybrid. It is not. It is a perfectly described wild species from the forested slopes between Panama and Colombia, growing quietly in leaf litter and organic debris while the rest of the plant world fails to notice it. Getting one's hands on a legitimate specimen requires patience, connections, and the willingness to spend rather more than one's spouse might consider reasonable. Mine remains the crown jewel of the collection, producing each new leaf with agonising slowness and maximum theatrical effect."
+  }
+}

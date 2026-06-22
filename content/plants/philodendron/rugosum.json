@@ -1,0 +1,63 @@
+{
+  "name": "Philodendron rugosum",
+  "slug": "rugosum",
+  "scientificName": "Philodendron rugosum Bogner & G.S.Bunting",
+  "commonName": "Pigskin Philodendron",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Philodendron",
+  "species": "rugosum",
+  "origin": "Southern Colombia and Ecuador (humid premontane to montane forest)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Philodendron rugosum, described by Bogner and Bunting, is a compact climbing aroid from the humid premontane and montane forests of southern Colombia and Ecuador, growing on mossy trees in warm, wet conditions with filtered light, consistent high humidity, and rich organic matter. Universally known in the hobby as the 'Pigskin Philodendron', it earns its name immediately from the defining texture of its leaves: thick, leathery, deeply bullate and rugose cordate blades with a dramatically pockmarked, almost reptilian surface that is unlike any other Philodendron in cultivation. Short to moderate internodes form a compact climbing stem, with aerial roots at nodes aiding attachment. Slow-growing but rewarding, rugosum is valued precisely because patience is required — each new leaf, with its extraordinary raised-cell surface texture, arrives slowly and is worth waiting for.",
+  "quickFacts": {
+    "growthHabit": "Compact climbing hemiepiphyte",
+    "matureSize": "Medium climber (0.8-1.5m with support)",
+    "light": "Medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "17-26°C (cool-montane tolerant)",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Cordate, thick and leathery",
+    "leafLength": "15-30 cm",
+    "leafWidth": "12-25 cm",
+    "petioleColor": "Short to moderate, green",
+    "venation": "Deeply sunken veins creating strongly bullate surface texture",
+    "texture": "Extremely rugose, bullate, thick-leathery (pigskin-like)",
+    "variegation": "None",
+    "growthHabit": "Compact climber with short to moderate internodes and aerial roots at nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Philodendron rugosum pigskin",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Philodendron rugosum",
+      "Philodendron pigskin",
+      "Pigskin philodendron",
+      "Philodendron rugosum Bogner",
+      "rugosum philodendron"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

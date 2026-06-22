@@ -1,0 +1,62 @@
+{
+  "name": "Begonia brevirimosa",
+  "slug": "brevirimosa",
+  "scientificName": "Begonia brevirimosa Irmsch.",
+  "commonName": "Pink Cane Begonia",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "brevirimosa",
+  "origin": "New Guinea (humid tropical forest, moist forest margins)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia brevirimosa, described by Irmsch., is a cane-type species from the humid tropical forests of New Guinea, growing in warm, shaded understory conditions with high humidity on rich organic substrate and moist forest margins where filtered light supports its vivid colouration. The plant is immediately distinguished by the leaves: striking asymmetrical blades with a vivid pink central field fading to darker green at the margins — a naturally occurring two-tone colouration that requires no variegation to be dramatic. The foliage is thin yet lush, with red undersides, carried on segmented red canes in an upright branching habit entirely distinct from the rhizomatous begonias. Among New Guinean cane begonias, brevirimosa holds a particular place in the collector world for the sheer intensity of its pink colouration on mature plants.",
+  "quickFacts": {
+    "growthHabit": "Upright cane, branching",
+    "matureSize": "Medium (40-80 cm tall)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (75-85%)",
+    "temperature": "19-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, ovate with toothed margins",
+    "leafLength": "8-18 cm",
+    "leafWidth": "6-14 cm",
+    "petioleColor": "Short, reddish",
+    "venation": "Visible below pink central field",
+    "texture": "Thin, lush, red undersides",
+    "variegation": "Vivid pink central field with darker green margins (natural species colouration)",
+    "growthHabit": "Upright segmented red canes, naturally branching"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia brevirimosa",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia brevirimosa",
+      "Begonia brevirimosa Irmsch",
+      "brevirimosa begonia",
+      "pink cane begonia New Guinea"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

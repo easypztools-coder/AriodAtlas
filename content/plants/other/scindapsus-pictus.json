@@ -1,0 +1,62 @@
+{
+  "name": "Scindapsus pictus",
+  "slug": "scindapsus-pictus",
+  "scientificName": "Scindapsus pictus Hassk.",
+  "commonName": "Satin Pothos",
+  "statusTag": "Classic Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Scindapsus",
+  "species": "pictus",
+  "origin": "Southeast Asia (lowland to hill forest, widespread from India to Philippines)",
+  "collectorPopularity": 2,
+  "rarityStatus": "Common",
+  "availability": "High",
+  "priceGuideTier": "£",
+  "aboutText": "Scindapsus pictus, described by Hasskarl, is a climbing forest aroid widely distributed across the warm, humid lowland to hill forests of Southeast Asia — rooting along tree trunks and coarse woody supports in shaded to dappled positions with high atmospheric humidity and organic, well-drained substrates. In cultivation it is known almost universally as 'Satin Pothos' — a misnomer that reflects the genus confusion common to trade names rather than any botanical kinship with Epipremnum. The species' defining feature is the irregular silver mottling over softly textured, matte ovate leaves that gives the foliage its characteristic satin sheen, combined with slightly winged petioles. Mature leaves are broader and more assertive than juvenile growth while retaining the matte finish. Pictus is among the most accessible of the climbing aroids, but the species in its full mature adult form — with large, well-silvered blades and proper climbing growth — is a more impressive plant than the small trailing juvenile specimens that typically appear in retail.",
+  "quickFacts": {
+    "growthHabit": "Climbing to scandent",
+    "matureSize": "Medium climber (1-3m with support)",
+    "light": "Low to bright indirect light",
+    "humidity": "Moderate to high humidity (60-80%)",
+    "temperature": "18-30°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Ovate with slightly winged petiole",
+    "leafLength": "Juvenile 5-10 cm; Adult 12-25 cm",
+    "leafWidth": "Juvenile 4-8 cm; Adult 8-20 cm",
+    "petioleColor": "Slightly winged, green",
+    "venation": "Visible beneath silver mottling",
+    "texture": "Soft matte (satin) finish, moderately coriaceous",
+    "variegation": "Irregular silver mottling (natural species patterning)",
+    "growthHabit": "Climbing by aerial roots at nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": false,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Scindapsus pictus",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Scindapsus pictus",
+      "Scindapsus pictus Hassk",
+      "satin pothos",
+      "Scindapsus pictus plant"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "argyraeus", "exotica"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

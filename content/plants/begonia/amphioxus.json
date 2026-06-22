@@ -1,0 +1,62 @@
+{
+  "name": "Begonia amphioxus",
+  "slug": "amphioxus",
+  "scientificName": "Begonia amphioxus Sands",
+  "commonName": "Spotted Cane Begonia",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "amphioxus",
+  "origin": "Sabah, northern Borneo (humid forest, moist limestone outcrops)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Begonia amphioxus, described by Sands, is one of the most visually dramatic begonias in cultivation — a rare upright species from the humid tropical forests of Sabah in northern Borneo, typically found on moist limestone outcrops, humus-rich soil and decaying leaf litter in warm, constantly humid, shaded understory conditions. The slender, segmented red canes carry narrow, lanceolate leaves of olive to bronzy green bearing vivid red venation, red margins and numerous silvery-pink spots, with undersides entirely red. The combination of the cane habit, the narrow pointed leaf form and the exuberant spotting and venation makes amphioxus one of the most sought-after Begonia species worldwide — a plant that commands immediate attention from any serious collector and considerable prices to match.",
+  "quickFacts": {
+    "growthHabit": "Upright cane, slender-stemmed",
+    "matureSize": "Medium (50-100 cm tall)",
+    "light": "Medium to bright indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "20-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Narrow, lanceolate",
+    "leafLength": "5-12 cm",
+    "leafWidth": "1.5-4 cm",
+    "petioleColor": "Short, reddish",
+    "venation": "Vivid red venation against bronzy-olive blade",
+    "texture": "Thin-coriaceous with silvery-pink spots and red undersides",
+    "variegation": "Silvery-pink spots, red venation, red margins (natural species markings)",
+    "growthHabit": "Upright segmented red canes with airy branching habit"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia amphioxus",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia amphioxus",
+      "Begonia amphioxus Sands",
+      "amphioxus begonia",
+      "Begonia amphioxus Borneo"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -22,7 +22,7 @@ import { PriceSnapshot, PriceListing } from "./types";
 
 const BASE_DIR = path.join(process.cwd(), "content", "price-snapshots");
 const GITHUB_RAW =
-  "https://raw.githubusercontent.com/easypztools-coder/AriodAtlas/main/content/price-snapshots";
+  "https://raw.githubusercontent.com/easypztools-coder/AroidAtlas/main/content/price-snapshots";
 
 /** Individual listing data saved alongside the snapshot for bucketing by month */
 interface SavedListing {

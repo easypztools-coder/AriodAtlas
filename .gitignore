@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # old nested repo (consolidated into root)
-ariod-atlas/
+aroid-atlas/
 .env*

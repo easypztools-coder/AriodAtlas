@@ -1,0 +1,62 @@
+{
+  "name": "Rhaphidophora hayi",
+  "slug": "rhaphidophora-hayi",
+  "scientificName": "Rhaphidophora hayi P.C.Boyce & Bogner",
+  "commonName": "Roof-Tile Rhaphidophora",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Rhaphidophora",
+  "species": "hayi",
+  "origin": "Papuasia to northern Queensland (wet tropical forest)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Rhaphidophora hayi, described by Boyce and Bogner, is an adhesive climbing aroid from wet tropical forest spanning Papuasia to northern Queensland — its stem following tree trunks and firm surfaces closely, attaching by roots at the nodes while the entire leaves remain pressed flat against the support in a permanent shingling arrangement. The overlapping blades of this species create a characteristic roof-tile formation — the origin of its common name — and this pattern distinguishes hayi from related Rhaphidophoras that eventually produce projecting or divided adult foliage. Short internodes, adhesive roots and entire green leaves held completely flat are the defining features; the plant never leaves the shingling phase. In cultivation, hayi is grown mounted on flat bark panels, where it spreads laterally in a manner as architectural as it is botanical.",
+  "quickFacts": {
+    "growthHabit": "Permanently shingling, adhesive climber",
+    "matureSize": "Medium spreader (0.5-2m on flat bark panel)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "20-30°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Entire, ovate to elliptic, held flat against substrate in roof-tile overlapping pattern",
+    "leafLength": "3-8 cm",
+    "leafWidth": "2-5 cm",
+    "petioleColor": "Very short, green",
+    "venation": "Visible on entire green blade",
+    "texture": "Semi-glossy, thin to moderately coriaceous",
+    "variegation": "None",
+    "growthHabit": "Permanently shingling with overlapping roof-tile leaf arrangement, adhesive roots, short internodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Rhaphidophora hayi shingling",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Rhaphidophora hayi",
+      "Rhaphidophora hayi Boyce",
+      "hayi Rhaphidophora",
+      "roof tile rhaphidophora"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

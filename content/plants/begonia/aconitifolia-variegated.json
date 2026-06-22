@@ -1,0 +1,62 @@
+{
+  "name": "Begonia aconitifolia 'Variegata'",
+  "slug": "aconitifolia-variegated",
+  "scientificName": "Begonia aconitifolia A.DC. 'Variegata'",
+  "commonName": "Variegated Cane Begonia",
+  "statusTag": "Collector Cultivar",
+  "botanicalType": "variegated",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "aconitifolia",
+  "origin": "Cultivated selection (derived from Begonia aconitifolia, native to Brazil)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Begonia aconitifolia 'Variegata' is a cultivated selection derived from the Brazilian cane begonia Begonia aconitifolia A.DC., selected and maintained in cultivation for its striking irregular variegation. The base species is a tall, bamboo-stemmed cane begonia from Brazil with deeply palmately lobed leaves; the 'Variegata' form overlays this architecture with an irregular marbling from cream through to pale yellow against the base green, with each leaf and each flush of new growth showing distinct variation in pattern and intensity. The upright bamboo-like segmented stems remain a structural feature, and the deeply lobed, serrated leaf margin adds further textural interest. A plant in full growth with newly emerging, more brightly variegated foliage alongside older settled leaves is a genuinely attractive specimen.",
+  "quickFacts": {
+    "growthHabit": "Upright cane, bamboo-like",
+    "matureSize": "Large (1-2m tall)",
+    "light": "Bright indirect light",
+    "humidity": "Moderate to high humidity (60-80%)",
+    "temperature": "18-28°C",
+    "difficulty": "Easy to Moderate",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Deeply palmately lobed with long pointed lobes and serrated margins",
+    "leafLength": "15-30 cm",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Reddish-green",
+    "venation": "Palmate, prominent on leaf surface",
+    "texture": "Semi-glossy, moderately thin",
+    "variegation": "Irregular cream to pale-yellow marbling against green, variable between leaves",
+    "growthHabit": "Tall, upright branching canes with distinct segmented nodes"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia aconitifolia variegata",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia aconitifolia variegata",
+      "Begonia aconitifolia variegated",
+      "aconitifolia variegata begonia",
+      "Begonia aconitifolia 'Variegata'"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

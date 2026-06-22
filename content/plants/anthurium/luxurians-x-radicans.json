@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium luxurians × radicans",
+  "slug": "luxurians-x-radicans",
+  "scientificName": "Anthurium luxurians × radicans",
+  "commonName": "Luxurians Radicans Hybrid",
+  "statusTag": "Rare Collector Hybrid",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "luxurians × radicans",
+  "origin": "Horticultural hybrid; derived from tropical American parentage",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium luxurians × radicans is a compact horticultural hybrid that draws on two Colombian species with distinct but complementary habits. The luxurians parent lends its signature bullate, strongly quilted and corrugated leaf surface, while radicans — a compact creeping species valued for its manageable habit and firm leaf substance — contributes a more restrained, terrestrial growth form. The outcome is a self-heading plant with short basal crown, cordate leaves showing a shallow to moderate sinus, and a strongly bullate, quilted surface with a glossy to satin deep green finish. Thick, sturdy petioles emerge from the crown with basal roots spreading into the substrate. This cross is prized for combining the dramatic texture of luxurians with a more practical size and care profile than the pure species.",
+  "quickFacts": {
+    "growthHabit": "Compact terrestrial, self-heading",
+    "matureSize": "Small to Medium (25-50 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-90%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate with shallow to moderate sinus, bullate and quilted",
+    "leafLength": "18-35 cm",
+    "leafWidth": "14-28 cm",
+    "petioleColor": "Thick, sturdy, green",
+    "venation": "Sunken primary veins forming quilted bullate cells",
+    "texture": "Strongly bullate, glossy to satin deep green",
+    "variegation": "None",
+    "growthHabit": "Short basal crown with surface roots, compact terrestrial"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium luxurians radicans hybrid",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium luxurians radicans",
+      "Anthurium luxurians x radicans",
+      "Anthurium luxurians × radicans",
+      "luxurians radicans hybrid",
+      "Anthurium lux radicans"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

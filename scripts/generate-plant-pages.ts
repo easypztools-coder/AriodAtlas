@@ -82,7 +82,7 @@ function getMimeType(filePath: string): string {
 
 // Prompt for Gemini to generate the correct plant JSON structure
 const JSON_PROMPT = `
-You are a botanical data extractor for Ariod Atlas. Your task is to analyze the provided botanical plate image and extract its details into the exact JSON schema defined below.
+You are a botanical data extractor for Aroid Atlas. Your task is to analyze the provided botanical plate image and extract its details into the exact JSON schema defined below.
 
 Return ONLY a raw JSON object matching this TypeScript type:
 

@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 
-const BASE_URL = "https://ariodatlas.com"; // TODO: update with real domain before going live
-const GENERA = ["monstera", "philodendron", "alocasia", "anthurium", "other"];
+const BASE_URL = "https://aroidatlas.com"; // TODO: update with real domain before going live
+const GENERA = ["monstera", "philodendron", "alocasia", "anthurium", "begonia", "other"];
 
 
 export default function sitemap(): MetadataRoute.Sitemap {

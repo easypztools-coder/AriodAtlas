@@ -1,0 +1,68 @@
+{
+  "name": "Alocasia zebrina",
+  "slug": "zebrina",
+  "scientificName": "Alocasia zebrina Schott",
+  "commonName": "Zebra Alocasia",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Alocasia",
+  "species": "zebrina",
+  "origin": "Philippines (Luzon and surrounding islands)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Alocasia zebrina is a terrestrial aroid native to the humid lowland forests of the Philippines, grown almost exclusively for its extraordinary petioles rather than its leaf blades. Those elongated stems are a natural marvel — pale yellow-green barred with irregular dark brownish-purple to near-black bands, mimicking the stripes of a zebra with uncanny precision. The broad, sagittate leaves emerge held upright and outward from a compact corm-like base, giving the plant a sculptural, palm-like silhouette at maturity. Among aroids, zebrina occupies a unique niche: dramatic enough to anchor a collection but forgiving enough to grow well in most warm, bright interiors.",
+  "quickFacts": {
+    "growthHabit": "Self-heading, corm-forming",
+    "matureSize": "Medium to Large (60-100 cm)",
+    "light": "Bright indirect light",
+    "humidity": "High humidity (60-80%)",
+    "temperature": "18-27°C",
+    "difficulty": "Easy to Intermediate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Sagittate to hastate (arrowhead-shaped)",
+    "leafLength": "35-70 cm",
+    "leafWidth": "20-45 cm",
+    "petioleColor": "Yellow-green with bold dark brown-purple banding",
+    "venation": "Prominent pale midrib, pinnate lateral veins",
+    "texture": "Semi-glossy, coriaceous",
+    "variegation": "None",
+    "growthHabit": "Upright rosette from compact corm"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Alocasia zebrina",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Alocasia zebrina",
+      "Zebrina Alocasia",
+      "Alocasia zebra plant",
+      "zebrina aroid"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Stripes Without the Fuss",
+    "date": "2020-03-08",
+    "author": "Aroid Aaron",
+    "content": "One doesn't always need to spend a small fortune to acquire something genuinely extraordinary. *Alocasia zebrina* proves the point rather elegantly. Those petioles — banded in ochre and near-black like some improbable tropical insect — are the sort of thing that stops visitors mid-sentence. The leaf blades themselves are perfectly respectable, broad and sagittate, but it is the stems that command the room. Native to the Philippines, this species has the considerable virtue of being relatively obliging in cultivation: bright indirect light, good humidity, a free-draining mix and occasional watering when the top third of the medium dries. It sulks if overwatered, as all Alocasias will, and it will drop leaves in winter if temperatures dip too sharply. But reward it with warmth and it pushes new growth with admirable regularity. A sound investment for the new collector, and a reliable talking point for the seasoned one."
+  }
+}

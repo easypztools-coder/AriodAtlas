@@ -1,0 +1,62 @@
+{
+  "name": "Anthurium rugulosum",
+  "slug": "rugulosum",
+  "scientificName": "Anthurium rugulosum Sodiro",
+  "commonName": "Rugose Anthurium",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "rugulosum",
+  "origin": "Ecuador (humid montane forest understory)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium rugulosum, described by Sodiro, is a compact terrestrial Anthurium from the humid montane forests of Ecuador, growing on the shaded forest floor or low on humus-covered roots and rotting wood in consistently moist conditions. The leaf surface is the defining feature: strongly rugose and bullate, with prominent corrugations and thick substance that give the elongated-cordate blades a deeply textured, almost relief-map quality — dark green and dramatic from any angle. Short petioles arise from a close-formed crown, keeping the plant tight and compact. Among the textured anthuriums, rugulosum is particularly valued for the intensity of its surface patterning and the clean, architectural quality of its overall form, making it an important and eagerly sought addition to any serious collection.",
+  "quickFacts": {
+    "growthHabit": "Compact terrestrial, self-heading",
+    "matureSize": "Small to Medium (30-55 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "17-26°C (cool-tolerant montane)",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Elongated-cordate with pronounced corrugations",
+    "leafLength": "20-40 cm",
+    "leafWidth": "14-28 cm",
+    "petioleColor": "Short, green",
+    "venation": "Strongly raised, forming rugose bullate pattern across dark blade",
+    "texture": "Strongly rugose, bullate, thick-substanced",
+    "variegation": "None",
+    "growthHabit": "Dense close-crowned basal rosette, terrestrial"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium rugulosum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium rugulosum",
+      "Anthurium rugulosum Sodiro",
+      "rugulosum anthurium",
+      "Anthurium rugose Ecuador"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

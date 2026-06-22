@@ -1,0 +1,62 @@
+{
+  "name": "Anthurium villenaorum",
+  "slug": "villenaorum",
+  "scientificName": "Anthurium villenaorum Croat",
+  "commonName": "Villena's Anthurium",
+  "statusTag": "Ultra Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "villenaorum",
+  "origin": "Peru (San Martín region, humid shaded montane rainforest)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium villenaorum, described by Croat, is a compact epiphytic species from the humid, shaded montane rainforests of Peru's San Martín region — growing on tree trunks and branches in high humidity with filtered light, abundant rainfall, and consistently warm conditions year-round. The deeply cordate, velvety leaves are dark green to nearly black, with bold and strikingly contrasting pale venation that rivals the finest velvet anthuriums in visual impact. Short petioles and a tight crown with visible ephemeral roots give it an admirably neat habit. Inflorescences are rarely produced in cultivation, adding a further layer of mystique. Villenaorum has become one of the most discussed species among advanced Anthurium collectors — genuinely rare, genuinely beautiful, and genuinely difficult to grow to its full potential outside a precisely controlled environment.",
+  "quickFacts": {
+    "growthHabit": "Compact epiphyte, self-heading",
+    "matureSize": "Small to Medium (25-50 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (85-95%)",
+    "temperature": "18-27°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Deeply cordate, velvety",
+    "leafLength": "20-40 cm",
+    "leafWidth": "14-28 cm",
+    "petioleColor": "Short, dark green to reddish",
+    "venation": "Bold, contrasting pale venation on near-black velvety blade",
+    "texture": "Velvety",
+    "variegation": "None",
+    "growthHabit": "Tight compact crown with visible ephemeral roots, epiphytic"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium villenaorum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium villenaorum",
+      "Anthurium villenaorum Croat",
+      "villenaorum anthurium",
+      "Anthurium villenaorum Peru"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

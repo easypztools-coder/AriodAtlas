@@ -1,0 +1,62 @@
+{
+  "name": "Monstera lechleriana",
+  "slug": "lechleriana",
+  "scientificName": "Monstera lechleriana Schott",
+  "commonName": "Lechler's Monstera",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Monstera",
+  "species": "lechleriana",
+  "origin": "Costa Rica to tropical South America",
+  "collectorPopularity": 3,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "££",
+  "aboutText": "Monstera lechleriana is a robust hemiepiphytic climber from the humid, frost-free tropical forests spanning Costa Rica through to tropical South America, ascending tree trunks from shaded understory positions into the lower canopy on thick climbing stems with strong nodes and stout aerial roots. The juvenile leaves are smaller, entire and unfenestrated; with maturity and height the blades elongate and develop the species' characteristic orderly inner fenestrations — oval perforations arranged with pleasing regularity along the midrib, distinct in their even spacing from the more scattered holes of related species. This regular fenestration pattern gives mature leaves a particularly clean, architectural quality. Less commonly encountered than some Monsteras in the hobby, it rewards growers able to provide good light, consistent moisture, and a sturdy support to climb.",
+  "quickFacts": {
+    "growthHabit": "Robust hemiepiphytic climber",
+    "matureSize": "Large climber (2-4m with support)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (65-85%)",
+    "temperature": "18-28°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Oblong-ovate with orderly oval inner fenestrations along midrib",
+    "leafLength": "30-70 cm",
+    "leafWidth": "20-45 cm",
+    "petioleColor": "Stout, green, geniculate",
+    "venation": "Prominent midrib with regular lateral veins between fenestrations",
+    "texture": "Coriaceous, semi-glossy",
+    "variegation": "None",
+    "growthHabit": "Vigorous climber with thick stems, strong nodes, stout aerial roots"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Monstera lechleriana",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Monstera lechleriana",
+      "Monstera lechleriana Schott",
+      "lechleriana monstera",
+      "Monstera lechler"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata", "albo"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

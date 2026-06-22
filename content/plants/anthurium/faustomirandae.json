@@ -1,0 +1,61 @@
+{
+  "name": "Anthurium faustomirandae",
+  "slug": "faustomirandae",
+  "scientificName": "Anthurium faustomirandae Pérez-Farr. & Croat",
+  "commonName": "Fausto Miranda's Anthurium",
+  "statusTag": "Ultra Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "faustomirandae",
+  "origin": "Chiapas, Mexico (humid tropical forest understory on limestone substrates)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Ultra Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium faustomirandae is a remarkable basal Anthurium described by Pérez-Farrera and Croat, endemic to the humid tropical forest of Chiapas, Mexico. It grows on moist terrestrial soils or limestone rock faces in shaded ravines and slopes with consistently high humidity and rich organic matter year-round. The defining characteristic is the exceptionally bullate, heavily quilted leaf surface — thick, coriaceous and velvety deep green, with strongly raised primary venation giving the blade an almost sculptured quality. Stout upright petioles arise from a short crown, and the plant grows terrestrially or lithophytically in its restricted natural habitat. Among Mexican anthuriums, faustomirandae occupies a position of remarkable prestige, combining extreme natural rarity with a leaf texture that stands alone in the genus.",
+  "quickFacts": {
+    "growthHabit": "Compact basal terrestrial to lithophytic",
+    "matureSize": "Medium (35-60 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "18-26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Cordate to subcordate, heavily bullate",
+    "leafLength": "25-50 cm",
+    "leafWidth": "18-38 cm",
+    "petioleColor": "Stout, upright, green",
+    "venation": "Strongly raised pale primary venation creating quilted pattern",
+    "texture": "Velvety, coriaceous, strongly bullate",
+    "variegation": "None",
+    "growthHabit": "Short-crowned basal rosette, terrestrial to lithophytic"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium faustomirandae",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium faustomirandae",
+      "Anthurium faustomirandae Croat",
+      "faustomirandae anthurium"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

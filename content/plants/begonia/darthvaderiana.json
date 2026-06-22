@@ -1,0 +1,62 @@
+{
+  "name": "Begonia darthvaderiana",
+  "slug": "darthvaderiana",
+  "scientificName": "Begonia darthvaderiana C.W.Lin & C.I.Peng",
+  "commonName": "Darth Vader Begonia",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "darthvaderiana",
+  "origin": "Sabah, Borneo (humid ultramatic rainforest understory)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Begonia darthvaderiana, described by C.W.Lin and C.I.Peng, is a rare species endemic to the ultramatic rainforest understory of Sabah in northern Borneo — one of the most botanically isolated and species-rich environments on earth. It grows in warm, very humid, low-light conditions on mossy forest-floor substrate rich in leaf litter and organic matter. The plant's unmistakable bat-wing foliage is its entire identity: large, asymmetric leaves of dark olive to near-black with a slightly leathery, glossy surface and a winged, dramatically silhouetted outline. Deep red, densely hairy petioles anchor each leaf. A creeping rhizome at substrate level produces fibrous roots and successive leaves along the stem. Named for the immediately obvious visual allusion, darthvaderiana has become one of the most coveted Bornean Begonias in collector circles worldwide.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping",
+    "matureSize": "Medium (25-50 cm spread)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (85-95%)",
+    "temperature": "20-28°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Asymmetric, bat-wing outline with winged silhouette",
+    "leafLength": "12-25 cm",
+    "leafWidth": "10-20 cm",
+    "petioleColor": "Deep red, densely hairy",
+    "venation": "Visible on slightly glossy dark blade",
+    "texture": "Slightly leathery, glossy, dark olive to near-black",
+    "variegation": "None",
+    "growthHabit": "Creeping rhizome producing fibrous roots and new leaves along stem"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia darthvaderiana",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia darthvaderiana",
+      "Begonia darth vaderiana",
+      "darth vader begonia",
+      "darthvaderiana begonia"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

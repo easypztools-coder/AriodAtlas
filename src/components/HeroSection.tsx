@@ -43,6 +43,8 @@ export default function HeroSection() {
   const [showResults, setShowResults] = useState(false);
   const [liveStats, setLiveStats] = useState<Record<string, string>>({});
   const [allPlants, setAllPlants] = useState<SearchPlant[]>([]);
+  const [indexLoading, setIndexLoading] = useState(false);
+  const [indexLoaded, setIndexLoaded] = useState(false);
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
 
@@ -57,16 +59,26 @@ export default function HeroSection() {
         })
       )
       .catch(() => {});
+  }, []);
 
+  function ensureSearchIndexLoaded() {
+    if (indexLoaded || indexLoading) return;
+    setIndexLoading(true);
     fetch("/api/plants")
-      .then((r) => r.json())
+      .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
           setAllPlants(data);
+          setIndexLoaded(true);
         }
       })
-      .catch(() => {});
-  }, []);
+      .catch((err) => {
+        console.error("Failed to load search index in Hero:", err);
+      })
+      .finally(() => {
+        setIndexLoading(false);
+      });
+  }
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -163,6 +175,7 @@ export default function HeroSection() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+                  onFocus={ensureSearchIndexLoaded}
                   placeholder="Search species, cultivars, or common names..."
                   className="w-full rounded-2xl border border-primary/15 bg-card/70 py-4 pl-12 pr-4 text-sm text-heading placeholder-muted/50 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-card focus:shadow-glow backdrop-blur-md"
                 />

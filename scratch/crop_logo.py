@@ -1,7 +1,7 @@
 from PIL import Image
 
 def main():
-    img_path = r"c:\Users\nicho\OneDrive\Documents\Web Development\Ariod Atlas AG\AriodAtlas\public\images\logo.png"
+    img_path = r"c:\Users\nicho\OneDrive\Documents\Web Development\Aroid Atlas AG\AroidAtlas\public\images\logo.png"
     img = Image.open(img_path)
     
     # Get bounding box of non-transparent pixels

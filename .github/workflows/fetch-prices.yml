@@ -44,8 +44,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "bot@ariod-atlas.com"
-          git config --local user.name "Ariod Atlas Bot"
+          git config --local user.email "bot@aroid-atlas.com"
+          git config --local user.name "Aroid Atlas Bot"
           git add content/price-snapshots/ content/plants/
           if git diff --cached --quiet; then
             echo "No changes to commit."

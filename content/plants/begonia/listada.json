@@ -1,0 +1,62 @@
+{
+  "name": "Begonia listada",
+  "slug": "listada",
+  "scientificName": "Begonia listada L.B.Sm. & Wassh.",
+  "commonName": "Striped Begonia",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "listada",
+  "origin": "Southeastern Brazil (humid shaded forest understory)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Begonia listada, described by L.B.Smith and Wasshausen, is a compact rhizomatous species from the moist forest habitats of southeastern Brazil, growing in shaded understory conditions on humus-rich substrate with high humidity and even moisture. The leaves are its distinguishing feature: asymmetrical, velvety blades with a striking bright green median stripe running the full length of each leaf against an otherwise near-black to very dark green surrounding lamina — a naturally occurring bicolour effect that no cultivation or selection has produced, but that the species simply is. Vivid red undersides complete the contrast. A short surface rhizome creeps gradually, building a compact clump of ornamental foliage that is unusually effective in terrariums and enclosed high-humidity displays.",
+  "quickFacts": {
+    "growthHabit": "Compact rhizomatous clump",
+    "matureSize": "Small (15-25 cm spread)",
+    "light": "Low to medium indirect light",
+    "humidity": "High humidity (75-90%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Asymmetrical, ovate, velvety",
+    "leafLength": "6-12 cm",
+    "leafWidth": "4-9 cm",
+    "petioleColor": "Reddish",
+    "venation": "Visible beneath stripe pattern",
+    "texture": "Velvety upper surface, red undersides",
+    "variegation": "Bright green median stripe on near-black lamina (natural species colouration)",
+    "growthHabit": "Short surface rhizome producing compact clumping growth"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia listada Brazil",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia listada",
+      "Begonia listada L.B.Sm",
+      "listada begonia",
+      "striped begonia Brazil"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

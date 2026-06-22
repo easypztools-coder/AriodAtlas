@@ -1,0 +1,63 @@
+{
+  "name": "Anthurium luxurians",
+  "slug": "luxurians",
+  "scientificName": "Anthurium luxurians Croat & R.N.Cirino",
+  "commonName": "Luxuriant Anthurium",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "luxurians",
+  "origin": "Colombia (wet tropical forest understory)",
+  "collectorPopularity": 5,
+  "rarityStatus": "Very Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium luxurians is a Colombian rainforest species described by Croat and Cirino, growing as a compact terrestrial or low epiphyte in the humid, shaded understory on rich organic soil, humus, and tree bases. Its defining quality — the one that sends collectors into spirals of desire — is the extraordinary bullate, heavily textured leaf surface. The thick, cordate blades are a deep, almost glacial dark glossy green, pronounced into raised cells between the veins in a pattern that resembles crocodile hide or fine hammered bronze. A compact, self-heading plant with short petioles arising from a dense crown, luxurians demands high humidity and warm temperatures, rewarding patience with one of the most tactilely astonishing leaf surfaces in the entire genus.",
+  "quickFacts": {
+    "growthHabit": "Compact terrestrial to low epiphyte, self-heading",
+    "matureSize": "Small to Medium (30-55 cm)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "20-29°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Cordate, heavily bullate",
+    "leafLength": "20-40 cm",
+    "leafWidth": "15-30 cm",
+    "petioleColor": "Short, green",
+    "venation": "Pronounced venation forming raised bullate cells across dark glossy blade",
+    "texture": "Thick, coriaceous, strongly bullate (reptile-scale texture)",
+    "variegation": "None",
+    "growthHabit": "Dense basal crown, compact self-heading"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium luxurians",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium luxurians",
+      "Anthurium luxurians Croat",
+      "luxurians anthurium",
+      "Anthurium luxurians Colombia"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board", "variegated", "variegata",
+      "x forgetii", "x radicans", "hybrid"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Begonia sizemoreae",
+  "slug": "sizemoreae",
+  "scientificName": "Begonia sizemoreae Kiew",
+  "commonName": "Sizemore's Begonia",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "sizemoreae",
+  "origin": "Vietnam (humid limestone-associated forest understory)",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Begonia sizemoreae, described by Kiew, is a compact rhizomatous species from the humid limestone-associated forest of Vietnam — growing in deep shade with high humidity on moist, humus-rich substrate among rocks and leaf litter in the sheltered understory. The leaves are velvety and asymmetrical, each bearing a distinctly silvery central zone fading to darker margins and rich red undersides — a bicolour effect that is intrinsic to the species and produces a leaf face of considerable ornamental interest. The plant creeps by a surface rhizome and produces handsome clumps of foliage on red petioles well suited to the conditions of a humid understory cabinet or enclosed terrarium. As a Vietnamese limestone begonia from the same tradition as ningmingensis, sizemoreae represents the quieter end of the collector begonia spectrum — beautiful but rarely the first species discussed, which means it is more obtainable than its quality deserves.",
+  "quickFacts": {
+    "growthHabit": "Compact rhizomatous clump",
+    "matureSize": "Small (15-25 cm spread)",
+    "light": "Low to medium indirect light",
+    "humidity": "Very high humidity (80-90%)",
+    "temperature": "19-27°C",
+    "difficulty": "Moderate to Advanced",
+    "growthSpeed": "Slow to Moderate"
+  },
+  "morphology": {
+    "leafShape": "Velvety, asymmetrical, broadly ovate",
+    "leafLength": "7-15 cm",
+    "leafWidth": "6-13 cm",
+    "petioleColor": "Red",
+    "venation": "Visible beneath silvery central zone",
+    "texture": "Velvety, red undersides",
+    "variegation": "Silvery central zone with darker margins (natural species colouration)",
+    "growthHabit": "Surface rhizome, compact clumping"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia sizemoreae Vietnam",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia sizemoreae",
+      "Begonia sizemoreae Kiew",
+      "sizemoreae begonia",
+      "Begonia sizemoreae Vietnam"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}

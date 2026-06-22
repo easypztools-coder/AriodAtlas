@@ -1,0 +1,62 @@
+{
+  "name": "Begonia acetosa",
+  "slug": "acetosa",
+  "scientificName": "Begonia acetosa Vell.",
+  "commonName": "Velvet Begonia",
+  "statusTag": "Collector Species",
+  "botanicalType": "species",
+  "family": "Begoniaceae",
+  "genus": "Begonia",
+  "species": "acetosa",
+  "origin": "Southeastern Brazil (Atlantic Forest, humid shaded understory)",
+  "collectorPopularity": 3,
+  "rarityStatus": "Uncommon",
+  "availability": "Moderate",
+  "priceGuideTier": "££",
+  "aboutText": "Begonia acetosa is a rhizomatous begonia native to the humid, shaded understory of the Atlantic Forest in southeastern Brazil, growing on rich humus-laden soil and among decaying leaf litter where high humidity and filtered light combine to support its distinctive foliage. Its creeping rhizome produces large, star-like, velvety leaves on long petioles — the upper surface ranging from olive-green to brownish with a pronounced velvet nap, while the undersides carry a contrasting wine-red colouration that is visible at any angle. This chromatic contrast between leaf faces, combined with considerable leaf size and a bold palmate outline, elevates acetosa well above the common garden begonia in collector esteem. A genuinely rewarding specimen plant for those with the humidity to do it justice.",
+  "quickFacts": {
+    "growthHabit": "Rhizomatous, creeping",
+    "matureSize": "Medium (30-60 cm spread)",
+    "light": "Medium to bright indirect light",
+    "humidity": "High humidity (70-85%)",
+    "temperature": "18-27°C",
+    "difficulty": "Moderate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Large, star-like, palmately lobed",
+    "leafLength": "10-25 cm",
+    "leafWidth": "10-25 cm",
+    "petioleColor": "Long, reddish-green",
+    "venation": "Palmate venation, visible through velvet surface",
+    "texture": "Velvety upper surface, contrasting wine-red undersides",
+    "variegation": "None",
+    "growthHabit": "Creeping rhizome with upright petioles"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": null,
+    "threeMonthChangePercent": null,
+    "marketStatus": null
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Begonia acetosa",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Begonia acetosa",
+      "Begonia acetosa Vell",
+      "acetosa begonia",
+      "velvet begonia Brazil"
+    ],
+    "excludeTerms": [
+      "seeds", "seed", "bulb", "rhizome", "corm", "poster", "print", "book",
+      "magazine", "care guide", "artificial", "fake", "plastic", "silk",
+      "soil", "perlite", "fertiliser", "fertilizer", "moss pole", "pot only",
+      "label", "tag", "cutting board"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "recommendedPlants": []
+}
