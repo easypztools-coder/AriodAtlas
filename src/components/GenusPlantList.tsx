@@ -14,6 +14,8 @@ interface PlantSummary {
   rarityStatus: string;
   priceGuideTier: string;
   botanicalType: string;
+  marketStatus: string | null;
+  currentMedianPriceGBP: number | null;
 }
 
 interface GenusPlantListProps {
@@ -202,10 +204,26 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                         </h3>
                         <p className="mt-1 text-xs text-muted truncate">{plant.commonName}</p>
                         
-                        <div className="mt-3 flex items-center gap-2">
+                        <div className="mt-3 flex flex-wrap items-center gap-2">
                           <span className="badge-price">
-                            {plant.priceGuideTier} · {getStaticTierLabel(plant.priceGuideTier)}
+                            {plant.currentMedianPriceGBP
+                              ? `£${plant.currentMedianPriceGBP.toFixed(0)} AA Price`
+                              : `${plant.priceGuideTier} · ${getStaticTierLabel(plant.priceGuideTier)}`}
                           </span>
+                          {plant.marketStatus && (
+                            <span
+                              className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold ${
+                                plant.marketStatus === "Rising"
+                                  ? "bg-green-500/10 text-green-400"
+                                  : plant.marketStatus === "Declining"
+                                  ? "bg-orange-500/10 text-orange-400"
+                                  : "bg-muted/10 text-muted-light"
+                              }`}
+                            >
+                              {plant.marketStatus === "Rising" ? "↑" : plant.marketStatus === "Declining" ? "↓" : "→"}
+                              {" "}{plant.marketStatus}
+                            </span>
+                          )}
                         </div>
                       </div>
 

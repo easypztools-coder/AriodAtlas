@@ -87,7 +87,7 @@ function filterPlantsForCollection(slug: string, plants: PlantData[]): PlantData
     case "collector-favorites":
       return plants.filter((p) => p.collectorPopularity >= 4.0);
     case "most-expensive":
-      return plants.filter((p) => ["£££", "££££"].includes(p.priceGuideTier));
+      return plants.filter((p) => p.priceGuideTier === "££££");
     case "giant-aroids":
       return plants.filter(
         (p) =>

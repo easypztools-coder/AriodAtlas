@@ -111,23 +111,45 @@ interface PageProps {
   params: { genus: string; slug: string };
 }
 
+function trimDescription(text: string, maxLen = 155): string {
+  if (text.length <= maxLen) return text;
+  const cut = text.slice(0, maxLen);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut) + "…";
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { genus, slug } = params;
   const data = loadPlantData(genus, slug);
   if (!data) return { title: "Plant Not Found" };
 
+  const description = trimDescription(data.aboutText);
+  const canonicalUrl = `https://aroidatlas.com/plants/${genus.toLowerCase()}/${slug}`;
+
   return {
     title: `${data.scientificName} — ${data.commonName}`,
-    description: data.aboutText.slice(0, 155) + "…",
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: `${data.scientificName} | Aroid Atlas`,
-      description: data.aboutText.slice(0, 155) + "…",
+      description,
+      url: canonicalUrl,
+      siteName: "Aroid Atlas",
       images: [
         {
           url: `/plants/${genus.toLowerCase()}/${data.slug}.png`,
-          alt: data.scientificName,
+          width: 1200,
+          height: 900,
+          alt: `${data.scientificName} — ${data.statusTag}`,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${data.scientificName} | Aroid Atlas`,
+      description,
     },
   };
 }

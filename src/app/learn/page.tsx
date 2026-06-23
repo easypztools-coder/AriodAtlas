@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Care Guides & Cultivation Resources",
@@ -21,9 +22,10 @@ interface GuideItem {
   id: string;
   title: string;
   category: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   summary: string;
   tips: string[];
+  relatedGenus?: string;
 }
 
 const CARE_GUIDES: GuideItem[] = [
@@ -31,6 +33,7 @@ const CARE_GUIDES: GuideItem[] = [
     id: "substrate",
     category: "Substrate & Soil",
     title: "The Ultimate Chunky Aroid Mix",
+    relatedGenus: "philodendron",
     summary: "Rare tropical aroids are mostly epiphytic or hemiepiphytic. They need highly aerated, chunky substrates to prevent root rot while retaining moisture.",
     tips: [
       "Base: 40% Orchid Bark or Coconut Husk chips for structure",
@@ -48,6 +51,7 @@ const CARE_GUIDES: GuideItem[] = [
     id: "lighting",
     category: "Lighting & PPFD",
     title: "Bright Indirect Light Demystified",
+    relatedGenus: "monstera",
     summary: "Forest canopy climbers receive dappled shade in the wild. Direct sun burns delicate leaves, while low light leads to leggy growth and loss of variegation.",
     tips: [
       "Exposure: East or West facing windows are ideal",
@@ -65,6 +69,7 @@ const CARE_GUIDES: GuideItem[] = [
     id: "humidity",
     category: "Climate & Airflow",
     title: "Humidity vs. Air Circulation",
+    relatedGenus: "anthurium",
     summary: "High humidity keeps growth points moist and helps aerial roots attach. However, stagnant air invites fungal pathogens. Active ventilation is key.",
     tips: [
       "Target RH: 65% - 85% relative humidity for rare species",
@@ -82,6 +87,7 @@ const CARE_GUIDES: GuideItem[] = [
     id: "watering",
     category: "Hydration & Feed",
     title: "Watering & Mineral Nutrition",
+    relatedGenus: "alocasia",
     summary: "Overwatering is the number one killer of rare collectibles. Water when the top 50% of the pot dries, and fertilize weakly with every watering.",
     tips: [
       "Method: Drench thoroughly until water runs out the bottom, then dry",
@@ -101,6 +107,7 @@ interface GlossaryTerm {
   term: string;
   definition: string;
   example: string;
+  plantLink?: { label: string; href: string };
 }
 
 const GLOSSARY_TERMS: GlossaryTerm[] = [
@@ -108,37 +115,88 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Fenestration",
     definition: "Naturally occurring holes or splits in a leaf blade, characteristic of mature Monstera species, adapted to allow wind and rain to pass through without tearing the leaf.",
     example: "Monstera deliciosa, Monstera esqueleto",
+    plantLink: { label: "Browse Monstera", href: "/plants/monstera" },
   },
   {
     term: "Epiphyte",
     definition: "A plant that grows harmlessly upon another plant (such as a tree canopy host) and derives its moisture and nutrients from the air, rain, and debris surrounding it.",
     example: "Anthurium veitchii, many Philodendrons",
+    plantLink: { label: "Browse Anthurium", href: "/plants/anthurium" },
   },
   {
     term: "Variegation",
     definition: "The appearance of differently colored zones (usually white, cream, or yellow) in leaves or stems due to genetic mutation or chimera, leading to zones lacking chlorophyll.",
     example: "Monstera albo-variegata, Philodendron caramel marble",
+    plantLink: { label: "Browse Variegated", href: "/collections/variegated-beauties" },
   },
   {
     term: "Node",
     definition: "The critical structural point on a stem where leaves, buds, and aerial roots originate. A cutting must contain at least one node to be propagated successfully.",
     example: "All climbing Araceae",
+    plantLink: { label: "Browse Climbers", href: "/collections/rare-climbers" },
   },
   {
     term: "Petiolar Sheath",
     definition: "A wing-like structure or sheath flanking the leaf stem (petiole) that protects emerging new leaves before they unfurl.",
     example: "Philodendron billietiae, Epipremnum pinnatum",
+    plantLink: { label: "Browse Philodendron", href: "/plants/philodendron" },
   },
   {
     term: "Bullate",
     definition: "A leaf texture described as puckered, blistered, or heavily wrinkled, usually an adaptation to increase surface area for light absorption in low-light rain forest floors.",
     example: "Anthurium luxurians, Alocasia rugosa",
+    plantLink: { label: "Browse Anthurium", href: "/plants/anthurium" },
   },
 ];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://aroidatlas.com/learn#article",
+      headline: "Care Guides & Cultivation Resources for Rare Tropical Aroids",
+      description:
+        "Detailed care guidelines, propagation advice, and a botanical glossary for Monstera, Philodendron, Anthurium, and Alocasia collectors.",
+      url: "https://aroidatlas.com/learn",
+      publisher: {
+        "@type": "Organization",
+        name: "Aroid Atlas",
+        url: "https://aroidatlas.com",
+      },
+      author: {
+        "@type": "Person",
+        name: "Aroid Aaron",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://aroidatlas.com" },
+        { "@type": "ListItem", position: 2, name: "Care Guides", item: "https://aroidatlas.com/learn" },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: GLOSSARY_TERMS.map((t) => ({
+        "@type": "Question",
+        name: `What does ${t.term} mean in botany?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t.definition,
+        },
+      })),
+    },
+  ],
+};
 
 export default function LearnPage() {
   return (
     <div className="section-spacing">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="section-container">
         {/* Header Block */}
         <div className="mb-12 max-w-3xl">
@@ -183,6 +241,17 @@ export default function LearnPage() {
                     </li>
                   ))}
                 </ul>
+                {guide.relatedGenus && (
+                  <Link
+                    href={`/plants/${guide.relatedGenus}`}
+                    className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Explore {guide.relatedGenus.charAt(0).toUpperCase() + guide.relatedGenus.slice(1)} species
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                )}
               </div>
             </div>
           ))}
@@ -210,6 +279,17 @@ export default function LearnPage() {
                   <span className="font-semibold not-italic text-primary">e.g.</span>
                   <span>{term.example}</span>
                 </div>
+                {term.plantLink && (
+                  <Link
+                    href={term.plantLink.href}
+                    className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-primary/70 hover:text-primary transition-colors"
+                  >
+                    {term.plantLink.label}
+                    <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                )}
               </div>
             ))}
           </div>

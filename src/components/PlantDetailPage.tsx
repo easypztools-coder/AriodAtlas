@@ -76,6 +76,49 @@ interface PlantData {
   };
 }
 
+function ShareButton({ scientificName }: { scientificName: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    const text = `Check out ${scientificName} on Aroid Atlas — rare plant profiles & live UK prices`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: scientificName, text, url });
+      } catch {
+        // user cancelled
+      }
+    } else {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  return (
+    <button
+      onClick={handleShare}
+      className="inline-flex items-center gap-2 rounded-lg border border-card/80 px-4 py-2 text-sm font-medium text-muted transition hover:bg-card/50"
+    >
+      {copied ? (
+        <>
+          <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          Link Copied
+        </>
+      ) : (
+        <>
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+          </svg>
+          Share
+        </>
+      )}
+    </button>
+  );
+}
+
 function PopularityStars({ rating }: { rating: number }) {
   const fullStars = Math.floor(rating);
   const hasHalf = rating - fullStars >= 0.5;
@@ -259,30 +302,7 @@ export default function PlantDetailPage({
 
         {/* Action Panel Row */}
         <div className="flex flex-wrap items-center gap-3">
-          <button className="inline-flex items-center gap-2 rounded-lg border border-card/80 px-4 py-2 text-sm font-medium text-muted transition hover:bg-card/50">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-            </svg>
-            Save
-          </button>
-          <button className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/20">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-            Add to Collection
-          </button>
-          <button className="inline-flex items-center gap-2 rounded-lg border border-card/80 px-4 py-2 text-sm font-medium text-muted transition hover:bg-card/50">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
-            </svg>
-            Share
-          </button>
-          <button className="inline-flex items-center gap-2 rounded-lg border border-card/80 px-4 py-2 text-sm font-medium text-muted transition hover:bg-card/50">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            PDF
-          </button>
+          <ShareButton scientificName={data.scientificName} />
         </div>
 
         {/* Status Row */}
@@ -312,6 +332,33 @@ export default function PlantDetailPage({
             {data.origin}
           </span>
         </div>
+
+        {/* AA Price Hero Callout */}
+        {fairPrice !== null && (
+          <div className="flex items-center gap-4 rounded-xl border border-price/25 bg-price/5 px-5 py-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-price/15">
+              <svg className="h-5 w-5 text-price" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.768 0-1.536-.219-2.121-.659C8.707 9.46 8.707 8.034 9.879 7.155c1.17-.879 3.07-.879 4.242 0L15 7.818" />
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-price/70">
+                Aroid Atlas Price Guide
+              </p>
+              <p className="text-sm text-muted mt-0.5">
+                The <span className="font-semibold text-heading">AA Price</span> suggests this should cost{" "}
+                <span className="font-bold text-price text-base">£{fairPrice.toFixed(0)}</span>
+                {" "}— based on verified eBay UK auction data
+              </p>
+            </div>
+            <a
+              href="#market-analysis"
+              className="shrink-0 text-[10px] font-semibold text-price/70 hover:text-price transition-colors underline underline-offset-2"
+            >
+              See full data
+            </a>
+          </div>
+        )}
 
         {/* Main Feature Image */}
         <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-card">
@@ -391,7 +438,7 @@ export default function PlantDetailPage({
         </div>
 
         {/* ─── Market Analysis & Price Guide ─────────────────────────────────── */}
-        <div className="glass-card p-6 md:p-8 space-y-6">
+        <div id="market-analysis" className="glass-card p-6 md:p-8 space-y-6">
           <div>
             <h2 className="text-xl md:text-2xl font-heading font-bold text-heading">
               Market Analysis & Price Guide
@@ -403,17 +450,20 @@ export default function PlantDetailPage({
 
           {/* Unified Price Dashboard KPI Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {/* Card 1: Est. Auction Value */}
-            <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Est. Auction Value</span>
+            {/* Card 1: AA Price */}
+            <div className="rounded-xl border border-price/20 bg-price/5 p-4 flex flex-col justify-between">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-price/80">AA Price</span>
+                <span className="text-[9px] bg-price/10 text-price px-1.5 py-0.5 rounded-full font-semibold">Official Guide</span>
+              </div>
               <div className="mt-2 flex items-baseline gap-1.5">
-                <span className="text-2xl font-bold text-primary">
+                <span className="text-2xl font-bold text-price">
                   {fairPrice !== null ? `£${fairPrice.toFixed(0)}` : "N/A"}
                 </span>
                 {fairPrice !== null && <span className="text-[10px] text-muted">GBP</span>}
               </div>
               <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                eBay UK fair value guide (excluding outliers)
+                Aroid Atlas verified fair-value guide (trimmed mean, excl. outliers)
               </span>
             </div>
 
