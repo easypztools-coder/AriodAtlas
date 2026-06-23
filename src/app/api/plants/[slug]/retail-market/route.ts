@@ -82,35 +82,53 @@ export async function GET(
     return handleFilesystemFallback(slug);
   }
 
+  let listings: ReturnType<typeof mapListing>[] = [];
+
+  // 1. Fetch active listings — this table is always present
   try {
     const db = getDbPool();
-    // 1. Get current active in-stock listings at UK retailers
     const activeListingsRes = await db.query(
-      `SELECT retailer_name, title, product_url, price_gbp, original_price_gbp, 
+      `SELECT retailer_name, title, product_url, price_gbp, original_price_gbp,
               pot_size_cm, plant_size_label, source_method, last_seen_at
        FROM retail_price_observations
        WHERE plant_slug = $1 AND in_stock = true AND last_seen_at >= CURRENT_TIMESTAMP - INTERVAL '7 days'
        ORDER BY price_gbp ASC`,
       [slug]
     );
+    listings = activeListingsRes.rows.map(mapListing);
+  } catch (err) {
+    console.error(`retail-market: failed to query retail_price_observations for ${slug}:`, err);
+    return handleFilesystemFallback(slug);
+  }
 
-    const listings = activeListingsRes.rows.map((row) => ({
-      retailerName: row.retailer_name,
-      title: row.title,
-      productUrl: row.product_url,
-      priceGbp: parseFloat(row.price_gbp),
-      originalPriceGbp: row.original_price_gbp ? parseFloat(row.original_price_gbp) : null,
-      potSizeCm: row.pot_size_cm ? parseFloat(row.pot_size_cm) : null,
-      plantSizeLabel: row.plant_size_label,
-      sourceMethod: row.source_method,
-      lastSeenAt: row.last_seen_at,
-    }));
+  // 2. Fetch snapshot stats — table may not exist yet on first deploy
+  let statsByType: Record<string, unknown> = {};
+  let history: ReturnType<typeof mapHistory>[] = [];
 
-    // 2. Get latest statistics snapshots grouped by plant item type
-    // PostgreSQL DISTINCT ON ensures we get the single newest checked_at row for each item_type
+  try {
+    const db = getDbPool();
+
+    // Ensure the snapshots table exists so the cron can populate it
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS retail_price_snapshots (
+        id           SERIAL PRIMARY KEY,
+        plant_slug   TEXT NOT NULL,
+        item_type    TEXT NOT NULL DEFAULT 'all',
+        checked_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        observed_count INTEGER NOT NULL DEFAULT 0,
+        min_price    NUMERIC(10,2),
+        p25_price    NUMERIC(10,2),
+        median_price NUMERIC(10,2),
+        mean_price   NUMERIC(10,2),
+        trimmed_mean_price NUMERIC(10,2),
+        p75_price    NUMERIC(10,2),
+        max_price    NUMERIC(10,2)
+      )
+    `);
+
     const latestSnapshotsRes = await db.query(
-      `SELECT DISTINCT ON (item_type) 
-         item_type, checked_at, observed_count, min_price, p25_price, 
+      `SELECT DISTINCT ON (item_type)
+         item_type, checked_at, observed_count, min_price, p25_price,
          median_price, mean_price, trimmed_mean_price, p75_price, max_price
        FROM retail_price_snapshots
        WHERE plant_slug = $1
@@ -118,7 +136,7 @@ export async function GET(
       [slug]
     );
 
-    const statsByType = latestSnapshotsRes.rows.reduce((acc: any, row: any) => {
+    statsByType = latestSnapshotsRes.rows.reduce((acc: Record<string, unknown>, row) => {
       acc[row.item_type] = {
         checkedAt: row.checked_at,
         count: row.observed_count,
@@ -133,7 +151,6 @@ export async function GET(
       return acc;
     }, {});
 
-    // 3. Get historical retail snapshots series (using 'all' for trend chart)
     const historyRes = await db.query(
       `SELECT checked_at as date, median_price as median, trimmed_mean_price as "trimmedMean",
               min_price as min, max_price as max, observed_count as "sampleSize",
@@ -144,26 +161,44 @@ export async function GET(
       [slug]
     );
 
-    const history = historyRes.rows.map((row) => ({
-      date: row.date,
-      median: parseFloat(row.median),
-      trimmedMean: parseFloat(row.trimmedMean),
-      min: parseFloat(row.min),
-      max: parseFloat(row.max),
-      p25: parseFloat(row.p25),
-      p75: parseFloat(row.p75),
-      sampleSize: row.sampleSize,
-    }));
-
-    return NextResponse.json({
-      success: true,
-      slug,
-      listings,
-      statsByType,
-      history,
-    });
+    history = historyRes.rows.map(mapHistory);
   } catch (err) {
-    console.error(`Failed to fetch retail market data for ${slug} from DB. Falling back to local files:`, err);
-    return handleFilesystemFallback(slug);
+    console.error(`retail-market: failed to query retail_price_snapshots for ${slug} (non-fatal):`, err);
+    // listings is still populated — stats/history will be empty until next cron run
   }
+
+  return NextResponse.json({
+    success: true,
+    slug,
+    listings,
+    statsByType,
+    history,
+  });
+}
+
+function mapListing(row: Record<string, unknown>) {
+  return {
+    retailerName: row.retailer_name,
+    title: row.title,
+    productUrl: row.product_url,
+    priceGbp: parseFloat(row.price_gbp as string),
+    originalPriceGbp: row.original_price_gbp ? parseFloat(row.original_price_gbp as string) : null,
+    potSizeCm: row.pot_size_cm ? parseFloat(row.pot_size_cm as string) : null,
+    plantSizeLabel: row.plant_size_label,
+    sourceMethod: row.source_method,
+    lastSeenAt: row.last_seen_at,
+  };
+}
+
+function mapHistory(row: Record<string, unknown>) {
+  return {
+    date: row.date,
+    median: parseFloat(row.median as string),
+    trimmedMean: parseFloat(row.trimmedMean as string),
+    min: parseFloat(row.min as string),
+    max: parseFloat(row.max as string),
+    p25: parseFloat(row.p25 as string),
+    p75: parseFloat(row.p75 as string),
+    sampleSize: row.sampleSize,
+  };
 }
