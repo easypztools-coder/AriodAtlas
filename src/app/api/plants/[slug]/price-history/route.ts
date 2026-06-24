@@ -131,6 +131,7 @@ export async function GET(
       soldDate: l.soldDate,
       currency: l.currency,
       url: l.url,
+      listingType: l.listingType,
     }))
     .sort((a, b) => {
       const dateA = a.soldDate ? new Date(a.soldDate).getTime() : 0;

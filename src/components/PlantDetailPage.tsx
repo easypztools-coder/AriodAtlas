@@ -200,11 +200,13 @@ export default function PlantDetailPage({
     soldDate: string | null;
     currency: string;
     url: string;
+    listingType?: string;
   }
 
   const [soldCompsData, setSoldCompsData] = useState<PriceHistoryPoint[]>([]);
   const [fairPrice, setFairPrice] = useState<number | null>(null);
   const [recentSales, setRecentSales] = useState<RecentSale[]>([]);
+  const [hoveredWeekDate, setHoveredWeekDate] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`/api/plants/${data.slug}/price-history`)
@@ -252,6 +254,19 @@ export default function PlantDetailPage({
   const combinedTier = fairPrice !== null
     ? getPriceRarityTier(fairPrice)
     : { tier: data.priceGuideTier, label: getStaticTierLabel(data.priceGuideTier) };
+
+  // Helper to derive ISO week key — used to sync graph hover with sales list
+  function getISOWeekKey(dateStr: string): string {
+    const date = new Date(dateStr);
+    const dayNum = date.getUTCDay() || 7;
+    date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+    const weekNo = Math.ceil(((date.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+    return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`;
+  }
+
+  // Latest week's p25/p75 for the "Typical Price Range" card
+  const latestWeek = soldCompsData.length > 0 ? soldCompsData[soldCompsData.length - 1] : null;
 
   // Use snapshot trimmed mean when available; fall back to mean of live listings
   const retailAverage: { value: number; count: number } | null = (() => {
@@ -494,49 +509,25 @@ export default function PlantDetailPage({
               </span>
             </div>
 
-            {/* Card 3: Price Gap Recommendation */}
+            {/* Card 3: Typical Price Range */}
             <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Smart Buy Rating</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Typical Range</span>
               <div className="mt-2">
-                {fairPrice !== null && retailAverage ? (
-                  (() => {
-                    const diff = retailAverage.value - fairPrice;
-                    const pct = (diff / retailAverage.value) * 100;
-                    if (diff > 5) {
-                      return (
-                        <>
-                          <span className="text-lg font-bold text-green-400">Save {pct.toFixed(0)}%</span>
-                          <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
-                            Auctions are cheaper than retail stores
-                          </span>
-                        </>
-                      );
-                    } else if (diff < -5) {
-                      return (
-                        <>
-                          <span className="text-lg font-bold text-primary">Buy Retail</span>
-                          <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
-                            Retail stores offer competitive prices
-                          </span>
-                        </>
-                      );
-                    } else {
-                      return (
-                        <>
-                          <span className="text-lg font-bold text-muted-light">Comparable</span>
-                          <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
-                            Prices are similar across markets
-                          </span>
-                        </>
-                      );
-                    }
-                  })()
+                {latestWeek ? (
+                  <>
+                    <span className="text-lg font-bold text-heading">
+                      £{latestWeek.p25.toFixed(0)} – £{latestWeek.p75.toFixed(0)}
+                    </span>
+                    <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
+                      Most recent eBay sales fall in this band
+                    </span>
+                  </>
                 ) : (
-                  <span className="text-lg font-bold text-muted">Awaiting Data</span>
+                  <span className="text-lg font-bold text-muted">No Data</span>
                 )}
               </div>
               <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                Where to find the best market value
+                Middle 50% of verified sale prices
               </span>
             </div>
 
@@ -589,7 +580,7 @@ export default function PlantDetailPage({
                 </div>
                 
                 {/* The actual chart - wide view container */}
-                <PriceHistoryChart data={soldCompsData} />
+                <PriceHistoryChart data={soldCompsData} onHover={setHoveredWeekDate} />
               </div>
 
               {/* Right Column: Recent Sales History (1/3 width on desktop) */}
@@ -610,15 +601,44 @@ export default function PlantDetailPage({
                             year: "numeric",
                           })
                         : "Date N/A";
-                      
-                      const element = (
-                        <div className="flex flex-col gap-1 rounded-lg border border-primary/5 bg-card/40 p-2.5 hover:bg-card-hover/60 transition-colors">
-                          <div className="text-[10px] font-medium text-heading line-clamp-1">
+
+                      const isHighlighted =
+                        hoveredWeekDate && sale.soldDate
+                          ? getISOWeekKey(hoveredWeekDate) === getISOWeekKey(sale.soldDate)
+                          : false;
+
+                      const typeLabel =
+                        sale.listingType && sale.listingType !== "unknown"
+                          ? sale.listingType.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+                          : null;
+
+                      const cardClass = [
+                        "flex flex-col gap-1 rounded-lg border p-2.5 transition-all duration-200",
+                        isHighlighted
+                          ? "border-primary/40 bg-card-hover/80 ring-1 ring-primary/30"
+                          : "border-primary/5 bg-card/40 hover:bg-card-hover/60",
+                      ].join(" ");
+
+                      const inner = (
+                        <div className={cardClass}>
+                          <div className="text-[10px] font-medium text-heading line-clamp-2 leading-snug">
                             {displayTitle}
                           </div>
-                          <div className="flex items-center justify-between text-[9px] text-muted">
-                            <span>{displayDate}</span>
-                            <span className="font-bold text-green-400">£{sale.totalPrice.toFixed(2)}</span>
+                          <div className="flex items-center gap-1.5 flex-wrap mt-0.5">
+                            {typeLabel && (
+                              <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-md font-medium">
+                                {typeLabel}
+                              </span>
+                            )}
+                            <span className="text-[9px] text-muted">{displayDate}</span>
+                          </div>
+                          <div className="flex items-center justify-between mt-1">
+                            <span className="font-bold text-green-400 text-xs">£{sale.totalPrice.toFixed(2)}</span>
+                            {sale.url && (
+                              <span className="text-[9px] text-muted/60 group-hover:text-primary transition-colors">
+                                View on eBay →
+                              </span>
+                            )}
                           </div>
                         </div>
                       );
@@ -630,17 +650,13 @@ export default function PlantDetailPage({
                             href={sale.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block"
+                            className="block group"
                           >
-                            {element}
+                            {inner}
                           </a>
                         );
                       }
-                      return (
-                        <div key={idx}>
-                          {element}
-                        </div>
-                      );
+                      return <div key={idx}>{inner}</div>;
                     })
                   ) : (
                     <p className="text-xs text-muted italic text-center py-8">No recent eBay transactions found.</p>

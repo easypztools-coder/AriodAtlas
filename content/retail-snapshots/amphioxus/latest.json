@@ -1,0 +1,55 @@
+{
+  "plantSlug": "amphioxus",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "grow-tropicals",
+      "retailerName": "Grow Tropicals",
+      "title": "Begonia amphioxus x malachosticta",
+      "productUrl": "https://growtropicals.com/products/begonia-amphioxus-x-malachosticta",
+      "priceGbp": 19.99,
+      "inStock": false,
+      "variantTitle": "8cm",
+      "potSizeCm": 8,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Begonia amphioxus x malachosticta",
+      "productUrl": "https://sproutsofbristol.co.uk/products/begonia-amphioxus-x-malachosticta",
+      "priceGbp": 22.5,
+      "originalPriceGbp": 30,
+      "inStock": true,
+      "variantTitle": "8cm",
+      "potSizeCm": 8,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 22.5,
+      "max": 22.5,
+      "median": 22.5,
+      "mean": 22.5,
+      "trimmedMean": 22.5,
+      "p25": 22.5,
+      "p75": 22.5,
+      "count": 1
+    },
+    "unknown": {
+      "min": 22.5,
+      "max": 22.5,
+      "median": 22.5,
+      "mean": 22.5,
+      "trimmedMean": 22.5,
+      "p25": 22.5,
+      "p75": 22.5,
+      "count": 1
+    }
+  }
+}

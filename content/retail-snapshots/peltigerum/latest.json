@@ -1,0 +1,68 @@
+{
+  "plantSlug": "peltigerum",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "grow-tropicals",
+      "retailerName": "Grow Tropicals",
+      "title": "Imperfect Anthurium peltigerum",
+      "productUrl": "https://growtropicals.com/products/imperfect-anthurium-peltigerum",
+      "priceGbp": 8.99,
+      "originalPriceGbp": 9.99,
+      "inStock": false,
+      "variantTitle": "12cm",
+      "potSizeCm": 12,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "urban-tropicana",
+      "retailerName": "Urban Tropicana",
+      "title": "Anthurium peltigerum | 12cm pot",
+      "productUrl": "https://urbantropicana.co.uk/products/anthurium-peltigerum-12cm-pot-copy",
+      "priceGbp": 21,
+      "inStock": false,
+      "potSizeCm": 12,
+      "plantSizeLabel": "established_plant",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Anthurium peltigerum",
+      "productUrl": "https://sproutsofbristol.co.uk/products/anthurium-peltigerum",
+      "priceGbp": 21,
+      "originalPriceGbp": 28,
+      "inStock": true,
+      "variantTitle": "12cm",
+      "potSizeCm": 12,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 21,
+      "max": 21,
+      "median": 21,
+      "mean": 21,
+      "trimmedMean": 21,
+      "p25": 21,
+      "p75": 21,
+      "count": 1
+    },
+    "unknown": {
+      "min": 21,
+      "max": 21,
+      "median": 21,
+      "mean": 21,
+      "trimmedMean": 21,
+      "p25": 21,
+      "p75": 21,
+      "count": 1
+    }
+  }
+}

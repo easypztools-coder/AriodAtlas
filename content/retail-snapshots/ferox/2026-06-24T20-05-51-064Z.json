@@ -1,0 +1,68 @@
+{
+  "plantSlug": "ferox",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "urban-tropicana",
+      "retailerName": "Urban Tropicana",
+      "title": "Begonia Ferox | 12cm pot",
+      "productUrl": "https://urbantropicana.co.uk/products/begonia-ferox",
+      "priceGbp": 26,
+      "inStock": false,
+      "potSizeCm": 12,
+      "plantSizeLabel": "established_plant",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Begonia ferox - Fierce Plant",
+      "productUrl": "https://sproutsofbristol.co.uk/products/begonia-ferox",
+      "priceGbp": 15,
+      "originalPriceGbp": 20,
+      "inStock": true,
+      "variantTitle": "8cm",
+      "potSizeCm": 8,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Begonia ferox - Fierce Plant",
+      "productUrl": "https://sproutsofbristol.co.uk/products/begonia-ferox",
+      "priceGbp": 18.75,
+      "originalPriceGbp": 25,
+      "inStock": false,
+      "variantTitle": "12cm",
+      "potSizeCm": 12,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 15,
+      "max": 15,
+      "median": 15,
+      "mean": 15,
+      "trimmedMean": 15,
+      "p25": 15,
+      "p75": 15,
+      "count": 1
+    },
+    "unknown": {
+      "min": 15,
+      "max": 15,
+      "median": 15,
+      "mean": 15,
+      "trimmedMean": 15,
+      "p25": 15,
+      "p75": 15,
+      "count": 1
+    }
+  }
+}

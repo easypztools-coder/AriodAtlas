@@ -1,0 +1,64 @@
+{
+  "plantSlug": "longiloba-watsoniana-pink-doff-variegated",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA LONGILOBA PINK BACK ALBO",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasialongiloba-pink-back-albo",
+      "priceGbp": 55,
+      "inStock": false,
+      "variantTitle": "Corm",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA LONGILOBA PINK BACK ALBO",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasialongiloba-pink-back-albo",
+      "priceGbp": 99,
+      "inStock": false,
+      "variantTitle": "Mature",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA LONGILOBA PINK BACK ALBO",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasialongiloba-pink-back-albo",
+      "priceGbp": 74.99,
+      "inStock": true,
+      "variantTitle": "Juvenile",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 74.99,
+      "max": 74.99,
+      "median": 74.99,
+      "mean": 74.99,
+      "trimmedMean": 74.99,
+      "p25": 74.99,
+      "p75": 74.99,
+      "count": 1
+    },
+    "unknown": {
+      "min": 74.99,
+      "max": 74.99,
+      "median": 74.99,
+      "mean": 74.99,
+      "trimmedMean": 74.99,
+      "p25": 74.99,
+      "p75": 74.99,
+      "count": 1
+    }
+  }
+}

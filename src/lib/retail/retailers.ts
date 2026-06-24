@@ -32,4 +32,22 @@ export const approvedRetailers: RetailerConfig[] = [
       },
     },
   },
+  {
+    slug: "alocasia-company",
+    name: "The Alocasia Company",
+    url: "https://www.thealocasiacompany.co.uk",
+    method: "shopify_json",
+  },
+  {
+    slug: "urban-tropicana",
+    name: "Urban Tropicana",
+    url: "https://urbantropicana.co.uk",
+    method: "shopify_json",
+  },
+  {
+    slug: "sprouts-of-bristol",
+    name: "Sprouts of Bristol",
+    url: "https://sproutsofbristol.co.uk",
+    method: "shopify_json",
+  },
 ];

@@ -1,0 +1,159 @@
+{
+  "plantSlug": "venom",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "grow-tropicals",
+      "retailerName": "Grow Tropicals",
+      "title": "Alocasia Venom (TC Plantlet) - Preorder",
+      "productUrl": "https://growtropicals.com/products/alocasia-venom-tc-plantlet-preorder",
+      "priceGbp": 32.99,
+      "inStock": false,
+      "variantTitle": "TC Plant",
+      "plantSizeLabel": "tc_plantlet",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM PINK",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom-pink-variegated",
+      "priceGbp": 775,
+      "inStock": false,
+      "variantTitle": "Corm",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM PINK",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom-pink-variegated",
+      "priceGbp": 995,
+      "inStock": false,
+      "variantTitle": "Juvenile",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM PINK",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom-pink-variegated",
+      "priceGbp": 1395,
+      "inStock": false,
+      "variantTitle": "Mature",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM PINK",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom-pink-variegated",
+      "priceGbp": 175,
+      "inStock": false,
+      "variantTitle": "Corm Low Colour Mother Plant (No Guarantee)",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM PINK",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom-pink-variegated",
+      "priceGbp": 195,
+      "originalPriceGbp": 995,
+      "inStock": false,
+      "variantTitle": "Low Colour Venom Plant",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom",
+      "priceGbp": 50,
+      "inStock": false,
+      "variantTitle": "Corm",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom",
+      "priceGbp": 125,
+      "inStock": false,
+      "variantTitle": "Mature",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    },
+    {
+      "retailerSlug": "alocasia-company",
+      "retailerName": "The Alocasia Company",
+      "title": "ALOCASIA VENOM",
+      "productUrl": "https://www.thealocasiacompany.co.uk/products/alocasia-venom",
+      "priceGbp": 99,
+      "inStock": true,
+      "variantTitle": "Juvenile",
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    },
+    {
+      "retailerSlug": "urban-tropicana",
+      "retailerName": "Urban Tropicana",
+      "title": "Alocasia Venom | 8cm pot",
+      "productUrl": "https://urbantropicana.co.uk/products/alocasia-venom-8cm-pot",
+      "priceGbp": 40,
+      "inStock": true,
+      "potSizeCm": 8,
+      "plantSizeLabel": "established_plant",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 40,
+      "max": 99,
+      "median": 69.5,
+      "mean": 69.5,
+      "trimmedMean": 69.5,
+      "p25": 54.75,
+      "p75": 84.25,
+      "count": 2
+    },
+    "unknown": {
+      "min": 99,
+      "max": 99,
+      "median": 99,
+      "mean": 99,
+      "trimmedMean": 99,
+      "p25": 99,
+      "p75": 99,
+      "count": 1
+    },
+    "established_plant": {
+      "min": 40,
+      "max": 40,
+      "median": 40,
+      "mean": 40,
+      "trimmedMean": 40,
+      "p25": 40,
+      "p75": 40,
+      "count": 1
+    }
+  }
+}

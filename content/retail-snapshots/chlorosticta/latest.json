@@ -1,0 +1,40 @@
+{
+  "plantSlug": "chlorosticta",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "urban-tropicana",
+      "retailerName": "Urban Tropicana",
+      "title": "Begonia Chlorosticta | 8cm pot",
+      "productUrl": "https://urbantropicana.co.uk/products/begonia-chlorosticta-8cm-pot",
+      "priceGbp": 22,
+      "inStock": true,
+      "potSizeCm": 8,
+      "plantSizeLabel": "established_plant",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 22,
+      "max": 22,
+      "median": 22,
+      "mean": 22,
+      "trimmedMean": 22,
+      "p25": 22,
+      "p75": 22,
+      "count": 1
+    },
+    "established_plant": {
+      "min": 22,
+      "max": 22,
+      "median": 22,
+      "mean": 22,
+      "trimmedMean": 22,
+      "p25": 22,
+      "p75": 22,
+      "count": 1
+    }
+  }
+}

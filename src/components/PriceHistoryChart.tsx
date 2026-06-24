@@ -15,6 +15,7 @@ import type { PriceHistoryPoint } from "@/lib/prices/types";
 
 interface PriceHistoryChartProps {
   data: PriceHistoryPoint[];
+  onHover?: (date: string | null) => void;
 }
 
 const MEDIAN_COLOR = "#C3D9A1";
@@ -22,25 +23,68 @@ const BAND_COLOR = "#A3C17A";
 const TEXT_MUTED = "#8B9A92";
 const BG_CARD = "#1A1F1D";
 
-/**
- * PriceHistoryChart — Dark luxury AroidAtlas aesthetic.
- *
- * Shows:
- * - Median price as a solid green line
- * - p25-p75 range as a translucent green band
- * - Legend explaining the visual elements
- * - Sample size / confidence displayed beneath
- */
-export default function PriceHistoryChart({
-  data,
-}: PriceHistoryChartProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function CustomTooltip({ active, payload, label }: any) {
+  if (!active || !payload || payload.length === 0) return null;
+
+  const byKey: Record<string, number> = {};
+  for (const entry of payload) {
+    byKey[entry.dataKey] = typeof entry.value === "number" ? entry.value : 0;
+  }
+
+  const median = byKey["median"];
+  const p25 = byKey["p25"];
+  const p75 = byKey["p75"];
+  const sampleSize: number = payload[0]?.payload?.sampleSize ?? 0;
+
+  const date = new Date(label);
+  const weekLabel = date.toLocaleDateString("en-GB", {
+    month: "long",
+    year: "numeric",
+  });
+
+  return (
+    <div
+      style={{
+        backgroundColor: BG_CARD,
+        border: "1px solid #2A2F2D",
+        borderRadius: "10px",
+        padding: "10px 14px",
+        fontSize: "12px",
+        color: "#FFFFFF",
+        minWidth: "180px",
+      }}
+    >
+      <p style={{ color: TEXT_MUTED, fontSize: "10px", marginBottom: "8px" }}>
+        {weekLabel}
+      </p>
+      {median !== undefined && (
+        <div style={{ marginBottom: "4px", display: "flex", justifyContent: "space-between", gap: "16px" }}>
+          <span style={{ color: TEXT_MUTED }}>Most common price</span>
+          <span style={{ color: MEDIAN_COLOR, fontWeight: 700 }}>£{median.toFixed(2)}</span>
+        </div>
+      )}
+      {p25 !== undefined && p75 !== undefined && (
+        <div style={{ marginBottom: "4px", display: "flex", justifyContent: "space-between", gap: "16px" }}>
+          <span style={{ color: TEXT_MUTED }}>Typical range</span>
+          <span style={{ color: BAND_COLOR }}>£{p25.toFixed(0)} – £{p75.toFixed(0)}</span>
+        </div>
+      )}
+      {sampleSize > 0 && (
+        <p style={{ color: TEXT_MUTED, fontSize: "10px", marginTop: "8px", borderTop: "1px solid #2A2F2D", paddingTop: "6px" }}>
+          Based on {sampleSize} sale{sampleSize !== 1 ? "s" : ""}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartProps) {
   if (!data || data.length === 0) {
     return (
       <div className="rounded-xl bg-card p-6 text-center">
-        <p className="text-sm text-muted">No price data available yet.</p>
-        <p className="mt-2 text-xs text-muted/60">
-          Run the admin price update endpoint to fetch the first snapshot.
-        </p>
+        <p className="text-sm text-muted">Not enough sales data to build a price graph yet.</p>
+        <p className="mt-1 text-xs text-muted/50">Check back as more listings are tracked over time.</p>
       </div>
     );
   }
@@ -52,7 +96,16 @@ export default function PriceHistoryChart({
       {/* ─── Chart ──────────────────────────────────────────────────────── */}
       <div className="h-64 md:h-72">
         <ResponsiveContainer width="100%" height="100%">
-          <ComposedChart data={data}>
+          <ComposedChart
+            data={data}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onMouseMove={(state: any) => {
+              if (state?.isTooltipActive && state?.activePayload?.length > 0) {
+                onHover?.(state.activePayload[0].payload.date as string);
+              }
+            }}
+            onMouseLeave={() => onHover?.(null)}
+          >
             <CartesianGrid
               strokeDasharray="3 3"
               stroke="#2A2F2D"
@@ -78,57 +131,24 @@ export default function PriceHistoryChart({
               tickFormatter={(v) => `£${v.toFixed(0)}`}
               domain={[0, "auto"]}
             />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: BG_CARD,
-                border: "1px solid #2A2F2D",
-                borderRadius: "8px",
-                fontSize: "12px",
-                color: "#FFFFFF",
-              }}
-              labelFormatter={(d) => {
-                const date = new Date(d);
-                return date.toLocaleDateString("en-GB", {
-                  month: "long",
-                  year: "numeric",
-                });
-              }}
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              formatter={(value: unknown, name: any) => {
-                const num =
-                  typeof value === "number"
-                    ? value
-                    : parseFloat(String(value ?? "0"));
-                const labelMap: Record<string, string> = {
-                  median: "Median",
-                  p25: "25th Percentile",
-                  p75: "75th Percentile",
-                };
-                const key = name ?? "";
-                return [
-                  `£${(num || 0).toFixed(2)}`,
-                  labelMap[key] ?? key,
-                ];
-              }}
-            />
+            <Tooltip content={<CustomTooltip />} />
 
-            {/* Custom legend rendered manually instead of recharts Legend component */}
+            {/* Custom legend */}
             <Legend
               content={() => (
                 <div className="flex items-center justify-center gap-4 pt-2 pb-1">
                   <div className="flex items-center gap-1.5">
                     <div className="h-0.5 w-4 bg-[#C3D9A1]" />
-                    <span className="text-[10px] text-[#8B9A92]">Median Price</span>
+                    <span className="text-[10px] text-[#8B9A92]">Most common price</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <div className="h-2 w-4 rounded-sm bg-[#A3C17A]/20 border border-dashed border-[#A3C17A]" />
-                    <span className="text-[10px] text-[#8B9A92]">25th–75th Percentile</span>
+                    <span className="text-[10px] text-[#8B9A92]">Typical price range</span>
                   </div>
                 </div>
               )}
             />
 
-            {/* p25–p75 range band (renders behind median line) */}
             <defs>
               <linearGradient id="p25p75Grad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor={BAND_COLOR} stopOpacity={0.2} />
@@ -136,7 +156,6 @@ export default function PriceHistoryChart({
               </linearGradient>
             </defs>
 
-            {/* Upper bound of band (p75) filled with gradient */}
             <Area
               type="monotone"
               dataKey="p75"
@@ -144,7 +163,6 @@ export default function PriceHistoryChart({
               fill="url(#p25p75Grad)"
               fillOpacity={1}
             />
-            {/* Lower bound of band (p25) — same fill, hides lower portion */}
             <Area
               type="monotone"
               dataKey="p25"
@@ -152,7 +170,6 @@ export default function PriceHistoryChart({
               fill={BG_CARD}
               fillOpacity={1}
             />
-            {/* Band outline — faint dashed lines for p25 and p75 */}
             <Line
               type="monotone"
               dataKey="p75"
@@ -173,8 +190,6 @@ export default function PriceHistoryChart({
               activeDot={false}
               legendType="none"
             />
-
-            {/* Median line */}
             <Line
               type="monotone"
               dataKey="median"
@@ -194,8 +209,7 @@ export default function PriceHistoryChart({
         <div className="flex flex-col gap-1">
           <span className="text-muted">eBay UK sold prices</span>
           <span className="text-muted/60">
-            Based on filtered completed listings. Excludes unrelated species,
-            multipacks and statistical outliers.
+            Verified completed listings only. Excludes unrelated species, multipacks and outliers.
           </span>
         </div>
         <span className="text-muted">{totalSamples} sales</span>

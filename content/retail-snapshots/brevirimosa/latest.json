@@ -1,0 +1,78 @@
+{
+  "plantSlug": "brevirimosa",
+  "checkedAt": "2026-06-24T20:05:51.064Z",
+  "listings": [
+    {
+      "retailerSlug": "urban-tropicana",
+      "retailerName": "Urban Tropicana",
+      "title": "Begonia Brevirimosa | 8cm pot",
+      "productUrl": "https://urbantropicana.co.uk/products/begonia-brevirimosa-8cm-pot",
+      "priceGbp": 30,
+      "inStock": true,
+      "potSizeCm": 8,
+      "plantSizeLabel": "established_plant",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 0.9
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Begonia brevirimosa",
+      "productUrl": "https://sproutsofbristol.co.uk/products/begonia-brevirimosa",
+      "priceGbp": 18,
+      "originalPriceGbp": 24,
+      "inStock": false,
+      "variantTitle": "12cm",
+      "potSizeCm": 12,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    },
+    {
+      "retailerSlug": "sprouts-of-bristol",
+      "retailerName": "Sprouts of Bristol",
+      "title": "Begonia brevirimosa",
+      "productUrl": "https://sproutsofbristol.co.uk/products/begonia-brevirimosa",
+      "priceGbp": 57,
+      "originalPriceGbp": 76,
+      "inStock": true,
+      "variantTitle": "17cm",
+      "potSizeCm": 17,
+      "plantSizeLabel": "unknown",
+      "sourceMethod": "shopify_json",
+      "matchConfidence": 1
+    }
+  ],
+  "statsByType": {
+    "all": {
+      "min": 30,
+      "max": 57,
+      "median": 43.5,
+      "mean": 43.5,
+      "trimmedMean": 43.5,
+      "p25": 36.75,
+      "p75": 50.25,
+      "count": 2
+    },
+    "established_plant": {
+      "min": 30,
+      "max": 30,
+      "median": 30,
+      "mean": 30,
+      "trimmedMean": 30,
+      "p25": 30,
+      "p75": 30,
+      "count": 1
+    },
+    "unknown": {
+      "min": 57,
+      "max": 57,
+      "median": 57,
+      "mean": 57,
+      "trimmedMean": 57,
+      "p25": 57,
+      "p75": 57,
+      "count": 1
+    }
+  }
+}
