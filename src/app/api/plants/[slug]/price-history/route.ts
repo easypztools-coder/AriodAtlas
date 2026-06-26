@@ -187,10 +187,18 @@ function loadEmbeddedPriceHistory(slug: string): PriceHistoryResponse | null {
         confidenceScore: "D",
       }));
 
+      // Use the most recent priceHistory entry as the fair price — it reflects
+      // the current market better than the static currentMedianPriceGBP which
+      // was set at content-authoring time and may be months out of date.
+      const latestHistoryPrice =
+        staticHistory.length > 0
+          ? staticHistory[staticHistory.length - 1].medianPriceGBP
+          : null;
+
       return {
         slug,
         history,
-        fairPurchasePrice: metrics.currentMedianPriceGBP ?? null,
+        fairPurchasePrice: latestHistoryPrice ?? metrics.currentMedianPriceGBP ?? null,
         recentSales: [],
       };
     } catch {

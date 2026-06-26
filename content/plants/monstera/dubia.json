@@ -1,7 +1,7 @@
 {
   "name": "Monstera dubia",
   "slug": "dubia",
-  "scientificName": "Monstera dubia (Kunth) Ernesto-Rodr. & G.Gerlach",
+  "scientificName": "Monstera dubia",
   "commonName": "Shingle Plant",
   "statusTag": "Rare Species",
   "botanicalType": "species",
@@ -47,9 +47,7 @@
     "requiredTerms": [],
     "acceptedTerms": [
       "Monstera dubia",
-      "Monstera dubia (Kunth) Ernesto-Rodr. & G.Gerlach",
       "Shingle Plant",
-      "Monstera dubia",
       "Monstera dubia plant"
     ],
     "excludeTerms": [

@@ -253,10 +253,6 @@ export default function PlantDetailPage({
       });
   }, [data.slug]);
 
-  const combinedTier = fairPrice !== null
-    ? getPriceRarityTier(fairPrice)
-    : { tier: data.priceGuideTier, label: getStaticTierLabel(data.priceGuideTier) };
-
   // Helper to derive ISO week key — used to sync graph hover with sales list
   function getISOWeekKey(dateStr: string): string {
     const date = new Date(dateStr);
@@ -266,9 +262,6 @@ export default function PlantDetailPage({
     const weekNo = Math.ceil(((date.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
     return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`;
   }
-
-  // Latest week's p25/p75 for the "Typical Price Range" card
-  const latestWeek = soldCompsData.length > 0 ? soldCompsData[soldCompsData.length - 1] : null;
 
   // Use snapshot trimmed mean when available; fall back to mean of live listings
   const retailAverage: { value: number; count: number } | null = (() => {
@@ -282,6 +275,18 @@ export default function PlantDetailPage({
     }
     return null;
   })();
+
+  // AA Price priority: real eBay sold data → retail asking price → embedded estimate
+  const aaDisplayPrice: { value: number; source: "ebay" | "retail" | "estimate" } | null = (() => {
+    if (fairPrice !== null && !fairPriceIsEstimate) return { value: fairPrice, source: "ebay" };
+    if (retailAverage !== null) return { value: Math.round(retailAverage.value), source: "retail" };
+    if (fairPrice !== null) return { value: fairPrice, source: "estimate" };
+    return null;
+  })();
+
+  const combinedTier = aaDisplayPrice !== null
+    ? getPriceRarityTier(aaDisplayPrice.value)
+    : { tier: data.priceGuideTier, label: getStaticTierLabel(data.priceGuideTier) };
 
   return (
     <div className="plant-detail-container">
@@ -298,14 +303,14 @@ export default function PlantDetailPage({
             {genusLabel}
           </Link>
           <span>/</span>
-          <span className="text-heading">{data.scientificName}</span>
+          <span className="text-heading">{data.name}</span>
         </nav>
 
         {/* Heading + Status Tags Row */}
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading italic">
-              {data.scientificName}
+              {data.name}
             </h1>
             <p className="text-sm text-muted mt-1">{data.commonName}</p>
           </div>
@@ -337,10 +342,6 @@ export default function PlantDetailPage({
 
         {/* Status Row */}
         <div className="flex flex-wrap items-center gap-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-xs font-medium text-muted">
-            <PopularityStars rating={data.collectorPopularity} />
-            <span className="ml-1">Popularity</span>
-          </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-price/10 px-3 py-1 text-xs font-medium text-price">
             <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -364,7 +365,7 @@ export default function PlantDetailPage({
         </div>
 
         {/* AA Price Hero Callout */}
-        {fairPrice !== null && (
+        {aaDisplayPrice !== null && (
           <div className="flex items-center gap-4 rounded-xl border border-price/25 bg-price/5 px-5 py-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-price/15">
               <svg className="h-5 w-5 text-price" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
@@ -377,8 +378,13 @@ export default function PlantDetailPage({
               </p>
               <p className="text-sm text-muted mt-0.5">
                 The <span className="font-semibold text-heading">AA Price</span> suggests this should cost{" "}
-                <span className="font-bold text-price text-base">£{fairPrice.toFixed(0)}</span>
-                {" "}— based on verified eBay UK auction data
+                <span className="font-bold text-price text-base">£{aaDisplayPrice.value.toFixed(0)}</span>
+                {" "}—{" "}
+                {aaDisplayPrice.source === "ebay"
+                  ? "based on verified eBay UK auction data"
+                  : aaDisplayPrice.source === "retail"
+                  ? "based on current UK retail prices"
+                  : "community estimate"}
               </p>
             </div>
             <a
@@ -479,122 +485,105 @@ export default function PlantDetailPage({
           </div>
 
           {/* Unified Price Dashboard KPI Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {/* Card 1: AA Price */}
-            <div className="rounded-xl border border-price/20 bg-price/5 p-4 flex flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-price/80">AA Price</span>
-                <span className="text-[9px] bg-price/10 text-price px-1.5 py-0.5 rounded-full font-semibold">
-                  {fairPrice !== null && !fairPriceIsEstimate
-                    ? "Official Guide"
-                    : fairPrice !== null && fairPriceIsEstimate
-                    ? "AI Estimate"
-                    : "Price Guide"}
-                </span>
-              </div>
-              <div className="mt-2 flex items-baseline gap-1.5">
-                {fairPrice !== null ? (
-                  <>
-                    <span className={`text-2xl font-bold ${fairPriceIsEstimate ? "text-price/70" : "text-price"}`}>
-                      £{fairPrice.toFixed(0)}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {/* Card 1: AA Price */}
+                <div className="rounded-xl border border-price/20 bg-price/5 p-4 flex flex-col justify-between">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-price/80">AA Price</span>
+                    <span className="text-[9px] bg-price/10 text-price px-1.5 py-0.5 rounded-full font-semibold">
+                      {aaDisplayPrice?.source === "ebay"
+                        ? "eBay Verified"
+                        : aaDisplayPrice?.source === "retail"
+                        ? "Retail Derived"
+                        : "Estimate"}
                     </span>
-                    <span className="text-[10px] text-muted">GBP</span>
-                  </>
-                ) : (
-                  <span className="text-xl font-bold text-price/70">
-                    {TIER_RANGES[data.priceGuideTier]?.label ?? "—"}
-                  </span>
-                )}
-              </div>
-              <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                {fairPrice !== null && !fairPriceIsEstimate
-                  ? "Aroid Atlas verified fair-value guide (trimmed mean, excl. outliers)"
-                  : fairPrice !== null
-                  ? "AI community estimate — will update automatically when real sales data is available"
-                  : "Estimated range based on rarity tier — no live auction data yet"}
-              </span>
-            </div>
-
-            {/* Card 2: Average Retail Value */}
-            <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Average Retail Value</span>
-              <div className="mt-2 flex items-baseline gap-1.5">
-                {retailAverage ? (
-                  <>
-                    <span className="text-2xl font-bold text-primary">£{retailAverage.value.toFixed(0)}</span>
-                    <span className="text-[10px] text-muted">GBP</span>
-                  </>
-                ) : (
-                  <span className="text-xl font-bold text-primary/50">Not tracked</span>
-                )}
-              </div>
-              <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                {retailAverage
-                  ? `${retailAverage.count} UK listing${retailAverage.count !== 1 ? "s" : ""} tracked`
-                  : "Not currently stocked by tracked UK retailers"}
-              </span>
-            </div>
-
-            {/* Card 3: Typical Price Range */}
-            <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Typical Range</span>
-              <div className="mt-2">
-                {latestWeek ? (
-                  <>
-                    <span className="text-lg font-bold text-heading">
-                      £{latestWeek.p25.toFixed(0)} – £{latestWeek.p75.toFixed(0)}
-                    </span>
-                    <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
-                      Most recent eBay sales fall in this band
-                    </span>
-                  </>
-                ) : TIER_RANGES[data.priceGuideTier] ? (
-                  <>
-                    <span className="text-lg font-bold text-heading/70">
-                      {TIER_RANGES[data.priceGuideTier].label}
-                    </span>
-                    <span className="block text-[10px] text-muted/80 mt-1 leading-tight">
-                      Estimated from rarity tier
-                    </span>
-                  </>
-                ) : (
-                  <span className="text-lg font-bold text-muted">—</span>
-                )}
-              </div>
-              <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                {latestWeek ? "Middle 50% of verified sale prices" : "Live auction data not yet available"}
-              </span>
-            </div>
-
-            {/* Card 4: Market Status & Volatility */}
-            <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Market Trend</span>
-              <div className="mt-2 flex items-center gap-1.5">
-                {data.marketMetrics.marketStatus ? (
-                  <>
-                    <span className={`text-base font-bold ${
-                      data.marketMetrics.marketStatus === "Rising"
-                        ? "text-green-400"
-                        : data.marketMetrics.marketStatus === "Declining"
-                        ? "text-orange-400"
-                        : "text-rarity"
-                    }`}>
-                      {data.marketMetrics.marketStatus}
-                    </span>
-                    {data.marketMetrics.threeMonthChangePercent !== null && (
-                      <span className="text-[10px] text-muted">
-                        ({data.marketMetrics.threeMonthChangePercent > 0 ? "+" : ""}{data.marketMetrics.threeMonthChangePercent.toFixed(0)}%)
+                  </div>
+                  <div className="mt-2 flex items-baseline gap-1.5">
+                    {aaDisplayPrice ? (
+                      <>
+                        <span className={`text-2xl font-bold ${aaDisplayPrice.source === "estimate" ? "text-price/60" : "text-price"}`}>
+                          £{aaDisplayPrice.value.toFixed(0)}
+                        </span>
+                        <span className="text-[10px] text-muted">GBP</span>
+                      </>
+                    ) : (
+                      <span className="text-xl font-bold text-price/70">
+                        {TIER_RANGES[data.priceGuideTier]?.label ?? "—"}
                       </span>
                     )}
-                  </>
-                ) : (
-                  <span className="text-base font-bold text-muted">Stable</span>
-                )}
-              </div>
-              <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                Price velocity over the last 90 days
-              </span>
-            </div>
+                  </div>
+                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
+                    {aaDisplayPrice?.source === "ebay"
+                      ? "Trimmed mean of verified eBay UK sold listings (outliers excluded)"
+                      : aaDisplayPrice?.source === "retail"
+                      ? "Derived from current UK retail asking prices — no recent auction data"
+                      : aaDisplayPrice?.source === "estimate"
+                      ? "Community estimate only — limited market data available"
+                      : "No price data — rarity tier shown above"}
+                  </span>
+                </div>
+
+                {/* Card 2: Average Retail Value */}
+                <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Retail Price</span>
+                  <div className="mt-2 flex items-baseline gap-1.5">
+                    {retailAverage ? (
+                      <>
+                        <span className="text-2xl font-bold text-primary">£{retailAverage.value.toFixed(0)}</span>
+                        <span className="text-[10px] text-muted">GBP</span>
+                      </>
+                    ) : (
+                      <span className="text-xl font-bold text-primary/50">Not tracked</span>
+                    )}
+                  </div>
+                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
+                    {retailAverage
+                      ? `Trimmed mean across ${retailAverage.count} active UK listing${retailAverage.count !== 1 ? "s" : ""}`
+                      : "Not currently stocked by tracked UK retailers"}
+                  </span>
+                </div>
+
+                {/* Card 3: Market Trend */}
+                <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Market Trend</span>
+                  <div className="mt-2 flex items-center gap-1.5">
+                    {data.marketMetrics.marketStatus ? (
+                      <>
+                        <span className={`text-base font-bold ${
+                          data.marketMetrics.marketStatus === "Rising"
+                            ? "text-green-400"
+                            : data.marketMetrics.marketStatus === "Declining"
+                            ? "text-orange-400"
+                            : "text-rarity"
+                        }`}>
+                          {data.marketMetrics.marketStatus}
+                        </span>
+                        {data.marketMetrics.threeMonthChangePercent !== null && (
+                          <span className="text-[10px] text-muted">
+                            ({data.marketMetrics.threeMonthChangePercent > 0 ? "+" : ""}{data.marketMetrics.threeMonthChangePercent.toFixed(0)}%)
+                          </span>
+                        )}
+                      </>
+                    ) : (
+                      <span className="text-base font-bold text-muted">—</span>
+                    )}
+                  </div>
+                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
+                    Price direction over the last 90 days
+                  </span>
+                </div>
+          </div>
+
+          {/* Pricing Methodology Note */}
+          <div className="rounded-lg border border-primary/8 bg-card/30 px-4 py-3 flex items-start gap-3">
+            <svg className="h-3.5 w-3.5 text-muted/50 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01" />
+            </svg>
+            <p className="text-[10px] text-muted/70 leading-relaxed">
+              <span className="font-semibold text-muted">How prices are calculated:</span>{" "}
+              The <span className="text-price/80">AA Price</span> uses verified eBay UK completed auction data — we take the trimmed mean (removing the top and bottom 20% of prices) to produce a fair-value guide that excludes outlier sales. When recent auction data is unavailable, the AA Price falls back to the current UK retail average from tracked stockists.{" "}
+              <span className="text-heading/60">Retail prices</span> are scraped from active UK plant shop listings and reflect what you would pay buying directly from a retailer today. All prices are in GBP and updated automatically.
+            </p>
           </div>
 
           {/* Large Focused Price History Graph + Recent Sales */}
