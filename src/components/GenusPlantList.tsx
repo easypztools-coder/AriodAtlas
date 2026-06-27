@@ -184,28 +184,37 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                 >
                   <Link
                     href={`/plants/${genus}/${plant.slug}`}
-                    className="glass-card-hover group relative flex overflow-hidden rounded-2xl p-6 h-full"
+                    className="glass-card-glow group block overflow-hidden rounded-2xl"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-forest-deep via-card to-forest-dark opacity-50" />
-                    <div className="relative flex justify-between items-center w-full gap-4 z-10">
-                      <div className="flex-1 min-w-0">
-                        {/* Botanical Type Badge inside card */}
-                        <div className="mb-2">
-                          <span
-                            className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] font-bold tracking-wider uppercase ${details.badgeClass}`}
-                          >
-                            <span className={`h-1 w-1 rounded-full ${details.dotClass}`} />
-                            {details.label}
-                          </span>
-                        </div>
+                    {/* Full botanical plate image */}
+                    <div className="relative aspect-[3/4] overflow-hidden bg-forest-dark/60">
+                      <Image
+                        src={`/plants/${genus}/${plant.slug}.png`}
+                        alt={plant.commonName}
+                        fill
+                        className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
+                        }}
+                      />
+                      {/* Bottom gradient for text legibility */}
+                      <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-forest-dark via-forest-dark/80 to-transparent pointer-events-none" />
 
-                        <h3 className="text-base font-heading font-bold text-heading italic group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      {/* Info overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <span
+                          className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] font-bold tracking-wider uppercase mb-2 ${details.badgeClass}`}
+                        >
+                          <span className={`h-1 w-1 rounded-full ${details.dotClass}`} />
+                          {details.label}
+                        </span>
+                        <h3 className="text-sm font-heading font-bold text-heading italic group-hover:text-primary transition-colors duration-300 line-clamp-2">
                           {plant.scientificName}
                         </h3>
-                        <p className="mt-1 text-xs text-muted truncate">{plant.commonName}</p>
-                        
-                        <div className="mt-3 flex flex-wrap items-center gap-2">
-                          <span className="badge-price">
+                        <p className="mt-0.5 text-[11px] text-muted/80 truncate">{plant.commonName}</p>
+                        <div className="mt-2 flex flex-wrap items-center gap-2">
+                          <span className="badge-price text-[10px]">
                             {plant.currentMedianPriceGBP
                               ? `£${plant.currentMedianPriceGBP.toFixed(0)} AA Price`
                               : `${plant.priceGuideTier} · ${getStaticTierLabel(plant.priceGuideTier)}`}
@@ -225,20 +234,6 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                             </span>
                           )}
                         </div>
-                      </div>
-
-                      {/* Right-aligned plate thumbnail */}
-                      <div className="relative h-20 w-20 shrink-0 rounded-xl overflow-hidden bg-forest-dark/60 border border-primary/5">
-                        <Image
-                          src={`/plants/${genus}/${plant.slug}.png`}
-                          alt={plant.commonName}
-                          fill
-                          className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.05]"
-                          sizes="80px"
-                          onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
-                          }}
-                        />
                       </div>
                     </div>
                   </Link>

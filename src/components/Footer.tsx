@@ -53,7 +53,7 @@ export default function Footer() {
                 alt="Aroid Atlas"
                 width={674}
                 height={100}
-                className="h-8 w-auto mix-blend-screen invert hue-rotate-180"
+                className="h-16 w-auto mix-blend-screen invert hue-rotate-180"
               />
             </Link>
             <p className="text-xs text-muted leading-relaxed max-w-xs">
