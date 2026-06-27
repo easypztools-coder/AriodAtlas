@@ -378,63 +378,6 @@ export default function PlantDetailPage({
             </div>
           </div>
 
-          {/* In the Wild — iNaturalist carousel */}
-          <PlantPhotoCarousel slug={data.slug} scientificName={data.scientificName} />
-
-          {/* Morphology + About split */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">Morphology</h2>
-              <div className="space-y-3">
-                {morphEntries.map(([key, value]) => (
-                  <div key={key} className="flex items-baseline justify-between border-b border-border pb-2">
-                    <span className="text-xs font-medium capitalize text-muted">
-                      {key.replace(/([A-Z])/g, " $1").trim()}
-                    </span>
-                    <span className="max-w-[180px] text-right text-sm text-heading">{value as string}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">About</h2>
-              <p className="mb-5 text-sm leading-relaxed text-muted">{data.aboutText}</p>
-
-              <div className="rounded border border-border bg-surface p-4">
-                <h4 className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.14em] text-heading">
-                  Climate Profile
-                </h4>
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Origin</span>
-                    <span className="font-medium text-heading">{data.origin}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Humidity</span>
-                    <span className="font-medium text-heading">{data.quickFacts.humidity}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Temperature</span>
-                    <span className="font-medium text-heading">{data.quickFacts.temperature}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Light</span>
-                    <span className="font-medium text-heading">{data.quickFacts.light}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Family</span>
-                    <span className="font-medium text-heading">{data.family}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-muted">Genus</span>
-                    <span className="font-medium text-heading">{data.genus}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* ── Auction History & Retail Data ─────────────────────── */}
           <div id="market-analysis" className="rounded border border-border bg-surface p-6 md:p-8 space-y-6">
             <div className="-mx-6 -mt-6 mb-6 h-px bg-accent/30 md:-mx-8 md:-mt-8 md:mb-8" />
@@ -708,6 +651,63 @@ export default function PlantDetailPage({
                 </ul>
               </div>
             )}
+          </div>
+
+          {/* In the Wild — iNaturalist carousel */}
+          <PlantPhotoCarousel slug={data.slug} scientificName={data.scientificName} />
+
+          {/* Morphology + About split */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">Morphology</h2>
+              <div className="space-y-3">
+                {morphEntries.map(([key, value]) => (
+                  <div key={key} className="flex items-baseline justify-between border-b border-border pb-2">
+                    <span className="text-xs font-medium capitalize text-muted">
+                      {key.replace(/([A-Z])/g, " $1").trim()}
+                    </span>
+                    <span className="max-w-[180px] text-right text-sm text-heading">{value as string}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">About</h2>
+              <p className="mb-5 text-sm leading-relaxed text-muted">{data.aboutText}</p>
+
+              <div className="rounded border border-border bg-surface p-4">
+                <h4 className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.14em] text-heading">
+                  Climate Profile
+                </h4>
+                <div className="grid grid-cols-2 gap-3 text-xs">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Origin</span>
+                    <span className="font-medium text-heading">{data.origin}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Humidity</span>
+                    <span className="font-medium text-heading">{data.quickFacts.humidity}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Temperature</span>
+                    <span className="font-medium text-heading">{data.quickFacts.temperature}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Light</span>
+                    <span className="font-medium text-heading">{data.quickFacts.light}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Family</span>
+                    <span className="font-medium text-heading">{data.family}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Genus</span>
+                    <span className="font-medium text-heading">{data.genus}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Propagation */}

@@ -77,7 +77,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum 'Variegated'",
+      "slug": "crystallinum-variegated",
+      "genus": "anthurium",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    },
+    {
+      "name": "Anthurium magnificum 'Variegated'",
+      "slug": "magnificum-variegated",
+      "genus": "anthurium",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    },
+    {
+      "name": "Anthurium dressleri 'Variegated'",
+      "slug": "dressleri-variegated",
+      "genus": "anthurium",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -87,6 +109,38 @@
     "timeToEstablished": "8-14 months",
     "propagatesTrue": false,
     "notes": "Variegation in this form is unstable — cuttings may revert to the standard green form. Select cuttings from the most highly variegated growth, but results are not guaranteed."
+  },
+  "careGuide": {
+    "substrate": "Very chunky, well-aerated mix: 40% orchid bark, 30% perlite, 20% sphagnum moss, 10% activated charcoal. Anthuriums suffocate in dense soil — roots need airflow.",
+    "watering": "Water when the substrate is nearly dry throughout. Less is more — overwatering is the primary killer of velvet anthuriums. Always use room-temperature water.",
+    "humidity": "70–85% is essential. Below 60% causes stunted growth and curling leaves. A dedicated humidifier is strongly recommended for UK growers.",
+    "fertilising": "Low-nitrogen fertiliser (e.g. 5-10-10 or orchid fertiliser) at quarter strength every 3–4 weeks. High nitrogen produces lush but weak growth susceptible to pests.",
+    "repotting": "Reluctantly — only when completely root-bound (every 2–3 years). These plants dislike disturbance and may sulk after repotting.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering or root rot",
+        "fix": "Remove from pot, trim affected roots, repot into fresh dry substrate and reduce watering"
+      },
+      {
+        "problem": "Curling or crispy leaf edges",
+        "cause": "Low humidity or cold draughts",
+        "fix": "Increase humidity above 70% and move away from cold windows"
+      },
+      {
+        "problem": "Thrips",
+        "cause": "Common on velvet-leaf anthuriums; hard to detect early",
+        "fix": "Inspect new growth and leaf undersides regularly; treat with neem oil or systemic insecticide at first sign"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Inspect the newest leaf — variegation that is only present on older leaves and absent from new growth suggests the plant is reverting",
+      "Thrips are the primary pest concern: check undersides of all leaves, especially unfurling new growth, for fine silvery streaks or dark specks",
+      "Variegated anthuriums are high-value — insist on photos of roots, newest leaf (both sides), and full plant before any purchase over £100",
+      "Be aware that unstable chimeral variegation means future leaves may express differently — buy based on the plant's current state, not assumed future patterning"
+    ]
   },
   "fieldNotes": {
     "title": "The Velvet Holy Grail",

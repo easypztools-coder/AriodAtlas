@@ -7,9 +7,9 @@ import PriceMethodology from "@/components/PriceMethodology";
 import ExploreCTA from "@/components/ExploreCTA";
 
 export const metadata: Metadata = {
-  title: "Rare Plant Price Guide — Live UK Market Data for Aroids",
+  title: "Rare Houseplant Price Guide — Live UK Market Data",
   description:
-    "Know what every rare aroid is actually worth. Live eBay UK auction data and retailer prices for 170+ collector species — updated automatically every week.",
+    "Know what every rare houseplant is worth. Live eBay UK auction prices and retailer data for 170+ tropical species — so you never overpay again.",
   openGraph: {
     url: "https://aroidatlas.co.uk",
   },

@@ -76,7 +76,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Monstera dubia",
+      "slug": "dubia",
+      "genus": "monstera",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Monstera lechleriana 'Albo Variegated'",
+      "slug": "lechleriana-albo-variegated",
+      "genus": "monstera",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    },
+    {
+      "name": "Monstera pinnatipartita 'Albo Variegated'",
+      "slug": "pinnatipartita-albo-variegated",
+      "genus": "monstera",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -87,6 +109,38 @@
     "timeToEstablished": "3-6 months",
     "propagatesTrue": true,
     "notes": "Variegation carries reliably through cuttings. Select cuttings with strong variegation expression — avoid predominantly green sections."
+  },
+  "careGuide": {
+    "substrate": "Chunky, well-draining mix: 40% potting compost, 30% perlite, 20% orchid bark, 10% worm castings. Monsteras are more tolerant of moisture than most aroids but still need drainage.",
+    "watering": "Water when the top 3–5 cm is dry. These are forgiving plants but still susceptible to root rot if kept too wet. Water less in winter.",
+    "humidity": "50–70% preferred. More tolerant of typical UK indoor humidity than other aroids, though 60%+ encourages larger leaf development.",
+    "fertilising": "Balanced fertiliser at half strength every 2 weeks from spring through summer. Monthly in winter or none at all.",
+    "repotting": "Every 12–18 months when roots emerge from drainage holes. Provide a moss pole or support — climbing encourages larger leaf production.",
+    "commonProblems": [
+      {
+        "problem": "No fenestrations (splits/holes)",
+        "cause": "Plant is juvenile, or insufficient light",
+        "fix": "Ensure bright indirect light and allow the plant to mature — fenestrations develop with age and better conditions"
+      },
+      {
+        "problem": "Yellow leaves",
+        "cause": "Overwatering or nutrient deficiency",
+        "fix": "Check soil moisture before watering; begin a regular fertilising routine in growing season"
+      },
+      {
+        "problem": "Brown patches on leaves",
+        "cause": "Sunburn or cold water on leaves",
+        "fix": "Avoid direct sun; water at the base and ensure water is room temperature"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify variegation extends into the newest leaf — a fully green newest leaf on an 'albo' or 'mint' monstera is a sign of reversion",
+      "Check that at least one healthy node is present below the most recent leaf — this is what produces all future growth",
+      "Inspect petioles closely for scale insects (small brown bumps) which are common on monsteras",
+      "Compare the variegation level shown to recently sold comps — heavily variegated sections command a significant premium and sellers sometimes photograph the most variegated area rather than the whole plant"
+    ]
   },
   "fieldNotes": {
     "title": "The Variegated Shingle King",

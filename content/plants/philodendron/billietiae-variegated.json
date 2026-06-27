@@ -80,20 +80,23 @@
   },
   "recommendedPlants": [
     {
-      "name": "Philodendron spiritus-sancti",
-      "slug": "spiritus-sancti",
-      "rarity": "Extremely Rare",
-      "price": "££££"
-    },
-    {
-      "name": "Philodendron x joepii 'Aurea Variegata'",
-      "slug": "joepii-aurea-variegata",
+      "name": "Philodendron melanochrysum 'Variegated'",
+      "slug": "melanochrysum-variegated",
+      "genus": "philodendron",
       "rarity": "Ultra Rare",
-      "price": "££££"
+      "price": "£££££"
     },
     {
-      "name": "Monstera burle marx flame",
-      "slug": "burle-marx-flame",
+      "name": "Philodendron verrucosum 'Variegated'",
+      "slug": "verrucosum-variegated",
+      "genus": "philodendron",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    },
+    {
+      "name": "Philodendron billietiae",
+      "slug": "billietiae",
+      "genus": "philodendron",
       "rarity": "Rare",
       "price": "£££"
     }
@@ -107,6 +110,38 @@
     "timeToEstablished": "4-8 months",
     "propagatesTrue": true,
     "notes": "Single-node cuttings root readily in moist sphagnum or water. Maintain 70%+ humidity and bottom warmth for best results."
+  },
+  "careGuide": {
+    "substrate": "High-porosity mix: 50% perlite, 30% orchid bark, 20% coco coir. Good aeration is essential — philodendrons are prone to root rot in dense substrates.",
+    "watering": "Water thoroughly when the top 3–4 cm of substrate is dry. Ensure free drainage and never allow to sit in water. Reduce frequency in winter.",
+    "humidity": "60–80% preferred. UK tap water can cause brown tips — use rainwater or filtered water where possible.",
+    "fertilising": "Balanced liquid fertiliser (e.g. 20-20-20) at quarter strength every two weeks in spring and summer. Monthly at most in winter.",
+    "repotting": "Every 12–18 months or when roots circle the base of the pot. Move up one pot size only — oversized pots increase rot risk.",
+    "commonProblems": [
+      {
+        "problem": "Brown leaf tips",
+        "cause": "Low humidity or fluoride/chlorine in tap water",
+        "fix": "Increase ambient humidity and switch to rainwater or filtered water"
+      },
+      {
+        "problem": "Yellow leaves",
+        "cause": "Overwatering or compacted substrate",
+        "fix": "Allow substrate to dry further between waterings; check root health and repot if necessary"
+      },
+      {
+        "problem": "Leggy growth with small leaves",
+        "cause": "Insufficient light",
+        "fix": "Move to a brighter position with more indirect light"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Check that roots are firm and white to tan — avoid plants with black, slimy, or absent roots",
+      "Verify the variegation pattern extends into new emerging growth — if the newest leaf is fully green, the plant may be reverting",
+      "Inspect leaf undersides for thrips (silvery stippling) and mealybugs (white cottony residue at leaf bases)",
+      "On eBay, compare the listed plant to multiple recent sold comps to confirm the asking price is realistic for the variegation level shown"
+    ]
   },
   "fieldNotes": {
     "title": "Orange Petioles in Splashed Gold",

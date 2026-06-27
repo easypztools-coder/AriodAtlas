@@ -78,7 +78,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Begonia masoniana 'Variegated'",
+      "slug": "masoniana-variegated",
+      "genus": "begonia",
+      "rarity": "Very Rare",
+      "price": "££££"
+    },
+    {
+      "name": "Begonia maculata 'Albo Variegated'",
+      "slug": "maculata-albo-variegated",
+      "genus": "begonia",
+      "rarity": "Very Rare",
+      "price": "££££"
+    },
+    {
+      "name": "Begonia listada",
+      "slug": "listada",
+      "genus": "begonia",
+      "rarity": "Rare",
+      "price": "£££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Leaf cutting",
@@ -89,5 +111,37 @@
     "timeToEstablished": "3-5 months",
     "propagatesTrue": true,
     "notes": "Most rhizomatous begonias root readily from leaf sections or petiole cuttings placed on moist substrate. Keep warm and humid until plantlets emerge at leaf margins."
+  },
+  "careGuide": {
+    "substrate": "Light, well-draining mix: 50% perlite, 30% potting compost, 20% orchid bark. Begonias are susceptible to root rot — excellent drainage is essential.",
+    "watering": "Allow the top half of the substrate to dry between waterings. Water at the base — wet leaves invite fungal problems. Reduce in winter.",
+    "humidity": "50–70%. More tolerant of average indoor humidity than tropical aroids, but consistent moisture prevents crispy leaf margins.",
+    "fertilising": "Balanced liquid fertiliser at quarter strength every 2–3 weeks during the growing season. Do not feed in winter.",
+    "repotting": "Every 12–18 months in spring. Begonias like shallow, wide pots that suit rhizomatous growth. Don't bury the rhizome.",
+    "commonProblems": [
+      {
+        "problem": "Powdery mildew",
+        "cause": "Poor air circulation combined with high humidity",
+        "fix": "Improve airflow; avoid wetting leaves; treat with a dilute bicarbonate of soda spray"
+      },
+      {
+        "problem": "Botrytis (grey mould)",
+        "cause": "Overwatering, dead leaves left on plant, poor air circulation",
+        "fix": "Remove dead foliage promptly; increase airflow; reduce watering"
+      },
+      {
+        "problem": "Leggy stems",
+        "cause": "Insufficient light",
+        "fix": "Move to a brighter position — begonias need good indirect light to maintain compact growth"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Check for powdery mildew — a white dusty coating on leaf surfaces, especially in dry conditions; it spreads rapidly between plants",
+      "Inspect for mealybugs at leaf axils and the underside of stems where they hide in white cottony deposits",
+      "Rhizome begonias should show firm, healthy rhizome tissue — avoid plants with soft, discoloured rhizomes",
+      "Most begonias ship well as leaf cuttings — if buying a cutting, ensure it has a healthy petiole and no signs of rot at the cut end"
+    ]
   }
 }

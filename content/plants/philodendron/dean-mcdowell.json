@@ -78,7 +78,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Philodendron gloriosum-tricolor",
+      "slug": "gloriosum-tricolor",
+      "genus": "philodendron",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
+    },
+    {
+      "name": "Philodendron pastazanum",
+      "slug": "pastazanum",
+      "genus": "philodendron",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Philodendron sodiroi",
+      "slug": "sodiroi",
+      "genus": "philodendron",
+      "rarity": "Rare",
+      "price": "£££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -88,5 +110,37 @@
     "timeToEstablished": "4-8 months",
     "propagatesTrue": null,
     "notes": "Single-node cuttings root readily in moist sphagnum or water. Maintain 70%+ humidity and bottom warmth for best results."
+  },
+  "careGuide": {
+    "substrate": "Chunky, well-draining mix: 40% orchid bark, 30% perlite, 20% sphagnum moss, 10% worm castings. A wide, shallow pot suits the crawling growth habit.",
+    "watering": "Water when the top 3–4 cm is dry. These terrestrial species are slightly more forgiving than climbers but still hate waterlogged roots.",
+    "humidity": "65–80%. Consistent high humidity produces larger, better-formed leaves.",
+    "fertilising": "Quarter-strength balanced fertiliser every two weeks during the growing season. Ease off in winter.",
+    "repotting": "Repot into a wider (not deeper) container when the rhizome reaches the pot edge. Every 18–24 months typically.",
+    "commonProblems": [
+      {
+        "problem": "Brown leaf edges",
+        "cause": "Low humidity or cold draughts",
+        "fix": "Increase humidity and keep away from windows and vents in winter"
+      },
+      {
+        "problem": "Root rot",
+        "cause": "Overwatering or poor drainage",
+        "fix": "Repot into fresh chunky substrate; trim any affected roots"
+      },
+      {
+        "problem": "Slow growth",
+        "cause": "Low light or cold temperatures",
+        "fix": "Ensure 18–26°C and a brighter indirect light position"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Confirm the rhizome is firm throughout — soft spots indicate rot",
+      "Check there is at least one healthy growing tip visible",
+      "Inspect leaf undersides for thrips (silvery stippling) and scale insects (small brown bumps on petioles)",
+      "Crawling philodendrons ship poorly if carelessly packaged — check seller reviews mention careful packing"
+    ]
   }
 }

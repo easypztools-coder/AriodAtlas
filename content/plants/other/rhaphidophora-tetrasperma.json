@@ -77,7 +77,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Epipremnum pinnatum 'Cebu Blue'",
+      "slug": "epipremnum-pinnatum-cebu-blue",
+      "genus": "other",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Rhaphidophora cryptantha 'Variegated'",
+      "slug": "rhaphidophora-cryptantha-variegated",
+      "genus": "other",
+      "rarity": "Very Rare",
+      "price": "££££"
+    },
+    {
+      "name": "Scindapsus treubii 'Moonlight Variegated'",
+      "slug": "scindapsus-treubii-moonlight-variegated",
+      "genus": "other",
+      "rarity": "Very Rare",
+      "price": "££££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -86,6 +108,38 @@
     "difficulty": "Moderate",
     "timeToEstablished": "4-7 months",
     "propagatesTrue": null
+  },
+  "careGuide": {
+    "substrate": "Well-draining mix: 40% perlite, 40% potting compost, 20% orchid bark.",
+    "watering": "Water when the top 3–4 cm is dry. These are generally forgiving and will tolerate slight drought better than overwatering.",
+    "humidity": "50–70% preferred. Most varieties in this group are more adaptable to typical indoor conditions than true aroids.",
+    "fertilising": "Balanced liquid fertiliser at half strength every 2 weeks in spring and summer. Monthly in winter.",
+    "repotting": "Every 12–18 months when root-bound. These vining plants grow quickly and may need annual repotting in peak years.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering or too little light",
+        "fix": "Allow to dry more between waterings; move to a brighter position"
+      },
+      {
+        "problem": "Loss of variegation (for variegated forms)",
+        "cause": "Insufficient light causing reversion to green",
+        "fix": "Move to a brighter position — variegated leaves need more light to maintain their pattern"
+      },
+      {
+        "problem": "Root rot",
+        "cause": "Overwatering or compacted substrate",
+        "fix": "Repot into fresh well-draining substrate; reduce watering frequency"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Ensure there is at least one healthy node present — a cutting without a node cannot produce new growth",
+      "For variegated forms, check that the variegation pattern appears on the newest growth and shows no signs of reversion to green",
+      "Inspect the underside of leaves for spider mites (fine webbing or stippling) which are common on pothos-family plants",
+      "Confirm the cutting has visible roots or a healthy node before purchasing — unrooted cuttings require propagation experience to succeed"
+    ]
   },
   "fieldNotes": {
     "title": "Not a Monstera — Better",

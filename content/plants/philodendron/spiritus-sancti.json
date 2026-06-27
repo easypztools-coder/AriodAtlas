@@ -125,22 +125,25 @@
   },
   "recommendedPlants": [
     {
-      "name": "Philodendron x joepii 'Aurea Variegata'",
-      "slug": "joepii-aurea-variegata",
-      "rarity": "Ultra Rare",
-      "price": "££££"
-    },
-    {
-      "name": "Philodendron patriciae 'Variegata'",
-      "slug": "patriciae-variegata",
-      "rarity": "Ultra Rare",
-      "price": "££££"
-    },
-    {
-      "name": "Philodendron 'Whipple Way'",
-      "slug": "whipple-way",
+      "name": "Philodendron joepii",
+      "slug": "joepii",
+      "genus": "philodendron",
       "rarity": "Very Rare",
-      "price": "£££"
+      "price": "££££"
+    },
+    {
+      "name": "Philodendron patriciae",
+      "slug": "patriciae",
+      "genus": "philodendron",
+      "rarity": "Very Rare",
+      "price": "££££"
+    },
+    {
+      "name": "Philodendron billietiae 'Variegated'",
+      "slug": "billietiae-variegated",
+      "genus": "philodendron",
+      "rarity": "Ultra Rare",
+      "price": "£££££"
     }
   ],
   "propagation": {
@@ -152,6 +155,38 @@
     "timeToEstablished": "4-8 months",
     "propagatesTrue": null,
     "notes": "Slow-growing species that roots reluctantly. Use moist sphagnum with high humidity and bottom heat. Multiple nodes improve success. Valuable enough that air layering is often preferred to avoid losing the cutting."
+  },
+  "careGuide": {
+    "substrate": "High-porosity mix: 50% perlite, 30% orchid bark, 20% coco coir. Good aeration is essential — philodendrons are prone to root rot in dense substrates.",
+    "watering": "Water thoroughly when the top 3–4 cm of substrate is dry. Ensure free drainage and never allow to sit in water. Reduce frequency in winter.",
+    "humidity": "60–80% preferred. UK tap water can cause brown tips — use rainwater or filtered water where possible.",
+    "fertilising": "Balanced liquid fertiliser (e.g. 20-20-20) at quarter strength every two weeks in spring and summer. Monthly at most in winter.",
+    "repotting": "Every 12–18 months or when roots circle the base of the pot. Move up one pot size only — oversized pots increase rot risk.",
+    "commonProblems": [
+      {
+        "problem": "Brown leaf tips",
+        "cause": "Low humidity or fluoride/chlorine in tap water",
+        "fix": "Increase ambient humidity and switch to rainwater or filtered water"
+      },
+      {
+        "problem": "Yellow leaves",
+        "cause": "Overwatering or compacted substrate",
+        "fix": "Allow substrate to dry further between waterings; check root health and repot if necessary"
+      },
+      {
+        "problem": "Leggy growth with small leaves",
+        "cause": "Insufficient light",
+        "fix": "Move to a brighter position with more indirect light"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Check that roots are firm and white to tan — avoid plants with black, slimy, or absent roots",
+      "Inspect leaf undersides for thrips (tiny dark specks or silvery streaking) and mealybugs (white cottony deposits at leaf axils)",
+      "Verify the plant has at least 2–3 healthy leaves and shows signs of active growth",
+      "For listings showing only one photo, request images of the roots, underside of leaves, and any new growth before purchasing"
+    ]
   },
   "fieldNotes": {
     "title": "Hunting the Ghost of Espírito Santo",

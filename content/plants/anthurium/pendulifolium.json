@@ -79,7 +79,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Anthurium vittariifolium",
+      "slug": "vittariifolium",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Anthurium pallidiflorum",
+      "slug": "pallidiflorum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Anthurium wendlingeri",
+      "slug": "wendlingeri",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -89,5 +111,37 @@
     "timeToEstablished": "10-16 months",
     "propagatesTrue": null,
     "notes": "Strap-leaf anthuriums rarely branch and are slow to produce offshoots. Stem cuttings require high humidity and warmth. Success rates are lower than velvet types."
+  },
+  "careGuide": {
+    "substrate": "Very coarse epiphytic mix: 50% orchid bark, 30% perlite, 20% sphagnum moss. Can also be grown mounted on cork bark for best airflow.",
+    "watering": "Allow to approach dryness between waterings — strap-leaf anthuriums are more drought-tolerant than velvet types. Water thoroughly, then allow to drain completely.",
+    "humidity": "65–80%. More tolerant of lower humidity than velvet types but still benefit from consistent moisture in the air.",
+    "fertilising": "Half-strength orchid fertiliser monthly during growing season. These are slow growers — overfeeding can burn roots.",
+    "repotting": "Infrequently — every 2–3 years. These species often bloom better when slightly root-bound. Consider mounting on cork board instead.",
+    "commonProblems": [
+      {
+        "problem": "Root rot",
+        "cause": "Dense substrate or overwatering",
+        "fix": "Switch to a very coarse bark-heavy mix; allow to dry more between waterings"
+      },
+      {
+        "problem": "No new growth",
+        "cause": "Too cold or too dark",
+        "fix": "Ensure minimum 18°C and bright indirect light"
+      },
+      {
+        "problem": "Brown leaf tips",
+        "cause": "Low humidity or salt buildup from fertiliser",
+        "fix": "Flush substrate with clean water to remove salt buildup; increase humidity"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Count the healthy leaves — strap-leaf anthuriums grow very slowly, so buying a plant with only one leaf means a long wait before it becomes an attractive specimen",
+      "Check for scale insects along the underside midrib of leaves — they are small, brown, and flat and easy to miss",
+      "Roots should be firm — check that drainage holes are visible in listing photos; root rot from waterlogged shipping medium is common",
+      "Ask the seller how many roots the plant has — a well-rooted plant establishes far faster than a recently divided offset"
+    ]
   }
 }

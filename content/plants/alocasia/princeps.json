@@ -79,7 +79,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Alocasia melo",
+      "slug": "melo",
+      "genus": "alocasia",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Alocasia scalprum",
+      "slug": "scalprum",
+      "genus": "alocasia",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Alocasia sinuata",
+      "slug": "sinuata",
+      "genus": "alocasia",
+      "rarity": "Rare",
+      "price": "£££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Offset (corm/pup)",
@@ -89,6 +111,38 @@
     "timeToEstablished": "3-6 months",
     "propagatesTrue": null,
     "notes": "Wait for the mother plant to produce corms or pups before dividing. Larger, well-established plants produce offsets most readily. Alocasias do not propagate reliably from stem cuttings."
+  },
+  "careGuide": {
+    "substrate": "Well-draining loamy mix: 40% potting compost, 30% perlite, 20% orchid bark, 10% worm castings. Alocasias need moisture retention unlike most aroids but still require good drainage.",
+    "watering": "Keep evenly moist during the growing season — never waterlogged, never bone dry. Check soil every 3–4 days in summer. Reduce significantly in winter when growth slows.",
+    "humidity": "60–80%. Lower humidity causes brown leaf edges; very low humidity combined with dry compost will trigger dormancy.",
+    "fertilising": "Balanced fertiliser at half strength every 2 weeks during spring and summer. Stop feeding in winter.",
+    "repotting": "Every 12–18 months in spring. Alocasias like being slightly snug in their pots — don't overpot.",
+    "commonProblems": [
+      {
+        "problem": "Leaves yellowing and dropping",
+        "cause": "Overwatering, cold temperatures, or natural dormancy",
+        "fix": "Reduce watering; ensure temperatures stay above 16°C; dormancy is normal in winter"
+      },
+      {
+        "problem": "Brown leaf edges",
+        "cause": "Low humidity or irregular watering",
+        "fix": "Increase humidity and maintain consistent watering routine"
+      },
+      {
+        "problem": "Spider mites",
+        "cause": "Most common pest; thrive in hot, dry conditions",
+        "fix": "Mist regularly; treat with neem oil or insecticidal soap; increase humidity"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Check the corm is firm — a soft or shrunken corm indicates dehydration or rot and is very difficult to recover",
+      "Verify there is at least one established leaf; avoid bare corms from unknown sellers unless you have experience germinating alocasia corms",
+      "Spider mites are the most common pest: inspect leaf undersides for fine webbing or stippling, especially in dry indoor environments",
+      "Alocasias can enter dormancy when stressed by shipping — a plant arriving with no leaves but a firm corm is not necessarily dead"
+    ]
   },
   "fieldNotes": {
     "title": "The Undulating Prince",

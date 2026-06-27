@@ -171,7 +171,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
             className="font-heading text-4xl font-semibold leading-[1.12] text-heading md:text-5xl lg:text-[56px]"
           >
-            Know what every rare aroid is actually worth.
+            Know what every rare houseplant is worth.
           </motion.h1>
 
           {/* Supporting copy */}
@@ -181,7 +181,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted"
           >
-            Live eBay UK auction data and retailer prices for 170+ collector species — updated automatically every week.
+            Live UK auction prices and retailer data for 170+ rare tropical species — so you never overpay again.
           </motion.p>
 
           {/* Search Bar */}

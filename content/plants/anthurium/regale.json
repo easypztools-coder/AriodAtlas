@@ -77,7 +77,29 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": [],
+  "recommendedPlants": [
+    {
+      "name": "Anthurium magnificum",
+      "slug": "magnificum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£££"
+    },
+    {
+      "name": "Anthurium splendidum",
+      "slug": "splendidum",
+      "genus": "anthurium",
+      "rarity": "Very Rare",
+      "price": "££££"
+    },
+    {
+      "name": "Anthurium faustomirandae",
+      "slug": "faustomirandae",
+      "genus": "anthurium",
+      "rarity": "Very Rare",
+      "price": "££££"
+    }
+  ],
   "propagation": {
     "methods": [
       "Stem cutting",
@@ -87,6 +109,38 @@
     "timeToEstablished": "8-14 months",
     "propagatesTrue": null,
     "notes": "Root in a closed high-humidity environment. Mature specimens may produce basal offshoots that can be carefully divided. Patience is essential — establishment is slow."
+  },
+  "careGuide": {
+    "substrate": "Very chunky, well-aerated mix: 40% orchid bark, 30% perlite, 20% sphagnum moss, 10% activated charcoal. Anthuriums suffocate in dense soil — roots need airflow.",
+    "watering": "Water when the substrate is nearly dry throughout. Less is more — overwatering is the primary killer of velvet anthuriums. Always use room-temperature water.",
+    "humidity": "70–85% is essential. Below 60% causes stunted growth and curling leaves. A dedicated humidifier is strongly recommended for UK growers.",
+    "fertilising": "Low-nitrogen fertiliser (e.g. 5-10-10 or orchid fertiliser) at quarter strength every 3–4 weeks. High nitrogen produces lush but weak growth susceptible to pests.",
+    "repotting": "Reluctantly — only when completely root-bound (every 2–3 years). These plants dislike disturbance and may sulk after repotting.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering or root rot",
+        "fix": "Remove from pot, trim affected roots, repot into fresh dry substrate and reduce watering"
+      },
+      {
+        "problem": "Curling or crispy leaf edges",
+        "cause": "Low humidity or cold draughts",
+        "fix": "Increase humidity above 70% and move away from cold windows"
+      },
+      {
+        "problem": "Thrips",
+        "cause": "Common on velvet-leaf anthuriums; hard to detect early",
+        "fix": "Inspect new growth and leaf undersides regularly; treat with neem oil or systemic insecticide at first sign"
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Inspect new growth carefully for thrips — check the undersides of unfurling leaves for tiny dark insects or silvery streaking, as velvet anthuriums are a primary target",
+      "Roots should be firm and pale — mushy or dark roots indicate rot often caused by poor transit conditions",
+      "Avoid plants with more than one yellowing leaf; minor leaf loss in transit is normal but multiple yellows suggest stress before shipping",
+      "Request a photo of the most recently unfurled leaf to judge current health — a crispy or damaged newest leaf is a red flag"
+    ]
   },
   "fieldNotes": {
     "title": "The Regal Standard",

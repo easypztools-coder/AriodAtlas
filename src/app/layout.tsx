@@ -21,21 +21,22 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://aroidatlas.co.uk"),
   title: {
-    default: "Aroid Atlas — Rare Tropical Plant Encyclopedia",
+    default: "Aroid Atlas — Rare Houseplant Price Guide",
     template: "%s | Aroid Atlas",
   },
   description:
-    "The visual encyclopedia of rare tropical plants. Discover, explore and compare the world's most extraordinary aroids — with live eBay UK market prices.",
+    "Know what every rare houseplant is worth. Live UK auction prices and retailer data for 170+ tropical species including Monstera, Philodendron, Anthurium and Alocasia.",
   keywords: [
-    "aroids",
-    "rare tropical plants",
-    "monstera",
-    "philodendron",
-    "anthurium",
-    "alocasia",
-    "plant encyclopedia",
-    "rare plants for sale",
-    "aroid care guide",
+    "rare houseplant price",
+    "rare houseplant value",
+    "houseplant price guide",
+    "rare tropical plants UK",
+    "monstera price",
+    "philodendron price",
+    "anthurium price",
+    "alocasia price",
+    "rare plants for sale UK",
+    "aroid price guide",
   ],
   authors: [{ name: "Aroid Atlas" }],
   openGraph: {
