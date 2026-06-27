@@ -49,11 +49,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block mb-3">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-mark.png"
                 alt="Aroid Atlas"
-                width={674}
-                height={100}
-                className="h-16 w-auto mix-blend-screen invert hue-rotate-180"
+                width={512}
+                height={512}
+                className="h-14 w-14 mix-blend-screen"
               />
             </Link>
             <p className="text-xs text-muted leading-relaxed max-w-xs">

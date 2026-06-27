@@ -40,16 +40,14 @@ function GenusCard({
 
         {representative ? (
           <>
-            {/* Specimen image with zoom-on-hover */}
+            {/* Full botanical plate */}
             <Image
               src={`/plants/${representative.genus}/${representative.slug}.png`}
               alt={`${genus.name} representative`}
               fill
-              className="object-cover object-center scale-[1.3] transition-all duration-700 ease-out group-hover:scale-[1.4] opacity-40 group-hover:opacity-60 filter brightness-90 group-hover:brightness-100"
+              className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               sizes="(max-width: 768px) 256px, 288px"
             />
-            {/* Premium spotlight reveal overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(17,26,21,0.5)_50%,rgba(17,26,21,0.95)_85%,#111A15_100%)] transition-all duration-700 ease-out group-hover:scale-105 pointer-events-none" />
           </>
         ) : (
           /* Decorative SVG pattern for fallback (e.g. Homalomena) */
