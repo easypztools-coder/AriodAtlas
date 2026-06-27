@@ -28,50 +28,50 @@ export function getBotanicalTypeDetails(type: string) {
     case "species":
       return {
         label: "Wild Species",
-        badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-        dotClass: "bg-emerald-400",
-        pillClass: "border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10",
-        activePillClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/50",
+        badgeClass: "bg-primary/10 text-primary border-primary/25",
+        dotClass: "bg-primary",
+        pillClass: "border-primary/25 text-primary/80 hover:bg-primary/8 hover:text-primary",
+        activePillClass: "bg-primary/15 text-primary border-primary/35",
       };
     case "hybrid":
       return {
         label: "Horticultural Hybrid",
-        badgeClass: "bg-sky-500/10 text-sky-400 border-sky-500/20",
-        dotClass: "bg-sky-400",
-        pillClass: "border-sky-500/30 text-sky-400 hover:bg-sky-500/10",
-        activePillClass: "bg-sky-500/20 text-sky-300 border-sky-500/50",
+        badgeClass: "bg-leaf/10 text-leaf border-leaf/20",
+        dotClass: "bg-leaf",
+        pillClass: "border-leaf/20 text-leaf/80 hover:bg-leaf/8 hover:text-leaf",
+        activePillClass: "bg-leaf/15 text-leaf border-leaf/30",
       };
     case "mutation":
       return {
         label: "Sport Mutation",
-        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
-        dotClass: "bg-rose-400",
-        pillClass: "border-rose-500/30 text-rose-400 hover:bg-rose-500/10",
-        activePillClass: "bg-rose-500/20 text-rose-300 border-rose-500/50",
+        badgeClass: "bg-rarity/10 text-rarity border-rarity/20",
+        dotClass: "bg-rarity",
+        pillClass: "border-rarity/20 text-rarity/80 hover:bg-rarity/8 hover:text-rarity",
+        activePillClass: "bg-rarity/15 text-rarity border-rarity/30",
       };
     case "variegated":
       return {
         label: "Variegated Sport",
-        badgeClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-        dotClass: "bg-amber-400",
-        pillClass: "border-amber-500/30 text-amber-400 hover:bg-amber-500/10",
-        activePillClass: "bg-amber-500/20 text-amber-300 border-amber-500/50",
+        badgeClass: "bg-accent/10 text-accent border-accent/25",
+        dotClass: "bg-accent",
+        pillClass: "border-accent/25 text-accent/80 hover:bg-accent/8 hover:text-accent",
+        activePillClass: "bg-accent/15 text-accent border-accent/35",
       };
     case "cultivar":
       return {
         label: "Cultivar Selection",
-        badgeClass: "bg-violet-500/10 text-violet-400 border-violet-500/20",
-        dotClass: "bg-violet-400",
-        pillClass: "border-violet-500/30 text-violet-400 hover:bg-violet-500/10",
-        activePillClass: "bg-violet-500/20 text-violet-300 border-violet-500/50",
+        badgeClass: "bg-primary-muted/10 text-primary-muted border-primary-muted/20",
+        dotClass: "bg-primary-muted",
+        pillClass: "border-primary-muted/20 text-primary-muted/80 hover:bg-primary-muted/8 hover:text-primary-muted",
+        activePillClass: "bg-primary-muted/15 text-primary-muted border-primary-muted/30",
       };
     default:
       return {
         label: "Variegated Sport",
-        badgeClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-        dotClass: "bg-amber-400",
-        pillClass: "border-amber-500/30 text-amber-400 hover:bg-amber-500/10",
-        activePillClass: "bg-amber-500/20 text-amber-300 border-amber-500/50",
+        badgeClass: "bg-accent/10 text-accent border-accent/25",
+        dotClass: "bg-accent",
+        pillClass: "border-accent/25 text-accent/80 hover:bg-accent/8 hover:text-accent",
+        activePillClass: "bg-accent/15 text-accent border-accent/35",
       };
   }
 }
@@ -79,7 +79,6 @@ export function getBotanicalTypeDetails(type: string) {
 export default function GenusPlantList({ initialPlants, genus }: GenusPlantListProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>("all");
 
-  // Calculate counts for each filter type
   const counts = initialPlants.reduce(
     (acc, plant) => {
       const type = plant.botanicalType || "variegated";
@@ -105,24 +104,23 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
 
   return (
     <div className="space-y-8">
-      {/* Premium Filter Pill Bar */}
+      {/* Filter bar */}
       <div className="flex flex-col gap-2">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-muted font-body">
+        <span className="font-body text-[10px] font-bold uppercase tracking-[0.14em] text-muted">
           Filter by Origin Type
         </span>
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-none">
+        <div className="-mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0">
           {filterOptions.map((opt) => {
             const count = counts[opt.value] || 0;
             const isSelected = selectedFilter === opt.value;
             const details = opt.value !== "all" ? getBotanicalTypeDetails(opt.value) : null;
 
-            // Styles for Active / Inactive states
-            let btnClass = "border border-primary/10 text-muted hover:text-heading hover:bg-primary/5 hover:border-primary/20";
+            let btnClass = "border border-border text-muted hover:text-heading hover:border-border-strong hover:bg-background-soft";
             if (isSelected) {
               if (opt.value === "all") {
-                btnClass = "bg-primary text-background border-primary";
+                btnClass = "bg-primary text-surface border-primary";
               } else if (details) {
-                btnClass = details.activePillClass;
+                btnClass = `border ${details.activePillClass}`;
               }
             } else if (details && count > 0) {
               btnClass = `border ${details.pillClass}`;
@@ -133,22 +131,21 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                 key={opt.value}
                 onClick={() => setSelectedFilter(opt.value)}
                 disabled={count === 0 && !isSelected}
-                className={`relative flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all duration-300 shrink-0 select-none ${btnClass} ${
-                  count === 0 ? "opacity-35 cursor-not-allowed border-dashed" : "cursor-pointer"
+                className={`relative flex shrink-0 select-none items-center gap-2 rounded-sm px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all duration-150 ${btnClass} ${
+                  count === 0 ? "cursor-not-allowed border-dashed opacity-35" : "cursor-pointer"
                 }`}
               >
-                {/* Active Indicator Dot */}
                 {details && (
                   <span className={`h-1.5 w-1.5 rounded-full ${details.dotClass}`} />
                 )}
                 <span>{opt.label}</span>
                 <span
-                  className={`rounded-full px-1.5 py-0.5 text-[10px] font-bold ${
+                  className={`rounded-sm px-1.5 py-0.5 text-[10px] font-bold ${
                     isSelected
                       ? opt.value === "all"
-                        ? "bg-background/25 text-background"
-                        : "bg-heading/10 text-heading"
-                      : "bg-primary/5 text-muted-light"
+                        ? "bg-surface/20 text-surface"
+                        : "bg-heading/8 text-heading"
+                      : "bg-border/50 text-muted"
                   }`}
                 >
                   {count}
@@ -159,15 +156,15 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
         </div>
       </div>
 
-      {/* Grid containing filtered cards */}
+      {/* Grid */}
       {filteredPlants.length === 0 ? (
-        <div className="text-center py-20 rounded-2xl border border-dashed border-primary/15 bg-card/10">
+        <div className="rounded border border-dashed border-border py-20 text-center">
           <p className="text-muted">No plants found matching this filter.</p>
         </div>
       ) : (
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
           <AnimatePresence mode="popLayout">
             {filteredPlants.map((plant) => {
@@ -177,63 +174,66 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                 <motion.div
                   key={plant.slug}
                   layout
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0, scale: 0.97 }}
+                  transition={{ duration: 0.25 }}
                 >
                   <Link
                     href={`/plants/${genus}/${plant.slug}`}
-                    className="glass-card-glow group block overflow-hidden rounded-2xl"
+                    className="group block overflow-hidden rounded border border-border bg-surface shadow-card-sm transition-all duration-200 hover:border-border-strong hover:shadow-glass"
                   >
-                    {/* Full botanical plate image */}
-                    <div className="relative aspect-[3/4] overflow-hidden bg-forest-dark/60">
+                    {/* Image area */}
+                    <div className="relative aspect-[3/4] overflow-hidden bg-background-soft">
                       <Image
                         src={`/plants/${genus}/${plant.slug}.png`}
                         alt={plant.commonName}
                         fill
-                        className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                        className="object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
                         }}
                       />
-                      {/* Bottom gradient for text legibility */}
-                      <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-forest-dark via-forest-dark/80 to-transparent pointer-events-none" />
+                      {/* Warm ivory gradient at the base for text */}
+                      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-surface via-surface/80 to-transparent" />
 
-                      {/* Info overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <span
-                          className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] font-bold tracking-wider uppercase mb-2 ${details.badgeClass}`}
-                        >
+                      {/* Botanical type badge — bottom-left */}
+                      <div className="absolute bottom-4 left-4">
+                        <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide ${details.badgeClass}`}>
                           <span className={`h-1 w-1 rounded-full ${details.dotClass}`} />
                           {details.label}
                         </span>
-                        <h3 className="text-sm font-heading font-bold text-heading italic group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                          {plant.scientificName}
-                        </h3>
-                        <p className="mt-0.5 text-[11px] text-muted/80 truncate">{plant.commonName}</p>
-                        <div className="mt-2 flex flex-wrap items-center gap-2">
-                          <span className="badge-price text-[10px]">
-                            {plant.currentMedianPriceGBP
-                              ? `£${plant.currentMedianPriceGBP.toFixed(0)} AA Price`
-                              : `${plant.priceGuideTier} · ${getStaticTierLabel(plant.priceGuideTier)}`}
+                      </div>
+                    </div>
+
+                    {/* Card info section */}
+                    <div className="px-4 pb-4 pt-3">
+                      <div className="mb-2.5 h-px w-full bg-accent/20" />
+                      <h3 className="font-heading text-[15px] font-semibold italic leading-snug text-heading transition-colors duration-150 group-hover:text-primary line-clamp-2">
+                        {plant.scientificName}
+                      </h3>
+                      <p className="mt-0.5 truncate text-[11px] text-muted">{plant.commonName}</p>
+                      <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                        <span className="badge-price">
+                          {plant.currentMedianPriceGBP
+                            ? `£${plant.currentMedianPriceGBP.toFixed(0)} AA Price`
+                            : `${plant.priceGuideTier} · ${getStaticTierLabel(plant.priceGuideTier)}`}
+                        </span>
+                        {plant.marketStatus && (
+                          <span
+                            className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-[9px] font-bold ${
+                              plant.marketStatus === "Rising"
+                                ? "border-leaf/20 bg-leaf/10 text-leaf"
+                                : plant.marketStatus === "Declining"
+                                ? "border-rarity/20 bg-rarity/8 text-rarity"
+                                : "border-border bg-background-soft text-muted"
+                            }`}
+                          >
+                            {plant.marketStatus === "Rising" ? "↑" : plant.marketStatus === "Declining" ? "↓" : "→"}
+                            {" "}{plant.marketStatus}
                           </span>
-                          {plant.marketStatus && (
-                            <span
-                              className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold ${
-                                plant.marketStatus === "Rising"
-                                  ? "bg-green-500/10 text-green-400"
-                                  : plant.marketStatus === "Declining"
-                                  ? "bg-orange-500/10 text-orange-400"
-                                  : "bg-muted/10 text-muted-light"
-                              }`}
-                            >
-                              {plant.marketStatus === "Rising" ? "↑" : plant.marketStatus === "Declining" ? "↓" : "→"}
-                              {" "}{plant.marketStatus}
-                            </span>
-                          )}
-                        </div>
+                        )}
                       </div>
                     </div>
                   </Link>

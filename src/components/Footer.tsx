@@ -42,29 +42,43 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-primary/10 bg-gradient-to-b from-background to-forest-dark">
+    <footer className="relative border-t border-border bg-background-soft">
+      {/* Fine brass accent rule */}
+      <div className="h-px w-full bg-accent/35" />
+
       <div className="section-container py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
-          {/* Brand */}
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-12">
+
+          {/* ── Brand Column ─────────────────────────────────────── */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="inline-block mb-3">
-              <Image
-                src="/images/logo-mark.png"
-                alt="Aroid Atlas"
-                width={512}
-                height={512}
-                className="h-14 w-14 mix-blend-screen"
-              />
+            <Link href="/" className="group mb-4 inline-flex items-center gap-2.5">
+              {/* Replace with final AroidAtlas circular logo asset. */}
+              <div className="relative h-10 w-10 shrink-0">
+                <Image
+                  src="/images/aroidatlas-emblem-transparent-tight.png"
+                  alt="Aroid Atlas"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-heading text-sm font-semibold tracking-[0.12em] text-heading">
+                  AROID ATLAS
+                </span>
+                <span className="mt-0.5 font-body text-[8px] tracking-[0.22em] text-accent">
+                  .CO.UK
+                </span>
+              </div>
             </Link>
-            <p className="text-xs text-muted leading-relaxed max-w-xs">
-              The definitive visual encyclopedia of rare tropical plants.
+            <p className="max-w-[200px] text-xs leading-relaxed text-muted">
+              A curated directory of rare aroids, market values and collector reference data.
             </p>
           </div>
 
-          {/* Link Columns */}
+          {/* ── Link Columns ─────────────────────────────────────── */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
-              <h4 className="text-xs font-semibold text-heading uppercase tracking-wider mb-4">
+              <h4 className="mb-4 text-[10px] font-semibold uppercase tracking-[0.15em] text-heading">
                 {section.title}
               </h4>
               <ul className="space-y-2.5">
@@ -72,7 +86,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-xs text-muted transition-colors duration-200 hover:text-primary"
+                      className="text-xs text-muted transition-colors duration-150 hover:text-heading"
                     >
                       {link.label}
                     </Link>
@@ -83,10 +97,13 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-8 pt-6 border-t border-primary/5">
+        {/* ── Bottom Bar ───────────────────────────────────────── */}
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 sm:flex-row sm:items-center">
           <p className="text-[11px] text-muted/60">
             &copy; {new Date().getFullYear()} Aroid Atlas. All rights reserved.
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.12em] text-accent/70">
+            Rare Plant Directory &middot; Value Index &middot; .CO.UK
           </p>
         </div>
       </div>

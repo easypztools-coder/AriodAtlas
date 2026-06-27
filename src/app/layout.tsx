@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Merriweather, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const merriweather = Merriweather({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -68,7 +70,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Aroid Atlas",
   url: "https://aroidatlas.co.uk",
-  logo: "https://aroidatlas.co.uk/images/logo.png",
+  logo: "https://aroidatlas.co.uk/images/aroidatlas-emblem-transparent-tight.png",
   description:
     "The visual encyclopedia of rare tropical plants. Live eBay UK market prices, species profiles, and cultivation data.",
   sameAs: [],
@@ -80,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${merriweather.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorantGaramond.variable} ${inter.variable}`}>
       <body className="bg-background text-muted font-body antialiased">
         <script
           type="application/ld+json"
@@ -88,10 +90,7 @@ export default function RootLayout({
         />
         <div className="flex min-h-screen flex-col">
           <Navbar />
-
-          {/* Main Content */}
           <main className="flex-1">{children}</main>
-
           <Footer />
         </div>
       </body>

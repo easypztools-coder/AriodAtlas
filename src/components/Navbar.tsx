@@ -81,8 +81,7 @@ export default function Navbar() {
   function handleSelect(slug: string, genus: string) {
     setSearchQuery("");
     setShowResults(false);
-    const genusPath = genus.toLowerCase();
-    router.push(`/plants/${genusPath}/${slug}`);
+    router.push(`/plants/${genus.toLowerCase()}/${slug}`);
   }
 
   function handleSearchSubmit(e: React.FormEvent) {
@@ -92,48 +91,64 @@ export default function Navbar() {
     }
   }
 
+  const navLinks = [
+    { href: "/plants", label: "Plants", active: pathname.startsWith("/plants") },
+    { href: "/compare", label: "Compare", active: pathname === "/compare" },
+    { href: "/identify", label: "Identify", active: pathname === "/identify" },
+    { href: "/learn", label: "Learn", active: pathname === "/learn" },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/95 backdrop-blur-md">
-      <nav className="mx-auto max-w-7xl px-6">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/98 backdrop-blur-sm">
+      <nav className="mx-auto max-w-[1300px] px-6">
+        <div className="flex h-[82px] items-center gap-8">
 
-        <div className="flex items-center gap-6 py-3">
-
-          {/* Logo + nav links stacked in a column so links span logo width */}
-          <div className="flex flex-col shrink-0">
-            <Link href="/" className="flex items-center mb-1">
+          {/* ── Brand Block ─────────────────────────────────────────── */}
+          <Link href="/" className="group flex shrink-0 items-center gap-3">
+            {/* Replace with final AroidAtlas circular logo asset. */}
+            <div className="relative h-[56px] w-[56px] shrink-0 md:h-[62px] md:w-[62px]">
               <Image
-                src="/images/logo.png"
-                alt="Aroid Atlas"
-                width={674}
-                height={100}
-                className="h-24 w-auto mix-blend-screen invert hue-rotate-180"
+                src="/images/aroidatlas-emblem-transparent-tight.png"
+                alt="Aroid Atlas emblem"
+                fill
+                className="object-contain"
                 priority
               />
-            </Link>
-            <div className="hidden md:flex justify-between">
-              <Link href="/plants" className={pathname.startsWith("/plants") ? "nav-link-active" : "nav-link"}>
-                Explore
-              </Link>
-              <Link href="/compare" className={pathname === "/compare" ? "nav-link-active" : "nav-link"}>
-                Compare
-              </Link>
-              <Link href="/identify" className={pathname === "/identify" ? "nav-link-active" : "nav-link"}>
-                Identify
-              </Link>
-              <Link href="/learn" className={pathname === "/learn" ? "nav-link-active" : "nav-link"}>
-                Learn
-              </Link>
             </div>
-          </div>
+            <div className="flex flex-col leading-none">
+              <span className="font-heading text-[17px] font-semibold tracking-[0.14em] text-heading transition-colors duration-150 group-hover:text-primary md:text-[19px]">
+                AROID ATLAS
+              </span>
+              <span className="mt-1 font-body text-[9px] tracking-[0.26em] text-accent">
+                .CO.UK
+              </span>
+            </div>
+          </Link>
 
           {/* Spacer */}
           <div className="flex-1" />
 
-          {/* Desktop Search */}
-          <div className="hidden md:block relative w-full max-w-xs" ref={searchRef}>
+          {/* ── Desktop Navigation ──────────────────────────────────── */}
+          <div className="hidden items-center gap-7 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={link.active ? "nav-link-active" : "nav-link"}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Fine vertical divider */}
+          <div className="hidden h-4 w-px bg-border md:block" />
+
+          {/* ── Desktop Search ───────────────────────────────────────── */}
+          <div className="relative hidden w-52 md:block" ref={searchRef}>
             <form onSubmit={handleSearchSubmit} className="relative">
               <svg
-                className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -151,33 +166,38 @@ export default function Navbar() {
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
                 onFocus={ensureSearchIndexLoaded}
-                placeholder="Search species or cultivars..."
-                className="w-full rounded-xl border border-primary/10 bg-card/60 py-2 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-card focus:shadow-glow"
+                placeholder="Search species..."
+                className="w-full rounded-sm border border-border bg-surface py-2 pl-9 pr-3 text-sm text-heading placeholder-muted/50 outline-none transition-all duration-150 focus:border-primary/40 focus:shadow-glow"
               />
             </form>
 
             <AnimatePresence>
               {showResults && (
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
+                  initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full left-0 right-0 mt-2 z-50 rounded-xl border border-primary/10 bg-card/95 backdrop-blur-xl shadow-xl overflow-hidden"
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded border border-border bg-surface shadow-glass-hover"
                 >
                   {searchResults.slice(0, 6).map((plant) => (
                     <button
                       key={plant.slug}
                       onClick={() => handleSelect(plant.slug, plant.genus)}
-                      className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm transition hover:bg-primary/10"
+                      className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm transition-colors duration-100 hover:bg-background-soft"
                     >
-                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-xs text-primary font-medium">
-                        {plant.genus.slice(0, 2)}
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-[10px] font-semibold text-primary">
+                        {plant.genus.slice(0, 2).toUpperCase()}
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium text-heading italic truncate">{plant.scientificName}</p>
-                        <p className="text-xs text-muted truncate">{plant.commonName}</p>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-medium italic text-heading">
+                          {plant.scientificName}
+                        </p>
+                        <p className="truncate text-[10px] text-muted">{plant.commonName}</p>
                       </div>
-                      <span className="badge-price shrink-0 text-[10px]">{plant.priceGuideTier} · {getStaticTierLabel(plant.priceGuideTier)}</span>
+                      <span className="badge-price shrink-0">
+                        {plant.priceGuideTier} · {getStaticTierLabel(plant.priceGuideTier)}
+                      </span>
                     </button>
                   ))}
                 </motion.div>
@@ -185,7 +205,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* ── Mobile Hamburger ─────────────────────────────────────── */}
           <button
             className="icon-btn md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -200,21 +220,20 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-
       </nav>
 
-      {/* Mobile Menu */}
+      {/* ── Mobile Menu ─────────────────────────────────────────────── */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="border-t border-primary/10 bg-card/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-border bg-surface md:hidden"
           >
-            <div className="space-y-1 px-6 py-4">
+            <div className="px-6 py-5 space-y-1">
               {/* Mobile Search */}
-              <form onSubmit={handleSearchSubmit} className="relative mb-4">
+              <form onSubmit={handleSearchSubmit} className="relative mb-5">
                 <svg
                   className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
                   fill="none"
@@ -235,37 +254,24 @@ export default function Navbar() {
                   onChange={(e) => handleSearch(e.target.value)}
                   onFocus={ensureSearchIndexLoaded}
                   placeholder="Search species, cultivars..."
-                  className="w-full rounded-xl border border-primary/10 bg-background/60 py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/60 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-background"
+                  className="w-full rounded-sm border border-border bg-background py-2.5 pl-10 pr-4 text-sm text-heading placeholder-muted/50 outline-none transition-all duration-150 focus:border-primary/40 focus:shadow-glow"
                 />
               </form>
-              <Link
-                href="/plants"
-                className="block rounded-lg px-3 py-2 text-sm font-medium text-heading transition hover:bg-primary/10"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Explore
-              </Link>
-              <Link
-                href="/compare"
-                className="block rounded-lg px-3 py-2 text-sm font-medium text-muted transition hover:bg-primary/10 hover:text-heading"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Compare
-              </Link>
-              <Link
-                href="/identify"
-                className="block rounded-lg px-3 py-2 text-sm font-medium text-muted transition hover:bg-primary/10 hover:text-heading"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Identify
-              </Link>
-              <Link
-                href="/learn"
-                className="block rounded-lg px-3 py-2 text-sm font-medium text-muted transition hover:bg-primary/10 hover:text-heading"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Learn
-              </Link>
+
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block rounded-sm px-3 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                    link.active
+                      ? "bg-primary/8 text-heading"
+                      : "text-muted hover:bg-background-soft hover:text-heading"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}

@@ -26,53 +26,50 @@ function GenusCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 30 }}
+      initial={{ opacity: 0, x: 20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
     >
       <Link
         href={`/plants/${genus.slug}`}
-        className="glass-card-hover group relative flex h-64 w-64 md:h-72 md:w-72 shrink-0 flex-col overflow-hidden rounded-2xl"
+        className="group relative flex h-64 w-64 shrink-0 flex-col overflow-hidden rounded border border-border bg-surface shadow-card-sm transition-all duration-200 hover:border-border-strong hover:shadow-glass md:h-72 md:w-72"
       >
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-deep via-card to-forest-dark" />
+        {/* Warm background base */}
+        <div className="absolute inset-0 bg-background-soft" />
 
         {representative ? (
-          <>
-            {/* Full botanical plate */}
-            <Image
-              src={`/plants/${representative.genus}/${representative.slug}.png`}
-              alt={`${genus.name} representative`}
-              fill
-              className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 256px, 288px"
-            />
-          </>
+          <Image
+            src={`/plants/${representative.genus}/${representative.slug}.png`}
+            alt={`${genus.name} representative`}
+            fill
+            className="object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+            sizes="(max-width: 768px) 256px, 288px"
+          />
         ) : (
-          /* Decorative SVG pattern for fallback (e.g. Homalomena) */
-          <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_center,rgba(195,217,161,0.12)_0%,transparent_70%)]">
-            <svg className="h-full w-full" viewBox="0 0 200 200" fill="none">
+          /* Placeholder for genera without a representative image */
+          <div className="absolute inset-0 flex items-center justify-center opacity-20">
+            <svg className="h-24 w-24 text-primary" viewBox="0 0 200 200" fill="none">
               <path
                 d="M100 180C100 180 50 130 50 80C50 40 75 20 100 15C125 20 150 40 150 80C150 130 100 180 100 180Z"
                 fill="currentColor"
-                opacity="0.3"
-                className="text-primary"
               />
             </svg>
           </div>
         )}
 
-        {/* Content */}
-        <div className="relative mt-auto p-6 z-10 bg-gradient-to-t from-forest-dark via-forest-dark/40 to-transparent pt-12">
-          <h3 className="text-lg font-heading font-bold text-heading group-hover:text-primary transition-colors duration-300">
+        {/* Bottom warm-ivory gradient overlay for text */}
+        <div className="relative mt-auto p-5 z-10 bg-gradient-to-t from-surface via-surface/90 to-transparent pt-10">
+          {/* Fine brass rule */}
+          <div className="mb-2.5 h-px w-full bg-accent/25" />
+          <h3 className="font-heading text-base font-semibold italic text-heading transition-colors duration-150 group-hover:text-primary">
             {genus.name}
           </h3>
-          <p className="mt-1 text-xs text-muted line-clamp-2">{genus.description}</p>
-          <div className="mt-3 flex items-center gap-2">
+          <p className="mt-1 line-clamp-1 text-[11px] text-muted">{genus.description}</p>
+          <div className="mt-2.5 flex items-center justify-between">
             <span className="badge-primary">{genus.speciesCount} species</span>
             <svg
-              className="h-4 w-4 text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary"
+              className="h-3.5 w-3.5 text-muted transition-transform duration-200 group-hover:translate-x-0.5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -92,20 +89,26 @@ export default function GenusGrid() {
     <section className="relative section-spacing overflow-hidden">
       <div className="section-container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
+          transition={{ duration: 0.5 }}
+          className="mb-10"
         >
+          <div className="mb-4 flex items-center gap-3">
+            <div className="h-px w-8 bg-accent/60" />
+            <p className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
+              Browse by Genus
+            </p>
+          </div>
           <h2 className="section-heading">Explore by Genus</h2>
           <p className="section-subheading mt-3">
-            Dive into the remarkable diversity of the Araceae family.
+            Dive into the remarkable diversity of the Araceae family — from velvety Anthuriums to fenestrated Monsteras.
           </p>
         </motion.div>
 
-        {/* Horizontal scrollable grid */}
-        <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none -mx-6 px-6">
+        {/* Horizontal scrollable genus row */}
+        <div className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory">
           {genera.map((genus, i) => (
             <div key={genus.slug} className="snap-start shrink-0">
               <GenusCard genus={genus} index={i} />
@@ -114,8 +117,8 @@ export default function GenusGrid() {
         </div>
 
         {/* Scroll hint */}
-        <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted/50">
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <div className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.1em] text-muted/60">
+          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
           </svg>
           <span>Scroll to explore more genera</span>

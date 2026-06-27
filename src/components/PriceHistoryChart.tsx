@@ -18,10 +18,13 @@ interface PriceHistoryChartProps {
   onHover?: (date: string | null) => void;
 }
 
-const MEDIAN_COLOR = "#C3D9A1";
-const BAND_COLOR = "#A3C17A";
-const TEXT_MUTED = "#8B9A92";
-const BG_CARD = "#1A1F1D";
+// Botanical-atlas palette for the chart
+const MEDIAN_COLOR = "#153328";   // Deep botanical green — main trend line
+const BAND_COLOR = "#496B55";     // Leaf green — price range band
+const TEXT_MUTED = "#7C837E";     // Muted text
+const BG_SURFACE = "#FAF8F2";     // Warm surface
+const BG_TOOLTIP = "#FAF8F2";
+const BORDER_COLOR = "#D8D0C1";   // Warm border
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CustomTooltip({ active, payload, label }: any) {
@@ -46,13 +49,14 @@ function CustomTooltip({ active, payload, label }: any) {
   return (
     <div
       style={{
-        backgroundColor: BG_CARD,
-        border: "1px solid #2A2F2D",
-        borderRadius: "10px",
+        backgroundColor: BG_TOOLTIP,
+        border: `1px solid ${BORDER_COLOR}`,
+        borderRadius: "4px",
         padding: "10px 14px",
         fontSize: "12px",
-        color: "#FFFFFF",
+        color: "#173229",
         minWidth: "180px",
+        boxShadow: "0 2px 8px rgba(21, 51, 40, 0.10)",
       }}
     >
       <p style={{ color: TEXT_MUTED, fontSize: "10px", marginBottom: "8px" }}>
@@ -71,7 +75,7 @@ function CustomTooltip({ active, payload, label }: any) {
         </div>
       )}
       {sampleSize > 0 && (
-        <p style={{ color: TEXT_MUTED, fontSize: "10px", marginTop: "8px", borderTop: "1px solid #2A2F2D", paddingTop: "6px" }}>
+        <p style={{ color: TEXT_MUTED, fontSize: "10px", marginTop: "8px", borderTop: `1px solid ${BORDER_COLOR}`, paddingTop: "6px" }}>
           Based on {sampleSize} sale{sampleSize !== 1 ? "s" : ""}
         </p>
       )}
@@ -82,9 +86,9 @@ function CustomTooltip({ active, payload, label }: any) {
 export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartProps) {
   if (!data || data.length === 0) {
     return (
-      <div className="rounded-xl bg-card p-6 text-center">
+      <div className="rounded border border-border bg-background-soft p-6 text-center">
         <p className="text-sm text-muted">Not enough sales data to build a price graph yet.</p>
-        <p className="mt-1 text-xs text-muted/50">Check back as more listings are tracked over time.</p>
+        <p className="mt-1 text-xs text-muted/60">Check back as more listings are tracked over time.</p>
       </div>
     );
   }
@@ -93,8 +97,7 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
 
   return (
     <div className="space-y-4">
-      {/* ─── Chart ──────────────────────────────────────────────────────── */}
-      <div className="h-64 md:h-72">
+      <div className="h-64 rounded border border-border bg-surface p-3 md:h-72">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart
             data={data}
@@ -108,7 +111,7 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
           >
             <CartesianGrid
               strokeDasharray="3 3"
-              stroke="#2A2F2D"
+              stroke={BORDER_COLOR}
               vertical={false}
             />
             <XAxis
@@ -123,27 +126,28 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
               stroke={TEXT_MUTED}
               fontSize={10}
               tickLine={false}
+              axisLine={false}
             />
             <YAxis
               stroke={TEXT_MUTED}
               fontSize={10}
               tickLine={false}
+              axisLine={false}
               tickFormatter={(v) => `£${v.toFixed(0)}`}
               domain={[0, "auto"]}
             />
             <Tooltip content={<CustomTooltip />} />
 
-            {/* Custom legend */}
             <Legend
               content={() => (
-                <div className="flex items-center justify-center gap-4 pt-2 pb-1">
+                <div className="flex items-center justify-center gap-5 pb-1 pt-2">
                   <div className="flex items-center gap-1.5">
-                    <div className="h-0.5 w-4 bg-[#C3D9A1]" />
-                    <span className="text-[10px] text-[#8B9A92]">Most common price</span>
+                    <div style={{ height: "2px", width: "16px", backgroundColor: MEDIAN_COLOR }} />
+                    <span style={{ fontSize: "10px", color: TEXT_MUTED }}>Most common price</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <div className="h-2 w-4 rounded-sm bg-[#A3C17A]/20 border border-dashed border-[#A3C17A]" />
-                    <span className="text-[10px] text-[#8B9A92]">Typical price range</span>
+                    <div style={{ height: "8px", width: "16px", borderRadius: "2px", backgroundColor: `${BAND_COLOR}22`, border: `1px dashed ${BAND_COLOR}` }} />
+                    <span style={{ fontSize: "10px", color: TEXT_MUTED }}>Typical range</span>
                   </div>
                 </div>
               )}
@@ -151,8 +155,8 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
 
             <defs>
               <linearGradient id="p25p75Grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={BAND_COLOR} stopOpacity={0.2} />
-                <stop offset="100%" stopColor={BAND_COLOR} stopOpacity={0.05} />
+                <stop offset="0%" stopColor={BAND_COLOR} stopOpacity={0.15} />
+                <stop offset="100%" stopColor={BAND_COLOR} stopOpacity={0.03} />
               </linearGradient>
             </defs>
 
@@ -167,7 +171,7 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
               type="monotone"
               dataKey="p25"
               stroke="none"
-              fill={BG_CARD}
+              fill={BG_SURFACE}
               fillOpacity={1}
             />
             <Line
@@ -195,8 +199,8 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
               dataKey="median"
               stroke={MEDIAN_COLOR}
               strokeWidth={2}
-              dot={{ fill: MEDIAN_COLOR, strokeWidth: 0, r: 4 }}
-              activeDot={{ fill: MEDIAN_COLOR, strokeWidth: 0, r: 6 }}
+              dot={{ fill: MEDIAN_COLOR, strokeWidth: 0, r: 3 }}
+              activeDot={{ fill: MEDIAN_COLOR, strokeWidth: 2, stroke: "#A98749", r: 5 }}
               name="median"
               legendType="line"
             />
@@ -204,11 +208,11 @@ export default function PriceHistoryChart({ data, onHover }: PriceHistoryChartPr
         </ResponsiveContainer>
       </div>
 
-      {/* ─── Stats Footer ─────────────────────────────────────────────────── */}
-      <div className="flex items-center justify-between border-t border-card/80 pt-3 text-xs">
-        <div className="flex flex-col gap-1">
+      {/* Stats footer */}
+      <div className="flex items-center justify-between border-t border-border pt-3 text-xs">
+        <div className="flex flex-col gap-0.5">
           <span className="text-muted">eBay UK sold prices</span>
-          <span className="text-muted/60">
+          <span className="text-[10px] text-muted/60">
             Verified completed listings only. Excludes unrelated species, multipacks and outliers.
           </span>
         </div>

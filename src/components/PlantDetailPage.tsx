@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 const PriceHistoryChart = dynamic(() => import("@/components/PriceHistoryChart"), {
-  loading: () => <div className="h-48 animate-pulse rounded-lg bg-card/60" />,
+  loading: () => <div className="h-48 animate-pulse rounded bg-background-soft" />,
   ssr: false,
 });
 import type { PriceHistoryPoint } from "@/lib/prices/types";
@@ -103,11 +103,11 @@ function ShareButton({ scientificName }: { scientificName: string }) {
   return (
     <button
       onClick={handleShare}
-      className="inline-flex items-center gap-2 rounded-lg border border-card/80 px-4 py-2 text-sm font-medium text-muted transition hover:bg-card/50"
+      className="inline-flex items-center gap-2 rounded-sm border border-border px-4 py-2 text-sm font-medium text-muted transition-all duration-150 hover:border-border-strong hover:text-heading"
     >
       {copied ? (
         <>
-          <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <svg className="h-4 w-4 text-leaf" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
           Link Copied
@@ -124,7 +124,6 @@ function ShareButton({ scientificName }: { scientificName: string }) {
   );
 }
 
-
 const GENUS_LABELS: Record<string, string> = {
   monstera: "Monstera",
   philodendron: "Philodendron",
@@ -133,7 +132,6 @@ const GENUS_LABELS: Record<string, string> = {
   begonia: "Begonia",
   other: "Other Aroids",
 };
-
 
 export default function PlantDetailPage({
   data,
@@ -145,7 +143,6 @@ export default function PlantDetailPage({
   const morphEntries = Object.entries(data.morphology);
   const genusLabel = GENUS_LABELS[genus] ?? genus;
 
-  // ─── Fetch live price history ───────────────────────────────────────────
   interface RecentSale {
     title: string;
     soldPrice: number;
@@ -177,12 +174,9 @@ export default function PlantDetailPage({
           setRecentSales(json.recentSales);
         }
       })
-      .catch(() => {
-        // Silently fail — chart will show empty state
-      });
+      .catch(() => {});
   }, [data.slug]);
 
-  // ─── Fetch live retail price data ──────────────────────────────────────────
   const [retailData, setRetailData] = useState<{
     listings: any[];
     statsByType: Record<string, any>;
@@ -201,12 +195,9 @@ export default function PlantDetailPage({
           });
         }
       })
-      .catch(() => {
-        // Silently fail
-      });
+      .catch(() => {});
   }, [data.slug]);
 
-  // Helper to derive ISO week key — used to sync graph hover with sales list
   function getISOWeekKey(dateStr: string): string {
     const date = new Date(dateStr);
     const dayNum = date.getUTCDay() || 7;
@@ -216,7 +207,6 @@ export default function PlantDetailPage({
     return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`;
   }
 
-  // Use snapshot trimmed mean when available; fall back to mean of live listings
   const retailAverage: { value: number; count: number } | null = (() => {
     if (retailData?.statsByType?.all) {
       return { value: retailData.statsByType.all.trimmedMean, count: retailData.statsByType.all.count };
@@ -229,7 +219,6 @@ export default function PlantDetailPage({
     return null;
   })();
 
-  // AA Price priority: real eBay sold data → retail asking price → embedded estimate
   const aaDisplayPrice: { value: number; source: "ebay" | "retail" | "estimate" } | null = (() => {
     if (fairPrice !== null && !fairPriceIsEstimate) return { value: fairPrice, source: "ebay" };
     if (retailAverage !== null) return { value: Math.round(retailAverage.value), source: "retail" };
@@ -244,637 +233,630 @@ export default function PlantDetailPage({
   return (
     <div className="plant-detail-container">
       <div className="plant-detail-grid">
-        {/* ===== LEFT COLUMN (Cols 1-7) ===== */}
+
+        {/* ===== LEFT COLUMN ===== */}
         <div className="plant-detail-main-col">
+
           {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-xs text-muted">
-          <Link href="/plants" className="hover:text-primary transition-colors">
-            Species
-          </Link>
-          <span>/</span>
-          <Link href={`/plants/${genus}`} className="hover:text-primary transition-colors">
-            {genusLabel}
-          </Link>
-          <span>/</span>
-          <span className="text-heading">{data.name}</span>
-        </nav>
+          <nav className="flex items-center gap-2 text-xs text-muted">
+            <Link href="/plants" className="transition-colors duration-150 hover:text-heading">
+              Species
+            </Link>
+            <span className="text-border-strong">/</span>
+            <Link href={`/plants/${genus}`} className="transition-colors duration-150 hover:text-heading">
+              {genusLabel}
+            </Link>
+            <span className="text-border-strong">/</span>
+            <span className="text-heading">{data.name}</span>
+          </nav>
 
-        {/* Heading + Status Tags Row */}
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div>
-            <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading italic">
-              {data.name}
-            </h1>
-            <p className="text-sm text-muted mt-1">{data.commonName}</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            {data.botanicalType && (() => {
-              const details = getBotanicalTypeDetails(data.botanicalType);
-              return (
-                <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${details.badgeClass}`}>
-                  <span className={`h-1.5 w-1.5 rounded-full ${details.dotClass}`} />
-                  {details.label}
-                </span>
-              );
-            })()}
-            {data.statusTag && (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-rarity/10 px-3 py-1 text-xs font-medium text-rarity">
-                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                </svg>
-                {data.statusTag}
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* Action Panel Row */}
-        <div className="flex flex-wrap items-center gap-3">
-          <ShareButton scientificName={data.scientificName} />
-        </div>
-
-        {/* Status Row */}
-        <div className="flex flex-wrap items-center gap-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-price/10 px-3 py-1 text-xs font-medium text-price">
-            <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            {combinedTier.tier} · {combinedTier.label}
-          </span>
-          {data.availability && (
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-xs font-medium text-muted">
-              <svg className="h-3.5 w-3.5 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.75m12-3.872a2.25 2.25 0 013 2.25v.75M6 6.878A2.25 2.25 0 004.5 9v.75m0 0h15" />
-              </svg>
-              {data.availability}
-            </span>
-          )}
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-xs font-medium text-muted">
-            <svg className="h-3.5 w-3.5 text-leaf" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            {data.origin}
-          </span>
-        </div>
-
-        {/* AA Price Hero Callout */}
-        {aaDisplayPrice !== null && (
-          <div className="flex items-center gap-4 rounded-xl border border-price/25 bg-price/5 px-5 py-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-price/15">
-              <svg className="h-5 w-5 text-price" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.768 0-1.536-.219-2.121-.659C8.707 9.46 8.707 8.034 9.879 7.155c1.17-.879 3.07-.879 4.242 0L15 7.818" />
-              </svg>
+          {/* Heading + Status Tags */}
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h1 className="font-heading text-3xl font-semibold italic leading-tight text-heading md:text-4xl">
+                {data.name}
+              </h1>
+              <p className="mt-1 text-sm text-muted">{data.commonName}</p>
             </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-price/70">
-                Aroid Atlas Price Guide
-              </p>
-              <p className="text-sm text-muted mt-0.5">
-                The <span className="font-semibold text-heading">AA Price</span> suggests this should cost{" "}
-                <span className="font-bold text-price text-base">£{aaDisplayPrice.value.toFixed(0)}</span>
-                {" "}—{" "}
-                {aaDisplayPrice.source === "ebay"
-                  ? "based on verified eBay UK auction data"
-                  : aaDisplayPrice.source === "retail"
-                  ? "based on current UK retail prices"
-                  : "community estimate"}
-              </p>
-              {soldCompsData.length > 0 && (
-                <p className="text-[10px] text-price/50 mt-1">
-                  Data as of{" "}
-                  {new Date(soldCompsData[soldCompsData.length - 1].date).toLocaleDateString("en-GB", {
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </p>
+            <div className="flex flex-wrap items-center gap-2">
+              {data.botanicalType && (() => {
+                const details = getBotanicalTypeDetails(data.botanicalType);
+                return (
+                  <span className={`inline-flex items-center gap-1.5 rounded-sm border px-3 py-1 text-xs font-medium ${details.badgeClass}`}>
+                    <span className={`h-1.5 w-1.5 rounded-full ${details.dotClass}`} />
+                    {details.label}
+                  </span>
+                );
+              })()}
+              {data.statusTag && (
+                <span className="inline-flex items-center gap-1.5 rounded-sm bg-rarity/10 border border-rarity/20 px-3 py-1 text-xs font-medium text-rarity">
+                  <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                  </svg>
+                  {data.statusTag}
+                </span>
               )}
             </div>
-            <a
-              href="#market-analysis"
-              className="shrink-0 text-[10px] font-semibold text-price/70 hover:text-price transition-colors underline underline-offset-2"
-            >
-              See full data
-            </a>
           </div>
-        )}
 
-        {/* Main Feature Image */}
-        <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-card">
-          <Image
-            src={`/plants/${genus}/${data.slug}.png`}
-            alt={data.commonName}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
-            }}
-          />
-        </div>
+          {/* Action Row */}
+          <div className="flex flex-wrap items-center gap-3">
+            <ShareButton scientificName={data.scientificName} />
+          </div>
 
-        {/* Split Baseline: Morphology + About + Climate */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="mb-4 text-lg font-heading font-bold text-heading">
-              Morphology
-            </h2>
-            <div className="space-y-3">
-              {morphEntries.map(([key, value]) => (
-                <div
-                  key={key}
-                  className="flex items-baseline justify-between border-b border-card/50 pb-2"
-                >
-                  <span className="text-xs font-medium capitalize text-muted">
-                    {key.replace(/([A-Z])/g, " $1").trim()}
-                  </span>
-                  <span className="text-sm text-heading text-right max-w-[180px]">
-                    {value as string}
-                  </span>
-                </div>
-              ))}
+          {/* Status Badges Row */}
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 rounded-sm border border-accent/25 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+              {combinedTier.tier} · {combinedTier.label}
+            </span>
+            {data.availability && (
+              <span className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+                {data.availability}
+              </span>
+            )}
+            <span className="inline-flex items-center gap-1.5 rounded-sm border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+              {data.origin}
+            </span>
+          </div>
+
+          {/* ── AA Price Hero Callout ──────────────────────────────── */}
+          {aaDisplayPrice !== null && (
+            <div className="flex items-center gap-4 rounded border border-accent/30 bg-accent/8 px-5 py-4">
+              {/* Brass top rule */}
+              <div className="absolute left-0 right-0 top-0 h-px bg-accent/40" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-accent/20 bg-accent/10">
+                <svg className="h-5 w-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.768 0-1.536-.219-2.121-.659C8.707 9.46 8.707 8.034 9.879 7.155c1.17-.879 3.07-.879 4.242 0L15 7.818" />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-body text-[10px] font-bold uppercase tracking-wider text-accent/80">
+                  Aroid Atlas Price Guide
+                </p>
+                <p className="mt-0.5 text-sm text-muted">
+                  The <span className="font-semibold text-heading">AA Price</span> suggests this should cost{" "}
+                  <span className="font-bold text-accent text-base">£{aaDisplayPrice.value.toFixed(0)}</span>
+                  {" "}—{" "}
+                  {aaDisplayPrice.source === "ebay"
+                    ? "based on verified eBay UK auction data"
+                    : aaDisplayPrice.source === "retail"
+                    ? "based on current UK retail prices"
+                    : "community estimate"}
+                </p>
+                {soldCompsData.length > 0 && (
+                  <p className="mt-1 text-[10px] text-muted/60">
+                    Data as of{" "}
+                    {new Date(soldCompsData[soldCompsData.length - 1].date).toLocaleDateString("en-GB", {
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </p>
+                )}
+              </div>
+              <a
+                href="#market-analysis"
+                className="shrink-0 text-[10px] font-semibold text-accent/70 underline underline-offset-2 transition-colors duration-150 hover:text-accent"
+              >
+                See full data
+              </a>
+            </div>
+          )}
+
+          {/* Main Feature Image */}
+          <div className="relative overflow-hidden rounded border border-border bg-background-soft">
+            <div className="relative aspect-[3/4]">
+              <Image
+                src={`/plants/${genus}/${data.slug}.png`}
+                alt={data.commonName}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
+                }}
+              />
             </div>
           </div>
 
-          <div>
-            <h2 className="mb-4 text-lg font-heading font-bold text-heading">
-              About
-            </h2>
-            <p className="text-sm leading-relaxed text-muted mb-5">
-              {data.aboutText}
-            </p>
+          {/* Morphology + About split */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">
+                Morphology
+              </h2>
+              <div className="space-y-3">
+                {morphEntries.map(([key, value]) => (
+                  <div
+                    key={key}
+                    className="flex items-baseline justify-between border-b border-border pb-2"
+                  >
+                    <span className="text-xs font-medium capitalize text-muted">
+                      {key.replace(/([A-Z])/g, " $1").trim()}
+                    </span>
+                    <span className="max-w-[180px] text-right text-sm text-heading">
+                      {value as string}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            <div className="rounded-lg bg-card/80 p-4 border border-primary/15">
-              <h4 className="text-xs font-semibold text-heading mb-3 uppercase tracking-wider">
-                Climate Profile
-              </h4>
-              <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Origin</span>
-                  <span className="text-heading font-medium">{data.origin}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Humidity</span>
-                  <span className="text-heading font-medium">{data.quickFacts.humidity}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Temperature</span>
-                  <span className="text-heading font-medium">{data.quickFacts.temperature}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Light</span>
-                  <span className="text-heading font-medium">{data.quickFacts.light}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Family</span>
-                  <span className="text-heading font-medium">{data.family}</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-muted">Genus</span>
-                  <span className="text-heading font-medium">{data.genus}</span>
+            <div>
+              <h2 className="mb-4 font-heading text-lg font-semibold text-heading">
+                About
+              </h2>
+              <p className="mb-5 text-sm leading-relaxed text-muted">
+                {data.aboutText}
+              </p>
+
+              <div className="rounded border border-border bg-surface p-4">
+                <h4 className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.14em] text-heading">
+                  Climate Profile
+                </h4>
+                <div className="grid grid-cols-2 gap-3 text-xs">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Origin</span>
+                    <span className="font-medium text-heading">{data.origin}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Humidity</span>
+                    <span className="font-medium text-heading">{data.quickFacts.humidity}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Temperature</span>
+                    <span className="font-medium text-heading">{data.quickFacts.temperature}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Light</span>
+                    <span className="font-medium text-heading">{data.quickFacts.light}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Family</span>
+                    <span className="font-medium text-heading">{data.family}</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-muted">Genus</span>
+                    <span className="font-medium text-heading">{data.genus}</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ─── Market Analysis & Price Guide ─────────────────────────────────── */}
-        <div id="market-analysis" className="glass-card p-6 md:p-8 space-y-6">
-          <div>
-            <h2 className="text-xl md:text-2xl font-heading font-bold text-heading">
-              Market Analysis & Price Guide
-            </h2>
-            <p className="text-xs text-muted mt-1">
-              Historical auction metrics and live online retailer listings updated weekly.
-            </p>
-          </div>
+          {/* ── Market Analysis & Price Guide ─────────────────────── */}
+          <div id="market-analysis" className="rounded border border-border bg-surface p-6 md:p-8 space-y-6">
+            {/* Brass top rule */}
+            <div className="-mx-6 -mt-6 mb-6 h-px bg-accent/30 md:-mx-8 md:-mt-8 md:mb-8" />
 
-          {/* Unified Price Dashboard KPI Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {/* Card 1: AA Price */}
-                <div className="rounded-xl border border-price/20 bg-price/5 p-4 flex flex-col justify-between">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-price/80">AA Price</span>
-                    <span className="text-[9px] bg-price/10 text-price px-1.5 py-0.5 rounded-full font-semibold">
-                      {aaDisplayPrice?.source === "ebay"
-                        ? "eBay Verified"
-                        : aaDisplayPrice?.source === "retail"
-                        ? "Retail Derived"
-                        : "Estimate"}
-                    </span>
-                  </div>
-                  <div className="mt-2 flex items-baseline gap-1.5">
-                    {aaDisplayPrice ? (
-                      <>
-                        <span className={`text-2xl font-bold ${aaDisplayPrice.source === "estimate" ? "text-price/60" : "text-price"}`}>
-                          £{aaDisplayPrice.value.toFixed(0)}
-                        </span>
-                        <span className="text-[10px] text-muted">GBP</span>
-                      </>
-                    ) : (
-                      <span className="text-xl font-bold text-price/70">
-                        {TIER_RANGES[data.priceGuideTier]?.label ?? "—"}
-                      </span>
-                    )}
-                  </div>
-                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                    {aaDisplayPrice?.source === "ebay"
-                      ? "Trimmed mean of verified eBay UK sold listings (outliers excluded)"
-                      : aaDisplayPrice?.source === "retail"
-                      ? "Derived from current UK retail asking prices — no recent auction data"
-                      : aaDisplayPrice?.source === "estimate"
-                      ? "Community estimate only — limited market data available"
-                      : "No price data — rarity tier shown above"}
-                  </span>
-                </div>
-
-                {/* Card 2: Average Retail Value */}
-                <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Retail Price</span>
-                  <div className="mt-2 flex items-baseline gap-1.5">
-                    {retailAverage ? (
-                      <>
-                        <span className="text-2xl font-bold text-primary">£{retailAverage.value.toFixed(0)}</span>
-                        <span className="text-[10px] text-muted">GBP</span>
-                      </>
-                    ) : (
-                      <span className="text-xl font-bold text-primary/50">Not tracked</span>
-                    )}
-                  </div>
-                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                    {retailAverage
-                      ? `Trimmed mean across ${retailAverage.count} active UK listing${retailAverage.count !== 1 ? "s" : ""}`
-                      : "Not currently stocked by tracked UK retailers"}
-                  </span>
-                </div>
-
-                {/* Card 3: Market Trend */}
-                <div className="rounded-xl border border-primary/10 bg-card-hover/40 p-4 flex flex-col justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted">Market Trend</span>
-                  <div className="mt-2 flex items-center gap-1.5">
-                    {data.marketMetrics.marketStatus ? (
-                      <>
-                        <span className={`text-base font-bold ${
-                          data.marketMetrics.marketStatus === "Rising"
-                            ? "text-green-400"
-                            : data.marketMetrics.marketStatus === "Declining"
-                            ? "text-orange-400"
-                            : "text-rarity"
-                        }`}>
-                          {data.marketMetrics.marketStatus}
-                        </span>
-                        {data.marketMetrics.threeMonthChangePercent !== null && (
-                          <span className="text-[10px] text-muted">
-                            ({data.marketMetrics.threeMonthChangePercent > 0 ? "+" : ""}{data.marketMetrics.threeMonthChangePercent.toFixed(0)}%)
-                          </span>
-                        )}
-                      </>
-                    ) : (
-                      <span className="text-base font-bold text-muted">—</span>
-                    )}
-                  </div>
-                  <span className="mt-2 text-[10px] text-muted/65 leading-tight">
-                    Price direction over the last 90 days
-                  </span>
-                </div>
-          </div>
-
-          {/* Pricing Methodology Note */}
-          <div className="rounded-lg border border-primary/8 bg-card/30 px-4 py-3 flex items-start gap-3">
-            <svg className="h-3.5 w-3.5 text-muted/50 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-              <circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01" />
-            </svg>
-            <p className="text-[10px] text-muted/70 leading-relaxed">
-              <span className="font-semibold text-muted">How prices are calculated:</span>{" "}
-              The <span className="text-price/80">AA Price</span> uses verified eBay UK completed auction data — we take the trimmed mean (removing the top and bottom 20% of prices) to produce a fair-value guide that excludes outlier sales. When recent auction data is unavailable, the AA Price falls back to the current UK retail average from tracked stockists.{" "}
-              <span className="text-heading/60">Retail prices</span> are scraped from active UK plant shop listings and reflect what you would pay buying directly from a retailer today. All prices are in GBP and updated automatically.
-            </p>
-          </div>
-
-          {/* Large Focused Price History Graph + Recent Sales */}
-          <div className="border-t border-primary/10 pt-6">
-            {soldCompsData.length === 0 && recentSales.length === 0 ? (
-              <p className="text-xs text-muted italic text-center py-4">
-                No eBay auction history available yet for this plant. Data is collected automatically as sales appear on eBay UK.
+            <div>
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
+                Market Analysis
               </p>
-            ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Left Column: Graph (2/3 width on desktop) */}
-              <div className="lg:col-span-2 space-y-4">
+              <h2 className="mt-1 font-heading text-xl font-semibold text-heading md:text-2xl">
+                Price Guide & Market Data
+              </h2>
+              <p className="mt-1 text-xs text-muted">
+                Historical auction metrics and live retailer listings updated weekly.
+              </p>
+            </div>
+
+            {/* KPI Grid */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {/* AA Price */}
+              <div className="flex flex-col justify-between rounded border border-accent/25 bg-accent/8 p-4">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-semibold text-heading">eBay Auction Price Trend</h3>
-                    <p className="text-[10px] text-muted">Weekly aggregated completed auction sales in the UK</p>
-                  </div>
-                  {soldCompsData.length > 0 && (
-                    <span className="text-[10px] text-muted-light bg-card/60 border border-primary/10 px-2 py-0.5 rounded-full">
-                      {soldCompsData.reduce((sum, d) => sum + d.sampleSize, 0)} sales analyzed
+                  <span className="font-body text-[10px] font-bold uppercase tracking-wider text-accent/80">AA Price</span>
+                  <span className="rounded-sm bg-accent/10 px-1.5 py-0.5 text-[9px] font-semibold text-accent">
+                    {aaDisplayPrice?.source === "ebay"
+                      ? "eBay Verified"
+                      : aaDisplayPrice?.source === "retail"
+                      ? "Retail Derived"
+                      : "Estimate"}
+                  </span>
+                </div>
+                <div className="mt-3 flex items-baseline gap-1.5">
+                  {aaDisplayPrice ? (
+                    <>
+                      <span className={`font-heading text-2xl font-semibold ${aaDisplayPrice.source === "estimate" ? "text-accent/60" : "text-accent"}`}>
+                        £{aaDisplayPrice.value.toFixed(0)}
+                      </span>
+                      <span className="text-[10px] text-muted">GBP</span>
+                    </>
+                  ) : (
+                    <span className="font-heading text-xl font-semibold text-accent/70">
+                      {TIER_RANGES[data.priceGuideTier]?.label ?? "—"}
                     </span>
                   )}
                 </div>
-
-                {/* The actual chart - wide view container */}
-                <PriceHistoryChart data={soldCompsData} onHover={setHoveredWeekDate} />
+                <span className="mt-2 text-[10px] leading-relaxed text-muted">
+                  {aaDisplayPrice?.source === "ebay"
+                    ? "Trimmed mean of verified eBay UK sold listings"
+                    : aaDisplayPrice?.source === "retail"
+                    ? "Derived from current UK retail asking prices"
+                    : aaDisplayPrice?.source === "estimate"
+                    ? "Community estimate — limited market data"
+                    : "No price data — rarity tier shown above"}
+                </span>
               </div>
 
-              {/* Right Column: Recent Sales History (1/3 width on desktop) */}
-              <div className="lg:col-span-1 space-y-4 flex flex-col">
-                <div>
-                  <h3 className="text-sm font-semibold text-heading">Recent eBay Sales</h3>
-                  <p className="text-[10px] text-muted">Direct verified completed transaction history</p>
+              {/* Retail Price */}
+              <div className="flex flex-col justify-between rounded border border-border bg-background-soft p-4">
+                <span className="font-body text-[10px] font-bold uppercase tracking-wider text-muted">Retail Price</span>
+                <div className="mt-3 flex items-baseline gap-1.5">
+                  {retailAverage ? (
+                    <>
+                      <span className="font-heading text-2xl font-semibold text-primary">£{retailAverage.value.toFixed(0)}</span>
+                      <span className="text-[10px] text-muted">GBP</span>
+                    </>
+                  ) : (
+                    <span className="font-heading text-xl font-semibold text-muted/50">Not tracked</span>
+                  )}
+                </div>
+                <span className="mt-2 text-[10px] leading-relaxed text-muted">
+                  {retailAverage
+                    ? `Trimmed mean across ${retailAverage.count} active UK listing${retailAverage.count !== 1 ? "s" : ""}`
+                    : "Not currently stocked by tracked UK retailers"}
+                </span>
+              </div>
+
+              {/* Market Trend */}
+              <div className="flex flex-col justify-between rounded border border-border bg-background-soft p-4">
+                <span className="font-body text-[10px] font-bold uppercase tracking-wider text-muted">Market Trend</span>
+                <div className="mt-3 flex items-center gap-1.5">
+                  {data.marketMetrics.marketStatus ? (
+                    <>
+                      <span className={`font-heading text-base font-semibold ${
+                        data.marketMetrics.marketStatus === "Rising"
+                          ? "text-leaf"
+                          : data.marketMetrics.marketStatus === "Declining"
+                          ? "text-accent-muted"
+                          : "text-rarity"
+                      }`}>
+                        {data.marketMetrics.marketStatus}
+                      </span>
+                      {data.marketMetrics.threeMonthChangePercent !== null && (
+                        <span className="text-[10px] text-muted">
+                          ({data.marketMetrics.threeMonthChangePercent > 0 ? "+" : ""}{data.marketMetrics.threeMonthChangePercent.toFixed(0)}%)
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <span className="font-heading text-base font-semibold text-muted">—</span>
+                  )}
+                </div>
+                <span className="mt-2 text-[10px] leading-relaxed text-muted">
+                  Price direction over the last 90 days
+                </span>
+              </div>
+            </div>
+
+            {/* Methodology note */}
+            <div className="flex items-start gap-3 rounded border border-border bg-background-soft px-4 py-3">
+              <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                <circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01" />
+              </svg>
+              <p className="text-[10px] leading-relaxed text-muted">
+                <span className="font-semibold text-heading/70">How prices are calculated:</span>{" "}
+                The <span className="text-accent/80">AA Price</span> uses verified eBay UK completed auction data — we take the trimmed mean (removing the top and bottom 20% of prices) to produce a fair-value guide. When recent auction data is unavailable, the AA Price falls back to the current UK retail average.{" "}
+                All prices are in GBP and updated automatically.
+              </p>
+            </div>
+
+            {/* Price History Chart + Recent Sales */}
+            <div className="border-t border-border pt-6">
+              {soldCompsData.length === 0 && recentSales.length === 0 ? (
+                <p className="py-4 text-center text-xs italic text-muted">
+                  No eBay auction history available yet. Data is collected automatically as sales appear on eBay UK.
+                </p>
+              ) : (
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                  {/* Chart */}
+                  <div className="space-y-4 lg:col-span-2">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-sm font-semibold text-heading">eBay Auction Price Trend</h3>
+                        <p className="text-[10px] text-muted">Weekly aggregated completed auction sales in the UK</p>
+                      </div>
+                      {soldCompsData.length > 0 && (
+                        <span className="rounded-sm border border-border bg-background-soft px-2 py-0.5 text-[10px] text-muted">
+                          {soldCompsData.reduce((sum, d) => sum + d.sampleSize, 0)} sales analyzed
+                        </span>
+                      )}
+                    </div>
+                    <PriceHistoryChart data={soldCompsData} onHover={setHoveredWeekDate} />
+                  </div>
+
+                  {/* Recent Sales */}
+                  <div className="flex flex-col space-y-4 lg:col-span-1">
+                    <div>
+                      <h3 className="text-sm font-semibold text-heading">Recent eBay Sales</h3>
+                      <p className="text-[10px] text-muted">Verified completed transaction history</p>
+                    </div>
+
+                    <div className="max-h-[300px] flex-1 space-y-2 overflow-y-auto rounded border border-border bg-background-soft p-3 pr-1">
+                      {recentSales && recentSales.length > 0 ? (
+                        recentSales.map((sale, idx) => {
+                          const displayTitle = sale.title || `${data.scientificName} - eBay Sale`;
+                          const displayDate = sale.soldDate
+                            ? new Date(sale.soldDate).toLocaleDateString("en-GB", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                              })
+                            : "Date N/A";
+
+                          const isHighlighted =
+                            hoveredWeekDate && sale.soldDate
+                              ? getISOWeekKey(hoveredWeekDate) === getISOWeekKey(sale.soldDate)
+                              : false;
+
+                          const typeLabel =
+                            sale.listingType && sale.listingType !== "unknown"
+                              ? sale.listingType.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+                              : null;
+
+                          const cardClass = [
+                            "flex flex-col gap-1 rounded border p-2.5 transition-all duration-150",
+                            isHighlighted
+                              ? "border-accent/30 bg-accent/8"
+                              : "border-border bg-surface hover:bg-background-soft",
+                          ].join(" ");
+
+                          const inner = (
+                            <div className={cardClass}>
+                              <div className="line-clamp-2 text-[10px] font-medium leading-snug text-heading">
+                                {displayTitle}
+                              </div>
+                              <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
+                                {typeLabel && (
+                                  <span className="rounded-sm bg-primary/8 px-1.5 py-0.5 text-[9px] font-medium text-primary">
+                                    {typeLabel}
+                                  </span>
+                                )}
+                                <span className="text-[9px] text-muted">{displayDate}</span>
+                              </div>
+                              <div className="mt-1 flex items-center justify-between">
+                                <span className="text-xs font-bold text-leaf">£{sale.totalPrice.toFixed(2)}</span>
+                                {sale.url && (
+                                  <span className="text-[9px] text-muted/60">View on eBay →</span>
+                                )}
+                              </div>
+                            </div>
+                          );
+
+                          if (sale.url) {
+                            return (
+                              <a key={idx} href={sale.url} target="_blank" rel="noopener noreferrer" className="block group">
+                                {inner}
+                              </a>
+                            );
+                          }
+                          return <div key={idx}>{inner}</div>;
+                        })
+                      ) : (
+                        <p className="py-8 text-center text-xs italic text-muted">
+                          {soldCompsData.length > 0
+                            ? "Individual sales unavailable — chart shows aggregate data."
+                            : "No recent eBay transactions found."}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Retail Listings */}
+            {retailData && (retailData.listings.length > 0 || Object.keys(retailData.statsByType).length > 0) && (
+              <div className="grid grid-cols-1 gap-6 border-t border-border pt-6 md:grid-cols-5">
+                <div className="space-y-3 md:col-span-3">
+                  <div>
+                    <h3 className="text-sm font-semibold text-heading">Available Retail Specimens</h3>
+                    <p className="text-[10px] text-muted">Click to visit store and purchase directly (prices include VAT)</p>
+                  </div>
+
+                  {retailData.listings.length > 0 ? (
+                    <div className="max-h-[300px] space-y-2 overflow-y-auto pr-1">
+                      {retailData.listings.map((list: any, idx: number) => (
+                        <a
+                          key={idx}
+                          href={list.productUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex flex-col gap-3 rounded border border-border bg-background-soft p-3.5 transition-all duration-150 hover:border-border-strong hover:bg-surface sm:flex-row sm:items-center sm:justify-between"
+                        >
+                          <div className="space-y-1">
+                            <div className="line-clamp-1 text-xs font-semibold text-heading transition-colors duration-150 group-hover:text-primary">
+                              {list.title}
+                            </div>
+                            <div className="flex items-center gap-2 text-[9px] text-muted">
+                              <span className="rounded-sm bg-primary/10 px-1.5 py-0.5 font-medium text-primary">{list.retailerName}</span>
+                              {list.potSizeCm && <span>{list.potSizeCm}cm Pot</span>}
+                              {list.plantSizeLabel && <span className="capitalize">{list.plantSizeLabel.replace(/_/g, " ")}</span>}
+                            </div>
+                          </div>
+                          <div className="flex shrink-0 items-center gap-3 self-end sm:self-center">
+                            <div className="text-right">
+                              <div className="text-sm font-bold text-leaf">
+                                £{list.priceGbp.toFixed(2)}
+                              </div>
+                              {list.originalPriceGbp && (
+                                <div className="text-[9px] text-muted line-through">
+                                  £{list.originalPriceGbp.toFixed(2)}
+                                </div>
+                              )}
+                            </div>
+                            <span className="inline-flex items-center gap-1 rounded-sm bg-primary px-3 py-1.5 text-[10px] font-semibold text-surface transition-colors duration-150 group-hover:bg-primary-dark">
+                              Buy Now
+                              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                              </svg>
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-xs italic text-muted">No retail specimens currently in stock.</p>
+                  )}
                 </div>
 
-                <div className="flex-1 rounded-xl border border-primary/5 bg-card/20 p-4 space-y-2 max-h-[300px] overflow-y-auto pr-1">
-                  {recentSales && recentSales.length > 0 ? (
-                    recentSales.map((sale, idx) => {
-                      const displayTitle = sale.title || `${data.scientificName} - eBay Sale`;
-                      const displayDate = sale.soldDate
-                        ? new Date(sale.soldDate).toLocaleDateString("en-GB", {
-                            day: "2-digit",
-                            month: "short",
-                            year: "numeric",
-                          })
-                        : "Date N/A";
+                {/* Price by Form */}
+                <div className="space-y-3 md:col-span-2">
+                  <div>
+                    <h3 className="text-sm font-semibold text-heading">Average Price by Form</h3>
+                    <p className="text-[10px] text-muted">Based on active retail listings</p>
+                  </div>
 
-                      const isHighlighted =
-                        hoveredWeekDate && sale.soldDate
-                          ? getISOWeekKey(hoveredWeekDate) === getISOWeekKey(sale.soldDate)
-                          : false;
-
-                      const typeLabel =
-                        sale.listingType && sale.listingType !== "unknown"
-                          ? sale.listingType.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
-                          : null;
-
-                      const cardClass = [
-                        "flex flex-col gap-1 rounded-lg border p-2.5 transition-all duration-200",
-                        isHighlighted
-                          ? "border-primary/40 bg-card-hover/80 ring-1 ring-primary/30"
-                          : "border-primary/5 bg-card/40 hover:bg-card-hover/60",
-                      ].join(" ");
-
-                      const inner = (
-                        <div className={cardClass}>
-                          <div className="text-[10px] font-medium text-heading line-clamp-2 leading-snug">
-                            {displayTitle}
+                  <div className="rounded border border-border bg-background-soft p-4 space-y-3.5">
+                    {Object.entries(retailData.statsByType).map(([type, stats]: [string, any]) => {
+                      if (type === "all") return null;
+                      const formattedType = type.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+                      return (
+                        <div key={type} className="flex flex-col gap-1 border-b border-border pb-2.5 last:border-0 last:pb-0">
+                          <div className="flex justify-between text-xs">
+                            <span className="font-medium text-muted">{formattedType}</span>
+                            <span className="font-semibold text-heading">£{stats.trimmedMean.toFixed(0)}</span>
                           </div>
-                          <div className="flex items-center gap-1.5 flex-wrap mt-0.5">
-                            {typeLabel && (
-                              <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-md font-medium">
-                                {typeLabel}
-                              </span>
-                            )}
-                            <span className="text-[9px] text-muted">{displayDate}</span>
-                          </div>
-                          <div className="flex items-center justify-between mt-1">
-                            <span className="font-bold text-green-400 text-xs">£{sale.totalPrice.toFixed(2)}</span>
-                            {sale.url && (
-                              <span className="text-[9px] text-muted/60 group-hover:text-primary transition-colors">
-                                View on eBay →
-                              </span>
-                            )}
+                          <div className="flex justify-between text-[9px] text-muted">
+                            <span>Range: £{stats.min.toFixed(0)} – £{stats.max.toFixed(0)}</span>
+                            <span>{stats.count} items</span>
                           </div>
                         </div>
                       );
+                    })}
 
-                      if (sale.url) {
-                        return (
-                          <a
-                            key={idx}
-                            href={sale.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block group"
-                          >
-                            {inner}
-                          </a>
-                        );
-                      }
-                      return <div key={idx}>{inner}</div>;
-                    })
-                  ) : (
-                    <p className="text-xs text-muted italic text-center py-8">
-                      {soldCompsData.length > 0
-                        ? "Individual sales records unavailable — chart shows aggregate snapshot data only."
-                        : "No recent eBay transactions found."}
-                    </p>
-                  )}
+                    {Object.keys(retailData.statsByType).filter((k) => k !== "all").length === 0 && (
+                      <p className="text-xs italic text-muted">No form statistics available.</p>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
             )}
           </div>
 
-          {/* Retail Listings & Breakdown Sub-Grid */}
-          {retailData && (retailData.listings.length > 0 || Object.keys(retailData.statsByType).length > 0) && (
-            <div className="border-t border-primary/10 pt-6 grid grid-cols-1 md:grid-cols-5 gap-6">
-              {/* Left Column: Live Retail Listings (Referral Links) */}
-              <div className="md:col-span-3 space-y-3">
-                <div>
-                  <h3 className="text-sm font-semibold text-heading">Available Retail Specimens</h3>
-                  <p className="text-[10px] text-muted mb-2">Click to visit store and purchase directly (prices include VAT)</p>
-                </div>
-                
-                {retailData.listings.length > 0 ? (
-                  <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1">
-                    {retailData.listings.map((list: any, idx: number) => (
-                      <a
-                        key={idx}
-                        href={list.productUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-primary/5 bg-card/50 p-3.5 hover:bg-card-hover/80 hover:border-primary/20 transition-all duration-300 shadow-sm"
-                      >
-                        <div className="space-y-1">
-                          <div className="text-xs font-semibold text-heading group-hover:text-primary transition-colors line-clamp-1">
-                            {list.title}
-                          </div>
-                          <div className="flex items-center gap-2 text-[9px] text-muted">
-                            <span className="bg-primary/10 text-primary px-1.5 py-0.5 rounded-md font-medium">{list.retailerName}</span>
-                            {list.potSizeCm && <span>{list.potSizeCm}cm Pot</span>}
-                            {list.plantSizeLabel && <span className="capitalize">{list.plantSizeLabel.replace(/_/g, " ")}</span>}
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-3 shrink-0 self-end sm:self-center">
-                          <div className="text-right">
-                            <div className="text-sm font-bold text-green-400">
-                              £{list.priceGbp.toFixed(2)}
-                            </div>
-                            {list.originalPriceGbp && (
-                              <div className="text-[9px] text-muted line-through">
-                                £{list.originalPriceGbp.toFixed(2)}
-                              </div>
-                            )}
-                          </div>
-                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-background bg-primary group-hover:bg-primary-dark rounded-lg px-3 py-1.5 transition-colors duration-200">
-                            Buy Now
-                            <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-xs text-muted italic">No retail specimens currently in stock.</p>
-                )}
-              </div>
+          {/* Field Notes */}
+          {data.fieldNotes && (
+            <div className="relative overflow-hidden rounded border-2 border-border bg-surface p-8">
+              {/* Double-ruled frame */}
+              <div className="pointer-events-none absolute inset-3 border border-dashed border-border" />
 
-              {/* Right Column: Size/Form price stats */}
-              <div className="md:col-span-2 space-y-3">
-                <div>
-                  <h3 className="text-sm font-semibold text-heading">Average Price by Form</h3>
-                  <p className="text-[10px] text-muted">Based on active retail listings</p>
+              {/* Brass rule at top */}
+              <div className="absolute left-0 right-0 top-0 h-px bg-accent/40" />
+
+              <div className="relative z-10 px-2 py-1">
+                <div className="mb-4 flex items-center justify-between border-b border-border pb-3">
+                  <span className="font-body text-[10px] font-bold uppercase tracking-[0.2em] text-muted">
+                    Field Notes &middot; Vol. 1
+                  </span>
+                  <span className="text-xs font-semibold text-muted">
+                    {new Date(data.fieldNotes.date).toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </span>
                 </div>
-                
-                <div className="rounded-xl border border-primary/5 bg-card/30 p-4 space-y-3.5">
-                  {Object.entries(retailData.statsByType).map(([type, stats]: [string, any]) => {
-                    if (type === "all") return null;
-                    const formattedType = type.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-                    return (
-                      <div key={type} className="flex flex-col gap-1 pb-2.5 border-b border-primary/5 last:border-0 last:pb-0">
-                        <div className="flex justify-between text-xs">
-                          <span className="text-muted-light font-medium">{formattedType}</span>
-                          <span className="font-semibold text-heading">£{stats.trimmedMean.toFixed(0)}</span>
-                        </div>
-                        <div className="flex justify-between text-[9px] text-muted">
-                          <span>Range: £{stats.min.toFixed(0)} - £{stats.max.toFixed(0)}</span>
-                          <span>{stats.count} items</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                  
-                  {Object.keys(retailData.statsByType).filter(k => k !== "all").length === 0 && (
-                    <p className="text-xs text-muted italic">No form statistics available.</p>
-                  )}
+
+                <h3 className="mb-3 font-heading text-xl font-semibold italic leading-tight text-heading">
+                  {data.fieldNotes.title}
+                </h3>
+
+                <p className="font-heading text-sm leading-relaxed text-muted">
+                  {data.fieldNotes.content}
+                </p>
+
+                <div className="mt-6 flex items-center justify-between text-xs text-muted">
+                  <span className="italic">Written at AroidAtlas research station</span>
+                  <span className="font-heading text-sm font-semibold italic text-heading">
+                    &mdash; Aroid Aaron
+                  </span>
                 </div>
               </div>
             </div>
           )}
         </div>
 
-        {/* Field Notes by Aroid Aaron (Vintage Journal Style) */}
-        {data.fieldNotes && (
-          <div className="relative overflow-hidden rounded-2xl bg-[#F4F0EA] border-2 border-[#E3DEC3] p-8 text-[#1A2421] shadow-lg">
-            {/* Double-ruled notebook frame */}
-            <div className="absolute inset-4 border border-dashed border-[#A8B5AE]/30 pointer-events-none" />
-            <div className="absolute inset-5 border border-double border-[#8B9A92]/40 pointer-events-none rounded-lg" />
-            
-            <div className="relative z-10 px-4 py-2">
-              <div className="flex items-center justify-between border-b border-[#8B9A92]/20 pb-3 mb-4">
-                <span className="text-[10px] font-bold tracking-widest text-[#8B9A92] uppercase font-body">
-                  Field Notes &middot; Vol. 1
-                </span>
-                <span className="text-xs font-semibold text-[#8B9A92] font-body">
-                  {new Date(data.fieldNotes.date).toLocaleDateString("en-GB", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric"
-                  })}
-                </span>
-              </div>
-
-              <h3 className="text-xl font-heading font-bold text-[#1A2421] mb-3 leading-tight italic">
-                {data.fieldNotes.title}
-              </h3>
-
-              <p className="text-sm leading-relaxed text-[#2C3531] font-heading font-serif">
-                {data.fieldNotes.content}
-              </p>
-
-              <div className="mt-6 flex items-center justify-between text-xs text-[#8B9A92] font-body">
-                <span className="italic">Written at AroidAtlas research station</span>
-                <span className="font-semibold italic text-[#1A2421] font-heading text-sm">
-                  &mdash; Aroid Aaron
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* ===== RIGHT SIDEBAR (Cols 8-10) ===== */}
-      <div className="plant-detail-sidebar-col">
-          <div className="rounded-xl bg-card p-5">
-            <h3 className="mb-4 text-sm font-semibold text-heading">
+        {/* ===== RIGHT SIDEBAR ===== */}
+        <div className="plant-detail-sidebar-col">
+          <div className="rounded border border-border bg-surface p-5">
+            {/* Brass top rule */}
+            <div className="-mx-5 -mt-5 mb-4 h-px bg-accent/30" />
+            <h3 className="mb-4 font-body text-[10px] font-bold uppercase tracking-[0.14em] text-heading">
               Quick Facts
             </h3>
             <div className="space-y-3">
               {Object.entries(data.quickFacts).map(([key, value]) => (
-                <div key={key} className="flex items-center justify-between">
-                  <span className="text-xs text-muted capitalize">
+                <div key={key} className="flex items-start justify-between gap-2">
+                  <span className="shrink-0 text-xs capitalize text-muted">
                     {key.replace(/([A-Z])/g, " $1").trim()}
                   </span>
-                  <span className="text-xs font-medium text-heading text-right max-w-[140px]">
+                  <span className="max-w-[140px] text-right text-xs font-medium text-heading">
                     {value}
                   </span>
                 </div>
               ))}
             </div>
-            <Link href="/learn" className="mt-5 block w-full rounded-xl bg-primary px-5 py-3 text-center text-sm font-semibold text-background transition hover:bg-primary/90">
+            <Link
+              href="/learn"
+              className="mt-5 block w-full rounded-sm bg-primary px-5 py-3 text-center text-sm font-semibold tracking-wide text-surface transition-colors duration-150 hover:bg-primary-dark"
+            >
               View Care Guide
             </Link>
           </div>
-          
 
           <a
             href={`https://www.etsy.com/uk/search?q=${encodeURIComponent(data.name)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-background transition hover:bg-primary/90"
+            className="flex w-full items-center justify-center gap-2 rounded-sm border border-primary/30 bg-transparent px-5 py-3 text-sm font-semibold text-primary transition-all duration-150 hover:border-primary/50 hover:bg-primary/5"
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z" />
             </svg>
-            Find Live Specimens on Etsy UK
+            Find on Etsy UK
           </a>
+        </div>
       </div>
 
-      {/* Close the plant-detail-grid container */}
-      </div>
-
-      {/* ===== BOTTOM FOOTPRINT: Recommended Plants ===== */}
+      {/* ===== RECOMMENDED PLANTS ===== */}
       <div className="plant-detail-recommended-section">
-        <h2 className="mb-5 text-lg font-heading font-bold text-heading">
+        <h2 className="mb-6 font-heading text-lg font-semibold text-heading">
           Recommended For You
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {data.recommendedPlants.map((plant) => {
             const recommendedGenus = (plant.genus || plant.name.split(" ")[0].replace(/['"]/g, "")).toLowerCase();
             return (
               <Link
                 key={plant.slug}
                 href={`/plants/${recommendedGenus}/${plant.slug}`}
-                className="group rounded-xl bg-card p-4 transition hover:bg-card/80"
+                className="group rounded border border-border bg-surface p-4 transition-all duration-150 hover:border-border-strong hover:shadow-glass"
               >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-sm font-semibold text-heading group-hover:text-primary transition-colors">
-                    {plant.name}
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2">
-                    <span className="inline-flex items-center rounded-full bg-price/10 px-2 py-0.5 text-[10px] font-medium text-price">
-                      {plant.price} · {getStaticTierLabel(plant.price)}
-                    </span>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-sm font-semibold text-heading transition-colors duration-150 group-hover:text-primary">
+                      {plant.name}
+                    </h3>
+                    <div className="mt-2">
+                      <span className="badge-price">
+                        {plant.price} · {getStaticTierLabel(plant.price)}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded border border-border bg-background-soft">
+                    <Image
+                      src={`/plants/${recommendedGenus}/${plant.slug}.png`}
+                      alt={plant.name}
+                      fill
+                      className="object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.06]"
+                      sizes="64px"
+                    />
                   </div>
                 </div>
-                <div className="relative h-16 w-16 rounded-lg overflow-hidden bg-background border border-primary/5 shrink-0">
-                  <Image
-                    src={`/plants/${recommendedGenus}/${plant.slug}.png`}
-                    alt={plant.name}
-                    fill
-                    className="object-cover object-center scale-[1.3] transition-all duration-500 ease-out group-hover:scale-[1.4] opacity-90 group-hover:opacity-100"
-                    sizes="64px"
-                  />
-                  {/* Spotlight overlay for recommended thumbnail */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(10,15,12,0.8)_80%,#0A0F0C_100%)] pointer-events-none" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
-                </div>
-              </div>
-            </Link>
-          );
+              </Link>
+            );
           })}
         </div>
       </div>

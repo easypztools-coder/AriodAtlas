@@ -20,21 +20,21 @@ interface SearchPlant {
 function StatCard({ label, value, index }: { label: string; value: string; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-      className="glass-card flex flex-col items-center gap-1 px-4 py-3 text-center"
+      className="flex flex-col items-center gap-1 border-r border-border px-5 py-2 text-center last:border-r-0"
     >
-      <span className="text-lg font-bold text-heading tabular-nums">{value}</span>
-      <span className="text-[10px] uppercase tracking-wider text-muted">{label}</span>
+      <span className="font-heading text-xl font-semibold text-heading tabular-nums">{value}</span>
+      <span className="text-[9px] uppercase tracking-[0.12em] text-muted">{label}</span>
     </motion.div>
   );
 }
 
 const LIVE_STAT_LABELS = [
-  { key: "species",           label: "Species Tracked" },
-  { key: "genera",            label: "Genera Covered" },
-  { key: "soldCompsAnalysed", label: "Retail Prices Tracked" },
+  { key: "species", label: "Species Tracked" },
+  { key: "genera", label: "Genera Covered" },
+  { key: "soldCompsAnalysed", label: "Prices Tracked" },
 ] as const;
 
 export default function HeroSection() {
@@ -53,8 +53,8 @@ export default function HeroSection() {
       .then((r) => r.json())
       .then((d) =>
         setLiveStats({
-          species:           d.species.toString(),
-          genera:            d.genera.toString(),
+          species: d.species.toString(),
+          genera: d.genera.toString(),
           soldCompsAnalysed: d.soldCompsAnalysed.toLocaleString(),
         })
       )
@@ -112,8 +112,7 @@ export default function HeroSection() {
   function handleSelect(slug: string, genus: string) {
     setSearchQuery("");
     setShowResults(false);
-    const genusPath = genus.toLowerCase();
-    router.push(`/plants/${genusPath}/${slug}`);
+    router.push(`/plants/${genus.toLowerCase()}/${slug}`);
   }
 
   function handleSearchSubmit(e: React.FormEvent) {
@@ -125,32 +124,42 @@ export default function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Background Glow */}
+      {/* Subtle warm-brass glow */}
       <div className="hero-glow pointer-events-none absolute inset-0" />
 
-      <div className="section-container relative py-8 md:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left: Text Content */}
+      <div className="section-container relative py-10 md:py-16">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+
+          {/* ── Left: Text Content ──────────────────────────────── */}
           <div className="space-y-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-6"
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="space-y-5"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-heading leading-tight">
-                The visual encyclopedia of{" "}
-                <span className="text-primary">rare tropical plants</span>
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3">
+                <div className="h-px w-8 bg-accent/60" />
+                <p className="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-accent">
+                  The Rare Plant Directory
+                </p>
+              </div>
+
+              {/* Headline */}
+              <h1 className="font-heading text-4xl font-semibold leading-[1.15] text-heading md:text-5xl lg:text-[52px]">
+                A curated atlas of rare aroids and their estimated value.
               </h1>
-              <p className="text-base md:text-lg text-muted-light max-w-xl leading-relaxed">
-                Discover, explore and compare the world&rsquo;s most extraordinary aroids.
-                A curated atlas for the discerning collector.
+
+              {/* Supporting copy */}
+              <p className="max-w-md text-base leading-relaxed text-muted">
+                Explore recognised species, cultivated forms, market history and current value estimates — curated for the serious collector.
               </p>
             </motion.div>
 
             {/* Search Bar */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative max-w-lg"
@@ -158,7 +167,7 @@ export default function HeroSection() {
             >
               <form onSubmit={handleSearchSubmit}>
                 <svg
-                  className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted"
+                  className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -176,86 +185,121 @@ export default function HeroSection() {
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   onFocus={ensureSearchIndexLoaded}
-                  placeholder="Search species, cultivars, or common names..."
-                  className="w-full rounded-2xl border border-primary/15 bg-card/70 py-4 pl-12 pr-4 text-sm text-heading placeholder-muted/50 outline-none transition-all duration-300 focus:border-primary/30 focus:bg-card focus:shadow-glow backdrop-blur-md"
+                  placeholder="Search species, cultivars or common names..."
+                  className="w-full rounded-sm border border-border bg-surface py-3.5 pl-11 pr-4 text-sm text-heading placeholder-muted/50 outline-none transition-all duration-150 focus:border-primary/40 focus:shadow-glow"
                 />
               </form>
+
               {/* Search Results Dropdown */}
               {showResults && (
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
+                  initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="absolute top-full left-0 right-0 mt-2 rounded-xl border border-primary/10 bg-card/95 backdrop-blur-xl shadow-xl overflow-hidden z-50"
+                  className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded border border-border bg-surface shadow-glass-hover"
                 >
                   {searchResults.slice(0, 6).map((plant) => (
                     <button
                       key={plant.slug}
                       onClick={() => handleSelect(plant.slug, plant.genus)}
-                      className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm transition hover:bg-primary/10"
+                      className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm transition-colors duration-100 hover:bg-background-soft"
                     >
-                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-xs text-primary font-medium">
-                        {plant.genus.slice(0, 2)}
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-[10px] font-semibold text-primary">
+                        {plant.genus.slice(0, 2).toUpperCase()}
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium text-heading italic truncate">{plant.scientificName}</p>
-                        <p className="text-xs text-muted truncate">{plant.commonName}</p>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-medium italic text-heading">
+                          {plant.scientificName}
+                        </p>
+                        <p className="truncate text-[10px] text-muted">{plant.commonName}</p>
                       </div>
-                      <span className="badge-price shrink-0 text-[10px]">{plant.priceGuideTier} · {getStaticTierLabel(plant.priceGuideTier)}</span>
+                      <span className="badge-price shrink-0">
+                        {plant.priceGuideTier} · {getStaticTierLabel(plant.priceGuideTier)}
+                      </span>
                     </button>
                   ))}
                 </motion.div>
               )}
             </motion.div>
 
-            {/* Stats Row */}
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-wrap items-center gap-4"
+            >
+              <Link href="/plants" className="btn-primary">
+                Explore the atlas
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+              <Link href="/learn" className="text-sm font-medium text-muted underline underline-offset-4 transition-colors duration-150 hover:text-heading">
+                View care guides
+              </Link>
+            </motion.div>
+
+            {/* Live Stats Row */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-3"
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
-              {LIVE_STAT_LABELS.map((s, i) => (
-                <StatCard key={s.key} label={s.label} value={liveStats[s.key] ?? "—"} index={i} />
-              ))}
+              <div className="inline-flex items-stretch divide-x divide-border rounded border border-border bg-surface">
+                {LIVE_STAT_LABELS.map((s, i) => (
+                  <StatCard key={s.key} label={s.label} value={liveStats[s.key] ?? "—"} index={i} />
+                ))}
+              </div>
             </motion.div>
           </div>
 
-          {/* Right: Hero Plant Render Placeholder */}
+          {/* ── Right: Hero Plant Image ──────────────────────────── */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="relative flex items-center justify-center"
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            className="flex items-center justify-center"
           >
-            <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
-              {/* Glow behind the plant */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-3xl" />
+            <div className="relative w-full max-w-sm md:max-w-md mx-auto">
+              {/* Subtle decorative ring */}
+              <div className="absolute -inset-4 rounded-full border border-accent/10 opacity-60" />
+              <div className="absolute -inset-8 rounded-full border border-accent/5 opacity-40" />
 
-              {/* Styled Container for hero plant image */}
+              {/* Plant image card */}
               <Link
                 href="/plants/philodendron/spiritus-sancti"
-                className="glass-card-glow relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl"
+                className="group relative block overflow-hidden rounded border border-border bg-surface shadow-glass transition-all duration-200 hover:border-border-strong hover:shadow-glass-hover"
               >
-                <Image
-                  src="/plants/philodendron/spiritus-sancti.png"
-                  alt="Philodendron spiritus-sancti — Hero Specimen"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
+                <div className="relative aspect-[3/4]">
+                  <Image
+                    src="/plants/philodendron/spiritus-sancti.png"
+                    alt="Philodendron spiritus-sancti — Featured Specimen"
+                    fill
+                    className="object-contain transition-transform duration-500 group-hover:scale-[1.015]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                  {/* Warm ivory fade at base */}
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-surface to-transparent" />
+                </div>
 
-                {/* Decorative gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-forest-dark/60" />
-
-                {/* Label */}
-                <div className="absolute bottom-4 left-4 right-4 text-center">
-                  <p className="text-xs text-muted/60 font-medium tracking-wider uppercase">
-                    Featured Specimen
-                  </p>
-                  <p className="text-sm text-heading/70 font-heading italic">
-                    Philodendron spiritus-sancti
-                  </p>
+                {/* Caption */}
+                <div className="px-5 pb-4 pt-2">
+                  {/* Fine brass rule above caption */}
+                  <div className="mb-3 h-px w-full bg-accent/25" />
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <p className="font-body text-[9px] uppercase tracking-[0.18em] text-accent">
+                        Featured Specimen
+                      </p>
+                      <p className="mt-0.5 font-heading text-sm italic text-heading">
+                        Philodendron spiritus-sancti
+                      </p>
+                    </div>
+                    <svg className="h-4 w-4 text-muted transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             </div>

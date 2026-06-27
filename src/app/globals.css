@@ -4,111 +4,118 @@
 
 @layer base {
   h1,
-  h2 {
-    font-family: var(--font-heading), serif;
+  h2,
+  h3 {
+    font-family: var(--font-heading), Georgia, serif;
   }
   body {
-    font-family: var(--font-body), sans-serif;
+    font-family: var(--font-body), system-ui, sans-serif;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(195, 217, 161, 0.15) transparent;
+    scrollbar-color: rgba(169, 135, 73, 0.2) transparent;
   }
 }
 
 @layer components {
+  /* ── Botanical Card System ─────────────────────────────────────────── */
   .glass-card {
-    @apply rounded-2xl border border-primary/10 bg-card/80 backdrop-blur-md shadow-glass;
+    @apply rounded border border-border bg-surface shadow-card-sm;
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-500 hover:shadow-glass-hover hover:border-primary/20 hover:bg-card-hover/80;
+    @apply glass-card transition-all duration-200 hover:border-border-strong hover:shadow-glass;
   }
 
+  /* glass-card-glow is an alias — no glow effect on light backgrounds */
   .glass-card-glow {
-    @apply glass-card-hover animate-glow-pulse;
+    @apply glass-card-hover;
   }
 
+  /* ── Badges ────────────────────────────────────────────────────────── */
   .badge-primary {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary;
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-primary;
   }
 
   .badge-rarity {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-rarity/10 px-3 py-1 text-xs font-medium text-rarity;
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-rarity/20 bg-rarity/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-rarity;
   }
 
   .badge-price {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-price/10 px-3 py-1 text-xs font-medium text-price;
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-accent/25 bg-accent/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-accent;
   }
 
   .badge-leaf {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-leaf/10 px-3 py-1 text-xs font-medium text-leaf;
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-leaf/20 bg-leaf/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-leaf;
   }
 
+  /* ── Typography ─────────────────────────────────────────────────────── */
   .section-heading {
-    @apply text-2xl md:text-3xl font-heading font-bold text-heading;
+    @apply font-heading text-2xl font-semibold tracking-tight text-heading md:text-3xl;
   }
 
   .section-subheading {
-    @apply text-sm md:text-base text-muted max-w-2xl;
+    @apply max-w-2xl text-sm leading-relaxed text-muted md:text-base;
   }
 
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-background transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 text-sm font-semibold tracking-wide text-surface transition-colors duration-150 hover:bg-primary-dark;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-primary/20 bg-primary/5 px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary/10 hover:border-primary/30;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-primary/30 bg-transparent px-6 py-3 text-sm font-semibold tracking-wide text-primary transition-all duration-150 hover:border-primary/50 hover:bg-primary/5;
   }
 
+  /* ── Navigation ──────────────────────────────────────────────────────── */
   .nav-link {
-    @apply text-sm font-medium text-muted transition-colors duration-200 hover:text-heading;
+    @apply text-xs font-medium uppercase tracking-[0.1em] text-muted transition-colors duration-150 hover:text-heading;
   }
 
   .nav-link-active {
-    @apply text-sm font-medium text-heading;
+    @apply text-xs font-semibold uppercase tracking-[0.1em] text-heading underline decoration-accent decoration-1 underline-offset-4;
   }
 
   .icon-btn {
-    @apply flex h-9 w-9 items-center justify-center rounded-lg text-muted transition-all duration-200 hover:bg-primary/10 hover:text-primary;
+    @apply flex h-9 w-9 items-center justify-center rounded text-muted transition-all duration-150 hover:bg-primary/10 hover:text-heading;
   }
 
+  /* ── Layout Helpers ──────────────────────────────────────────────────── */
   .hero-glow {
     @apply bg-hero-glow;
   }
 
   .section-container {
-    @apply mx-auto max-w-7xl px-6;
+    @apply mx-auto max-w-[1300px] px-6;
   }
 
-  /* Unified global spacing classes to minimize dead space */
   .section-spacing {
-    @apply py-10 md:py-14;
+    @apply py-12 md:py-16;
   }
 
   .section-spacing-tighter {
-    @apply py-6 md:py-10;
+    @apply py-8 md:py-12;
   }
 
-  /* Plant Detail page specific layouts */
+  /* ── Plant Detail Layout ──────────────────────────────────────────────── */
   .plant-detail-container {
-    @apply max-w-7xl mx-auto px-4 py-6 md:py-8 bg-background;
+    @apply mx-auto max-w-[1300px] px-4 py-6 md:py-10;
   }
 
   .plant-detail-grid {
-    @apply grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8 lg:items-start;
+    @apply grid grid-cols-1 gap-6 lg:grid-cols-10 lg:gap-10 lg:items-start;
   }
 
   .plant-detail-main-col {
-    @apply lg:col-span-7 space-y-6 md:space-y-8;
+    @apply space-y-6 md:space-y-8 lg:col-span-7;
   }
 
   .plant-detail-sidebar-col {
-    @apply lg:col-span-3 space-y-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto pr-1;
+    @apply space-y-4 lg:col-span-3 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto pr-1;
   }
 
   .plant-detail-recommended-section {
-    @apply mt-10 border-t border-primary/10 pt-8;
+    @apply mt-10 border-t border-border pt-8;
   }
 }

@@ -9,47 +9,72 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0F0C",
-        card: "#111A15",
-        "card-hover": "#18221C",
-        primary: "#C3D9A1",
-        "primary-dark": "#A8C485",
-        muted: "#8B9A92",
-        "muted-light": "#A8B5AE",
-        heading: "#FFFFFF",
-        rarity: "#F87171",
-        price: "#B371CF",
-        leaf: "#60A5FA",
-        "forest-dark": "#060A08",
-        "forest-deep": "#0D1612",
-        olive: "#5A6B4A",
-        "olive-light": "#7A8F66",
+        // ── Surfaces & Backgrounds ──────────────────────────────────────
+        background: "#F4F0E7",
+        "background-soft": "#EEE8DC",
+        surface: "#FAF8F2",
+        "surface-raised": "#FFFCF6",
+
+        // Card aliases (legacy compat)
+        card: "#FAF8F2",
+        "card-hover": "#F0EBE0",
+
+        // ── Primary: Deep Botanical Green ───────────────────────────────
+        primary: "#153328",
+        "primary-dark": "#0D261D",
+        "primary-muted": "#355448",
+
+        // ── Accent: Antique Brass ───────────────────────────────────────
+        accent: "#A98749",
+        "accent-muted": "#C2A873",
+        "accent-soft": "#DED1B4",
+
+        // ── Text ────────────────────────────────────────────────────────
+        heading: "#173229",
+        muted: "#526159",
+        "muted-light": "#7C837E",
+
+        // ── Borders ─────────────────────────────────────────────────────
+        border: "#D8D0C1",
+        "border-strong": "#B8AD98",
+
+        // ── Semantic UI ─────────────────────────────────────────────────
+        rarity: "#8B493F",
+        price: "#A98749",
+        leaf: "#496B55",
+
+        // ── Legacy overlay tokens (map to warm tones for image overlays) ─
+        "forest-dark": "#F4F0E7",
+        "forest-deep": "#EEE8DC",
+        olive: "#355448",
+        "olive-light": "#526159",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "serif"],
-        body: ["var(--font-body)", "sans-serif"],
+        heading: ["var(--font-heading)", "Georgia", "serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "hero-glow":
-          "radial-gradient(ellipse at center 40%, rgba(195, 217, 161, 0.08) 0%, transparent 70%)",
+          "radial-gradient(ellipse at center 40%, rgba(169, 135, 73, 0.07) 0%, transparent 65%)",
         "card-glow":
-          "linear-gradient(135deg, rgba(195, 217, 161, 0.05) 0%, transparent 50%)",
+          "linear-gradient(135deg, rgba(21, 51, 40, 0.02) 0%, transparent 50%)",
       },
       boxShadow: {
-        glass: "0 0 0 1px rgba(195, 217, 161, 0.08), 0 4px 24px rgba(0, 0, 0, 0.3)",
+        glass: "0 1px 4px rgba(21, 51, 40, 0.07), 0 0 0 1px rgba(216, 208, 193, 1)",
         "glass-hover":
-          "0 0 0 1px rgba(195, 217, 161, 0.15), 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(195, 217, 161, 0.05)",
-        glow: "0 0 30px rgba(195, 217, 161, 0.06)",
+          "0 2px 10px rgba(21, 51, 40, 0.10), 0 0 0 1px rgba(184, 173, 152, 1)",
+        glow: "0 0 0 2px rgba(169, 135, 73, 0.30)",
+        "card-sm": "0 1px 3px rgba(21, 51, 40, 0.05)",
       },
       borderRadius: {
-        "2xl": "16px",
-        "3xl": "24px",
+        "2xl": "10px",
+        "3xl": "14px",
       },
       animation: {
-        "fade-in": "fadeIn 0.6s ease-out forwards",
-        "fade-up": "fadeUp 0.8s ease-out forwards",
-        "glow-pulse": "glowPulse 3s ease-in-out infinite",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+        "fade-up": "fadeUp 0.7s ease-out forwards",
+        "glow-pulse": "glowPulse 4s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -57,12 +82,12 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         glowPulse: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(195, 217, 161, 0.03)" },
-          "50%": { boxShadow: "0 0 40px rgba(195, 217, 161, 0.08)" },
+          "0%, 100%": { opacity: "0.85" },
+          "50%": { opacity: "1" },
         },
       },
     },
