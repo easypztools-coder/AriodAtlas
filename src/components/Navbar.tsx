@@ -106,7 +106,7 @@ export default function Navbar() {
                 alt="Aroid Atlas"
                 width={674}
                 height={100}
-                className="h-14 w-auto mix-blend-screen"
+                className="h-12 w-auto mix-blend-screen invert hue-rotate-180"
                 priority
               />
             </Link>

@@ -227,21 +227,18 @@ export default function GenusPlantList({ initialPlants, genus }: GenusPlantListP
                         </div>
                       </div>
 
-                      {/* Right-aligned soft-reveal thumbnail */}
-                      <div className="relative h-20 w-20 shrink-0 rounded-xl overflow-hidden bg-card border border-primary/5">
+                      {/* Right-aligned plate thumbnail */}
+                      <div className="relative h-20 w-20 shrink-0 rounded-xl overflow-hidden bg-forest-dark/60 border border-primary/5">
                         <Image
                           src={`/plants/${genus}/${plant.slug}.png`}
                           alt={plant.commonName}
                           fill
-                          className="object-cover object-center scale-[1.3] transition-all duration-500 ease-out group-hover:scale-[1.4] opacity-90 group-hover:opacity-100"
+                          className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.05]"
                           sizes="80px"
                           onError={(e) => {
                             (e.currentTarget as HTMLImageElement).src = "/images/plant-placeholder.png";
                           }}
                         />
-                        {/* Spotlight overlay */}
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(17,26,21,0.8)_80%,#111A15_100%)] pointer-events-none" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent pointer-events-none" />
                       </div>
                     </div>
                   </Link>
