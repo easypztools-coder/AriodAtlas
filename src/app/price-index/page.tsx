@@ -38,7 +38,7 @@ async function buildRows(): Promise<PriceIndexRow[]> {
     .readdirSync(plantsRoot)
     .filter((g) => fs.statSync(path.join(plantsRoot, g)).isDirectory());
 
-  const jsonRows: Omit<PriceIndexRow, 'dbMedianPrice' | 'listingCount' | 'inStockCount' | 'retailerCount' | 'hasRetailData'>[] = [];
+  const jsonRows: Omit<PriceIndexRow, 'dbMedianPrice' | 'listingCount' | 'inStockCount' | 'retailerCount' | 'hasRetailData' | 'ebayDataPoints'>[] = [];
 
   for (const genus of genera) {
     const genusDir = path.join(plantsRoot, genus);
@@ -60,6 +60,9 @@ async function buildRows(): Promise<PriceIndexRow[]> {
           estimatedSource: data.marketMetrics?.estimatedSource ?? null,
           threeMonthChangePercent: data.marketMetrics?.threeMonthChangePercent ?? null,
           marketStatus: data.marketMetrics?.marketStatus ?? null,
+          ebayDataPoints: Array.isArray(data.priceHistory) && data.priceHistory.length > 0
+            ? (data.priceHistory[data.priceHistory.length - 1].dataPointsAnalyzed ?? null)
+            : null,
         });
       } catch {
         // skip malformed JSON

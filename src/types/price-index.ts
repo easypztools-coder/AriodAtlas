@@ -17,4 +17,5 @@ export interface PriceIndexRow {
   inStockCount: number;
   retailerCount: number;
   hasRetailData: boolean;
+  ebayDataPoints: number | null;
 }

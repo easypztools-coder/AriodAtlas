@@ -10,8 +10,8 @@ type SortKey =
   | 'botanicalType'
   | 'rarityStatus'
   | 'priceGuideTier'
-  | 'retailerPrice'
-  | 'ebayPrice'
+  | 'displayPrice'
+  | 'ebayDataPoints'
   | 'threeMonthChangePercent'
   | 'marketStatus'
   | 'listingCount'
@@ -29,8 +29,8 @@ const RARITY_ORDER: Record<string, number> = {
 
 function getSortValue(row: PriceIndexRow, key: SortKey): string | number | null {
   switch (key) {
-    case 'retailerPrice':  return row.dbMedianPrice;
-    case 'ebayPrice':      return row.currentMedianPriceGBP;
+    case 'displayPrice':   return row.dbMedianPrice ?? row.currentMedianPriceGBP ?? null;
+    case 'ebayDataPoints': return row.ebayDataPoints;
     case 'rarityStatus':   return RARITY_ORDER[row.rarityStatus] ?? -1;
     case 'priceGuideTier': return row.priceGuideTier.length;
     default:               return row[key] as string | number | null;
@@ -181,8 +181,8 @@ export default function PriceIndexTable({ rows }: Props) {
                 <ThHeader {...thProps} sortKey="botanicalType">Type</ThHeader>
                 <ThHeader {...thProps} sortKey="rarityStatus">Rarity</ThHeader>
                 <ThHeader {...thProps} sortKey="priceGuideTier">Tier</ThHeader>
-                <ThHeader {...thProps} sortKey="retailerPrice">Retailer £</ThHeader>
-                <ThHeader {...thProps} sortKey="ebayPrice">Est. £</ThHeader>
+                <ThHeader {...thProps} sortKey="displayPrice">Median £</ThHeader>
+                <ThHeader {...thProps} sortKey="ebayDataPoints">eBay #</ThHeader>
                 <ThHeader {...thProps} sortKey="threeMonthChangePercent">3M Change</ThHeader>
                 <ThHeader {...thProps} sortKey="marketStatus">Market</ThHeader>
                 <ThHeader {...thProps} sortKey="listingCount">Listings</ThHeader>
@@ -242,24 +242,26 @@ export default function PriceIndexTable({ rows }: Props) {
                       <span className="text-xs font-medium text-accent">{row.priceGuideTier}</span>
                     </td>
 
-                    {/* Retailer £ — live DB price from UK retailers */}
+                    {/* Median £ — retailer DB price, falling back to AI estimate */}
                     <td className="px-3 py-2 whitespace-nowrap">
-                      {row.dbMedianPrice != null ? (
-                        <span className="text-xs font-medium text-heading">
-                          £{row.dbMedianPrice.toFixed(0)}
-                        </span>
-                      ) : (
-                        <span className="text-xs text-muted">—</span>
-                      )}
+                      {(() => {
+                        const price = row.dbMedianPrice ?? row.currentMedianPriceGBP;
+                        const isEstimate = !row.dbMedianPrice && row.estimatedSource === 'ai_estimate';
+                        return price != null ? (
+                          <span className={`text-xs font-medium ${isEstimate ? 'text-muted' : 'text-heading'}`}>
+                            £{price.toFixed(0)}
+                            {isEstimate && <sup className="text-[9px] ml-0.5" title="AI estimate">~</sup>}
+                          </span>
+                        ) : (
+                          <span className="text-xs text-muted">—</span>
+                        );
+                      })()}
                     </td>
 
-                    {/* Est. £ — AI price estimate from marketMetrics */}
-                    <td className="px-3 py-2 whitespace-nowrap">
-                      {row.currentMedianPriceGBP != null ? (
-                        <span className="text-xs text-muted">
-                          £{row.currentMedianPriceGBP.toFixed(0)}
-                          <sup className="text-[9px] ml-0.5" title="AI estimate">~</sup>
-                        </span>
+                    {/* eBay # — number of sold listings the last price snapshot was based on */}
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
+                      {row.ebayDataPoints != null ? (
+                        <span className="text-xs text-heading">{row.ebayDataPoints}</span>
                       ) : (
                         <span className="text-xs text-muted">—</span>
                       )}
@@ -363,9 +365,9 @@ export default function PriceIndexTable({ rows }: Props) {
 
       {/* Legend */}
       <p className="text-[10px] text-muted/70 font-body">
-        <strong>Retailer £</strong> — live median from UK retailer listings.{' '}
-        <strong>Est. £ <sup>~</sup></strong> — AI price estimate; no live market data yet.
-        Listing counts cover the last 30 days.
+        <strong>Median £<sup>~</sup></strong> — AI price estimate; no live retailer data yet for that species.
+        <strong> eBay #</strong> — number of sold listings used in the latest eBay price snapshot.
+        Retail listing counts cover the last 30 days.
       </p>
     </div>
   );
