@@ -25,23 +25,24 @@ export async function GET() {
     }
   }
 
-  // Retail price observation count from DB; fall back to eBay filesystem
-  // snapshots if no DB is configured (local dev without a database).
-  let retailPricesTracked = 0;
+  // Total eBay sold listings analysed — sum accepted_count across all snapshots.
+  // Falls back to filesystem snapshots if DB is unavailable.
+  let soldCompsAnalysed = 0;
   const hasDb = !!(process.env.POSTGRES_URL || process.env.DATABASE_URL);
 
   if (hasDb) {
     try {
       const db = getDbPool();
       const res = await db.query(
-        "SELECT COUNT(*)::int AS count FROM retail_price_observations"
+        "SELECT COALESCE(SUM(accepted_count), 0)::int AS count FROM ebay_price_snapshots"
       );
-      retailPricesTracked = res.rows[0]?.count ?? 0;
+      soldCompsAnalysed = res.rows[0]?.count ?? 0;
     } catch {
-      // DB unavailable — leave at 0
+      // DB unavailable — fall through to filesystem
     }
-  } else {
-    // Filesystem fallback: sum acceptedCount from eBay price snapshots
+  }
+
+  if (soldCompsAnalysed === 0) {
     const snapshotsRoot = path.join(process.cwd(), "content", "price-snapshots");
     if (fs.existsSync(snapshotsRoot)) {
       for (const slugDir of fs.readdirSync(snapshotsRoot, { withFileTypes: true }).filter((d) => d.isDirectory())) {
@@ -49,7 +50,7 @@ export async function GET() {
         if (fs.existsSync(latestPath)) {
           try {
             const data = JSON.parse(fs.readFileSync(latestPath, "utf-8"));
-            retailPricesTracked += data.acceptedCount ?? 0;
+            soldCompsAnalysed += data.acceptedCount ?? 0;
           } catch {
             // malformed snapshot — skip
           }
@@ -61,6 +62,6 @@ export async function GET() {
   return NextResponse.json({
     species,
     genera: generaCount,
-    soldCompsAnalysed: retailPricesTracked,
+    soldCompsAnalysed,
   });
 }
