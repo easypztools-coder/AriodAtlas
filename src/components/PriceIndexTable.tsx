@@ -10,7 +10,8 @@ type SortKey =
   | 'botanicalType'
   | 'rarityStatus'
   | 'priceGuideTier'
-  | 'displayPrice'
+  | 'retailerPrice'
+  | 'ebayPrice'
   | 'threeMonthChangePercent'
   | 'marketStatus'
   | 'listingCount'
@@ -28,24 +29,11 @@ const RARITY_ORDER: Record<string, number> = {
 
 function getSortValue(row: PriceIndexRow, key: SortKey): string | number | null {
   switch (key) {
-    case 'displayPrice':
-      return row.dbMedianPrice ?? row.currentMedianPriceGBP ?? null;
-    case 'rarityStatus':
-      return RARITY_ORDER[row.rarityStatus] ?? -1;
-    case 'priceGuideTier':
-      return row.priceGuideTier.length;
-    case 'listingCount':
-      return row.listingCount;
-    case 'inStockCount':
-      return row.inStockCount;
-    case 'retailerCount':
-      return row.retailerCount;
-    case 'collectorPopularity':
-      return row.collectorPopularity;
-    case 'threeMonthChangePercent':
-      return row.threeMonthChangePercent;
-    default:
-      return row[key] as string | null;
+    case 'retailerPrice':  return row.dbMedianPrice;
+    case 'ebayPrice':      return row.currentMedianPriceGBP;
+    case 'rarityStatus':   return RARITY_ORDER[row.rarityStatus] ?? -1;
+    case 'priceGuideTier': return row.priceGuideTier.length;
+    default:               return row[key] as string | number | null;
   }
 }
 
@@ -62,7 +50,7 @@ function ThHeader({ children, sortKey: k, activeSortKey, sortDir, onSort }: ThHe
   return (
     <th
       onClick={() => onSort(k)}
-      className="px-3 py-3 text-left text-xs font-medium text-muted whitespace-nowrap sticky top-[82px] z-20 bg-[#FAF8F2] cursor-pointer select-none hover:text-heading transition-colors duration-100 border-b border-primary/10"
+      className="px-3 py-3 text-left text-xs font-medium text-muted whitespace-nowrap sticky top-0 z-20 bg-[#FAF8F2] cursor-pointer select-none hover:text-heading transition-colors duration-100 border-b border-primary/10"
     >
       <span className="flex items-center gap-0.5">
         {children}
@@ -136,10 +124,7 @@ export default function PriceIndexTable({ rows }: Props) {
 
   function handleSort(key: SortKey) {
     if (sortKey === key) setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
-    else {
-      setSortKey(key);
-      setSortDir('asc');
-    }
+    else { setSortKey(key); setSortDir('asc'); }
   }
 
   const thProps = { activeSortKey: sortKey, sortDir, onSort: handleSort };
@@ -157,9 +142,7 @@ export default function PriceIndexTable({ rows }: Props) {
         />
         <select value={filterGenus} onChange={(e) => setFilterGenus(e.target.value)} className={SELECT_CLASS}>
           <option value="all">All Genera</option>
-          {genera.map((g) => (
-            <option key={g} value={g}>{g}</option>
-          ))}
+          {genera.map((g) => <option key={g} value={g}>{g}</option>)}
         </select>
         <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className={SELECT_CLASS}>
           <option value="all">All Types</option>
@@ -169,9 +152,7 @@ export default function PriceIndexTable({ rows }: Props) {
         </select>
         <select value={filterRarity} onChange={(e) => setFilterRarity(e.target.value)} className={SELECT_CLASS}>
           <option value="all">All Rarities</option>
-          {rarities.map((r) => (
-            <option key={r} value={r}>{r}</option>
-          ))}
+          {rarities.map((r) => <option key={r} value={r}>{r}</option>)}
         </select>
         <label className="flex items-center gap-2 text-xs text-muted cursor-pointer select-none">
           <input
@@ -189,9 +170,9 @@ export default function PriceIndexTable({ rows }: Props) {
         </span>
       </div>
 
-      {/* Table */}
-      <div className="glass-card overflow-hidden">
-        <div className="overflow-x-auto">
+      {/* Table — contained scroll so sticky thead works */}
+      <div className="glass-card">
+        <div className="overflow-auto max-h-[75vh]">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr>
@@ -200,7 +181,8 @@ export default function PriceIndexTable({ rows }: Props) {
                 <ThHeader {...thProps} sortKey="botanicalType">Type</ThHeader>
                 <ThHeader {...thProps} sortKey="rarityStatus">Rarity</ThHeader>
                 <ThHeader {...thProps} sortKey="priceGuideTier">Tier</ThHeader>
-                <ThHeader {...thProps} sortKey="displayPrice">Median £</ThHeader>
+                <ThHeader {...thProps} sortKey="retailerPrice">Retailer £</ThHeader>
+                <ThHeader {...thProps} sortKey="ebayPrice">Est. £</ThHeader>
                 <ThHeader {...thProps} sortKey="threeMonthChangePercent">3M Change</ThHeader>
                 <ThHeader {...thProps} sortKey="marketStatus">Market</ThHeader>
                 <ThHeader {...thProps} sortKey="listingCount">Listings</ThHeader>
@@ -212,23 +194,17 @@ export default function PriceIndexTable({ rows }: Props) {
             <tbody className="divide-y divide-border">
               {displayed.map((row) => {
                 const genusSlug = row.genus.toLowerCase();
-                const displayPrice = row.dbMedianPrice ?? row.currentMedianPriceGBP;
-                const isEstimate =
-                  displayPrice != null &&
-                  displayPrice === row.currentMedianPriceGBP &&
-                  !row.dbMedianPrice &&
-                  row.estimatedSource === 'ai_estimate';
 
                 return (
                   <tr
                     key={`${genusSlug}-${row.slug}`}
                     className="hover:bg-primary/[.025] transition-colors duration-100"
                   >
-                    {/* Plant name + thumbnail */}
-                    <td className="px-3 py-2.5 min-w-[200px] max-w-[260px]">
+                    {/* Plant: image left, name right */}
+                    <td className="px-3 py-2 min-w-[200px] max-w-[260px]">
                       <Link
                         href={`/plants/${genusSlug}/${row.slug}`}
-                        className="flex items-center gap-2.5 group"
+                        className="flex items-start gap-2.5 group"
                       >
                         <img
                           src={`/plants/${genusSlug}/${row.slug}.png`}
@@ -236,53 +212,53 @@ export default function PriceIndexTable({ rows }: Props) {
                           aria-hidden="true"
                           width={28}
                           height={36}
-                          className="object-cover rounded shrink-0 opacity-85 group-hover:opacity-100 transition-opacity"
+                          className="object-cover rounded shrink-0 opacity-85 group-hover:opacity-100 transition-opacity mt-0.5"
                           style={{ width: 28, height: 36 }}
                           onError={(e) => {
                             (e.target as HTMLImageElement).style.display = 'none';
                           }}
                         />
-                        <div className="min-w-0">
-                          <p className="text-xs font-medium italic text-heading group-hover:text-primary transition-colors leading-tight truncate">
-                            {row.scientificName}
-                          </p>
-                          {row.commonName && (
-                            <p className="text-[10px] text-muted leading-tight truncate">
-                              {row.commonName}
-                            </p>
-                          )}
-                        </div>
+                        <span className="text-xs font-medium italic text-heading group-hover:text-primary transition-colors leading-snug truncate">
+                          {row.scientificName}
+                        </span>
                       </Link>
                     </td>
 
                     {/* Genus */}
-                    <td className="px-3 py-2.5 text-xs text-muted whitespace-nowrap">
-                      {row.genus}
-                    </td>
+                    <td className="px-3 py-2 text-xs text-muted whitespace-nowrap">{row.genus}</td>
 
-                    {/* Botanical type */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
+                    {/* Type */}
+                    <td className="px-3 py-2 whitespace-nowrap">
                       <span className="text-xs text-muted capitalize">{row.botanicalType}</span>
                     </td>
 
                     {/* Rarity */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
+                    <td className="px-3 py-2 whitespace-nowrap">
                       <span className="text-[10px] font-medium text-rarity">{row.rarityStatus}</span>
                     </td>
 
-                    {/* Price tier */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
+                    {/* Price guide tier */}
+                    <td className="px-3 py-2 whitespace-nowrap">
                       <span className="text-xs font-medium text-accent">{row.priceGuideTier}</span>
                     </td>
 
-                    {/* Median price */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
-                      {displayPrice != null ? (
+                    {/* Retailer £ — live DB price from UK retailers */}
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      {row.dbMedianPrice != null ? (
                         <span className="text-xs font-medium text-heading">
-                          £{displayPrice.toFixed(0)}
-                          {isEstimate && (
-                            <sup className="text-muted text-[9px] ml-0.5" title="AI estimate">~</sup>
-                          )}
+                          £{row.dbMedianPrice.toFixed(0)}
+                        </span>
+                      ) : (
+                        <span className="text-xs text-muted">—</span>
+                      )}
+                    </td>
+
+                    {/* Est. £ — AI price estimate from marketMetrics */}
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      {row.currentMedianPriceGBP != null ? (
+                        <span className="text-xs text-muted">
+                          £{row.currentMedianPriceGBP.toFixed(0)}
+                          <sup className="text-[9px] ml-0.5" title="AI estimate">~</sup>
                         </span>
                       ) : (
                         <span className="text-xs text-muted">—</span>
@@ -290,7 +266,7 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* 3M change */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
+                    <td className="px-3 py-2 whitespace-nowrap">
                       {row.threeMonthChangePercent != null ? (
                         <span
                           className={`text-xs font-medium ${
@@ -306,7 +282,7 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* Market status */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
+                    <td className="px-3 py-2 whitespace-nowrap">
                       {row.marketStatus ? (
                         <span
                           className={`text-xs font-medium ${
@@ -317,11 +293,7 @@ export default function PriceIndexTable({ rows }: Props) {
                               : 'text-muted'
                           }`}
                         >
-                          {row.marketStatus === 'Rising'
-                            ? '↑ '
-                            : row.marketStatus === 'Declining'
-                            ? '↓ '
-                            : '→ '}
+                          {row.marketStatus === 'Rising' ? '↑ ' : row.marketStatus === 'Declining' ? '↓ ' : '→ '}
                           {row.marketStatus}
                         </span>
                       ) : (
@@ -330,7 +302,7 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* Listings */}
-                    <td className="px-3 py-2.5 text-center whitespace-nowrap">
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
                       {row.hasRetailData ? (
                         <span className="text-xs font-medium text-heading">{row.listingCount}</span>
                       ) : (
@@ -339,7 +311,7 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* In stock */}
-                    <td className="px-3 py-2.5 text-center whitespace-nowrap">
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
                       {row.hasRetailData ? (
                         <span
                           className={`text-xs font-medium ${
@@ -354,7 +326,7 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* Retailers */}
-                    <td className="px-3 py-2.5 text-center whitespace-nowrap">
+                    <td className="px-3 py-2 text-center whitespace-nowrap">
                       {row.hasRetailData ? (
                         <span className="text-xs text-heading">{row.retailerCount}</span>
                       ) : (
@@ -363,8 +335,11 @@ export default function PriceIndexTable({ rows }: Props) {
                     </td>
 
                     {/* Collector popularity */}
-                    <td className="px-3 py-2.5 whitespace-nowrap">
-                      <span className="text-xs tracking-tight" aria-label={`${row.collectorPopularity} out of 5`}>
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      <span
+                        className="text-xs tracking-tight"
+                        aria-label={`${row.collectorPopularity} out of 5`}
+                      >
                         {Array.from({ length: 5 }, (_, i) => (
                           <span key={i} className={i < row.collectorPopularity ? 'text-accent' : 'text-border'}>
                             {i < row.collectorPopularity ? '●' : '○'}
@@ -388,8 +363,9 @@ export default function PriceIndexTable({ rows }: Props) {
 
       {/* Legend */}
       <p className="text-[10px] text-muted/70 font-body">
-        <sup>~</sup> AI estimate — no live retail data available for this species yet.
-        Listing counts cover the last 30 days across approved UK retailers.
+        <strong>Retailer £</strong> — live median from UK retailer listings.{' '}
+        <strong>Est. £ <sup>~</sup></strong> — AI price estimate; no live market data yet.
+        Listing counts cover the last 30 days.
       </p>
     </div>
   );
