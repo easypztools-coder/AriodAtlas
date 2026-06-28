@@ -116,9 +116,20 @@ export async function GET(request: NextRequest) {
         UNIQUE(retailer_slug, product_url)
       )
     `);
-    // Unique constraint — needed for ON CONFLICT upserts. Added separately so it
-    // applies even when the table already existed without the constraint.
-    await db.query(`CREATE UNIQUE INDEX IF NOT EXISTS uq_obs_retailer_product_url ON retail_price_observations(retailer_slug, product_url)`);
+    // Remove duplicate rows before adding the unique constraint — keeps the
+    // most recently-seen row per (retailer_slug, product_url).
+    await db.query(`
+      DELETE FROM retail_price_observations
+      WHERE id NOT IN (
+        SELECT MAX(id) FROM retail_price_observations
+        GROUP BY retailer_slug, product_url
+      )
+    `);
+    // Drop and recreate the unique index so it's definitely present and
+    // unique — handles the case where a non-unique index with this name
+    // was left behind by an older migration.
+    await db.query(`DROP INDEX IF EXISTS uq_obs_retailer_product_url`);
+    await db.query(`CREATE UNIQUE INDEX uq_obs_retailer_product_url ON retail_price_observations(retailer_slug, product_url)`);
     // Composite index covering the retail-market API query pattern
     await db.query(`CREATE INDEX IF NOT EXISTS idx_obs_plant_stock_seen ON retail_price_observations(plant_slug, in_stock, last_seen_at DESC, price_gbp ASC)`);
     await db.query(`
@@ -157,7 +168,15 @@ export async function GET(request: NextRequest) {
       )
     `);
     await db.query(`CREATE INDEX IF NOT EXISTS idx_review_status ON retail_price_review_queue(status)`);
-    await db.query(`CREATE UNIQUE INDEX IF NOT EXISTS uq_review_retailer_product_url ON retail_price_review_queue(retailer_slug, product_url)`);
+    await db.query(`
+      DELETE FROM retail_price_review_queue
+      WHERE id NOT IN (
+        SELECT MAX(id) FROM retail_price_review_queue
+        GROUP BY retailer_slug, product_url
+      )
+    `);
+    await db.query(`DROP INDEX IF EXISTS uq_review_retailer_product_url`);
+    await db.query(`CREATE UNIQUE INDEX uq_review_retailer_product_url ON retail_price_review_queue(retailer_slug, product_url)`);
     await db.query(`
       CREATE TABLE IF NOT EXISTS retail_scrape_errors (
         id SERIAL PRIMARY KEY,

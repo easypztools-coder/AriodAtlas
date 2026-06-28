@@ -496,11 +496,6 @@ export default function PlantDetailPage({
                             </div>
                           );
 
-                          const hoverHandlers = {
-                            onMouseEnter: () => sale.soldDate && setHoveredWeekDate(sale.soldDate),
-                            onMouseLeave: () => setHoveredWeekDate(null),
-                          };
-
                           if (sale.url) {
                             return (
                               <a
@@ -509,14 +504,13 @@ export default function PlantDetailPage({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block group"
-                                {...hoverHandlers}
                               >
                                 {inner}
                               </a>
                             );
                           }
                           return (
-                            <div key={idx} {...hoverHandlers}>
+                            <div key={idx}>
                               {inner}
                             </div>
                           );
