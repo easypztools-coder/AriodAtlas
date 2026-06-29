@@ -75,5 +75,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Veracruz Diversity",
+    "date": "2023-06-15",
+    "author": "Aroid Aaron",
+    "content": "Named for the botanist Miguel Ángel Florés Cano, Monstera florescanoana adds to the already considerable Monstera diversity documented from Veracruz state in Mexico. Described from Mexican cloud forest and insufficiently studied to have established itself in mainstream cultivation, which gives it an appropriately esoteric quality in specialist collections. The Veracruz highlands host several Monstera species that have barely filtered into the collector hobby; florescanoana is one of the more accessible of these in terms of availability if not in terms of widespread knowledge."
+  }
 }

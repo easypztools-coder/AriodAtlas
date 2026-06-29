@@ -141,5 +141,11 @@
       "Confirm the cutting or plant has been rooted before purchasing, unless you are buying intentionally unrooted — unrooted cuttings require a propagation setup to succeed"
     ]
   },
-  "botanicalType": "cultivar"
+  "botanicalType": "cultivar",
+  "fieldNotes": {
+    "title": "The El Salvador Provenance",
+    "date": "2023-08-01",
+    "author": "Aroid Aaron",
+    "content": "Monstera siltepecana has a wide distribution from eastern Mexico to Nicaragua, with the El Salvador form representing a specific Central American provenance that collectors have identified as morphologically distinct from the type. Siltepecana juveniles shingle in much the same way as Monstera dubia — the leaves press flat against the host substrate — before transitioning to free-hanging adult growth. The El Salvador form may differ in leaf size and fenestration pattern at maturity. Available at middle tier pricing for what is a legitimate collector's differentiation."
+  }
 }

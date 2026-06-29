@@ -78,5 +78,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Caribbean Obliqua",
+    "date": "2023-06-01",
+    "author": "Aroid Aaron",
+    "content": "A Trinidad locality form of Monstera obliqua from the Caribbean island, which is geologically and biogeographically continuous with the Venezuelan mainland rather than with the Antillean island chain. Trinidad's flora contains numerous South American species that reached the island via the former land connection to Venezuela. Rare, at accessible price tier. Trinidad obliqua — if genuinely obliqua rather than adansonii — represents an interesting biogeographic data point for understanding the species' distribution across its full range including island populations."
+  }
 }

@@ -141,5 +141,11 @@
       "On eBay, compare the listed plant to multiple recent sold comps to confirm the asking price is realistic for the variegation level shown"
     ]
   },
-  "botanicalType": "variegated"
+  "botanicalType": "variegated",
+  "fieldNotes": {
+    "title": "Nangarita Valley Variegation",
+    "date": "2023-11-01",
+    "author": "Aroid Aaron",
+    "content": "A variegated collector form of Philodendron nangaritense — a species from Ecuador, named for the Nangaritza River valley in Zamora-Chinchipe province where collections were made. The variegated selection adds cream or white sectoring to the already interesting species-type leaf form. At upper middle tier pricing, as a combination of genuine species rarity and variegated selection status. The Nangaritza valley is a biogeographically significant collecting ground in Ecuador; the species name carries that geographic specificity honestly."
+  }
 }

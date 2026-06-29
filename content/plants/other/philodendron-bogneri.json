@@ -77,5 +77,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "The Malagasy Outlier",
+    "date": "2023-01-15",
+    "author": "Aroid Aaron",
+    "content": "Madagascar begonias occupy a very specific ecological niche: rocky habitats, sharply drained mineral substrates, monsoon climate with distinct dry seasons — quite unlike the perpetually humid forest floor conditions that most collectable begonias prefer. Begonia bogneri reflects this completely different requirement profile. It tolerates — indeed requires — periodic dryness that would kill a Bornean humidity-lover. A botanical curiosity that repays learning about the specific ecology of the Malagasy interior before simply treating it like everything else in your terrarium. It will not thank you for the comparison."
+  }
 }

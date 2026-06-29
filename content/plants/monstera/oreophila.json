@@ -91,5 +91,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Mountain-Loving Monstera",
+    "date": "2023-07-01",
+    "author": "Aroid Aaron",
+    "content": "Oreophila means 'mountain-loving,' which accurately describes a Costa Rican to Panamanian Monstera adapted to higher elevation forest conditions than most of its lowland relatives. Cooler temperatures, consistent cloud moisture, and higher light levels characterise the montane habitats this species occupies — which is relevant to UK cultivation since montane species frequently perform better in the British climate than their lowland relatives, due to the closer alignment with northern European seasonal temperature profiles. A useful and interesting plant for this reason."
+  }
 }

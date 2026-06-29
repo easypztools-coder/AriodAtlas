@@ -91,5 +91,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Tacaná Volcano Origins",
+    "date": "2023-05-15",
+    "author": "Aroid Aaron",
+    "content": "Named for the Tacaná volcano on the Mexico-Guatemala border — the cone that marks the transition between Mexican Chiapas and the Guatemalan highlands. A climbing Monstera distributed from this origin through Central America and Panama, in humid cloud forest conditions. At middle tier pricing. The geological specificity of the name is pleasantly rare in plant taxonomy — most species are named for people or descriptive qualities, and the volcano origin gives this one a biogeographic context that is genuinely informative."
+  }
 }

@@ -78,5 +78,11 @@
     ],
     "marketCurrency": "GBP"
   },
-  "recommendedPlants": []
+  "recommendedPlants": [],
+  "fieldNotes": {
+    "title": "Southeast Asian Velvet Crossing",
+    "date": "2023-10-01",
+    "author": "Aroid Aaron",
+    "content": "A horticultural cross between Anthurium nigrolaminum 'Gigi' — itself a Southeast Asian selection of a Peruvian species — and papillilaminum, combining the dark, deeply velvety character of nigrolaminum with the more robust growth habit of papillilaminum. Developed in Thai breeding programmes during the peak of velvet Anthurium enthusiasm, this cross and its sibling (note the two different spelling variants circulating in the trade) produce plants with remarkable dark surface colouration. The slight spelling discrepancy between this entry and the adjacent one in the catalogue is itself illustrative of how informally documented the provenance of many Thai hybrids remains."
+  }
 }

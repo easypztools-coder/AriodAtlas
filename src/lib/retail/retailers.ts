@@ -26,8 +26,9 @@ export const approvedRetailers: RetailerConfig[] = [
     method: "html_selectors",
     config: {
       selectors: {
-        container: 'a[href^="/shop/"]',
+        container: 'article[class*="ProductCard__StyledProductCard"]',
         title: "h3",
+        link: "h3 a",
         price: "p",
       },
     },
