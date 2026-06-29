@@ -116,21 +116,7 @@ export async function GET(request: NextRequest) {
         UNIQUE(retailer_slug, product_url)
       )
     `);
-    // Remove duplicate rows before adding the unique constraint — keeps the
-    // most recently-seen row per (retailer_slug, product_url).
-    await db.query(`
-      DELETE FROM retail_price_observations
-      WHERE id NOT IN (
-        SELECT MAX(id) FROM retail_price_observations
-        GROUP BY retailer_slug, product_url
-      )
-    `);
-    // Drop and recreate the unique index so it's definitely present and
-    // unique — handles the case where a non-unique index with this name
-    // was left behind by an older migration.
-    await db.query(`DROP INDEX IF EXISTS uq_obs_retailer_product_url`);
-    await db.query(`CREATE UNIQUE INDEX uq_obs_retailer_product_url ON retail_price_observations(retailer_slug, product_url)`);
-    // Composite index covering the retail-market API query pattern
+    await db.query(`CREATE UNIQUE INDEX IF NOT EXISTS uq_obs_retailer_product_url ON retail_price_observations(retailer_slug, product_url)`);
     await db.query(`CREATE INDEX IF NOT EXISTS idx_obs_plant_stock_seen ON retail_price_observations(plant_slug, in_stock, last_seen_at DESC, price_gbp ASC)`);
     await db.query(`
       CREATE TABLE IF NOT EXISTS retail_price_snapshots (
@@ -168,15 +154,7 @@ export async function GET(request: NextRequest) {
       )
     `);
     await db.query(`CREATE INDEX IF NOT EXISTS idx_review_status ON retail_price_review_queue(status)`);
-    await db.query(`
-      DELETE FROM retail_price_review_queue
-      WHERE id NOT IN (
-        SELECT MAX(id) FROM retail_price_review_queue
-        GROUP BY retailer_slug, product_url
-      )
-    `);
-    await db.query(`DROP INDEX IF EXISTS uq_review_retailer_product_url`);
-    await db.query(`CREATE UNIQUE INDEX uq_review_retailer_product_url ON retail_price_review_queue(retailer_slug, product_url)`);
+    await db.query(`CREATE UNIQUE INDEX IF NOT EXISTS uq_review_retailer_product_url ON retail_price_review_queue(retailer_slug, product_url)`);
     await db.query(`
       CREATE TABLE IF NOT EXISTS retail_scrape_errors (
         id SERIAL PRIMARY KEY,
@@ -225,17 +203,19 @@ export async function GET(request: NextRequest) {
     cultivar: p.cultivar,
   }));
 
-  // 3. Loop over approved retailers
-  for (const retailer of approvedRetailers) {
-    console.log(`[Cron Scraper] Starting ${retailer.name} (${retailer.method})...`);
-
-    try {
+  // 3. Scrape all retailers in parallel — wall time is now max(slowest retailer)
+  //    rather than sum(all retailers).
+  const retailerResults = await Promise.allSettled(
+    approvedRetailers.map(async (retailer) => {
+      console.log(`[Cron Scraper] Starting ${retailer.name} (${retailer.method})...`);
       const extracted = await runRetailerAdapter(retailer);
       console.log(`[Cron Scraper] Extracted ${extracted.length} products from ${retailer.name}`);
-      fetchedProductCount += extracted.length;
 
-      // Track product URLs seen in this run so we can mark absent ones out-of-stock
       const seenProductUrls: string[] = [];
+      let fetched = extracted.length;
+      let accepted = 0;
+      let review = 0;
+      let rejected = 0;
 
       for (const prod of extracted) {
         let bestMatch: EnabledPlant | null = null;
@@ -270,7 +250,7 @@ export async function GET(request: NextRequest) {
             matchConfidence: highestConf,
           });
           seenProductUrls.push(prod.productUrl);
-          acceptedCount++;
+          accepted++;
         } else if (highestConf >= 0.65 && bestMatch) {
           await upsertReviewQueue(db, {
             retailerSlug: prod.retailerSlug,
@@ -282,15 +262,13 @@ export async function GET(request: NextRequest) {
             priceGbp: prod.priceGbp,
             reason: matchReason,
           });
-          reviewCount++;
+          review++;
         } else {
-          rejectedCount++;
+          rejected++;
         }
       }
 
       // Mark products from this retailer that weren't seen in this run as out-of-stock.
-      // Only do this when the extraction succeeded and returned results — if extracted is
-      // empty, we can't distinguish "retailer has no products" from a fetch failure.
       if (seenProductUrls.length > 0) {
         try {
           await db.query(
@@ -305,10 +283,24 @@ export async function GET(request: NextRequest) {
           console.error(`[Cron Scraper] Error marking stale listings for ${retailer.name}:`, cleanupErr);
         }
       }
-    } catch (err: any) {
-      console.error(`[Cron Scraper] Error scraping ${retailer.name}:`, err);
+
+      return { retailerSlug: retailer.slug, method: retailer.method, fetched, accepted, review, rejected };
+    })
+  );
+
+  // Accumulate counts and log per-retailer errors
+  for (let i = 0; i < retailerResults.length; i++) {
+    const result = retailerResults[i];
+    const retailer = approvedRetailers[i];
+    if (result.status === "fulfilled") {
+      fetchedProductCount += result.value.fetched;
+      acceptedCount += result.value.accepted;
+      reviewCount += result.value.review;
+      rejectedCount += result.value.rejected;
+    } else {
       errorCount++;
-      const errorMessage = err instanceof Error ? err.message : String(err);
+      const errorMessage = result.reason instanceof Error ? result.reason.message : String(result.reason);
+      console.error(`[Cron Scraper] Error scraping ${retailer.name}:`, result.reason);
       errorsList.push({ retailer: retailer.slug, message: errorMessage });
 
       try {
