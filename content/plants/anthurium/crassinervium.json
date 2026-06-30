@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium crassinervium",
+  "slug": "crassinervium",
+  "scientificName": "Anthurium crassinervium",
+  "commonName": "Pugnacious Birdsnest",
+  "statusTag": "Uncommon Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "crassinervium",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Medium",
+  "priceGuideTier": "£",
+  "aboutText": "Anthurium crassinervium is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Rosette, birdsnest",
+    "matureSize": "Large (60-100 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "60 - 85%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Ovate-spathulate, wavy",
+    "leafLength": "40cm - 90cm",
+    "leafWidth": "20cm - 40cm",
+    "petioleColor": "Stout green",
+    "venation": "Thick keeled midrib",
+    "texture": "Very thick, coriaceous",
+    "variegation": "None",
+    "growthHabit": "Erect rosette"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 28,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium crassinervium",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium crassinervium",
+      "Anthurium crassinervium"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. A massive birdsnest species, crassinervium has exceptionally thick, coriaceous leaves with a kneed petiole and a keeled midrib underneath. It is highly drought-tolerant compared to other aroids, and represents a robust specimen for a spacious collection.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "crassinervium",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium crassinervium",
+    "commonName": "Pugnacious Birdsnest"
+  },
+  "displayMetadata": {
+    "statusTag": "Uncommon Species",
+    "rarityStatus": "Uncommon",
+    "availability": "Medium",
+    "priceGuideTier": "£",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Rosette, birdsnest",
+      "matureSize": "Large (60-100 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "60 - 85%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Easy",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Ovate-spathulate, wavy",
+      "leafLength": "40cm - 90cm",
+      "leafWidth": "20cm - 40cm",
+      "petioleColor": "Stout green",
+      "venation": "Thick keeled midrib",
+      "texture": "Very thick, coriaceous",
+      "variegation": "None",
+      "growthHabit": "Erect rosette"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

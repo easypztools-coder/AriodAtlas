@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium veitchii",
+  "slug": "veitchii",
+  "scientificName": "Anthurium veitchii",
+  "commonName": "King Anthurium",
+  "statusTag": "Very Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "veitchii",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Very Rare",
+  "availability": "Low",
+  "priceGuideTier": "£££",
+  "aboutText": "Anthurium veitchii is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Pendant epiphyte",
+    "matureSize": "Large (up to 1m+ leaves)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "75 - 90%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Long lanceolate, deeply corrugated",
+    "leafLength": "50cm - 120cm",
+    "leafWidth": "15cm - 30cm",
+    "petioleColor": "Light green, arching",
+    "venation": "Parallel lateral veins forming deep ridges",
+    "texture": "Leathery, thick",
+    "variegation": "None",
+    "growthHabit": "Erect crown, later pendulous"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 120,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium veitchii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium veitchii",
+      "Anthurium veitchii"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. The King Anthurium, Anthurium veitchii, is truly royal in stature. The heavily corrugated, pendulous leaves are exceptionally leathery and can reach immense lengths under high humidity. I watched a specimen hanging from a mossy rock face, its pleated blade catching the moisture of the mist. In the UK trade, pricing remains high and volatile, with larger specimens fetching exorbitant sums from wealthy collectors who value sheer scale over compact domesticity.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "veitchii",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium veitchii",
+    "commonName": "King Anthurium"
+  },
+  "displayMetadata": {
+    "statusTag": "Very Rare Species",
+    "rarityStatus": "Very Rare",
+    "availability": "Low",
+    "priceGuideTier": "£££",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Pendant epiphyte",
+      "matureSize": "Large (up to 1m+ leaves)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "75 - 90%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Advanced",
+      "growthSpeed": "Slow"
+    },
+    "morphology": {
+      "leafShape": "Long lanceolate, deeply corrugated",
+      "leafLength": "50cm - 120cm",
+      "leafWidth": "15cm - 30cm",
+      "petioleColor": "Light green, arching",
+      "venation": "Parallel lateral veins forming deep ridges",
+      "texture": "Leathery, thick",
+      "variegation": "None",
+      "growthHabit": "Erect crown, later pendulous"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

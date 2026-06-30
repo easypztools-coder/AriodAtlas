@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium bakeri",
+  "slug": "bakeri",
+  "scientificName": "Anthurium bakeri",
+  "commonName": "Bakeri Strap Leaf",
+  "statusTag": "Uncommon Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "bakeri",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Medium",
+  "priceGuideTier": "£",
+  "aboutText": "Anthurium bakeri is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Pendant epiphyte",
+    "matureSize": "Medium (40-60 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "70 - 80%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Strap-like, narrow",
+    "leafLength": "30cm - 60cm",
+    "leafWidth": "3cm - 5cm",
+    "petioleColor": "Short green",
+    "venation": "Subtle primary vein",
+    "texture": "Leathery, flexible",
+    "variegation": "None",
+    "growthHabit": "Clumping epiphyte"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 20,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium bakeri",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium bakeri",
+      "Anthurium bakeri"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. A strap-leaf Anthurium, bakeri produces long, narrow, pendulous foliage. It is a tidy, easy epiphyte that regularly produces bright red, showy berries along its spadix. It requires little fuss compared to its larger-leafed brethren, and its market value remains low and highly accessible for the casual hobbyist.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "bakeri",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium bakeri",
+    "commonName": "Bakeri Strap Leaf"
+  },
+  "displayMetadata": {
+    "statusTag": "Uncommon Species",
+    "rarityStatus": "Uncommon",
+    "availability": "Medium",
+    "priceGuideTier": "£",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Pendant epiphyte",
+      "matureSize": "Medium (40-60 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "70 - 80%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Easy",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Strap-like, narrow",
+      "leafLength": "30cm - 60cm",
+      "leafWidth": "3cm - 5cm",
+      "petioleColor": "Short green",
+      "venation": "Subtle primary vein",
+      "texture": "Leathery, flexible",
+      "variegation": "None",
+      "growthHabit": "Clumping epiphyte"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

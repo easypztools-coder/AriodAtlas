@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium dressleri",
+  "slug": "dressleri",
+  "scientificName": "Anthurium dressleri",
+  "commonName": "Dressleri Velvet Leaf",
+  "statusTag": "Extremely Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "dressleri",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Extremely Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "Anthurium dressleri is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Terrestrial, slow-clumping",
+    "matureSize": "Medium (30-50 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "80 - 95%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Cordate, heavily bullate",
+    "leafLength": "20cm - 35cm",
+    "leafWidth": "15cm - 25cm",
+    "petioleColor": "Burgundy-green",
+    "venation": "Pale green, contrasted",
+    "texture": "Velvety, thick",
+    "variegation": "None",
+    "growthHabit": "Slow basal growth"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 250,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium dressleri",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium dressleri",
+      "Anthurium dressleri"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium dressleri is a dark and troublesome treasure from the humid forests of Panama. The leaves are of the deepest velvety black-green, thick and heavily corrugated. It grows with painful slowness and is prone to immediate rot if the air goes stagnant or dry. The market in London is rife with questionable hybrids sold under this name, but a true dressleri specimen commands a small fortune.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "dressleri",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium dressleri",
+    "commonName": "Dressleri Velvet Leaf"
+  },
+  "displayMetadata": {
+    "statusTag": "Extremely Rare Species",
+    "rarityStatus": "Extremely Rare",
+    "availability": "Very Low",
+    "priceGuideTier": "££££",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Terrestrial, slow-clumping",
+      "matureSize": "Medium (30-50 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "80 - 95%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Advanced",
+      "growthSpeed": "Slow"
+    },
+    "morphology": {
+      "leafShape": "Cordate, heavily bullate",
+      "leafLength": "20cm - 35cm",
+      "leafWidth": "15cm - 25cm",
+      "petioleColor": "Burgundy-green",
+      "venation": "Pale green, contrasted",
+      "texture": "Velvety, thick",
+      "variegation": "None",
+      "growthHabit": "Slow basal growth"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

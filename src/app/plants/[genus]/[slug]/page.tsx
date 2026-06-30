@@ -239,6 +239,7 @@ export default function PlantPage({ params }: PageProps) {
                 "@type": "Offer",
                 priceCurrency: "GBP",
                 price: data.marketMetrics.currentMedianPriceGBP,
+                priceValidUntil: new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
                 availability: "https://schema.org/LimitedAvailability",
                 seller: {
                   "@type": "Organization",
@@ -310,70 +311,30 @@ export default function PlantPage({ params }: PageProps) {
       {
         "@type": "FAQPage",
         mainEntity: [
-          ...(data.marketMetrics.currentMedianPriceGBP
-            ? [
-                {
-                  "@type": "Question",
-                  name: `How much does a ${data.scientificName} cost?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `A ${data.commonName} (${data.scientificName}) typically costs around £${Math.round(data.marketMetrics.currentMedianPriceGBP)} in the UK based on recent eBay UK sold comparables. It is classified as ${data.rarityStatus} and rated ${data.priceGuideTier} on the collector market.`,
-                  },
-                },
-              ]
-            : []),
+          {
+            "@type": "Question",
+            name: `How much does ${data.scientificName} cost in the UK?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `The current median market value for a ${data.scientificName} in the UK is approximately £${data.marketMetrics.currentMedianPriceGBP || 0} based on transaction analytics.`,
+            },
+          },
           {
             "@type": "Question",
             name: `Is ${data.scientificName} rare?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: `${data.scientificName} is classified as ${data.rarityStatus}. Availability is described as ${data.availability}. It originates from ${data.origin} and is considered a ${data.statusTag ? data.statusTag + " " : ""}collector specimen.`,
+              text: `Yes, ${data.scientificName} is classified as ${data.rarityStatus} with a current availability status of ${data.availability}.`,
             },
           },
           {
             "@type": "Question",
-            name: `Where can I buy ${data.commonName}?`,
+            name: `Where can I find live specimens of ${data.scientificName}?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: `${data.commonName} (${data.scientificName}) can be found on eBay UK, specialist aroid nurseries, and private collector groups. Aroid Atlas tracks live UK market prices to help you pay a fair price.`,
+              text: `Verified live specimens of ${data.scientificName} can be sourced from independent indoor plant nurseries and online specialty storefronts.`,
             },
           },
-          ...(data.quickFacts?.light
-            ? [
-                {
-                  "@type": "Question",
-                  name: `What light does ${data.scientificName} need?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `${data.scientificName} requires ${data.quickFacts.light}. As a ${data.botanicalType} from ${data.origin}, it thrives in conditions that replicate its natural forest habitat.`,
-                  },
-                },
-              ]
-            : []),
-          ...(data.quickFacts?.humidity
-            ? [
-                {
-                  "@type": "Question",
-                  name: `What humidity does ${data.scientificName} need?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `${data.scientificName} prefers ${data.quickFacts.humidity} humidity. Maintaining adequate humidity is important for healthy leaf development and preventing tip browning.`,
-                  },
-                },
-              ]
-            : []),
-          ...(data.quickFacts?.difficulty
-            ? [
-                {
-                  "@type": "Question",
-                  name: `Is ${data.scientificName} easy to care for?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `${data.scientificName} is rated as ${data.quickFacts.difficulty} difficulty. ${data.quickFacts.growthSpeed ? `It has a ${data.quickFacts.growthSpeed} growth rate. ` : ""}It is best suited for collectors with experience growing rare tropical aroids.`,
-                  },
-                },
-              ]
-            : []),
         ],
       },
     ],

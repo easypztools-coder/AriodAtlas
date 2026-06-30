@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium hookeri",
+  "slug": "hookeri",
+  "scientificName": "Anthurium hookeri",
+  "commonName": "Birdsnest Anthurium",
+  "statusTag": "Uncommon Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "hookeri",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Medium",
+  "priceGuideTier": "£",
+  "aboutText": "Anthurium hookeri is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Rosette, birdsnest",
+    "matureSize": "Large (60-90 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "60 - 80%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Ovate-spathulate",
+    "leafLength": "40cm - 80cm",
+    "leafWidth": "20cm - 35cm",
+    "petioleColor": "Short, thick green",
+    "venation": "Keeled midrib, parallel lateral veins",
+    "texture": "Coriaceous, stiff",
+    "variegation": "None",
+    "growthHabit": "Rosette crown"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 25,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium hookeri",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium hookeri",
+      "Anthurium hookeri"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium hookeri presents a very different aspect. It is a birdsnest type, forming a tight rosette of stiff, coriaceous leaves designed to capture falling forest debris. The leaf margins are slightly wavy, and the surface lacks any velvet sheen, being glossy green instead. Prices are stable and accessible, making it a robust addition for those who lack the space or humifying apparatus for delicate species.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "hookeri",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium hookeri",
+    "commonName": "Birdsnest Anthurium"
+  },
+  "displayMetadata": {
+    "statusTag": "Uncommon Species",
+    "rarityStatus": "Uncommon",
+    "availability": "Medium",
+    "priceGuideTier": "£",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Rosette, birdsnest",
+      "matureSize": "Large (60-90 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "60 - 80%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Easy",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Ovate-spathulate",
+      "leafLength": "40cm - 80cm",
+      "leafWidth": "20cm - 35cm",
+      "petioleColor": "Short, thick green",
+      "venation": "Keeled midrib, parallel lateral veins",
+      "texture": "Coriaceous, stiff",
+      "variegation": "None",
+      "growthHabit": "Rosette crown"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

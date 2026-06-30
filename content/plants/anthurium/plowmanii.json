@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium plowmanii",
+  "slug": "plowmanii",
+  "scientificName": "Anthurium plowmanii",
+  "commonName": "Ruffled Birdsnest Anthurium",
+  "statusTag": "Uncommon Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "plowmanii",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Uncommon",
+  "availability": "Medium",
+  "priceGuideTier": "£",
+  "aboutText": "Anthurium plowmanii is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Rosette, clumping",
+    "matureSize": "Large (60-100 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "65 - 80%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Undulated lanceolate",
+    "leafLength": "40cm - 90cm",
+    "leafWidth": "15cm - 30cm",
+    "petioleColor": "Green, stout",
+    "venation": "Thick primary veins",
+    "texture": "Extremely coriaceous, ruffled",
+    "variegation": "None",
+    "growthHabit": "Dense rosette"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 30,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium plowmanii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium plowmanii",
+      "Anthurium plowmanii"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium plowmanii is distinguished by its extremely ruffled, undulated leaf margins. The leaves are incredibly leathery, resembling thick parchment. It stands up to dry air better than most in this genus, which is a blessing in the drafty glasshouses of England. The market is stable, with healthy specimens priced moderately.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "plowmanii",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium plowmanii",
+    "commonName": "Ruffled Birdsnest Anthurium"
+  },
+  "displayMetadata": {
+    "statusTag": "Uncommon Species",
+    "rarityStatus": "Uncommon",
+    "availability": "Medium",
+    "priceGuideTier": "£",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Rosette, clumping",
+      "matureSize": "Large (60-100 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "65 - 80%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Easy",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Undulated lanceolate",
+      "leafLength": "40cm - 90cm",
+      "leafWidth": "15cm - 30cm",
+      "petioleColor": "Green, stout",
+      "venation": "Thick primary veins",
+      "texture": "Extremely coriaceous, ruffled",
+      "variegation": "None",
+      "growthHabit": "Dense rosette"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

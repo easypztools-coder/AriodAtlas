@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium brownii",
+  "slug": "brownii",
+  "scientificName": "Anthurium brownii",
+  "commonName": "Brownii Elephant Ear",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "brownii",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "££",
+  "aboutText": "Anthurium brownii is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Climbing, hemi-epiphytic",
+    "matureSize": "Large (60-120 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "70 - 85%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Moderate to Fast"
+  },
+  "morphology": {
+    "leafShape": "Tri-lobed, elephant-ear",
+    "leafLength": "40cm - 80cm",
+    "leafWidth": "30cm - 50cm",
+    "petioleColor": "Green with ruffled margins",
+    "venation": "Thick primary and secondary veins",
+    "texture": "Smooth, satin",
+    "variegation": "None",
+    "growthHabit": "Climbing scandent"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 45,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium brownii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium brownii",
+      "Anthurium brownii"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium brownii grows into a massive elephant ear structure. The lobed leaves have ruffled petioles and a beautiful satin sheen. It is a robust climber that can quickly take over a glasshouse wall. Prices are moderate, reflecting its slightly faster growth rate compared to the strict understory velvets.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "brownii",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium brownii",
+    "commonName": "Brownii Elephant Ear"
+  },
+  "displayMetadata": {
+    "statusTag": "Rare Species",
+    "rarityStatus": "Rare",
+    "availability": "Low",
+    "priceGuideTier": "££",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Climbing, hemi-epiphytic",
+      "matureSize": "Large (60-120 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "70 - 85%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Intermediate",
+      "growthSpeed": "Moderate to Fast"
+    },
+    "morphology": {
+      "leafShape": "Tri-lobed, elephant-ear",
+      "leafLength": "40cm - 80cm",
+      "leafWidth": "30cm - 50cm",
+      "petioleColor": "Green with ruffled margins",
+      "venation": "Thick primary and secondary veins",
+      "texture": "Smooth, satin",
+      "variegation": "None",
+      "growthHabit": "Climbing scandent"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "name": "Anthurium nigrolaminum 'Gigi' x papillilaminum",
+  "slug": "anthurium-nigrolaminum-gigi-x-papillilaminum",
+  "scientificName": "Anthurium nigrolaminum 'Gigi' x papillilaminum",
+  "commonName": "Nigro-Papillilaminum Hybrid",
+  "statusTag": "Rare Hybrid Cultivar",
+  "botanicalType": "hybrid",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "nigrolaminum 'Gigi' x papillilaminum",
+  "origin": "Thailand",
+  "collectorPopularity": 5.0,
+  "rarityStatus": "Extremely Rare",
+  "availability": "Very Low",
+  "priceGuideTier": "££££",
+  "aboutText": "A horticultural masterwork, this hybrid crosses the legendary Anthurium nigrolaminum 'Gigi' with a premium selection of Anthurium papillilaminum. It is highly coveted for its extremely dark, velvety, coriaceous leaves which feature prominent, contrasting silver-white primary venation. Originating from advanced collections in Southeast Asia, this hybrid exhibits outstanding structural presence, producing elongated heart-sagittate leaves that deepen in color as they mature. It demands humid, warm conditions typical of tropical forest understories and performs best in a loose, aerated, organic medium.",
+  "quickFacts": {
+    "growthHabit": "Epiphytic, clumping",
+    "matureSize": "Large; leaves up to 60cm+",
+    "light": "Bright, indirect filtered light",
+    "humidity": "70 - 90%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Advanced",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Elongated heart-sagittate",
+    "leafLength": "40cm - 70cm",
+    "leafWidth": "15cm - 25cm",
+    "petioleColor": "Dark burgundy",
+    "venation": "Conspicuous silver-white",
+    "texture": "Velvety, heavily coriaceous",
+    "variegation": "None (venation focus)",
+    "growthHabit": "Epiphytic"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 48.0,
+    "threeMonthChangePercent": 0.0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium nigrolaminum Gigi papillilaminum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium nigrolaminum x pap",
+      "Anthurium Gigi hybrid",
+      "Anthurium Gigi pap"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Another cross between Anthurium nigrolaminum 'Gigi' and papillilaminum—the double-L spelling variant that circulates alongside the single-L version in the trade, both referring to the same parentage combination from Thai breeding programmes. I have observed these leaves in the glasshouse; their coriaceous, heavily velvety textures absorb light like charcoal under a tropical canopy. Yet, the price volatility of these novelties in the London market is absurd; local sellers demand extortionate figures for mere cuttings, while the broader import pipelines show signs of imminent saturation. A collector's hybrid for those who have decided that standard velvet anthuriums are insufficiently dark, but one must tread carefully in these speculative waters.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "nigrolaminum 'Gigi' x papillilaminum",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium nigrolaminum 'Gigi' x papillilaminum",
+    "commonName": "Nigro-Papillilaminum Hybrid"
+  },
+  "displayMetadata": {
+    "statusTag": "Rare Hybrid Cultivar",
+    "rarityStatus": "Extremely Rare",
+    "availability": "Very Low",
+    "priceGuideTier": "££££",
+    "collectorPopularity": 5.0
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Epiphytic, clumping",
+      "matureSize": "Large; leaves up to 60cm+",
+      "light": "Bright, indirect filtered light",
+      "humidity": "70 - 90%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Advanced",
+      "growthSpeed": "Slow"
+    },
+    "morphology": {
+      "leafShape": "Elongated heart-sagittate",
+      "leafLength": "40cm - 70cm",
+      "leafWidth": "15cm - 25cm",
+      "petioleColor": "Dark burgundy",
+      "venation": "Conspicuous silver-white",
+      "texture": "Velvety, heavily coriaceous",
+      "variegation": "None (venation focus)",
+      "growthHabit": "Epiphytic"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium 'Ace of Spades'",
+      "slug": "ace-of-spades",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    },
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Requires high humidity and precise warm moisture levels. Rooting cuttings is slow."
+  },
+  "careGuide": {
+    "substrate": "Very chunky, well-aerated mix: orchid bark, perlite, sphagnum moss, charcoal.",
+    "watering": "Water when the top half of the substrate is dry. Sensitive to rot.",
+    "humidity": "Minimum 70% required for healthy leaf expansion.",
+    "fertilising": "Balanced low-strength fertilizer monthly during active growth.",
+    "repotting": "Repot only when rootbound, disturb roots minimally.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering or root rot",
+        "fix": "Check roots, trim rot, repot in drier chunky mix."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify that the leaf texture is thick and coriaceous as expected of a healthy specimen.",
+      "Check the petiole color; it should be dark burgundy-maroon, typical of the Gigi parentage.",
+      "Examine root structure closely for transit-related rot or decay."
+    ]
+  }
+}

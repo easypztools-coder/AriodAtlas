@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium clarinervium",
+  "slug": "clarinervium",
+  "scientificName": "Anthurium clarinervium",
+  "commonName": "Clarinervium Velvet Leaf",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "clarinervium",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Medium",
+  "priceGuideTier": "££",
+  "aboutText": "Anthurium clarinervium is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Compact, terrestrial",
+    "matureSize": "Medium (40-60 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "70 - 80%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Slow"
+  },
+  "morphology": {
+    "leafShape": "Deeply cordate",
+    "leafLength": "20cm - 30cm",
+    "leafWidth": "15cm - 22cm",
+    "petioleColor": "Dark green, terete",
+    "venation": "Striking silver-white, geometric",
+    "texture": "Velvety, coriaceous",
+    "variegation": "None",
+    "growthHabit": "Compact rosette"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 35,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium clarinervium",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium clarinervium",
+      "Anthurium clarinervium"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium clarinervium remains a foundational marvel of the Mexican understories. Its deeply cordate, velvety leaves are remarkably stiff and coriaceous to the touch, offset by a clean, geometric white venation that stands in sharp contrast to the dark blade. I must note, the pricing index in London has stabilised somewhat for this species compared to its wildly volatile hybrid cousins, yet nurserymen still demand a premium for specimens showing perfect, unblemished cordation.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "clarinervium",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium clarinervium",
+    "commonName": "Clarinervium Velvet Leaf"
+  },
+  "displayMetadata": {
+    "statusTag": "Rare Species",
+    "rarityStatus": "Rare",
+    "availability": "Medium",
+    "priceGuideTier": "££",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Compact, terrestrial",
+      "matureSize": "Medium (40-60 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "70 - 80%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Intermediate",
+      "growthSpeed": "Slow"
+    },
+    "morphology": {
+      "leafShape": "Deeply cordate",
+      "leafLength": "20cm - 30cm",
+      "leafWidth": "15cm - 22cm",
+      "petioleColor": "Dark green, terete",
+      "venation": "Striking silver-white, geometric",
+      "texture": "Velvety, coriaceous",
+      "variegation": "None",
+      "growthHabit": "Compact rosette"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

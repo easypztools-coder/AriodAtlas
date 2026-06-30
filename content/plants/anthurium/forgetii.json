@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium forgetii",
+  "slug": "forgetii",
+  "scientificName": "Anthurium forgetii",
+  "commonName": "Forgetii Velvet Leaf",
+  "statusTag": "Rare Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "forgetii",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Rare",
+  "availability": "Low",
+  "priceGuideTier": "££",
+  "aboutText": "Anthurium forgetii is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Compact, clumping",
+    "matureSize": "Medium (30-50 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "70 - 85%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Intermediate",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Peltate, ovate-elliptic",
+    "leafLength": "25cm - 40cm",
+    "leafWidth": "15cm - 25cm",
+    "petioleColor": "Green to reddish-green",
+    "venation": "Silvery-green primary veins",
+    "texture": "Velvety, soft",
+    "variegation": "None",
+    "growthHabit": "Self-heading"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 55,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium forgetii",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium forgetii",
+      "Anthurium forgetii"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium forgetii is an anomaly, lacking the typical sinus of the genus. The leaves are completely peltate, a rounded dark green shield of velvety texture. It is a quiet, striking beauty that absorbs light like fine velvet cloth. Speculators are actively dividing imports from Colombia, creating a highly unstable secondary market for small offsets in the home counties.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "forgetii",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium forgetii",
+    "commonName": "Forgetii Velvet Leaf"
+  },
+  "displayMetadata": {
+    "statusTag": "Rare Species",
+    "rarityStatus": "Rare",
+    "availability": "Low",
+    "priceGuideTier": "££",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Compact, clumping",
+      "matureSize": "Medium (30-50 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "70 - 85%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Intermediate",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Peltate, ovate-elliptic",
+      "leafLength": "25cm - 40cm",
+      "leafWidth": "15cm - 25cm",
+      "petioleColor": "Green to reddish-green",
+      "venation": "Silvery-green primary veins",
+      "texture": "Velvety, soft",
+      "variegation": "None",
+      "growthHabit": "Self-heading"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

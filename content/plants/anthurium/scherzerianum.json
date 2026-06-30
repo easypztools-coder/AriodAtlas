@@ -1,0 +1,137 @@
+{
+  "name": "Anthurium scherzerianum",
+  "slug": "scherzerianum",
+  "scientificName": "Anthurium scherzerianum",
+  "commonName": "Flamingo Flower",
+  "statusTag": "Common Species",
+  "botanicalType": "species",
+  "family": "Araceae",
+  "genus": "Anthurium",
+  "species": "scherzerianum",
+  "origin": "Tropical Americas",
+  "collectorPopularity": 4,
+  "rarityStatus": "Common",
+  "availability": "High",
+  "priceGuideTier": "£",
+  "aboutText": "Anthurium scherzerianum is a native species of the tropical Americas. It exhibits outstanding foliage characteristics suitable for rare plant collectors.",
+  "quickFacts": {
+    "growthHabit": "Clumping, erect",
+    "matureSize": "Medium (30-50 cm)",
+    "light": "Bright, indirect filtered light",
+    "humidity": "60 - 80%",
+    "temperature": "18 - 26°C",
+    "difficulty": "Easy",
+    "growthSpeed": "Moderate"
+  },
+  "morphology": {
+    "leafShape": "Ovate-lanceolate",
+    "leafLength": "20cm - 35cm",
+    "leafWidth": "8cm - 12cm",
+    "petioleColor": "Greenish-brown",
+    "venation": "Visible central vein",
+    "texture": "Matte, slightly leathery",
+    "variegation": "None",
+    "growthHabit": "Basal clumps"
+  },
+  "marketMetrics": {
+    "currentMedianPriceGBP": 15,
+    "threeMonthChangePercent": 0,
+    "marketStatus": "Awaiting Synchronisation Pipeline Run"
+  },
+  "priceTracking": {
+    "enabled": true,
+    "source": "soldcomps",
+    "marketplace": "ebay.co.uk",
+    "query": "Anthurium scherzerianum",
+    "requiredTerms": [],
+    "acceptedTerms": [
+      "Anthurium scherzerianum",
+      "Anthurium scherzerianum"
+    ],
+    "excludeTerms": [
+      "seeds",
+      "bulb",
+      "rhizome",
+      "poster",
+      "print",
+      "sticker",
+      "pot"
+    ],
+    "marketCurrency": "GBP"
+  },
+  "fieldNotes": "15th October 1889. Anthurium scherzerianum is the classic flamingo flower, though wild collections are still treasured. The curly orange-red spadix and bright red spathe are unmistakable. It is common, stable, and highly resistant to pests, making it the perfect plant for the general public, though collectors still value selected cultivars.",
+  "taxonomy": {
+    "genus": "Anthurium",
+    "species": "scherzerianum",
+    "botanicalType": "Araceae",
+    "scientificName": "Anthurium scherzerianum",
+    "commonName": "Flamingo Flower"
+  },
+  "displayMetadata": {
+    "statusTag": "Common Species",
+    "rarityStatus": "Common",
+    "availability": "High",
+    "priceGuideTier": "£",
+    "collectorPopularity": 4
+  },
+  "careInfo": {
+    "quickFacts": {
+      "growthHabit": "Clumping, erect",
+      "matureSize": "Medium (30-50 cm)",
+      "light": "Bright, indirect filtered light",
+      "humidity": "60 - 80%",
+      "temperature": "18 - 26°C",
+      "difficulty": "Easy",
+      "growthSpeed": "Moderate"
+    },
+    "morphology": {
+      "leafShape": "Ovate-lanceolate",
+      "leafLength": "20cm - 35cm",
+      "leafWidth": "8cm - 12cm",
+      "petioleColor": "Greenish-brown",
+      "venation": "Visible central vein",
+      "texture": "Matte, slightly leathery",
+      "variegation": "None",
+      "growthHabit": "Basal clumps"
+    }
+  },
+  "recommendedPlants": [
+    {
+      "name": "Anthurium crystallinum",
+      "slug": "crystallinum",
+      "genus": "anthurium",
+      "rarity": "Rare",
+      "price": "£"
+    }
+  ],
+  "propagation": {
+    "methods": [
+      "Stem cutting",
+      "Offset (keiki)"
+    ],
+    "difficulty": "Challenging",
+    "timeToEstablished": "6-12 months",
+    "propagatesTrue": null,
+    "notes": "Propagates best under high humidity."
+  },
+  "careGuide": {
+    "substrate": "Chunky aroid mix.",
+    "watering": "Water when top 50% dry.",
+    "humidity": "High (70-90%).",
+    "fertilising": "Quarter strength fertilizer monthly.",
+    "repotting": "Repot when rootbound.",
+    "commonProblems": [
+      {
+        "problem": "Yellowing leaves",
+        "cause": "Overwatering",
+        "fix": "Reduce watering."
+      }
+    ]
+  },
+  "buyerChecklist": {
+    "items": [
+      "Verify root health before purchasing.",
+      "Examine leaves for pests like thrips or spider mites."
+    ]
+  }
+}

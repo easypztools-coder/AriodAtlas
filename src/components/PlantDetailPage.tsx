@@ -108,7 +108,7 @@ interface PlantData {
   propagation?: Propagation;
   careGuide?: CareGuide;
   buyerChecklist?: BuyerChecklist;
-  fieldNotes?: {
+  fieldNotes?: string | {
     title: string;
     date: string;
     author: string;
@@ -1026,20 +1026,26 @@ export default function PlantDetailPage({
                     Field Notes &middot; Vol. 1
                   </span>
                   <span className="text-xs font-semibold text-muted">
-                    {new Date(data.fieldNotes.date).toLocaleDateString("en-GB", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
+                    {typeof data.fieldNotes === "string"
+                      ? new Date("2026-06-30").toLocaleDateString("en-GB", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })
+                      : new Date(data.fieldNotes.date).toLocaleDateString("en-GB", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
                   </span>
                 </div>
 
                 <h3 className="mb-3 font-heading text-xl font-semibold italic leading-tight text-heading">
-                  {data.fieldNotes.title}
+                  {typeof data.fieldNotes === "string" ? "Observations from the Field" : data.fieldNotes.title}
                 </h3>
 
                 <p className="max-w-2xl font-heading text-sm md:text-base leading-relaxed text-muted">
-                  {data.fieldNotes.content}
+                  {typeof data.fieldNotes === "string" ? data.fieldNotes : data.fieldNotes.content}
                 </p>
 
                 <div className="mt-6 flex items-center justify-between text-xs text-muted">
